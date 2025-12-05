@@ -1,0 +1,660 @@
+{
+  "title": {
+    "text": {
+      "headline": "Major Latin Printers (1450-1700)",
+      "text": "<p>Publishers who produced 500+ Latin works during the Renaissance and early modern period.</p>"
+    }
+  },
+  "events": [
+    {
+      "start_date": {
+        "year": 1629
+      },
+      "end_date": {
+        "year": 1681
+      },
+      "text": {
+        "headline": "M\u00fcller, Henning (II)",
+        "text": "<p><strong>2,641</strong> Latin works published</p><p>Active 1629-1681 in Helmstedt</p>"
+      },
+      "group": "Helmstedt"
+    },
+    {
+      "start_date": {
+        "year": 1518
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Plantiniana",
+        "text": "<p><strong>2,562</strong> Latin works published</p><p>Active 1518-1700 in Amsterdam, Antwerpen, Den Haag</p>"
+      },
+      "group": "Amsterdam"
+    },
+    {
+      "start_date": {
+        "year": 1652
+      },
+      "end_date": {
+        "year": 1694
+      },
+      "text": {
+        "headline": "Nisius, Johann",
+        "text": "<p><strong>2,303</strong> Latin works published</p><p>Active 1652-1694 in Amsterdam, Frankfurt am Main, Frankfurt</p>"
+      },
+      "group": "Amsterdam"
+    },
+    {
+      "start_date": {
+        "year": 1584
+      },
+      "end_date": {
+        "year": 1646
+      },
+      "text": {
+        "headline": "Steinmann, Tobias",
+        "text": "<p><strong>2,090</strong> Latin works published</p><p>Active 1584-1646 in Erfurt, Jena, Leipzig</p>"
+      },
+      "group": "Erfurt"
+    },
+    {
+      "start_date": {
+        "year": 1495
+      },
+      "end_date": {
+        "year": 1612
+      },
+      "text": {
+        "headline": "Petit, Jean",
+        "text": "<p><strong>2,011</strong> Latin works published</p><p>Active 1495-1612 in Langres, Caen, Paris</p>"
+      },
+      "group": "Langres"
+    },
+    {
+      "start_date": {
+        "year": 1506
+      },
+      "end_date": {
+        "year": 1631
+      },
+      "text": {
+        "headline": "Gormann, Johann",
+        "text": "<p><strong>1,999</strong> Latin works published</p><p>Active 1506-1631 in Wittenberg</p>"
+      },
+      "group": "Wittenberg"
+    },
+    {
+      "start_date": {
+        "year": 1555
+      },
+      "end_date": {
+        "year": 1629
+      },
+      "text": {
+        "headline": "Plantin, Christophe",
+        "text": "<p><strong>1,922</strong> Latin works published</p><p>Active 1555-1629 in Antwerpen, Paris, Leuven</p>"
+      },
+      "group": "Antwerpen"
+    },
+    {
+      "start_date": {
+        "year": 1596
+      },
+      "end_date": {
+        "year": 1650
+      },
+      "text": {
+        "headline": "Camerale, Stamperia",
+        "text": "<p><strong>1,798</strong> Latin works published</p><p>Active 1596-1650 in Roma, Ravenna, Ferrara</p>"
+      },
+      "group": "Roma"
+    },
+    {
+      "start_date": {
+        "year": 1540
+      },
+      "end_date": {
+        "year": 1670
+      },
+      "text": {
+        "headline": "R\u00f6hner, Johann",
+        "text": "<p><strong>1,794</strong> Latin works published</p><p>Active 1540-1670 in Jena, Wittenberg, Frankfurt an der Oder</p>"
+      },
+      "group": "Jena"
+    },
+    {
+      "start_date": {
+        "year": 1610
+      },
+      "end_date": {
+        "year": 1698
+      },
+      "text": {
+        "headline": "Henckel, Matth\u00e4us",
+        "text": "<p><strong>1,743</strong> Latin works published</p><p>Active 1610-1698 in Wittenberg, Helmstedt, Frankfurt an der Oder</p>"
+      },
+      "group": "Wittenberg"
+    },
+    {
+      "start_date": {
+        "year": 1651
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Tipografia della Reverenda Camera Apostolica (Roma)",
+        "text": "<p><strong>1,718</strong> Latin works published</p><p>Active 1651-1700 in Roma, Venezia, Vicenza</p>"
+      },
+      "group": "Roma"
+    },
+    {
+      "start_date": {
+        "year": 1660
+      },
+      "end_date": {
+        "year": 1693
+      },
+      "text": {
+        "headline": "Bauh\u00f6fer, Johann Jacob",
+        "text": "<p><strong>1,656</strong> Latin works published</p><p>Active 1660-1693 in Hamburg, Wroc\u0142aw, M\u00fchlhausen</p>"
+      },
+      "group": "Hamburg"
+    },
+    {
+      "start_date": {
+        "year": 1681
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Elzevier, Abraham (II)",
+        "text": "<p><strong>1,634</strong> Latin works published</p><p>Active 1681-1700 in Leiden</p>"
+      },
+      "group": "Leiden"
+    },
+    {
+      "start_date": {
+        "year": 1603
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Meyer, Heinrich",
+        "text": "<p><strong>1,585</strong> Latin works published</p><p>Active 1603-1700 in Altdorf, Schwabach, Frankfurt am Main</p>"
+      },
+      "group": "Altdorf"
+    },
+    {
+      "start_date": {
+        "year": 1524
+      },
+      "end_date": {
+        "year": 1599
+      },
+      "text": {
+        "headline": "Gryphe, S\u00e9bastien",
+        "text": "<p><strong>1,562</strong> Latin works published</p><p>Active 1524-1599 in s.l. (Unknown), Lyon, London</p>"
+      },
+      "group": "s.l. (Unknown)"
+    },
+    {
+      "start_date": {
+        "year": 1535
+      },
+      "end_date": {
+        "year": 1652
+      },
+      "text": {
+        "headline": "Elzevier, Abraham (I)",
+        "text": "<p><strong>1,557</strong> Latin works published</p><p>Active 1535-1652 in Amsterdam, Tours, Den Haag</p>"
+      },
+      "group": "Amsterdam"
+    },
+    {
+      "start_date": {
+        "year": 1661
+      },
+      "end_date": {
+        "year": 1684
+      },
+      "text": {
+        "headline": "Elzevier, Johannes (widow of)",
+        "text": "<p><strong>1,544</strong> Latin works published</p><p>Active 1661-1684 in Leiden</p>"
+      },
+      "group": "Leiden"
+    },
+    {
+      "start_date": {
+        "year": 1661
+      },
+      "end_date": {
+        "year": 1684
+      },
+      "text": {
+        "headline": "Elzevier, Johannes (heirs of)",
+        "text": "<p><strong>1,542</strong> Latin works published</p><p>Active 1661-1684 in Leiden</p>"
+      },
+      "group": "Leiden"
+    },
+    {
+      "start_date": {
+        "year": 1535
+      },
+      "end_date": {
+        "year": 1652
+      },
+      "text": {
+        "headline": "Elzevier, Bonaventura",
+        "text": "<p><strong>1,535</strong> Latin works published</p><p>Active 1535-1652 in Amsterdam, Tours, Den Haag</p>"
+      },
+      "group": "Amsterdam"
+    },
+    {
+      "start_date": {
+        "year": 1580
+      },
+      "end_date": {
+        "year": 1650
+      },
+      "text": {
+        "headline": "Paets Jacobszoon, Jan",
+        "text": "<p><strong>1,521</strong> Latin works published</p><p>Active 1580-1650 in Amsterdam, Gouda, Den Haag</p>"
+      },
+      "group": "Amsterdam"
+    },
+    {
+      "start_date": {
+        "year": 1510
+      },
+      "end_date": {
+        "year": 1640
+      },
+      "text": {
+        "headline": "Weidner, Johann",
+        "text": "<p><strong>1,520</strong> Latin works published</p><p>Active 1510-1640 in Weimar, Rinteln, Erfurt</p>"
+      },
+      "group": "Weimar"
+    },
+    {
+      "start_date": {
+        "year": 1587
+      },
+      "end_date": {
+        "year": 1696
+      },
+      "text": {
+        "headline": "Lucius, Jakob (II)",
+        "text": "<p><strong>1,365</strong> Latin works published</p><p>Active 1587-1696 in Hamburg, Wittenberg, Helmstedt</p>"
+      },
+      "group": "Hamburg"
+    },
+    {
+      "start_date": {
+        "year": 1553
+      },
+      "end_date": {
+        "year": 1597
+      },
+      "text": {
+        "headline": "Lucius, Jakob (I)",
+        "text": "<p><strong>1,323</strong> Latin works published</p><p>Active 1553-1597 in Rostock, Wittenberg, Helmstedt</p>"
+      },
+      "group": "Rostock"
+    },
+    {
+      "start_date": {
+        "year": 1636
+      },
+      "end_date": {
+        "year": 1655
+      },
+      "text": {
+        "headline": "Keil, Nikolaus",
+        "text": "<p><strong>1,303</strong> Latin works published</p><p>Active 1636-1655 in Rostock</p>"
+      },
+      "group": "Rostock"
+    },
+    {
+      "start_date": {
+        "year": 1521
+      },
+      "end_date": {
+        "year": 1635
+      },
+      "text": {
+        "headline": "Fue\u00df, Joachim",
+        "text": "<p><strong>1,211</strong> Latin works published</p><p>Active 1521-1635 in Rostock, Legnica</p>"
+      },
+      "group": "Rostock"
+    },
+    {
+      "start_date": {
+        "year": 1678
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Halma, Fran\u00e7ois",
+        "text": "<p><strong>1,172</strong> Latin works published</p><p>Active 1678-1700 in Amsterdam, Franeker, Utrecht</p>"
+      },
+      "group": "Amsterdam"
+    },
+    {
+      "start_date": {
+        "year": 1637
+      },
+      "end_date": {
+        "year": 1673
+      },
+      "text": {
+        "headline": "Wendt, Michael",
+        "text": "<p><strong>1,167</strong> Latin works published</p><p>Active 1637-1673 in Wittenberg, s.l. (Germany), Leipzig</p>"
+      },
+      "group": "Wittenberg"
+    },
+    {
+      "start_date": {
+        "year": 1601
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Schr\u00f6dter, Christian",
+        "text": "<p><strong>1,155</strong> Latin works published</p><p>Active 1601-1700 in Wittenberg, Leipzig</p>"
+      },
+      "group": "Wittenberg"
+    },
+    {
+      "start_date": {
+        "year": 1610
+      },
+      "end_date": {
+        "year": 1652
+      },
+      "text": {
+        "headline": "Matsson, Eskil",
+        "text": "<p><strong>1,134</strong> Latin works published</p><p>Active 1610-1652 in Stockholm, Uppsala</p>"
+      },
+      "group": "Stockholm"
+    },
+    {
+      "start_date": {
+        "year": 1650
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Reumann, Joachim",
+        "text": "<p><strong>1,118</strong> Latin works published</p><p>Active 1650-1700 in Stockholm, Hamburg, Kiel</p>"
+      },
+      "group": "Stockholm"
+    },
+    {
+      "start_date": {
+        "year": 1567
+      },
+      "end_date": {
+        "year": 1683
+      },
+      "text": {
+        "headline": "Blado, Antonio (heirs of)",
+        "text": "<p><strong>1,101</strong> Latin works published</p><p>Active 1567-1683 in Roma, Bologna</p>"
+      },
+      "group": "Roma"
+    },
+    {
+      "start_date": {
+        "year": 1529
+      },
+      "end_date": {
+        "year": 1683
+      },
+      "text": {
+        "headline": "Janssonius, Johannes",
+        "text": "<p><strong>1,078</strong> Latin works published</p><p>Active 1529-1683 in Frankfurt am Main, Harderwijk, Leiden</p>"
+      },
+      "group": "Frankfurt am Main"
+    },
+    {
+      "start_date": {
+        "year": 1654
+      },
+      "end_date": {
+        "year": 1685
+      },
+      "text": {
+        "headline": "Dreunen, Meinardus van",
+        "text": "<p><strong>1,059</strong> Latin works published</p><p>Active 1654-1685 in Utrecht</p>"
+      },
+      "group": "Utrecht"
+    },
+    {
+      "start_date": {
+        "year": 1516
+      },
+      "end_date": {
+        "year": 1585
+      },
+      "text": {
+        "headline": "Blado, Antonio",
+        "text": "<p><strong>1,055</strong> Latin works published</p><p>Active 1516-1585 in Roma, Foligno, Bologna</p>"
+      },
+      "group": "Roma"
+    },
+    {
+      "start_date": {
+        "year": 1501
+      },
+      "end_date": {
+        "year": 1536
+      },
+      "text": {
+        "headline": "Bade, Josse",
+        "text": "<p><strong>1,053</strong> Latin works published</p><p>Active 1501-1536 in Antwerpen, Poitiers, Paris</p>"
+      },
+      "group": "Antwerpen"
+    },
+    {
+      "start_date": {
+        "year": 1558
+      },
+      "end_date": {
+        "year": 1669
+      },
+      "text": {
+        "headline": "Sengenwald, Georg",
+        "text": "<p><strong>1,052</strong> Latin works published</p><p>Active 1558-1669 in Berlin, Kulmbach, Hamburg</p>"
+      },
+      "group": "Berlin"
+    },
+    {
+      "start_date": {
+        "year": 1613
+      },
+      "end_date": {
+        "year": 1666
+      },
+      "text": {
+        "headline": "Reusner, Johann",
+        "text": "<p><strong>1,044</strong> Latin works published</p><p>Active 1613-1666 in Rostock, K\u00f6nigsberg, Wittenberg</p>"
+      },
+      "group": "Rostock"
+    },
+    {
+      "start_date": {
+        "year": 1566
+      },
+      "end_date": {
+        "year": 1693
+      },
+      "text": {
+        "headline": "Gruppenbach, Georg",
+        "text": "<p><strong>1,040</strong> Latin works published</p><p>Active 1566-1693 in Frankfurt am Main, T\u00fcbingen, Leipzig</p>"
+      },
+      "group": "Frankfurt am Main"
+    },
+    {
+      "start_date": {
+        "year": 1582
+      },
+      "end_date": {
+        "year": 1650
+      },
+      "text": {
+        "headline": "Balck, Ulderick",
+        "text": "<p><strong>1,023</strong> Latin works published</p><p>Active 1582-1650 in Amsterdam, Franeker, Leiden</p>"
+      },
+      "group": "Amsterdam"
+    },
+    {
+      "start_date": {
+        "year": 1580
+      },
+      "end_date": {
+        "year": 1625
+      },
+      "text": {
+        "headline": "Egenolff, Paul",
+        "text": "<p><strong>975</strong> Latin works published</p><p>Active 1580-1625 in Frankfurt am Main, Hanau, London</p>"
+      },
+      "group": "Frankfurt am Main"
+    },
+    {
+      "start_date": {
+        "year": 1629
+      },
+      "end_date": {
+        "year": 1675
+      },
+      "text": {
+        "headline": "Hake, Johann (II)",
+        "text": "<p><strong>971</strong> Latin works published</p><p>Active 1629-1675 in Jena, Wittenberg, Leipzig</p>"
+      },
+      "group": "Jena"
+    },
+    {
+      "start_date": {
+        "year": 1640
+      },
+      "end_date": {
+        "year": 1669
+      },
+      "text": {
+        "headline": "Hagen, Georg",
+        "text": "<p><strong>968</strong> Latin works published</p><p>Active 1640-1669 in Altdorf, N\u00fcrnberg, Aachen</p>"
+      },
+      "group": "Altdorf"
+    },
+    {
+      "start_date": {
+        "year": 1654
+      },
+      "end_date": {
+        "year": 1688
+      },
+      "text": {
+        "headline": "Hansson, Peter",
+        "text": "<p><strong>968</strong> Latin works published</p><p>Active 1654-1688 in Turku</p>"
+      },
+      "group": "Turku"
+    },
+    {
+      "start_date": {
+        "year": 1656
+      },
+      "end_date": {
+        "year": 1685
+      },
+      "text": {
+        "headline": "Krebs, Samuel",
+        "text": "<p><strong>966</strong> Latin works published</p><p>Active 1656-1685 in Frankfurt am Main, Hamburg, Dresden</p>"
+      },
+      "group": "Frankfurt am Main"
+    },
+    {
+      "start_date": {
+        "year": 1545
+      },
+      "end_date": {
+        "year": 1612
+      },
+      "text": {
+        "headline": "Rouill\u00e9, Guillaume",
+        "text": "<p><strong>919</strong> Latin works published</p><p>Active 1545-1612 in Salamanca, Gen\u00e8ve, Paris</p>"
+      },
+      "group": "Salamanca"
+    },
+    {
+      "start_date": {
+        "year": 1633
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Georg, Johann",
+        "text": "<p><strong>918</strong> Latin works published</p><p>Active 1633-1700 in leipzig, Hamburg, Leipzig</p>"
+      },
+      "group": "leipzig"
+    },
+    {
+      "start_date": {
+        "year": 1668
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Wall, Johan Larsson",
+        "text": "<p><strong>910</strong> Latin works published</p><p>Active 1668-1700 in Turku</p>"
+      },
+      "group": "Turku"
+    },
+    {
+      "start_date": {
+        "year": 1608
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Jesuit Press (Praha)",
+        "text": "<p><strong>901</strong> Latin works published</p><p>Active 1608-1700 in Praha</p>"
+      },
+      "group": "Praha"
+    },
+    {
+      "start_date": {
+        "year": 1509
+      },
+      "end_date": {
+        "year": 1646
+      },
+      "text": {
+        "headline": "Chemlin, Kaspar",
+        "text": "<p><strong>893</strong> Latin works published</p><p>Active 1509-1646 in Frankfurt am Main, Giessen, Marburg</p>"
+      },
+      "group": "Frankfurt am Main"
+    },
+    {
+      "start_date": {
+        "year": 1508
+      },
+      "end_date": {
+        "year": 1627
+      },
+      "text": {
+        "headline": "M\u00f6llemann, Stephan",
+        "text": "<p><strong>887</strong> Latin works published</p><p>Active 1508-1627 in Rostock, Wittenberg, L\u00fcbeck</p>"
+      },
+      "group": "Rostock"
+    }
+  ]
+}

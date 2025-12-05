@@ -392,6 +392,12 @@ export default function Home() {
                 Read the Research
               </a>
               <a
+                href="/timelines"
+                className="px-6 py-3 bg-cyan-600 hover:bg-cyan-500 rounded-lg font-semibold transition-colors"
+              >
+                Explore Timelines
+              </a>
+              <a
                 href="https://github.com/JDerekLomas/latinclaude"
                 className="px-6 py-3 bg-slate-700 hover:bg-slate-600 rounded-lg font-semibold transition-colors"
               >

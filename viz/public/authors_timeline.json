@@ -1,0 +1,985 @@
+{
+  "title": {
+    "text": {
+      "headline": "Prolific Latin Authors (1450-1700)",
+      "text": "<p>Authors with 100+ Latin editions in the USTC database. These writers shaped Renaissance and early modern thought.</p>"
+    }
+  },
+  "events": [
+    {
+      "start_date": {
+        "year": 1465
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Cicero, Marcus Tullius",
+        "text": "<p><strong>4,952</strong> Latin editions</p><p>Published 1465-1700</p><ul><li>Fragmenta, , Ab Andrea Patricio Collecta, [et] in quattuor tomos digesta. Index </li><li>Absoluta totius rhetoricae methodus, ex Cicerone, Quintiliano et aliis collecta</li><li>De senectute liber</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1496
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Erasmus, Desiderius",
+        "text": "<p><strong>4,379</strong> Latin editions</p><p>Published 1496-1700</p><ul><li>De duplici copia verborum ac rerum commentarii duo: multa acce\u00dfione, novisque fo</li><li>Opus, in quinque libros digestum, in quibus mire retegit et confutat veterum hae</li><li>Ecclesiastae sive de ratione concionandi libri quatuor, opus recens, denuo ab au</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1510
+      },
+      "end_date": {
+        "year": 1698
+      },
+      "text": {
+        "headline": "Melanchthon, Philipp",
+        "text": "<p><strong>3,387</strong> Latin editions</p><p>Published 1510-1698</p><ul><li>De anima, commentarii, explicatio</li><li>De perfecto oratore ad M. Brutum liber M. Tullii Ciceronis de oratore libri tres</li><li>Pars octava argumentorum et responsionum theologicarum. Contexta ex scriptis rev</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1469
+      },
+      "end_date": {
+        "year": 1698
+      },
+      "text": {
+        "headline": "Aristoteles",
+        "text": "<p><strong>3,051</strong> Latin editions</p><p>Published 1469-1698</p><ul><li>in praedicabilia Porphyrii, praedicamenta, & libros posteriorum analyticorum Ari</li><li>Ethica ad Nicomachum. Magna moralia. Isagogicon moralis disciplinae. Virtutis qu</li><li>Burleus in artem veterem Gualterii Burlei Anglici: doctoris consummatissimi: in </li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1471
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Ovidius Naso, Publius",
+        "text": "<p><strong>1,492</strong> Latin editions</p><p>Published 1471-1700</p><ul><li>Tomus 2. Quo continentur Metamorphoseon libri 15</li><li>Metamorphoseos</li><li>opera, veterum exemplarium auxilio ab infinitis mendis emendata</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1469
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Vergilius Maro, Publius",
+        "text": "<p><strong>1,338</strong> Latin editions</p><p>Published 1469-1700</p><ul><li>Bucolica Georgica aeneis, cum Seruii commmentariis. Addunturq\u00e2ue Probi et Mancin</li><li>Bucolica. Cum familiari tam verborum qua sententiarum expositione per Hermannum </li><li>Bucolica</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1491
+      },
+      "end_date": {
+        "year": 1599
+      },
+      "text": {
+        "headline": "Bade, Josse",
+        "text": "<p><strong>1,284</strong> Latin editions</p><p>Published 1491-1599</p><ul><li>Comoedie sex, cum interpretationibus Aelii Donati, Guidonis, Inuenalis Cenomani,</li><li>Bucolica Georgica aeneis, cum Seruii commmentariis. Addunturq\u00e2ue Probi et Mancin</li><li>Veterum maxime insignium paroemiarium id est adagiorum collectanea rursus recogn</li></ul>"
+      },
+      "group": "Reformation Era"
+    },
+    {
+      "start_date": {
+        "year": 1517
+      },
+      "end_date": {
+        "year": 1699
+      },
+      "text": {
+        "headline": "Luther, Martin",
+        "text": "<p><strong>1,176</strong> Latin editions</p><p>Published 1517-1699</p><ul><li>De votis monasticis, Martini Lutheri judicium.</li><li>Enarratio copiosa et luculenta psalmi secundi, et capitis noni isaiae, de regno </li><li>Epistola Lutheriana ad leonem decimum summum pontificem. Tractatus de libertate </li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1463
+      },
+      "end_date": {
+        "year": 1697
+      },
+      "text": {
+        "headline": "Thomas Aquinas, St",
+        "text": "<p><strong>1,119</strong> Latin editions</p><p>Published 1463-1697</p><ul><li>De vitiis et virtutibus numero quaternario procedens, sive Quaternarius</li><li>De veritate.</li><li>demonstratae Paschalini Regiselmi clerici Veneti Praefatio, qua theologia schola</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1469
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Terentius Afer, Publius",
+        "text": "<p><strong>1,107</strong> Latin editions</p><p>Published 1469-1700</p><ul><li>Comoedie sex, cum interpretationibus Aelii Donati, Guidonis, Inuenalis Cenomani,</li><li>Andria</li><li>Comoediae. Preceded by: Petrarca: Vita Terentii. Epitaphium Terentii</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1474
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Horatius Flaccus, Quintus",
+        "text": "<p><strong>1,027</strong> Latin editions</p><p>Published 1474-1700</p><ul><li>Carmen saeculare</li><li>Poemata omnia, post omnes omnium editiones summa denuo vigilantia recognita, & s</li><li>Po\u00ebmata omnia</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1468
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Justinianus I",
+        "text": "<p><strong>998</strong> Latin editions</p><p>Published 1468-1700</p><ul><li>Argumentum institutionum Imperialium Immiscentur congruenter textui summaris</li><li>Volumen ut peculiari vocabulo nuncupant totius juris civilis velut colophon ac c</li><li>Codicis priores libri novem</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1466
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Augustinus, St",
+        "text": "<p><strong>975</strong> Latin editions</p><p>Published 1466-1700</p><ul><li>Meditationes soliloquia et manuale omnia ad m.s. exemplaria emendata, & in melio</li><li>De utilitate credendi ad Honoratum liber unus. Libellus de catechizandis rudibus</li><li>De doctrina christiana libri IIII omnibus sacram scripturam vel recte intelliger</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1454
+      },
+      "end_date": {
+        "year": 1684
+      },
+      "text": {
+        "headline": "Donatus, Aelius",
+        "text": "<p><strong>965</strong> Latin editions</p><p>Published 1454-1684</p><ul><li>Comoedie sex, cum interpretationibus Aelii Donati, Guidonis, Inuenalis Cenomani,</li><li>Secunda editio Donati. Noviter correcti, & emendati, variisque & multis erroribu</li><li>Ars minor</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1592
+      },
+      "end_date": {
+        "year": 1661
+      },
+      "text": {
+        "headline": "Martini, Jakob",
+        "text": "<p><strong>838</strong> Latin editions</p><p>Published 1592-1661</p><ul><li>Collegii Secundi Theorematum Theologicorum Disputatio ... , In Academia Witteber</li><li>Centuria ... Quaestionum Illustrium Philosophicarum In Inclyta Witebergensi Acad</li><li>Partis primae Theorematum Physicorum Specialium Exercitatio Nona De Generatione </li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1523
+      },
+      "end_date": {
+        "year": 1699
+      },
+      "text": {
+        "headline": "Camerarius, Joachim",
+        "text": "<p><strong>822</strong> Latin editions</p><p>Published 1523-1699</p><ul><li>Disputatio de cultu vero Dei et ritibus caeremoniarum ac disciplina et ieiunio o</li><li>De institutione oratoria libri XII, singulari cum studio recogniti argument\u00edsque</li><li>De natura et effectionibus daemonum libelli duo Plutarchi cheronensis. Cum expli</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1470
+      },
+      "end_date": {
+        "year": 1598
+      },
+      "text": {
+        "headline": "Bartolus de Saxoferrato",
+        "text": "<p><strong>745</strong> Latin editions</p><p>Published 1470-1598</p><ul><li>Super prima parte Digesti novi (cum additionibus Alexandri Tartagni)</li><li>In primam [-secundam] Infortiati partem commentaria. Quibus praeter Alex. Barb. </li><li>Super secunda parte Codicis</li></ul>"
+      },
+      "group": "Reformation Era"
+    },
+    {
+      "start_date": {
+        "year": 1476
+      },
+      "end_date": {
+        "year": 1683
+      },
+      "text": {
+        "headline": "Galenus",
+        "text": "<p><strong>728</strong> Latin editions</p><p>Published 1476-1683</p><ul><li>In librum Galeni de ptissana, commentaria, nunc primum in lucem edita. Cum quaes</li><li>De differentiis foebrium libri duo</li><li>Institutionum medicinae, ad Hippocratis, Galeni, aliorumque veterum scripta rect</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1601
+      },
+      "end_date": {
+        "year": 1699
+      },
+      "text": {
+        "headline": "Gerhard, Johann",
+        "text": "<p><strong>696</strong> Latin editions</p><p>Published 1601-1699</p><ul><li>Carmina votiva Viro Magnifico, Ampli\u00dfimo [et] Consulti\u00dfimo Dn. Valentino Riemero</li><li>Exercitium pietatis quotidianum quadripartitum : peccatorum confessiones, gratia</li><li>Exercitationes perbreves in Gebri Arabis philos. libros duos summae perfectionis</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1472
+      },
+      "end_date": {
+        "year": 1699
+      },
+      "text": {
+        "headline": "Aesopus",
+        "text": "<p><strong>695</strong> Latin editions</p><p>Published 1472-1699</p><ul><li>Fabellae quaedam</li><li>aesopi Phrygis et aliorum fabulae</li><li>Vita et Fabulae [Greek].</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1650
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Deutschmann, Johann",
+        "text": "<p><strong>670</strong> Latin editions</p><p>Published 1650-1700</p><ul><li>Disputatio Solennis De Reformatis Evangelicis, Verius Non Evangelicis , Quam Sub</li><li>Disputatio Solennis De Reformatis Evangelicis, Verius Non Evangelicis , Quam Sub</li><li>Mysterium S.S. Trinitatis A Fidelibus Sub Veteri Testamento Cognitum Adspirante </li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1527
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Lipsius, Justus",
+        "text": "<p><strong>661</strong> Latin editions</p><p>Published 1527-1700</p><ul><li>Leges regiae et leges decem virales</li><li>Variarum lectionum libri IIII</li><li>Epistolarum selectarum centuria singularis ad Italos & Hispanos</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1663
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Stryk, Samuel",
+        "text": "<p><strong>659</strong> Latin editions</p><p>Published 1663-1700</p><ul><li>Disputatio Iuris Canonici, De Dissensu Unius Desponsatorum Ad C. Praeterea 2. X.</li><li>Disputatio Iuridica De Negotiis Per Interpretem Gestis, Quam In Illustri Leucore</li><li>Collegium Practicum, In S.S.D. Introductionem Ad Praxin Forensem caute instituen</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1581
+      },
+      "end_date": {
+        "year": 1667
+      },
+      "text": {
+        "headline": "Goclenius, Rudolph",
+        "text": "<p><strong>634</strong> Latin editions</p><p>Published 1581-1667</p><ul><li>Assertio Medicinae Universalis Adversus Universalem Vulgo iactatam , Authore Rod</li><li>Theses logicae de argumentatione et quibusdam epithematis divino fretus auxilic </li><li>Disputatio Philosophica : Continens Synopsin totius Philosophiae Doctrinam Metap</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1470
+      },
+      "end_date": {
+        "year": 1699
+      },
+      "text": {
+        "headline": "Seneca, Lucius Annaeus",
+        "text": "<p><strong>632</strong> Latin editions</p><p>Published 1470-1699</p><ul><li>Thebais ex veterum codicum fide et Justi Lipsii conjecturis castigata opera</li><li>Sententiae omnes undiquaque selectissimae, quae indicis vice in absoluta, et int</li><li>Flores selecti ex omnibus illius operibus vero judicio emendatis</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1514
+      },
+      "end_date": {
+        "year": 1694
+      },
+      "text": {
+        "headline": "Vives, Juan Luis",
+        "text": "<p><strong>623</strong> Latin editions</p><p>Published 1514-1694</p><ul><li>Ad veram sapientiam introductio</li><li>Isokratus hapanta. Isocratis scripta, quae quidem nunc extant, omnia, Graecolati</li><li>Historiae augustae scriptores Latini minores; qui augustorum, necnon et caesarum</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1476
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Hippocrates",
+        "text": "<p><strong>576</strong> Latin editions</p><p>Published 1476-1700</p><ul><li>Institutionum medicinae, ad Hippocratis, Galeni, aliorumque veterum scripta rect</li><li>Aphorismorum sectiones septem recens e Graeco in Latinum sermonem per Leonhartum</li><li>De natura humana; et de ratione victus in morbis acutis; Galeni ars medicinalis</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1509
+      },
+      "end_date": {
+        "year": 1693
+      },
+      "text": {
+        "headline": "Despaut\u00e8re, Jean",
+        "text": "<p><strong>572</strong> Latin editions</p><p>Published 1509-1693</p><ul><li>De figuris liber unicus ex Quintiliano, Donato concinnatus</li><li>Grammaticae institutionis libri VII., doct\u00e8, & concinn\u00e8 in compendium redacti</li><li>Universa grammatica</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1634
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Calov, Abraham",
+        "text": "<p><strong>570</strong> Latin editions</p><p>Published 1634-1700</p><ul><li>Metaphysica Divina \u00e8 principiis primis eruta in abstractione Entis representata </li><li>Oratio Inaugralis Haeresin Neo-Photinianam vel Socinianam : Ceu novorum paradoxo</li><li>Disputationum In Augustanam Confessionem Decima Ex Articulo eius Quinto De Minis</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1638
+      },
+      "end_date": {
+        "year": 1699
+      },
+      "text": {
+        "headline": "Struve, Georg Adam",
+        "text": "<p><strong>552</strong> Latin editions</p><p>Published 1638-1699</p><ul><li>Disputationum Publicarum IV. De Rerum Divisione Et Acquirendo Earum Dominio , Qu</li><li>Collegii Iuridici In Academia Salana Decanus Georgius Adam Struve/ I. U. D. Pand</li><li>Centuria Positionum Inauguralium De Successore Obligato Vel Libero , Quas ... De</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1481
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Nebrija, Antonio de",
+        "text": "<p><strong>545</strong> Latin editions</p><p>Published 1481-1700</p><ul><li>Grammatica</li><li>Paschale cum commento</li><li>Syntaxis, quibusdam locis paraphrasi et exemplis Ciceronis</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1476
+      },
+      "end_date": {
+        "year": 1612
+      },
+      "text": {
+        "headline": "Beroaldo, Filippo",
+        "text": "<p><strong>521</strong> Latin editions</p><p>Published 1476-1612</p><ul><li>Noctium atticarum libri xx</li><li>Elegiae.</li><li>In Marcum Antonium Philippicae orationes XIIII. summa diligentia emendatae ac re</li></ul>"
+      },
+      "group": "Reformation Era"
+    },
+    {
+      "start_date": {
+        "year": 1577
+      },
+      "end_date": {
+        "year": 1698
+      },
+      "text": {
+        "headline": "Conring, Hermann",
+        "text": "<p><strong>521</strong> Latin editions</p><p>Published 1577-1698</p><ul><li>Disputatio De Natura Ac Optimis Auctoribus Civilis Prudentiae , Quam Ex Politici</li><li>Disputatio Medica De Scorbuto , Quam ... Praeside ... Joanne Wolfio ... publico </li><li>Disputatio Physica De Coelo, Cuius Theses ... , Praeside Hermanno Conringio Phil</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1463
+      },
+      "end_date": {
+        "year": 1588
+      },
+      "text": {
+        "headline": "Villa Dei, Alexander de",
+        "text": "<p><strong>515</strong> Latin editions</p><p>Published 1463-1588</p><ul><li>Secunda pars Doctrinalis</li><li>Doctrinale (Partes I-II)</li><li>Textus cum sententiis et constructionibus</li></ul>"
+      },
+      "group": "Reformation Era"
+    },
+    {
+      "start_date": {
+        "year": 1510
+      },
+      "end_date": {
+        "year": 1698
+      },
+      "text": {
+        "headline": "Manuzio, Paolo",
+        "text": "<p><strong>514</strong> Latin editions</p><p>Published 1510-1698</p><ul><li>Dictionarium</li><li>Epistolarum Pauli Manutii libri V. Quincto nuper addito. Eiusdem qu\u00e6 pr\u00e6fationes</li><li>Apophthegmatum Ex Optimis Utriusque Linguae Scriptoribus Libri VIII. : Doctissim</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1601
+      },
+      "end_date": {
+        "year": 1650
+      },
+      "text": {
+        "headline": "Catholic Church",
+        "text": "<p><strong>500</strong> Latin editions</p><p>Published 1601-1650</p><ul><li>Breviarium Romanum</li><li>Missae approbatae per summos pontifices de sacratissimo rosario B. Virginis Mari</li><li>Ordo baptizandi et alia sacramenta administrandi, ex Romanae Ecclesiae ritu. In </li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1476
+      },
+      "end_date": {
+        "year": 1600
+      },
+      "text": {
+        "headline": "Mancinelli, Antonio",
+        "text": "<p><strong>499</strong> Latin editions</p><p>Published 1476-1600</p><ul><li>Bucolica Georgica aeneis, cum Seruii commmentariis. Addunturq\u00e2ue Probi et Mancin</li><li>Spica. Versilogus sive De componendis versibus opusculum</li><li>Versilogus</li></ul>"
+      },
+      "group": "Reformation Era"
+    },
+    {
+      "start_date": {
+        "year": 1601
+      },
+      "end_date": {
+        "year": 1699
+      },
+      "text": {
+        "headline": "Coccejus, Johannes",
+        "text": "<p><strong>485</strong> Latin editions</p><p>Published 1601-1699</p><ul><li>Exercitatio de principio epistolae D. Pauli ad Ephesios</li><li>Disp. X de foedere Dei cum homine, agens de sponsoris obedientia et merito</li><li>Disp. IX de foedere Dei cum homine, adhuc agens de foederis novi pacto</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1603
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Wedel, Georg Wolfgang",
+        "text": "<p><strong>483</strong> Latin editions</p><p>Published 1603-1700</p><ul><li>Dissertatio Medica Inauguralis De Cura Palliativa , Rectore ... Guilielmo Henric</li><li>De Pharmacia Moderno Seculo Applicanda Dissertationes III. Huic Editioni Accessi</li><li>Guerneri Rolfincii, Phil. & Medic. Doctoris, Professoris Publici, Epitomes Metho</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1534
+      },
+      "end_date": {
+        "year": 1619
+      },
+      "text": {
+        "headline": "Stigel, Johann",
+        "text": "<p><strong>474</strong> Latin editions</p><p>Published 1534-1619</p><ul><li>De anima, commentarii, explicatio</li><li>Examen eorum qui audiuntur ante ritum publicae ordinationis, qua commendatur eis</li><li>Enarratio copiosa et luculenta psalmi secundi, et capitis noni isaiae, de regno </li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1603
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Meisner, Balthasar",
+        "text": "<p><strong>469</strong> Latin editions</p><p>Published 1603-1700</p><ul><li>Anthr\u014dpologias Sacrae Disputatio XIIX. Ad Statum Reparationis Pertinens, De Nume</li><li>Anthr\u014dpologias Sacrae Disputatio XXV. Ad Statum Reparationis Pertinens. De Merit</li><li>Collegii Adiaphoristici Calvinianis oppositi, Disputatio Sexta De Ceremoniis Et </li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1459
+      },
+      "end_date": {
+        "year": 1694
+      },
+      "text": {
+        "headline": "Plutarchus",
+        "text": "<p><strong>468</strong> Latin editions</p><p>Published 1459-1694</p><ul><li>Amatoriae narrationes Plutarchi Cheronei, Angelo Politiano interprete</li><li>Dialogus cui titulus vitarum seu philosophorum auctio nunc primum Latinus factus</li><li>Vitae illustrium virorum [Latin]. Sextus Rufus: De historia Romana</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1552
+      },
+      "end_date": {
+        "year": 1696
+      },
+      "text": {
+        "headline": "Caselius, Johannes",
+        "text": "<p><strong>465</strong> Latin editions</p><p>Published 1552-1696</p><ul><li>Joan. Caselii, Ad nobilem adolescentem Davidem Hilchenium ut insistat vestigiis </li><li>Philippo Racebergio, Sereni\u00dfimi nostri, Henrici Julii, praesulis Halberstad., du</li><li>Joan. Caselii Kalendae Ianuariae Anni M.D.CIII.</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1644
+      },
+      "end_date": {
+        "year": 1690
+      },
+      "text": {
+        "headline": "Hoornbeek, Johannes",
+        "text": "<p><strong>462</strong> Latin editions</p><p>Published 1644-1690</p><ul><li>Disputatio theologica, de precibus, pars quarta. 17.06</li><li>Disputatio theologica, de poenitentia. 22.12</li><li>Disputatio theologica, de precibus, pars quinta et ultima. 23.06</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1470
+      },
+      "end_date": {
+        "year": 1699
+      },
+      "text": {
+        "headline": "Sallustius Crispus, Gaius",
+        "text": "<p><strong>445</strong> Latin editions</p><p>Published 1470-1699</p><ul><li>Opera</li><li>De coniuratione Catilinae</li><li>De conjuratione Catilinaria et bello Jugurthino historiae</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1473
+      },
+      "end_date": {
+        "year": 1698
+      },
+      "text": {
+        "headline": "Boethius, Anicius Manlius Severinus",
+        "text": "<p><strong>440</strong> Latin editions</p><p>Published 1473-1698</p><ul><li>Dialectica</li><li>Sententiae omnes undiquaque selectissimae, quae indicis vice in absoluta, et int</li><li>De consolatione philosophi\u00e6 libri V</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1551
+      },
+      "end_date": {
+        "year": 1661
+      },
+      "text": {
+        "headline": "Chytr\u00e4us, David",
+        "text": "<p><strong>434</strong> Latin editions</p><p>Published 1551-1661</p><ul><li>Chronologia historiae maccabaeorum usque ad natum Christum deducta explicatio ma</li><li>Catechesis recens recognita a Davide chytraeo.</li><li>De bello antiturcico, oratio. Scripta et public\u00e8 recitata in inclut\u00e2 academi\u00e2 Ro</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1542
+      },
+      "end_date": {
+        "year": 1691
+      },
+      "text": {
+        "headline": "Gueinz, Christian",
+        "text": "<p><strong>432</strong> Latin editions</p><p>Published 1542-1691</p><ul><li>Divitiarum Evangelicarum Disquisitio Vicesima Sexta , Praeside Christiano Gueinz</li><li>Synopsis Procli Diadochi Sphaericae , Quam ... Sub Praesidio Christiani Gueinzii</li><li>Deliciarum Epistolicarum Festivalium Exercitatio Decima Tertia , Praeside Christ</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1538
+      },
+      "end_date": {
+        "year": 1687
+      },
+      "text": {
+        "headline": "Fabricius, Georg",
+        "text": "<p><strong>429</strong> Latin editions</p><p>Published 1538-1687</p><ul><li>Disputationum Physicarum Quarta De Forma Et Privatione , Quam Divina adspirante </li><li>Oratio de bello adversus Turcam suscipiendo, ad Ferdinandum Ungariae Bo\u00ebmiaeque </li><li>Catechesis recens recognita a Davide chytraeo.</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1474
+      },
+      "end_date": {
+        "year": 1618
+      },
+      "text": {
+        "headline": "Tedeschi, Niccol\u00f2",
+        "text": "<p><strong>427</strong> Latin editions</p><p>Published 1474-1618</p><ul><li>Prima super primo decretalium. Commentariorum prima in primum librum decretalium</li><li>Commentaria super prima [-tertia] parte primi [-quinti] Decretalium libri. Nunc </li><li>Repertorium super lecturis Panormitani. Index aut si mauis repertorium admodum s</li></ul>"
+      },
+      "group": "Reformation Era"
+    },
+    {
+      "start_date": {
+        "year": 1605
+      },
+      "end_date": {
+        "year": 1673
+      },
+      "text": {
+        "headline": "Revius, Jacobus",
+        "text": "<p><strong>427</strong> Latin editions</p><p>Published 1605-1673</p><ul><li>Abstersio macularum, quae ab anonymo quodam, calumnios\u00e6 praefationis in Notas Ca</li><li>Disputationum theologicarum octogesima, de vita \u00e6terna altera. Ad diem [ ].05</li><li>Statera philosophiae Cartesianae, qua principiorum ejus falsitas & dogmatum impu</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1465
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Cato, Dionysius",
+        "text": "<p><strong>426</strong> Latin editions</p><p>Published 1465-1700</p><ul><li>Catonis et Graecorum sapientium Praecepta de moribus, cum galica et interdum lat</li><li>Autores cum suis commentis scilicet sententiae morales distichis descriptae et m</li><li>Cato morosus [= Disticha de moribus]</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1615
+      },
+      "end_date": {
+        "year": 1694
+      },
+      "text": {
+        "headline": "Maresius, Samuel",
+        "text": "<p><strong>422</strong> Latin editions</p><p>Published 1615-1694</p><ul><li>Disputationum exegeticarum ad confessionem Belgicam quadragesima septima, qu\u00e6 es</li><li>[Theses gedefendeert door Pistorius, 10 November 1640]</li><li>Dissertatio epistolica de trapezitis</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1477
+      },
+      "end_date": {
+        "year": 1599
+      },
+      "text": {
+        "headline": "Del Maino, Giasone",
+        "text": "<p><strong>419</strong> Latin editions</p><p>Published 1477-1599</p><ul><li>In primam [-secundam] Digesti novi partem commentaria. Cum solitis doctorum insi</li><li>In primam [-secundam] codicis partem praelectiones</li><li>Lectura insignis super secunda parte codicis cum apostillis novissime impressa. </li></ul>"
+      },
+      "group": "Reformation Era"
+    },
+    {
+      "start_date": {
+        "year": 1531
+      },
+      "end_date": {
+        "year": 1688
+      },
+      "text": {
+        "headline": "Sturm, Johannes",
+        "text": "<p><strong>417</strong> Latin editions</p><p>Published 1531-1688</p><ul><li>Antipappi tres, contra D. Joannis Pappi Charitatem et condemnationem Christianam</li><li>De officiis. Libri III. Cato maior, sive de senectute. Laelius, sive de amicitia</li><li>Leges scholae lauinganae scholae lavinganae, ad D. Philippum Ludovicum, et D. Jo</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1471
+      },
+      "end_date": {
+        "year": 1688
+      },
+      "text": {
+        "headline": "Valla, Lorenzo",
+        "text": "<p><strong>417</strong> Latin editions</p><p>Published 1471-1688</p><ul><li>De linguae Latinae elegantia libri sex, diligentia haud vulgari ad emendatissima</li><li>Elegantiolae in pristinum statum redacte. Contraque vulgatam multorum opinionem </li><li>De linguae Latinae Elegantia libri sex. De reciprocatione sui, et Suus, libellus</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1474
+      },
+      "end_date": {
+        "year": 1688
+      },
+      "text": {
+        "headline": "Baptista Mantuanus",
+        "text": "<p><strong>416</strong> Latin editions</p><p>Published 1474-1688</p><ul><li>Adolescentia seu Bucolica [Tertia pars operum]</li><li>De peccatis</li><li>Contra poetas impudice loquentes. Philippe Furstenberger and Valentin Celido</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1535
+      },
+      "end_date": {
+        "year": 1688
+      },
+      "text": {
+        "headline": "Rolfinck, Werner",
+        "text": "<p><strong>408</strong> Latin editions</p><p>Published 1535-1688</p><ul><li>Auctoritate & auspiciis sereni\u00dfimorum Principum, inclutae huius Academiae nutrit</li><li>Disputatio Medica De Melancholia , Facultatis Medicae Consensu Publicae disquisi</li><li>Disputatio Chimica Quinta, De Fossilibus In Genere Et In Specie, De Aqueis Seu S</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1596
+      },
+      "end_date": {
+        "year": 1697
+      },
+      "text": {
+        "headline": "Besold, Christoph",
+        "text": "<p><strong>405</strong> Latin editions</p><p>Published 1596-1697</p><ul><li>Apparatus Bellicus , Quem Auctoritate Amplissimi Iurisconsultorum Ordinis, in In</li><li>Discursus politici singulares : I. de Tribus domesticae societatis speciebus : m</li><li>Discursus Politici Singulares : I. De Tribus Domesticae Societatis Speciebus: Ma</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1480
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Isocrates",
+        "text": "<p><strong>402</strong> Latin editions</p><p>Published 1480-1700</p><ul><li>De ratione discenae linuae Latinae et Graecae. Ad demonicum</li><li>Ad veram sapientiam introductio</li><li>Isokratous pros Demonikou parainesis, logos proton Isocratis ad Demonicum admoni</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1489
+      },
+      "end_date": {
+        "year": 1691
+      },
+      "text": {
+        "headline": "Manuzio, Aldo",
+        "text": "<p><strong>392</strong> Latin editions</p><p>Published 1489-1691</p><ul><li>Orthographiae</li><li>Factorum, et dictorum memorabilium libri novem. Fidelissimis eruditissimorum vir</li><li>Institutionum grammaticarum libri quatuor</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1602
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "Schurzfleisch, Konrad Samuel",
+        "text": "<p><strong>392</strong> Latin editions</p><p>Published 1602-1700</p><ul><li>Auspiciis Rectoris Magnificentissimi, Serenissimi Domini Friderici 08. Principis</li><li>Dissertationem Philologicam, De Literis Ephesiis, Sub Praesidio Conradi Samuelis</li><li>Praeside C. S. Schurzfleischio, Prof. Publ. publice disputabit M. Jo. Andreas Gl</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1606
+      },
+      "end_date": {
+        "year": 1700
+      },
+      "text": {
+        "headline": "M\u00fcller, Peter",
+        "text": "<p><strong>383</strong> Latin editions</p><p>Published 1606-1700</p><ul><li>Disputatio Illustrium Controversiarum Ex I. Civili Et Feudali consignatarum , Qu</li><li>Disputatio Iuridica De Quinque Ordinibus Successionis Legitimae, Seu Quae Ab Int</li><li>Progymnasmatum theologicorum erudit\u00e6 pietatis studiosis juvenibus pr\u00e6lectionum t</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1551
+      },
+      "end_date": {
+        "year": 1698
+      },
+      "text": {
+        "headline": "Muret, Marc-Antoine",
+        "text": "<p><strong>382</strong> Latin editions</p><p>Published 1551-1698</p><ul><li>Ad Pium IV, pontificem maximum oratio, Francisci II Galliae et Scotiae regis nom</li><li>Ethica Nicomachea M. Antonii mvreti I.c. Et civis r. Orationes XXIII. Earum inde</li><li>Orationum M. Antonii Mureti Presbyteri. Volumen alterum Teil: : Correctum, Et No</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1532
+      },
+      "end_date": {
+        "year": 1660
+      },
+      "text": {
+        "headline": "P\u00e9rion, Joachim",
+        "text": "<p><strong>379</strong> Latin editions</p><p>Published 1532-1660</p><ul><li>Institutiones ad chrysaorium</li><li>De animo libri III</li><li>De interpretatione liber, correctus et emendatus, argumentis et annotationibus d</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1472
+      },
+      "end_date": {
+        "year": 1699
+      },
+      "text": {
+        "headline": "Bonaventura, St",
+        "text": "<p><strong>379</strong> Latin editions</p><p>Published 1472-1699</p><ul><li>Incomincia le devote meditatione sopra la passione del nostro Signore Iesu Chris</li><li>Centiloquium, noviter impressum</li><li>Meditationum libellus ac orationum devotarum qui Anthidotarius anime dicitur; et</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1651
+      },
+      "end_date": {
+        "year": 1699
+      },
+      "text": {
+        "headline": "Leusden, Johannes",
+        "text": "<p><strong>379</strong> Latin editions</p><p>Published 1651-1699</p><ul><li>Compendium Gr\u00e6cum Novi Testamenti continens ex 7959. versiculis totius N. Testam</li><li>Compendium Gr\u00e6cum Novi Testamenti, continens, ex 7959. versiculis totius N. Test</li><li>Pauca, & brevia qu\u00e6dam pr\u00e6cepta ad notitiam lingu\u00e6 Hebr\u00e6\u00e6, et Chald\u00e6\u00e6 Veteris T.</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1505
+      },
+      "end_date": {
+        "year": 1639
+      },
+      "text": {
+        "headline": "Vio, Tommaso de",
+        "text": "<p><strong>378</strong> Latin editions</p><p>Published 1505-1639</p><ul><li>in praedicabilia Porphyrii, praedicamenta, & libros posteriorum analyticorum Ari</li><li>Evangelia cum commentariis in quatuor evangelia et Acta apostolorum</li><li>Summa totius theologiae divi Thomae de Aquino angelici et s. ecclesiae doctoris </li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1473
+      },
+      "end_date": {
+        "year": 1620
+      },
+      "text": {
+        "headline": "Tartagni, Alessandro",
+        "text": "<p><strong>375</strong> Latin editions</p><p>Published 1473-1620</p><ul><li>In primam [-secundam] Infortiati partem commentaria. Quibus praeter Alex. Barb. </li><li>Super prima [-secunda] codicis cum apostilis noviter editis</li><li>Repertorium copiosissimum, in omnia Alexandri Tartagni Imol. iurisc. clarissimi </li></ul>"
+      },
+      "group": "Reformation Era"
+    },
+    {
+      "start_date": {
+        "year": 1540
+      },
+      "end_date": {
+        "year": 1697
+      },
+      "text": {
+        "headline": "Ames, William",
+        "text": "<p><strong>375</strong> Latin editions</p><p>Published 1540-1697</p><ul><li>Collegii anti Bellarminiani tom. 4 disp. XL, de meritis</li><li>Collegii anti Bellarminiani disput. XXXIII, quae est secunda de monarchia pontif</li><li>Disceptatio scholastica De circulo pontificio, et eorum omnium [a katal\u0113psia], q</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1467
+      },
+      "end_date": {
+        "year": 1695
+      },
+      "text": {
+        "headline": "Hieronymus, St",
+        "text": "<p><strong>373</strong> Latin editions</p><p>Published 1467-1695</p><ul><li>De ingenuis moribus ac liberalibus studiis  Plutarchus, De liberis educandis  S.</li><li>Illustrium virorum opuscula. De homousio contra Arrium. De spiritu sancto. De an</li><li>Tomus IIII operum, ad fidem vetustissimorum exemplarium, octingentis & amplias s</li></ul>"
+      },
+      "group": "Late Renaissance"
+    },
+    {
+      "start_date": {
+        "year": 1647
+      },
+      "end_date": {
+        "year": 1691
+      },
+      "text": {
+        "headline": "Bechmann, Johann Volkmar",
+        "text": "<p><strong>371</strong> Latin editions</p><p>Published 1647-1691</p><ul><li>Disputatio Inauguralis Iuridica De Concursu Actionum Poenalium [et] realium , Qu</li><li>De concursu actionum poenalium & realium / Erasmus Ungepaur ; Johann Volkmar Bec</li><li>Exercitatio Iuridica XX. De Iure Pignoris , Quam ... Praeside ... Dn. Georg-Adam</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1590
+      },
+      "end_date": {
+        "year": 1695
+      },
+      "text": {
+        "headline": "Bertius, Petrus",
+        "text": "<p><strong>367</strong> Latin editions</p><p>Published 1590-1695</p><ul><li>Oratio in qua suae in Galliam migrationis rationem</li><li>Theses theologicae de baptismo</li><li>Positiones naturales de physic\u00e6 subiecto deque natura. Ad diem [ ].03</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1575
+      },
+      "end_date": {
+        "year": 1699
+      },
+      "text": {
+        "headline": "Meibom, Heinrich",
+        "text": "<p><strong>365</strong> Latin editions</p><p>Published 1575-1699</p><ul><li>Parodia Terentiana de formula concordiae, recens in publicum emissa</li><li>Catalogus ducum Brunsvicensium et Lunaeburgensium, qui diversis in locis episcop</li><li>Commentaria in quatuor institutionum Justiniani imperatoris libros</li></ul>"
+      },
+      "group": "17th Century"
+    },
+    {
+      "start_date": {
+        "year": 1507
+      },
+      "end_date": {
+        "year": 1695
+      },
+      "text": {
+        "headline": "Eck, Johannes",
+        "text": "<p><strong>364</strong> Latin editions</p><p>Published 1507-1695</p><ul><li>Apologia pro princibus catholicis ac aliis ordinibus imperii adversus mucores & </li><li>Audi lector Joannis eckii theologi ingoldstadie\u00f1. Orationes accipe tres non inel</li><li>Enchiridion locorum communium adversus Lutherum et alios hostes ecclesiae. Ex om</li></ul>"
+      },
+      "group": "Late Renaissance"
+    }
+  ]
+}
