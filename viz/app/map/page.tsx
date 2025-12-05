@@ -3,6 +3,14 @@
 import Link from "next/link";
 import { useEffect, useState, useMemo } from "react";
 import Map from "react-map-gl/maplibre";
+
+const InfoIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10"></circle>
+    <line x1="12" y1="16" x2="12" y2="12"></line>
+    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+  </svg>
+);
 import DeckGL from "@deck.gl/react";
 import { ScatterplotLayer } from "@deck.gl/layers";
 import "maplibre-gl/dist/maplibre-gl.css";
@@ -51,6 +59,7 @@ export default function PrintingMap() {
   const [year, setYear] = useState(1470);
   const [isPlaying, setIsPlaying] = useState(false);
   const [speed, setSpeed] = useState(200);
+  const [showInfo, setShowInfo] = useState(false);
 
   // Load data
   useEffect(() => {
@@ -161,15 +170,148 @@ export default function PrintingMap() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <header className="border-b border-slate-800 relative z-10">
-        <div className="max-w-6xl mx-auto px-8 py-4">
-          <Link href="/" className="text-violet-400 hover:underline text-sm">
-            &larr; Back to visualization
-          </Link>
-          <h1 className="text-2xl font-bold mt-2">
-            The Spread of Latin Printing in Europe
-          </h1>
+        <div className="max-w-6xl mx-auto px-8 py-4 flex items-start justify-between">
+          <div>
+            <Link href="/" className="text-violet-400 hover:underline text-sm">
+              &larr; Back to visualization
+            </Link>
+            <h1 className="text-2xl font-bold mt-2">
+              The Spread of Latin Printing in Europe
+            </h1>
+          </div>
+          <button
+            onClick={() => setShowInfo(!showInfo)}
+            className="mt-2 p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
+            title="About this visualization"
+          >
+            <InfoIcon />
+          </button>
         </div>
       </header>
+
+      {/* Info Panel */}
+      {showInfo && (
+        <div className="absolute inset-0 z-50 bg-slate-950/95 overflow-auto">
+          <div className="max-w-3xl mx-auto px-8 py-12">
+            <div className="flex justify-between items-start mb-8">
+              <h2 className="text-3xl font-bold">About This Visualization</h2>
+              <button
+                onClick={() => setShowInfo(false)}
+                className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+
+            <div className="space-y-8 text-slate-300">
+              <section>
+                <h3 className="text-xl font-semibold text-white mb-3">Data Source</h3>
+                <p className="mb-3">
+                  This visualization draws on the{" "}
+                  <a href="https://www.ustc.ac.uk/" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                    Universal Short Title Catalogue (USTC)
+                  </a>
+                  , a comprehensive database of early modern European printing maintained by the University of St Andrews.
+                </p>
+                <p>
+                  We filtered for Latin-language works published between 1450 and 1700, yielding <strong className="text-white">356,989 edition records</strong> across <strong className="text-white">48 European cities</strong>.
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-semibold text-white mb-3">Methodology</h3>
+                <ul className="space-y-3 list-disc list-inside">
+                  <li>
+                    <strong className="text-white">City coordinates</strong>: Publication places were geocoded using standard coordinates for major European cities. Place names were normalized from USTC variants (e.g., &ldquo;Venezia&rdquo; for Venice, &ldquo;K&ouml;ln&rdquo; for Cologne).
+                  </li>
+                  <li>
+                    <strong className="text-white">Dot size</strong>: Represents the <em>cumulative total</em> of Latin works published in that city up to the current year. Uses a square-root scale to prevent dominant cities from overwhelming the map.
+                  </li>
+                  <li>
+                    <strong className="text-white">Dot brightness</strong>: Represents that city&apos;s share of <em>that year&apos;s</em> total output. A bright dot means the city was a major producer that specific year; a dim dot means it was relatively quiet.
+                  </li>
+                  <li>
+                    <strong className="text-white">Year aggregation</strong>: Each record counts as one edition. Works with uncertain dates or ranges are included at their earliest estimated year.
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-semibold text-white mb-3">Historical Accuracy</h3>
+                <p className="mb-3">
+                  The visualization correctly reflects key moments in printing history:
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex gap-3">
+                    <span className="text-violet-400 font-mono w-12">1454</span>
+                    <span>Mainz appears &mdash; Gutenberg&apos;s movable type begins the printing revolution</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-violet-400 font-mono w-12">1469</span>
+                    <span>Venice enters &mdash; soon becomes Europe&apos;s largest printing center</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-violet-400 font-mono w-12">1470</span>
+                    <span>Paris joins &mdash; the Sorbonne establishes the first French press</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-violet-400 font-mono w-12">1520s</span>
+                    <span>Wittenberg surges &mdash; Reformation printing explodes under Luther</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-violet-400 font-mono w-12">1600s</span>
+                    <span>Leiden rises &mdash; Dutch Golden Age scholarship and Elzevier publishing</span>
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-semibold text-white mb-3">Top Publishing Centers (All Time)</h3>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div className="space-y-1">
+                    <div className="flex justify-between"><span>Paris</span><span className="text-violet-400 font-mono">32,272</span></div>
+                    <div className="flex justify-between"><span>Wittenberg</span><span className="text-violet-400 font-mono">24,947</span></div>
+                    <div className="flex justify-between"><span>Venice</span><span className="text-violet-400 font-mono">23,730</span></div>
+                    <div className="flex justify-between"><span>Jena</span><span className="text-violet-400 font-mono">21,008</span></div>
+                    <div className="flex justify-between"><span>Leipzig</span><span className="text-violet-400 font-mono">20,694</span></div>
+                  </div>
+                  <div className="space-y-1">
+                    <div className="flex justify-between"><span>Lyon</span><span className="text-violet-400 font-mono">19,034</span></div>
+                    <div className="flex justify-between"><span>Leiden</span><span className="text-violet-400 font-mono">18,078</span></div>
+                    <div className="flex justify-between"><span>Rome</span><span className="text-violet-400 font-mono">17,192</span></div>
+                    <div className="flex justify-between"><span>Cologne</span><span className="text-violet-400 font-mono">14,341</span></div>
+                    <div className="flex justify-between"><span>Antwerp</span><span className="text-violet-400 font-mono">13,269</span></div>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-semibold text-white mb-3">Limitations</h3>
+                <ul className="space-y-2 text-sm text-slate-400">
+                  <li>&bull; Survival bias: Many editions were lost; extant records favor larger, wealthier centers.</li>
+                  <li>&bull; Cataloging gaps: Some archives are better documented than others.</li>
+                  <li>&bull; Latin only: This map excludes vernacular printing, which would show different patterns.</li>
+                  <li>&bull; Edition vs. copies: Each dot represents unique editions, not total copies printed.</li>
+                </ul>
+              </section>
+
+              <section className="border-t border-slate-800 pt-6 text-sm text-slate-500">
+                <p>
+                  Built with{" "}
+                  <a href="https://deck.gl/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:underline">Deck.gl</a>
+                  {" "}and{" "}
+                  <a href="https://maplibre.org/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:underline">MapLibre</a>
+                  . Base map by{" "}
+                  <a href="https://carto.com/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:underline">CARTO</a>.
+                </p>
+              </section>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Map container */}
       <div className="relative" style={{ height: "calc(100vh - 180px)" }}>
