@@ -2,6 +2,20 @@ import Link from "next/link";
 
 const posts = [
   {
+    slug: "hunting-for-translations",
+    title: "Hunting for Translations: A Day Mapping the Latin-English Landscape",
+    date: "December 5, 2024",
+    excerpt: "How many Latin works have been translated into English? I catalogued 3,232 translation volumes across 45+ sources to find out. The coverage rates surprised me.",
+    tag: "Research Report",
+  },
+  {
+    slug: "esoteric-timeline",
+    title: "A Visual Timeline of Esoteric Publishing (1469-1750)",
+    date: "December 2024",
+    excerpt: "Scroll through three centuries of hermetic, alchemical, and occult publications. From Ficino's Corpus Hermeticum to the Rosicrucian manifestos.",
+    tag: "Visualization",
+  },
+  {
     slug: "death-of-latin",
     title: "The Death of Latin? What 1.6 Million Books Tell Us",
     date: "December 2024",
