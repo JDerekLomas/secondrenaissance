@@ -1234,7 +1234,7 @@
   ],
   "accessibility_funnel": [
     {
-      "stage": "Total Latin Works in USTC",
+      "stage": "Total Latin Editions in USTC",
       "count": 533320,
       "pct": 100
     },
@@ -1244,25 +1244,35 @@
       "pct": 27
     },
     {
-      "stage": "Translated to English",
-      "count": 1000,
-      "pct": 0.2
+      "stage": "English Translations Available",
+      "count": 2000,
+      "pct": 0.4
     }
   ],
   "digitization": {
-    "total_latin_works": 533320,
+    "total_latin_editions": 533320,
     "ustc_digital_links_all": 450000,
     "ustc_digitization_rate": 27,
     "estimated_latin_digitized": 145000,
-    "translation_series_count": 1000,
-    "translation_rate_pct": 0.19,
+    "translation_count_estimate": "1500-2000",
+    "translation_rate_of_editions": 0.3,
     "sources": {
       "ustc": "USTC About page: 450,000 editions with digital links out of 1.65M total (27%)",
+      "perseus": "Perseus Digital Library: 631 Latin works (Scaife Viewer)",
       "itatti": "I Tatti Renaissance Library: 100 volumes (March 2025)",
-      "loeb_latin": "Loeb Classical Library Latin volumes: ~158",
+      "loeb_latin": "Loeb Classical Library Latin: ~158 volumes",
+      "aris_phillips": "Aris & Phillips Classical Texts: 170+ volumes (~80 Latin)",
+      "penguin_latin": "Penguin Classics Latin: 114 volumes",
+      "oxford_medieval": "Oxford Medieval Texts: 103 volumes",
       "doml": "Dumbarton Oaks Medieval Library Latin: ~50 volumes",
-      "other_estimate": "Other academic presses: ~700 (conservative estimate)"
-    }
+      "toronto_medieval": "Toronto Medieval Latin Texts: 37 volumes",
+      "liverpool_tth": "Liverpool Translated Texts for Historians: 86 volumes (~50 Latin)",
+      "fathers_church": "Fathers of the Church (CUA): 147 volumes (~80 Latin)",
+      "ancient_christian": "Ancient Christian Writers (Paulist): 76 volumes (~40 Latin)",
+      "anf_npnf": "Ante-Nicene/Nicene Post-Nicene Fathers: 38 volumes",
+      "classics_spirituality": "Classics of Western Spirituality: 130+ volumes (~40 Latin)"
+    },
+    "note": "USTC counts editions (printings), not unique works. A popular work may have 100+ editions. Unique Latin works estimated at 50,000-100,000, meaning translation coverage of unique works could be 2-4%."
   },
   "top_places": [
     {
@@ -1410,6 +1420,6 @@
   ],
   "key_insight": {
     "title": "The Hidden Renaissance",
-    "message": "Of 533,320 Latin works printed 1450-1700, only ~1,000 (0.2%) have English translations. 99.8% of Renaissance Latin thought remains inaccessible to English readers."
+    "message": "Of 533,320 Latin editions printed 1450-1700, only ~1,500-2,000 unique works have English translations. The vast majority of Renaissance Latin thought remains inaccessible to English readers."
   }
 }

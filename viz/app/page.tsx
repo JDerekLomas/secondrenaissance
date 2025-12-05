@@ -83,7 +83,7 @@ export default function Home() {
           </p>
           <div className="inline-block bg-red-500/20 border border-red-500/50 rounded-lg px-6 py-4">
             <p className="text-lg text-red-300">
-              <span className="font-bold text-2xl text-red-400">99.8%</span> have never been translated to English
+              Only <span className="font-bold text-2xl text-red-400">~2,000</span> have English translations
             </p>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function Home() {
           </div>
           <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 text-center">
             <div className="text-3xl md:text-4xl font-bold text-red-400">
-              ~1K
+              ~2K
             </div>
             <div className="text-slate-400 mt-2">English Translations</div>
           </div>

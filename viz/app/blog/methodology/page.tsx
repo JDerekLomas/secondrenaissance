@@ -49,6 +49,13 @@ export default function Methodology() {
             <p className="text-slate-300 mb-4">
               We queried the USTC for records where the language field contains &ldquo;Latin,&rdquo; yielding <strong className="text-white">533,320 Latin-language edition records</strong> (32.7% of the total catalogue).
             </p>
+
+            <div className="bg-amber-900/20 border border-amber-700/50 rounded-lg p-4 my-6">
+              <h4 className="text-amber-400 font-semibold mb-2">Editions vs. Works</h4>
+              <p className="text-slate-300 text-sm">
+                The USTC counts <em>editions</em>, not unique works. A popular text like Cicero&apos;s <em>De Officiis</em> might appear in 200+ editions. The actual number of unique Latin works is significantly smaller than 533,320, but still numbers in the tens of thousands.
+              </p>
+            </div>
           </section>
 
           <section className="mb-12">
@@ -82,11 +89,236 @@ export default function Methodology() {
                 {" "}&mdash; 3.8+ million scanned books
               </li>
             </ul>
+          </section>
 
-            <div className="bg-amber-900/20 border border-amber-700/50 rounded-lg p-4 my-6">
-              <h4 className="text-amber-400 font-semibold mb-2">Important Caveat</h4>
-              <p className="text-slate-300 text-sm">
-                We do not have Latin-specific digitization rates. The 27% figure applies to all USTC editions across all languages. Latin works may have higher or lower digitization rates depending on institutional priorities.
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold text-white mb-4">English Translation Data</h2>
+
+            <p className="text-slate-300 mb-4">
+              We compiled counts from major Latin-English scholarly translation series and digital libraries:
+            </p>
+
+            <h3 className="text-xl font-medium text-violet-400 mt-6 mb-3">Digital Libraries</h3>
+            <div className="bg-slate-900 border border-slate-700 rounded-lg p-4 my-6">
+              <table className="w-full text-sm">
+                <tbody className="text-slate-300">
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">
+                      <a href="https://www.perseus.tufts.edu/hopper/" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                        Perseus Digital Library
+                      </a>
+                    </td>
+                    <td className="py-2 font-mono">631</td>
+                    <td className="py-2 text-slate-500">Latin works with translations (Scaife Viewer)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="text-xl font-medium text-violet-400 mt-6 mb-3">Renaissance &amp; Neo-Latin</h3>
+            <div className="bg-slate-900 border border-slate-700 rounded-lg p-4 my-6">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="text-left text-slate-400 border-b border-slate-700">
+                    <th className="pb-2">Series</th>
+                    <th className="pb-2">Vols</th>
+                    <th className="pb-2">Notes</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-300">
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">
+                      <a href="https://www.hup.harvard.edu/series/the-i-tatti-renaissance-library" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                        I Tatti Renaissance Library
+                      </a>
+                    </td>
+                    <td className="py-2 font-mono">100</td>
+                    <td className="py-2 text-slate-500">Italian Renaissance Latin (2001&ndash;)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="text-xl font-medium text-violet-400 mt-6 mb-3">Classical Latin</h3>
+            <div className="bg-slate-900 border border-slate-700 rounded-lg p-4 my-6">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="text-left text-slate-400 border-b border-slate-700">
+                    <th className="pb-2">Series</th>
+                    <th className="pb-2">Vols</th>
+                    <th className="pb-2">Notes</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-300">
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">
+                      <a href="https://www.loebclassics.com/" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                        Loeb Classical Library (Latin)
+                      </a>
+                    </td>
+                    <td className="py-2 font-mono">~158</td>
+                    <td className="py-2 text-slate-500">520+ total (Greek &amp; Latin), 1912&ndash;</td>
+                  </tr>
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">
+                      <a href="https://www.liverpooluniversitypress.co.uk/topic/book-series/aris-and-phillips-classical-texts" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                        Aris &amp; Phillips Classical Texts
+                      </a>
+                    </td>
+                    <td className="py-2 font-mono">170+</td>
+                    <td className="py-2 text-slate-500">Greek &amp; Latin, 1979&ndash; (~80 Latin)</td>
+                  </tr>
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">
+                      <a href="https://www.penguin.co.uk/penguin-classics/classics-list" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                        Penguin Classics (Latin)
+                      </a>
+                    </td>
+                    <td className="py-2 font-mono">114</td>
+                    <td className="py-2 text-slate-500">Latin language filter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="text-xl font-medium text-violet-400 mt-6 mb-3">Medieval Latin</h3>
+            <div className="bg-slate-900 border border-slate-700 rounded-lg p-4 my-6">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="text-left text-slate-400 border-b border-slate-700">
+                    <th className="pb-2">Series</th>
+                    <th className="pb-2">Vols</th>
+                    <th className="pb-2">Notes</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-300">
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">
+                      <a href="https://global.oup.com/academic/content/series/o/oxford-medieval-texts-omt/" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                        Oxford Medieval Texts
+                      </a>
+                    </td>
+                    <td className="py-2 font-mono">103</td>
+                    <td className="py-2 text-slate-500">Facing-page translations, 1967&ndash;</td>
+                  </tr>
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">
+                      <a href="https://domedieval.org/" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                        Dumbarton Oaks Medieval Library
+                      </a>
+                    </td>
+                    <td className="py-2 font-mono">~50</td>
+                    <td className="py-2 text-slate-500">Latin subseries, 2010&ndash;</td>
+                  </tr>
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">
+                      <a href="https://www.medieval.utoronto.ca/research/research-cms/publication-series/toronto-medieval-latin-texts" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                        Toronto Medieval Latin Texts
+                      </a>
+                    </td>
+                    <td className="py-2 font-mono">37</td>
+                    <td className="py-2 text-slate-500">Pedagogical editions, 1972&ndash;</td>
+                  </tr>
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">
+                      <a href="https://www.liverpooluniversitypress.co.uk/topic/book-series/translated-texts-for-historians" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                        Liverpool Translated Texts for Historians
+                      </a>
+                    </td>
+                    <td className="py-2 font-mono">86</td>
+                    <td className="py-2 text-slate-500">Late Antique/Medieval, includes Greek (~50 Latin)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="text-xl font-medium text-violet-400 mt-6 mb-3">Patristic &amp; Church Fathers</h3>
+            <div className="bg-slate-900 border border-slate-700 rounded-lg p-4 my-6">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="text-left text-slate-400 border-b border-slate-700">
+                    <th className="pb-2">Series</th>
+                    <th className="pb-2">Vols</th>
+                    <th className="pb-2">Notes</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-300">
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">
+                      <a href="https://www.cuapress.org/series/" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                        Fathers of the Church (CUA)
+                      </a>
+                    </td>
+                    <td className="py-2 font-mono">147</td>
+                    <td className="py-2 text-slate-500">Latin &amp; Greek, 1947&ndash; (~80 Latin)</td>
+                  </tr>
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">
+                      <a href="https://www.paulistpress.com/Products/CategoryCenter/PTRL!ACHW/ancient-christian-writers-series.aspx" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                        Ancient Christian Writers (Paulist)
+                      </a>
+                    </td>
+                    <td className="py-2 font-mono">76</td>
+                    <td className="py-2 text-slate-500">Latin &amp; Greek, 1946&ndash; (~40 Latin)</td>
+                  </tr>
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">
+                      <a href="https://ccel.org/fathers" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                        Ante-Nicene/Nicene Post-Nicene Fathers
+                      </a>
+                    </td>
+                    <td className="py-2 font-mono">38</td>
+                    <td className="py-2 text-slate-500">Public domain, 1885&ndash;1900</td>
+                  </tr>
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">
+                      <a href="https://www.paulistpress.com/Products/CategoryCenter/COWS/all-titles.aspx" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                        Classics of Western Spirituality
+                      </a>
+                    </td>
+                    <td className="py-2 font-mono">130+</td>
+                    <td className="py-2 text-slate-500">Mixed languages, 1978&ndash; (~40 Latin)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="text-xl font-medium text-violet-400 mt-6 mb-3">Total Estimate</h3>
+            <div className="bg-slate-900 border border-slate-700 rounded-lg p-4 my-6">
+              <table className="w-full text-sm">
+                <tbody className="text-slate-300">
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">Named series above (Latin-specific)</td>
+                    <td className="py-2 font-mono text-right">~1,000</td>
+                  </tr>
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">Perseus Digital Library (unique works)</td>
+                    <td className="py-2 font-mono text-right">~400</td>
+                  </tr>
+                  <tr className="border-b border-slate-800">
+                    <td className="py-2">Other academic presses, dissertations, journals</td>
+                    <td className="py-2 font-mono text-right">~500</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr className="border-t border-slate-600 font-semibold">
+                    <td className="pt-3 text-white">Conservative Total</td>
+                    <td className="pt-3 font-mono text-white text-right">~1,500&ndash;2,000</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+
+            <div className="bg-emerald-900/20 border border-emerald-700/50 rounded-lg p-4 my-6">
+              <h4 className="text-emerald-400 font-semibold mb-2">The Translation Gap</h4>
+              <p className="text-slate-300 text-sm mb-2">
+                With approximately <strong>1,500&ndash;2,000</strong> Latin works translated into English out of <strong>533,320</strong> Latin editions in the USTC:
+              </p>
+              <p className="text-2xl font-bold text-emerald-400">
+                ~0.3% of USTC Latin editions have English translations
+              </p>
+              <p className="text-slate-400 text-sm mt-3">
+                <strong>Important caveat:</strong> The USTC counts <em>editions</em> (printings), not unique works. A single work like Erasmus&apos;s <em>Adagia</em> may have 100+ editions. The number of unique Latin <em>works</em> is perhaps 50,000&ndash;100,000, meaning translation coverage of unique works could be 2&ndash;4%. Still, the vast majority of Renaissance Latin literature remains untranslated.
               </p>
             </div>
           </section>
@@ -159,81 +391,6 @@ export default function Methodology() {
           </section>
 
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold text-white mb-4">English Translation Data</h2>
-
-            <p className="text-slate-300 mb-4">
-              We compiled counts from the major Latin-English scholarly translation series:
-            </p>
-
-            <div className="bg-slate-900 border border-slate-700 rounded-lg p-4 my-6">
-              <h4 className="text-white font-semibold mb-3">Latin-English Translation Series</h4>
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="text-left text-slate-400 border-b border-slate-700">
-                    <th className="pb-2">Series</th>
-                    <th className="pb-2">Volumes</th>
-                    <th className="pb-2">Focus</th>
-                  </tr>
-                </thead>
-                <tbody className="text-slate-300">
-                  <tr className="border-b border-slate-800">
-                    <td className="py-2">
-                      <a href="https://www.hup.harvard.edu/series/the-i-tatti-renaissance-library" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
-                        I Tatti Renaissance Library
-                      </a>
-                    </td>
-                    <td className="py-2 font-mono">100</td>
-                    <td className="py-2 text-slate-500">Italian Renaissance Latin (2001&ndash;present)</td>
-                  </tr>
-                  <tr className="border-b border-slate-800">
-                    <td className="py-2">
-                      <a href="https://www.loebclassics.com/" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
-                        Loeb Classical Library (Latin)
-                      </a>
-                    </td>
-                    <td className="py-2 font-mono">~158</td>
-                    <td className="py-2 text-slate-500">Classical Latin (1912&ndash;present)</td>
-                  </tr>
-                  <tr className="border-b border-slate-800">
-                    <td className="py-2">
-                      <a href="https://domedieval.org/" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
-                        Dumbarton Oaks Medieval Library
-                      </a>
-                    </td>
-                    <td className="py-2 font-mono">~50</td>
-                    <td className="py-2 text-slate-500">Medieval Latin (2010&ndash;present)</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2 text-slate-400">Other academic presses (est.)</td>
-                    <td className="py-2 font-mono text-slate-400">~700</td>
-                    <td className="py-2 text-slate-500">Various (scattered publications)</td>
-                  </tr>
-                </tbody>
-                <tfoot>
-                  <tr className="border-t border-slate-600 font-semibold">
-                    <td className="pt-3 text-white">Total</td>
-                    <td className="pt-3 font-mono text-white">~1,000</td>
-                    <td></td>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-
-            <div className="bg-red-900/20 border border-red-700/50 rounded-lg p-4 my-6">
-              <h4 className="text-red-400 font-semibold mb-2">The Translation Gap</h4>
-              <p className="text-slate-300 text-sm mb-2">
-                With approximately <strong>1,000</strong> Latin works translated into English out of <strong>533,320</strong> Latin editions in the USTC:
-              </p>
-              <p className="text-2xl font-bold text-red-400">
-                Only 0.19% of Renaissance Latin has English translations
-              </p>
-              <p className="text-slate-400 text-sm mt-2">
-                This is a conservative estimate. Many of these translations cover classical authors (Cicero, Virgil) rather than Renaissance or early modern Latin works.
-              </p>
-            </div>
-          </section>
-
-          <section className="mb-12">
             <h2 className="text-2xl font-semibold text-white mb-4">Summary of Key Findings</h2>
 
             <div className="overflow-x-auto">
@@ -257,37 +414,23 @@ export default function Methodology() {
                     <td className="p-3 text-slate-500">USTC website</td>
                   </tr>
                   <tr className="border-t border-slate-700">
-                    <td className="p-3">High-quality transcriptions (English only)</td>
+                    <td className="p-3">High-quality transcriptions (English texts only)</td>
                     <td className="p-3 font-mono">~60,000</td>
                     <td className="p-3 text-slate-500">EEBO-TCP</td>
                   </tr>
                   <tr className="border-t border-slate-700 bg-slate-900/50">
                     <td className="p-3">Latin works with English translations</td>
-                    <td className="p-3 font-mono">~1,000 (0.19%)</td>
+                    <td className="p-3 font-mono">~1,500&ndash;2,000</td>
                     <td className="p-3 text-slate-500">Series counts</td>
+                  </tr>
+                  <tr className="border-t border-slate-700">
+                    <td className="p-3">Translation coverage (of editions)</td>
+                    <td className="p-3 font-mono">~0.3%</td>
+                    <td className="p-3 text-slate-500">Calculated</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold text-white mb-4">What We Don&apos;t Know</h2>
-
-            <ul className="list-disc list-inside text-slate-300 space-y-3">
-              <li>
-                <strong className="text-white">Latin-specific digitization rate</strong>: We assume Latin has roughly the same ~27% digitization rate as the USTC average, but this is unverified.
-              </li>
-              <li>
-                <strong className="text-white">OCR coverage for Latin</strong>: No systematic count exists of Latin early modern works with searchable OCR.
-              </li>
-              <li>
-                <strong className="text-white">Translations into other languages</strong>: German, French, Italian, and other translations are not counted here.
-              </li>
-              <li>
-                <strong className="text-white">Open access vs. paywalled</strong>: Some digitized works are behind institutional paywalls.
-              </li>
-            </ul>
           </section>
 
           <section className="mb-12 border-t border-slate-800 pt-8">
@@ -302,6 +445,13 @@ export default function Methodology() {
                 . University of St Andrews.
               </li>
               <li>
+                Perseus Digital Library.{" "}
+                <a href="https://scaife.perseus.org/" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                  Scaife Viewer
+                </a>
+                . Tufts University. 631 Latin works.
+              </li>
+              <li>
                 Text Creation Partnership.{" "}
                 <a href="https://textcreationpartnership.org/tcp-texts/eebo-tcp-early-english-books-online/" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
                   EEBO-TCP
@@ -309,23 +459,9 @@ export default function Methodology() {
                 . University of Michigan / ProQuest.
               </li>
               <li>
-                HathiTrust Digital Library.{" "}
-                <a href="https://www.hathitrust.org/the-collection/" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
-                  The Collection
-                </a>
-                .
-              </li>
-              <li>
                 Springmann, U. &amp; L&uuml;deling, A. (2017). &ldquo;OCR of historical printings with an application to building diachronic corpora.&rdquo;{" "}
                 <a href="https://www.digitalhumanities.org/dhq/vol/11/2/000288/000288.html" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
                   Digital Humanities Quarterly 11(2)
-                </a>
-                .
-              </li>
-              <li>
-                Reul, C. et al. (2017). &ldquo;Improving OCR Accuracy on Early Printed Books by utilizing Cross Fold Training and Voting.&rdquo;{" "}
-                <a href="https://arxiv.org/abs/1711.09670" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
-                  arXiv:1711.09670
                 </a>
                 .
               </li>
@@ -344,11 +480,25 @@ export default function Methodology() {
                 . ~520 volumes total (Greek and Latin).
               </li>
               <li>
-                Dumbarton Oaks Medieval Library.{" "}
-                <a href="https://domedieval.org/" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
-                  Harvard University Press
+                Oxford Medieval Texts.{" "}
+                <a href="https://global.oup.com/academic/content/series/o/oxford-medieval-texts-omt/" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                  Oxford University Press
                 </a>
-                . 50+ Latin volumes.
+                . 103 volumes.
+              </li>
+              <li>
+                Fathers of the Church.{" "}
+                <a href="https://www.cuapress.org/series/" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                  Catholic University of America Press
+                </a>
+                . 147 volumes.
+              </li>
+              <li>
+                Aris &amp; Phillips Classical Texts.{" "}
+                <a href="https://www.liverpooluniversitypress.co.uk/topic/book-series/aris-and-phillips-classical-texts" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">
+                  Liverpool University Press
+                </a>
+                . 170+ volumes.
               </li>
             </ul>
           </section>
