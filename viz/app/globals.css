@@ -2,26 +2,170 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --cream: #f5f0e6;
+  --cream-dark: #e8e0d0;
+  --parchment: #faf6ed;
+  --ink: #2c2416;
+  --ink-light: #4a3f2f;
+  --ink-faded: #6b5d4d;
+  --accent: #8b4513;
+  --accent-dark: #6b3410;
+  --gold: #b8860b;
+  --gold-light: #daa520;
+  --border: #d4c9b5;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: 'EB Garamond', 'Georgia', serif;
+  line-height: 1.7;
+}
+
+/* Parchment texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  z-index: 1000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+
+/* Override slate colors with our theme */
+.bg-slate-950 { background-color: var(--ink) !important; }
+.bg-slate-900 { background-color: var(--cream-dark) !important; }
+.bg-slate-900\/50 { background-color: rgba(232, 224, 208, 0.5) !important; }
+.bg-slate-800 { background-color: var(--border) !important; }
+.bg-slate-800\/50 { background-color: rgba(212, 201, 181, 0.5) !important; }
+.bg-slate-700 { background-color: var(--border) !important; }
+
+.text-white { color: var(--ink) !important; }
+.text-slate-300 { color: var(--ink-light) !important; }
+.text-slate-400 { color: var(--ink-faded) !important; }
+.text-slate-500 { color: var(--ink-faded) !important; }
+
+.text-violet-400 { color: var(--accent) !important; }
+.text-violet-300 { color: var(--accent) !important; }
+.bg-violet-500\/20 { background-color: rgba(139, 69, 19, 0.15) !important; }
+.bg-violet-500\/30 { background-color: rgba(139, 69, 19, 0.2) !important; }
+.hover\:text-violet-400:hover { color: var(--accent-dark) !important; }
+.border-violet-500\/50 { border-color: rgba(139, 69, 19, 0.5) !important; }
+.border-violet-500\/30 { border-color: rgba(139, 69, 19, 0.3) !important; }
+
+.text-cyan-400 { color: var(--accent-dark) !important; }
+.text-emerald-400 { color: #2d5a27 !important; }
+.text-amber-400 { color: var(--gold) !important; }
+.text-red-400 { color: #8b2500 !important; }
+.text-orange-400 { color: #a0522d !important; }
+
+.bg-cyan-600 { background-color: var(--accent) !important; }
+.bg-emerald-600 { background-color: #2d5a27 !important; }
+.bg-amber-600 { background-color: var(--gold) !important; }
+.bg-violet-600 { background-color: var(--accent) !important; }
+
+.border-slate-800 { border-color: var(--border) !important; }
+.border-slate-700 { border-color: var(--border) !important; }
+.border-slate-600 { border-color: var(--border) !important; }
+.divide-slate-700 > :not([hidden]) ~ :not([hidden]) { border-color: var(--border) !important; }
+
+/* Main content areas */
+.min-h-screen.bg-slate-950 {
+  background: linear-gradient(180deg, var(--parchment) 0%, var(--cream) 100%) !important;
+}
+
+/* Cards and boxes */
+.rounded-xl, .rounded-lg {
+  box-shadow: 0 1px 3px rgba(44, 36, 22, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration-color: var(--gold-light);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+/* Code blocks */
+code {
+  font-family: 'Courier New', monospace;
+  background: var(--cream-dark);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: var(--accent-dark);
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+}
+
+th {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  letter-spacing: 0.05em;
+}
+
+/* Decorative elements */
+.prose h2::before {
+  content: '§ ';
+  color: var(--gold);
+  font-weight: normal;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-faded);
+}
+
+/* Selection */
+::selection {
+  background: rgba(184, 134, 11, 0.3);
+  color: var(--ink);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Font mono override */
+.font-mono {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--accent-dark);
 }
