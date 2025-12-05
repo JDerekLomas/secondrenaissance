@@ -24,10 +24,13 @@ export default function Home() {
               Data
             </Link>
             <Link href="/blog" className="text-[#6b5f52] hover:text-[#1a1612] transition-colors">
-              Research
+              Blog
             </Link>
             <Link href="/roadmap" className="text-[#6b5f52] hover:text-[#1a1612] transition-colors">
               Roadmap
+            </Link>
+            <Link href="/blog/methodology" className="text-[#6b5f52] hover:text-[#1a1612] transition-colors">
+              Methods
             </Link>
             <a href="https://github.com/JDerekLomas/ancient-wisdom-research-labs" className="text-[#6b5f52] hover:text-[#1a1612] transition-colors">
               GitHub

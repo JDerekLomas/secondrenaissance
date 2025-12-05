@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Latin Master Bibliography - 533K Latin Works (1450-1700)",
-  description: "Interactive visualization of 533,168 Latin printed works from the Universal Short Title Catalogue (USTC)",
+  title: "Ancient Wisdom Research Labs - Mapping Hidden Libraries",
+  description: "500,000 Latin works from 1450-1700 remain untranslated. We're mapping the hidden libraries of Western esotericism.",
 };
 
 export default function RootLayout({
@@ -25,8 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#faf7f2] text-[#1a1612]`}
       >
         {children}
       </body>
