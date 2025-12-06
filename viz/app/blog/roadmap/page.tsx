@@ -661,8 +661,8 @@ export default function RoadmapPage() {
     <div style={{ minHeight: '100vh', background: '#fdfcf9', color: '#1a1612' }}>
       <header style={{ borderBottom: '1px solid #e8e4dc' }}>
         <div style={{ maxWidth: '1152px', margin: '0 auto', padding: '24px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Link href="/" style={{ color: '#9e4a3a', textDecoration: 'none', fontSize: '12px', letterSpacing: '0.05em', fontFamily: 'Inter, sans-serif', fontWeight: 500 }}>
-            &larr; ANCIENT WISDOM RESEARCH
+          <Link href="/blog" style={{ color: '#9e4a3a', textDecoration: 'none', fontSize: '12px', letterSpacing: '0.05em', fontFamily: 'Inter, sans-serif', fontWeight: 500 }}>
+            &larr; RESEARCH ESSAYS
           </Link>
           <a
             href="https://www.ancientwisdomtrust.org/become-a-patron"

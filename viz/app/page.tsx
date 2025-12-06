@@ -53,7 +53,6 @@ export default function Home() {
           <div style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
             <Link href="/data" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>Data</Link>
             <Link href="/blog" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>Essays</Link>
-            <Link href="/roadmap" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>Roadmap</Link>
             <Link href="/about" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>About</Link>
             <a
               href="https://www.ancientwisdomtrust.org/become-a-patron"
@@ -594,7 +593,7 @@ export default function Home() {
             transform access to Renaissance thought within a decade.
           </p>
 
-          <Link href="/roadmap" style={{
+          <Link href="/blog/roadmap" style={{
             fontFamily: 'Inter, sans-serif',
             fontSize: '14px',
             color: '#9e4a3a',
@@ -680,7 +679,7 @@ export default function Home() {
             borderTop: '1px solid rgba(255,255,255,0.1)',
           }}>
             <Link href="/explore" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Explore the Data</Link>
-            <Link href="/roadmap" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Translation Roadmap</Link>
+            <Link href="/blog/roadmap" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Translation Roadmap</Link>
             <Link href="/blog" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Research Essays</Link>
             <Link href="/about" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>About</Link>
           </div>

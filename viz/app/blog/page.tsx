@@ -16,6 +16,13 @@ const pinnedPosts = [
     excerpt: "German overtook Latin in the 1670s. We analyzed the complete USTC database to pinpoint exactly when Europe's lingua franca lost its dominance.",
     tag: "Data",
   },
+  {
+    slug: "roadmap",
+    title: "Translation Roadmap: Prioritizing 500,000 Works",
+    date: "December 2025",
+    excerpt: "A systematic approach to translation priorities. We score works by historical impact, translation gap, feasibility, and audience to identify what to translate first.",
+    tag: "Mission",
+  },
 ];
 
 // All posts in reverse chronological order (newest first)
