@@ -7,14 +7,14 @@ const forgottenAuthors = [
   { name: "Giambattista della Porta", editions: 156, field: "Natural magic, optics, cryptography", translated: 0 },
 ];
 
-// Subject breakdown
+// Subject breakdown - ordered by interest/accessibility, not size
 const subjects = [
-  { name: "Theology", count: 127000, pct: 25.2, translated: "< 1%" },
-  { name: "Law", count: 68000, pct: 13.5, translated: "< 1%" },
   { name: "Philosophy", count: 42000, pct: 8.3, translated: "~3%" },
-  { name: "Medicine", count: 38000, pct: 7.5, translated: "< 1%" },
   { name: "Natural Philosophy", count: 31000, pct: 6.2, translated: "~2%" },
+  { name: "Medicine", count: 38000, pct: 7.5, translated: "< 1%" },
   { name: "Poetry & Literature", count: 28000, pct: 5.6, translated: "~5%" },
+  { name: "Law", count: 68000, pct: 13.5, translated: "< 1%" },
+  { name: "History", count: 24000, pct: 4.8, translated: "~4%" },
 ];
 
 export default function Home() {
@@ -51,9 +51,9 @@ export default function Home() {
             SECOND RENAISSANCE RESEARCH
           </Link>
           <div style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
-            <Link href="/explore" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>Explore</Link>
-            <Link href="/roadmap" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>Roadmap</Link>
+            <Link href="/data" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>Data</Link>
             <Link href="/blog" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>Essays</Link>
+            <Link href="/roadmap" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>Roadmap</Link>
             <Link href="/about" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>About</Link>
             <a
               href="https://www.ancientwisdomtrust.org/become-a-patron"

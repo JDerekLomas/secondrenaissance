@@ -1,48 +1,7 @@
 import Link from "next/link";
 
-const posts = [
-  {
-    slug: "hunting-for-translations",
-    title: "Hunting for Translations: A Day Mapping the Latin-English Landscape",
-    date: "December 2025",
-    excerpt: "How many Latin works have been translated into English? I catalogued 3,232 translation volumes across 45+ sources to find out. The coverage rates surprised me.",
-    tag: "Research",
-  },
-  {
-    slug: "esoteric-timeline",
-    title: "A Visual Timeline of Esoteric Publishing (1469-1750)",
-    date: "December 2025",
-    excerpt: "Scroll through three centuries of hermetic, alchemical, and occult publications. From Ficino's Corpus Hermeticum to the Rosicrucian manifestos.",
-    tag: "Visualization",
-  },
-  {
-    slug: "death-of-latin",
-    title: "The Death of Latin? What 1.6 Million Books Tell Us",
-    date: "December 2025",
-    excerpt: "German overtook Latin in the 1670s. We analyzed the complete USTC database to pinpoint exactly when Europe's lingua franca lost its dominance.",
-    tag: "Data",
-  },
-  {
-    slug: "mapping-translations",
-    title: "Mapping the Translation Landscape: A Research Diary",
-    date: "December 2025",
-    excerpt: "How do you count something that's never been counted? Building a comprehensive database of Latin-to-English translations—and discovering how much we don't know.",
-    tag: "Methods",
-  },
-  {
-    slug: "methodology",
-    title: "Methodology: How We Estimated Digitization Rates",
-    date: "December 2025",
-    excerpt: "Documenting the sources and methods behind our accessibility estimates. How we derived the 18% digitized, 8% OCR, and 3% translated figures.",
-    tag: "Methods",
-  },
-  {
-    slug: "rivers-of-esoteric-life",
-    title: "Rivers of Esoteric Life: Mapping the Hermetic Tradition",
-    date: "December 2025",
-    excerpt: "Applying Forlong's 'Rivers of Life' methodology to trace how Hermetica, alchemy, Kabbalah, and Rosicrucianism flowed through Renaissance publishing. Draft for discussion.",
-    tag: "Draft",
-  },
+// Pinned posts - featured at the top
+const pinnedPosts = [
   {
     slug: "why-latin-matters",
     title: "Why Latin Matters: 500,000 Unread Books",
@@ -51,17 +10,35 @@ const posts = [
     tag: "Mission",
   },
   {
-    slug: "forgotten-authors",
-    title: "The Forgotten Giants: Prolific Authors You've Never Heard Of",
+    slug: "death-of-latin",
+    title: "The Death of Latin? What 1.6 Million Books Tell Us",
     date: "December 2025",
-    excerpt: "Jakob Martini wrote 836 works. Johann Gerhard wrote 697. You've never read a word they wrote—because almost none of it has been translated.",
+    excerpt: "German overtook Latin in the 1670s. We analyzed the complete USTC database to pinpoint exactly when Europe's lingua franca lost its dominance.",
+    tag: "Data",
+  },
+];
+
+// All posts in reverse chronological order (newest first)
+const posts = [
+  {
+    slug: "lost-books",
+    title: "The Dark Matter of Book History: How Many Latin Works Are Lost Forever?",
+    date: "December 2025",
+    excerpt: "We count 500,000 surviving Latin works. But estimates suggest 25-80% of editions were lost entirely. What does this mean for our understanding of the Renaissance?",
     tag: "Research",
   },
   {
-    slug: "forgotten-1400s",
-    title: "The Forgotten Quattrocento: Thinkers of the 1400s You Can't Read",
+    slug: "theology-problem",
+    title: "The Elephant in the Room: 114,000 Latin Theological Works",
     date: "December 2025",
-    excerpt: "Giorgio Valla, Giovanni Pontano, Paul of Venice. The 15th century gave us the Renaissance—and hundreds of Latin thinkers whose works remain untranslated.",
+    excerpt: "Theology is the largest category in the Latin corpus—and the most misunderstood. Why we don't lead with it, and why it still matters.",
+    tag: "Research",
+  },
+  {
+    slug: "forgotten-1600s",
+    title: "The Forgotten Seicento: Thinkers of the 1600s You Can't Read",
+    date: "December 2025",
+    excerpt: "Kircher, Sennert, Weyer, Liceti. 324,690 Latin works from the Scientific Revolution—and the scholars behind them who remain untranslated.",
     tag: "Research",
   },
   {
@@ -72,10 +49,38 @@ const posts = [
     tag: "Research",
   },
   {
-    slug: "forgotten-1600s",
-    title: "The Forgotten Seicento: Thinkers of the 1600s You Can't Read",
+    slug: "forgotten-1400s",
+    title: "The Forgotten Quattrocento: Thinkers of the 1400s You Can't Read",
     date: "December 2025",
-    excerpt: "Kircher, Sennert, Weyer, Liceti. 324,690 Latin works from the Scientific Revolution—and the scholars behind them who remain untranslated.",
+    excerpt: "Giorgio Valla, Giovanni Pontano, Paul of Venice. The 15th century gave us the Renaissance—and hundreds of Latin thinkers whose works remain untranslated.",
+    tag: "Research",
+  },
+  {
+    slug: "forgotten-authors",
+    title: "The Forgotten Giants: Prolific Authors You've Never Heard Of",
+    date: "December 2025",
+    excerpt: "Jakob Martini wrote 836 works. Johann Gerhard wrote 697. You've never read a word they wrote—because almost none of it has been translated.",
+    tag: "Research",
+  },
+  {
+    slug: "hunting-for-translations",
+    title: "Hunting for Translations: A Day Mapping the Latin-English Landscape",
+    date: "December 2025",
+    excerpt: "How many Latin works have been translated into English? I catalogued 3,232 translation volumes across 45+ sources to find out. The coverage rates surprised me.",
+    tag: "Research",
+  },
+  {
+    slug: "mapping-translations",
+    title: "Mapping the Translation Landscape: A Research Diary",
+    date: "December 2025",
+    excerpt: "How do you count something that's never been counted? Building a comprehensive database of Latin-to-English translations—and discovering how much we don't know.",
+    tag: "Methods",
+  },
+  {
+    slug: "famous-humanists",
+    title: "Even Ficino Isn't Fully Translated",
+    date: "December 2025",
+    excerpt: "You'd think the famous Renaissance humanists would be fully available. They're not. Ficino, Pico, Valla—vast bodies of work remain untranslated.",
     tag: "Research",
   },
   {
@@ -93,11 +98,18 @@ const posts = [
     tag: "Data",
   },
   {
-    slug: "famous-humanists",
-    title: "Even Ficino Isn't Fully Translated",
+    slug: "rivers-of-esoteric-life",
+    title: "Rivers of Esoteric Life: Mapping the Hermetic Tradition",
     date: "December 2025",
-    excerpt: "You'd think the famous Renaissance humanists would be fully available. They're not. Ficino, Pico, Valla—vast bodies of work remain untranslated.",
-    tag: "Research",
+    excerpt: "Applying Forlong's 'Rivers of Life' methodology to trace how Hermetica, alchemy, Kabbalah, and Rosicrucianism flowed through Renaissance publishing. Draft for discussion.",
+    tag: "Draft",
+  },
+  {
+    slug: "methodology",
+    title: "Methodology: How We Estimated Digitization Rates",
+    date: "December 2025",
+    excerpt: "Documenting the sources and methods behind our accessibility estimates. How we derived the 18% digitized, 8% OCR, and 3% translated figures.",
+    tag: "Methods",
   },
 ];
 
@@ -175,29 +187,47 @@ export default function BlogIndex() {
           fontSize: '19px',
           lineHeight: 1.6,
           color: '#555',
+          marginBottom: '24px',
         }}>
           Exploring the hidden libraries of Renaissance Latin—data, methodology, and discoveries.
         </p>
+        <Link href="/data" style={{
+          fontFamily: 'Inter, sans-serif',
+          fontSize: '14px',
+          color: '#9e4a3a',
+          textDecoration: 'none',
+        }}>
+          See data visualizations →
+        </Link>
       </header>
 
-      {/* Posts */}
+      {/* Pinned Posts */}
       <section style={{
         maxWidth: '800px',
         margin: '0 auto',
-        padding: '0 24px 80px',
+        padding: '0 24px 32px',
       }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          {posts.map((post) => {
+        <p style={{
+          fontFamily: 'Inter, sans-serif',
+          fontSize: '11px',
+          fontWeight: 500,
+          letterSpacing: '0.1em',
+          color: '#888',
+          marginBottom: '16px',
+        }}>
+          FEATURED
+        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          {pinnedPosts.map((post) => {
             const colors = tagColors[post.tag] || tagColors.Research;
             return (
               <article
                 key={post.slug}
                 style={{
                   background: '#fff',
-                  border: '1px solid #e8e4dc',
+                  border: '2px solid #9e4a3a20',
                   borderRadius: '8px',
                   padding: '28px 32px',
-                  transition: 'border-color 0.2s',
                 }}
               >
                 <Link href={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
@@ -214,11 +244,6 @@ export default function BlogIndex() {
                     }}>
                       {post.tag.toUpperCase()}
                     </span>
-                    <span style={{
-                      fontFamily: 'Inter, sans-serif',
-                      fontSize: '13px',
-                      color: '#999',
-                    }}>{post.date}</span>
                   </div>
                   <h2 style={{
                     fontFamily: 'Cormorant Garamond, Georgia, serif',
@@ -235,6 +260,78 @@ export default function BlogIndex() {
                     fontSize: '16px',
                     lineHeight: 1.6,
                     color: '#666',
+                  }}>{post.excerpt}</p>
+                </Link>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* All Posts */}
+      <section style={{
+        maxWidth: '800px',
+        margin: '0 auto',
+        padding: '0 24px 80px',
+      }}>
+        <p style={{
+          fontFamily: 'Inter, sans-serif',
+          fontSize: '11px',
+          fontWeight: 500,
+          letterSpacing: '0.1em',
+          color: '#888',
+          marginBottom: '16px',
+        }}>
+          ALL ESSAYS
+        </p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          {posts.map((post) => {
+            const colors = tagColors[post.tag] || tagColors.Research;
+            return (
+              <article
+                key={post.slug}
+                style={{
+                  background: '#fff',
+                  border: '1px solid #e8e4dc',
+                  borderRadius: '8px',
+                  padding: '24px 28px',
+                }}
+              >
+                <Link href={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '8px' }}>
+                    <span style={{
+                      fontFamily: 'Inter, sans-serif',
+                      fontSize: '10px',
+                      fontWeight: 500,
+                      letterSpacing: '0.05em',
+                      padding: '3px 8px',
+                      borderRadius: '4px',
+                      background: colors.bg,
+                      color: colors.text,
+                    }}>
+                      {post.tag.toUpperCase()}
+                    </span>
+                    <span style={{
+                      fontFamily: 'Inter, sans-serif',
+                      fontSize: '12px',
+                      color: '#aaa',
+                    }}>{post.date}</span>
+                  </div>
+                  <h2 style={{
+                    fontFamily: 'Cormorant Garamond, Georgia, serif',
+                    fontSize: '20px',
+                    fontWeight: 500,
+                    color: '#1a1612',
+                    marginBottom: '4px',
+                    lineHeight: 1.3,
+                  }}>
+                    {post.title}
+                  </h2>
+                  <p style={{
+                    fontFamily: 'Newsreader, Georgia, serif',
+                    fontSize: '15px',
+                    lineHeight: 1.5,
+                    color: '#777',
                   }}>{post.excerpt}</p>
                 </Link>
               </article>
