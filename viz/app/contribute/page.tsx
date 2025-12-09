@@ -65,11 +65,13 @@ export default function ContributePage() {
 
     try {
       // Get count of ALL works in 1400-1700 range (not just Latin)
-      const { count } = await supabase
+      const { count, error: countError } = await supabase
         .from('bph_works')
         .select('*', { count: 'exact', head: true })
         .gte('year', 1400)
         .lte('year', 1700);
+
+      if (countError) throw countError;
 
       if (!count || count === 0) {
         setError('No works available');
@@ -84,6 +86,7 @@ export default function ContributePage() {
         .select('id, title, author, year, publisher, city, ubn, detected_language')
         .gte('year', 1400)
         .lte('year', 1700)
+        .order('id')
         .range(randomOffset, randomOffset);
 
       if (fetchError) throw fetchError;
@@ -93,7 +96,8 @@ export default function ContributePage() {
       setCurrentWork(data[0]);
     } catch (err) {
       console.error('Error loading work:', err);
-      setError('Failed to load work. Please try again.');
+      const message = err instanceof Error ? err.message : 'Unknown error';
+      setError(`Failed to load work: ${message}`);
     } finally {
       setLoading(false);
     }
