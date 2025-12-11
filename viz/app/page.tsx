@@ -21,70 +21,14 @@ export default function Home() {
 
   return (
     <main className="min-h-screen" style={{ background: '#fdfcf9' }}>
-      {/* Navigation */}
-      <nav style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        background: 'rgba(253, 252, 249, 0.95)',
-        backdropFilter: 'blur(8px)',
-        borderBottom: '1px solid #e8e4dc',
-        zIndex: 100,
-        padding: '16px 24px',
-      }}>
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}>
-          <Link href="/" style={{
-            fontFamily: 'Inter, sans-serif',
-            fontSize: '12px',
-            fontWeight: 500,
-            letterSpacing: '0.1em',
-            color: '#666',
-            textDecoration: 'none',
-          }}>
-            SECOND RENAISSANCE RESEARCH
-          </Link>
-          <div style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
-            <Link href="/data" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>Data</Link>
-            <Link href="/blog" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>Essays</Link>
-            <Link href="/about" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>About</Link>
-            <Link href="/contribute" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#9e4a3a', fontWeight: 500, textDecoration: 'none' }}>Contribute</Link>
-            <Link href="/digitizer" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>Digitizer</Link>
-            <a
-              href="https://www.ancientwisdomtrust.org/become-a-patron"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                fontFamily: 'Inter, sans-serif',
-                fontSize: '12px',
-                fontWeight: 500,
-                color: '#fff',
-                background: '#9e4a3a',
-                padding: '8px 16px',
-                borderRadius: '4px',
-                textDecoration: 'none',
-              }}
-            >
-              Support This Work
-            </a>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero: The Thesis */}
       <section style={{
-        minHeight: '100vh',
+        minHeight: 'calc(100vh - 64px)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: '120px 24px 80px',
+        padding: '40px 24px 80px',
         textAlign: 'center',
       }}>
         <h1 style={{

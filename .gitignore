@@ -29,3 +29,5 @@ data/comprehensive_*.csv
 node_modules/
 .next/
 data/ustc/ustc_editions.csv
+.vercel
+viz/uploads/

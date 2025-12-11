@@ -3,6 +3,7 @@ import { supabase } from '@/lib/supabase';
 import { getUserFromRequest } from '@/lib/supabase-server';
 import { writeFile, mkdir } from 'fs/promises';
 import path from 'path';
+import AdmZip from 'adm-zip';
 
 // Default prompts
 const DEFAULT_PROMPTS = {
@@ -98,32 +99,23 @@ export async function POST(request: NextRequest) {
       provider?: string;
       prompts?: Record<string, string>;
       preview_pages?: number;
+      max_pages?: number | null;
       pdf_path?: string;
+      images_dir?: string;
       original_filename?: string;
+      total_pages?: number;
     };
 
-    // Handle multipart form data (PDF upload) or JSON (IA identifier)
+    // Handle multipart form data (PDF or ZIP upload) or JSON (IA identifier)
     if (contentType.includes('multipart/form-data')) {
       const formData = await request.formData();
-      const file = formData.get('pdf') as File | null;
+      const pdfFile = formData.get('pdf') as File | null;
+      const imagesFile = formData.get('images') as File | null;
       const provider = formData.get('provider') as string || 'openai';
       const promptsStr = formData.get('prompts') as string;
       const previewPages = parseInt(formData.get('preview_pages') as string || '30');
-
-      if (!file) {
-        return NextResponse.json({ error: 'No PDF file provided' }, { status: 400 });
-      }
-
-      // Save PDF to uploads directory
-      const uploadsDir = path.join(process.cwd(), 'uploads', 'translations');
-      await mkdir(uploadsDir, { recursive: true });
-
-      const timestamp = Date.now();
-      const filename = `${timestamp}_${file.name.replace(/[^a-zA-Z0-9._-]/g, '_')}`;
-      const filepath = path.join(uploadsDir, filename);
-
-      const bytes = await file.arrayBuffer();
-      await writeFile(filepath, Buffer.from(bytes));
+      const maxPagesStr = formData.get('max_pages') as string;
+      const maxPages = maxPagesStr ? parseInt(maxPagesStr) : null;
 
       let prompts = DEFAULT_PROMPTS;
       if (promptsStr) {
@@ -134,17 +126,77 @@ export async function POST(request: NextRequest) {
         }
       }
 
-      jobData = {
-        pdf_path: filepath,
-        original_filename: file.name,
-        provider,
-        prompts,
-        preview_pages: previewPages
-      };
+      if (pdfFile) {
+        // Save PDF to uploads directory
+        const uploadsDir = path.join(process.cwd(), 'uploads', 'translations');
+        await mkdir(uploadsDir, { recursive: true });
+
+        const timestamp = Date.now();
+        const filename = `${timestamp}_${pdfFile.name.replace(/[^a-zA-Z0-9._-]/g, '_')}`;
+        const filepath = path.join(uploadsDir, filename);
+
+        const bytes = await pdfFile.arrayBuffer();
+        await writeFile(filepath, Buffer.from(bytes));
+
+        jobData = {
+          pdf_path: filepath,
+          original_filename: pdfFile.name,
+          provider,
+          prompts,
+          preview_pages: previewPages,
+          max_pages: maxPages
+        };
+      } else if (imagesFile) {
+        // Handle ZIP of images
+        const timestamp = Date.now();
+        const jobDir = path.join(process.cwd(), 'uploads', 'translations', `images_${timestamp}`);
+        await mkdir(jobDir, { recursive: true });
+
+        // Save and extract ZIP
+        const bytes = await imagesFile.arrayBuffer();
+        const zip = new AdmZip(Buffer.from(bytes));
+        const zipEntries = zip.getEntries();
+
+        // Extract and sort image files
+        const imageFiles: string[] = [];
+        for (const entry of zipEntries) {
+          if (entry.isDirectory) continue;
+          const name = entry.entryName.toLowerCase();
+          if (name.endsWith('.png') || name.endsWith('.jpg') || name.endsWith('.jpeg')) {
+            // Extract to job directory
+            const basename = path.basename(entry.entryName);
+            zip.extractEntryTo(entry, jobDir, false, true);
+            imageFiles.push(basename);
+          }
+        }
+
+        // Sort files naturally (page_0001.png, page_0002.png, etc.)
+        imageFiles.sort((a, b) => {
+          const numA = parseInt(a.match(/\d+/)?.[0] || '0');
+          const numB = parseInt(b.match(/\d+/)?.[0] || '0');
+          return numA - numB;
+        });
+
+        if (imageFiles.length === 0) {
+          return NextResponse.json({ error: 'No image files found in ZIP' }, { status: 400 });
+        }
+
+        jobData = {
+          images_dir: jobDir,
+          original_filename: imagesFile.name,
+          total_pages: imageFiles.length,
+          provider,
+          prompts,
+          preview_pages: Math.min(previewPages, imageFiles.length),
+          max_pages: maxPages
+        };
+      } else {
+        return NextResponse.json({ error: 'No PDF or images file provided' }, { status: 400 });
+      }
     } else {
       // JSON body for IA identifier
       const body = await request.json();
-      const { ia_identifier, title, creator, year, provider, prompts, preview_pages } = body;
+      const { ia_identifier, title, creator, year, provider, prompts, preview_pages, max_pages } = body;
 
       if (!ia_identifier) {
         return NextResponse.json({ error: 'ia_identifier is required' }, { status: 400 });
@@ -157,7 +209,8 @@ export async function POST(request: NextRequest) {
         year,
         provider: provider || 'openai',
         prompts: { ...DEFAULT_PROMPTS, ...prompts },
-        preview_pages: preview_pages || 30
+        preview_pages: preview_pages || 30,
+        max_pages: max_pages || null
       };
     }
 

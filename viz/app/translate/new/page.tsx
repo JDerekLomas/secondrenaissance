@@ -4,6 +4,8 @@ import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/AuthContext';
 
+type UploadType = 'pdf' | 'images';
+
 const DEFAULT_PROMPTS = {
   ocr: `You are transcribing a Renaissance Latin facsimile page image.
 
@@ -62,9 +64,11 @@ export default function NewTranslation() {
   const { session } = useAuth();
   const router = useRouter();
 
+  const [uploadType, setUploadType] = useState<UploadType>('pdf');
   const [file, setFile] = useState<File | null>(null);
   const [provider, setProvider] = useState<'openai' | 'gemini' | 'claude'>('openai');
   const [previewPages, setPreviewPages] = useState(30);
+  const [totalPagesToProcess, setTotalPagesToProcess] = useState<number | null>(null);
   const [prompts, setPrompts] = useState<Record<string, string>>(DEFAULT_PROMPTS);
   const [expandedPrompt, setExpandedPrompt] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
@@ -74,7 +78,7 @@ export default function NewTranslation() {
     e.preventDefault();
 
     if (!file) {
-      setError('Please select a PDF file');
+      setError(`Please select a ${uploadType === 'pdf' ? 'PDF' : 'ZIP'} file`);
       return;
     }
 
@@ -88,10 +92,13 @@ export default function NewTranslation() {
 
     try {
       const formData = new FormData();
-      formData.append('pdf', file);
+      formData.append(uploadType === 'pdf' ? 'pdf' : 'images', file);
       formData.append('provider', provider);
       formData.append('preview_pages', previewPages.toString());
       formData.append('prompts', JSON.stringify(prompts));
+      if (totalPagesToProcess !== null) {
+        formData.append('max_pages', totalPagesToProcess.toString());
+      }
 
       const response = await fetch('/api/translate/jobs', {
         method: 'POST',
@@ -117,24 +124,69 @@ export default function NewTranslation() {
   return (
     <div>
       <div className="mb-8">
-        <h1 className="text-3xl font-serif text-[#1a1612]">Upload PDF for Translation</h1>
+        <h1 className="text-3xl font-serif text-[#1a1612]">Upload for Translation</h1>
         <p className="mt-2 text-[#5c5c5c]">
-          Upload a Renaissance Latin PDF and configure the translation prompts
+          Upload a PDF or ZIP of page images and configure the translation prompts
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-8">
-        {/* File upload */}
+        {/* Upload type selector */}
         <div className="bg-white rounded-lg border border-[#d4c4b5] p-6">
-          <label className="block text-sm font-medium text-[#1a1612] mb-2">
-            PDF File
+          <label className="block text-sm font-medium text-[#1a1612] mb-3">
+            Upload Type
           </label>
-          <input
-            type="file"
-            accept="application/pdf"
-            onChange={(e) => setFile(e.target.files?.[0] || null)}
-            className="w-full cursor-pointer rounded border border-dashed border-[#c1b09c] bg-[#faf7f2] px-4 py-8 text-sm text-[#6c5b4a]"
-          />
+          <div className="flex gap-4 mb-4">
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="radio"
+                name="uploadType"
+                checked={uploadType === 'pdf'}
+                onChange={() => { setUploadType('pdf'); setFile(null); }}
+                className="text-[#9e4a3a]"
+              />
+              <span className="text-sm">PDF Document</span>
+            </label>
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="radio"
+                name="uploadType"
+                checked={uploadType === 'images'}
+                onChange={() => { setUploadType('images'); setFile(null); }}
+                className="text-[#9e4a3a]"
+              />
+              <span className="text-sm">ZIP of Page Images</span>
+            </label>
+          </div>
+
+          {uploadType === 'pdf' ? (
+            <>
+              <input
+                type="file"
+                accept="application/pdf"
+                onChange={(e) => setFile(e.target.files?.[0] || null)}
+                className="w-full cursor-pointer rounded border border-dashed border-[#c1b09c] bg-[#faf7f2] px-4 py-8 text-sm text-[#6c5b4a]"
+              />
+              <p className="mt-2 text-xs text-[#5c5c5c]">
+                Upload a PDF file. Pages will be rendered as images for OCR.
+              </p>
+            </>
+          ) : (
+            <>
+              <input
+                type="file"
+                accept=".zip,application/zip"
+                onChange={(e) => setFile(e.target.files?.[0] || null)}
+                className="w-full cursor-pointer rounded border border-dashed border-[#c1b09c] bg-[#faf7f2] px-4 py-8 text-sm text-[#6c5b4a]"
+              />
+              <p className="mt-2 text-xs text-[#5c5c5c]">
+                Upload a ZIP file containing page images (PNG, JPG). Files should be named
+                sequentially, e.g., <code className="bg-gray-100 px-1 rounded">page_0001.png</code>, <code className="bg-gray-100 px-1 rounded">page_0002.png</code>, etc.
+                Also supports: <code className="bg-gray-100 px-1 rounded">page_0001_source.png</code>
+              </p>
+            </>
+          )}
+
           {file && (
             <p className="mt-2 text-sm text-[#5c5c5c]">
               Selected: <strong>{file.name}</strong> ({(file.size / 1024 / 1024).toFixed(2)} MB)
@@ -173,7 +225,7 @@ export default function NewTranslation() {
                 type="number"
                 value={previewPages}
                 onChange={(e) => setPreviewPages(parseInt(e.target.value) || 30)}
-                min={5}
+                min={1}
                 max={100}
                 className="w-full px-3 py-2 border border-[#d4c4b5] rounded focus:outline-none focus:ring-1 focus:ring-[#9e4a3a]"
               />
@@ -181,6 +233,50 @@ export default function NewTranslation() {
                 Process this many pages first, then review before continuing
               </p>
             </div>
+          </div>
+
+          {/* Total pages setting */}
+          <div className="mt-6 pt-6 border-t border-[#e5ddd3]">
+            <label className="block text-sm font-medium text-[#1a1612] mb-2">
+              Total Pages to Process
+            </label>
+            <div className="flex items-center gap-4 mb-2">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="totalPages"
+                  checked={totalPagesToProcess === null}
+                  onChange={() => setTotalPagesToProcess(null)}
+                  className="text-[#9e4a3a]"
+                />
+                <span className="text-sm">All pages</span>
+              </label>
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="totalPages"
+                  checked={totalPagesToProcess !== null}
+                  onChange={() => setTotalPagesToProcess(50)}
+                  className="text-[#9e4a3a]"
+                />
+                <span className="text-sm">Custom limit</span>
+              </label>
+            </div>
+            {totalPagesToProcess !== null && (
+              <input
+                type="number"
+                value={totalPagesToProcess}
+                onChange={(e) => setTotalPagesToProcess(Math.max(1, parseInt(e.target.value) || 50))}
+                min={1}
+                className="w-full md:w-48 px-3 py-2 border border-[#d4c4b5] rounded focus:outline-none focus:ring-1 focus:ring-[#9e4a3a]"
+                placeholder="e.g., 50"
+              />
+            )}
+            <p className="mt-1 text-xs text-[#5c5c5c]">
+              {totalPagesToProcess === null
+                ? 'After reviewing the preview, all remaining pages will be processed'
+                : `Processing will stop after ${totalPagesToProcess} pages total`}
+            </p>
           </div>
         </div>
 

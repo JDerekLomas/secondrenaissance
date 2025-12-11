@@ -12,6 +12,7 @@
     "@deck.gl/layers": "^9.2.3",
     "@deck.gl/react": "^9.2.3",
     "@supabase/supabase-js": "^2.86.2",
+    "adm-zip": "^0.5.16",
     "deck.gl": "^9.2.3",
     "maplibre-gl": "^5.14.0",
     "next": "14.2.33",
@@ -21,6 +22,7 @@
     "recharts": "^3.5.1"
   },
   "devDependencies": {
+    "@types/adm-zip": "^0.5.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

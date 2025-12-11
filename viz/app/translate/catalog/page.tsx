@@ -27,6 +27,11 @@ export default function CatalogBrowser() {
   const [error, setError] = useState<string | null>(null);
   const [creating, setCreating] = useState<string | null>(null);
 
+  // Modal state for configuring translation
+  const [selectedItem, setSelectedItem] = useState<IAItem | null>(null);
+  const [previewPages, setPreviewPages] = useState(30);
+  const [totalPagesToProcess, setTotalPagesToProcess] = useState<number | null>(null); // null = all pages
+
   const limit = 20;
 
   useEffect(() => {
@@ -60,10 +65,20 @@ export default function CatalogBrowser() {
     }
   }
 
-  async function startTranslation(item: IAItem) {
-    if (!session?.access_token) return;
+  function openConfigModal(item: IAItem) {
+    setSelectedItem(item);
+    setPreviewPages(30);
+    setTotalPagesToProcess(null);
+  }
 
-    setCreating(item.identifier);
+  function closeConfigModal() {
+    setSelectedItem(null);
+  }
+
+  async function startTranslation() {
+    if (!session?.access_token || !selectedItem) return;
+
+    setCreating(selectedItem.identifier);
 
     try {
       const response = await fetch('/api/translate/jobs', {
@@ -73,10 +88,12 @@ export default function CatalogBrowser() {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          ia_identifier: item.identifier,
-          title: item.title,
-          creator: item.creator,
-          year: item.year
+          ia_identifier: selectedItem.identifier,
+          title: selectedItem.title,
+          creator: selectedItem.creator,
+          year: selectedItem.year,
+          preview_pages: previewPages,
+          max_pages: totalPagesToProcess // null means all pages
         })
       });
 
@@ -89,6 +106,7 @@ export default function CatalogBrowser() {
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to start translation');
       setCreating(null);
+      closeConfigModal();
     }
   }
 
@@ -219,7 +237,7 @@ export default function CatalogBrowser() {
                   </div>
 
                   <button
-                    onClick={() => startTranslation(item)}
+                    onClick={() => openConfigModal(item)}
                     disabled={creating === item.identifier}
                     className="ml-4 px-4 py-2 bg-[#9e4a3a] text-white text-sm rounded hover:bg-[#8a4033] disabled:opacity-50"
                   >
@@ -258,6 +276,98 @@ export default function CatalogBrowser() {
           No results found. Try adjusting your search.
         </div>
       ) : null}
+
+      {/* Configuration Modal */}
+      {selectedItem && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg max-w-lg w-full p-6">
+            <h2 className="text-xl font-serif text-[#1a1612] mb-2">
+              Configure Translation
+            </h2>
+            <p className="text-sm text-[#5c5c5c] mb-6">
+              {selectedItem.title || selectedItem.identifier}
+            </p>
+
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-[#1a1612] mb-1">
+                  Preview Pages
+                </label>
+                <input
+                  type="number"
+                  value={previewPages}
+                  onChange={(e) => setPreviewPages(Math.max(1, parseInt(e.target.value) || 30))}
+                  min={1}
+                  max={100}
+                  className="w-full px-3 py-2 border border-[#d4c4b5] rounded focus:outline-none focus:ring-1 focus:ring-[#9e4a3a]"
+                />
+                <p className="mt-1 text-xs text-[#5c5c5c]">
+                  Process this many pages first, then pause for review
+                </p>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-[#1a1612] mb-1">
+                  Total Pages to Process
+                </label>
+                <div className="flex items-center gap-4">
+                  <label className="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      name="pageLimit"
+                      checked={totalPagesToProcess === null}
+                      onChange={() => setTotalPagesToProcess(null)}
+                      className="text-[#9e4a3a]"
+                    />
+                    <span className="text-sm">All pages</span>
+                  </label>
+                  <label className="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      name="pageLimit"
+                      checked={totalPagesToProcess !== null}
+                      onChange={() => setTotalPagesToProcess(50)}
+                      className="text-[#9e4a3a]"
+                    />
+                    <span className="text-sm">Custom limit</span>
+                  </label>
+                </div>
+                {totalPagesToProcess !== null && (
+                  <input
+                    type="number"
+                    value={totalPagesToProcess}
+                    onChange={(e) => setTotalPagesToProcess(Math.max(1, parseInt(e.target.value) || 50))}
+                    min={1}
+                    className="mt-2 w-full px-3 py-2 border border-[#d4c4b5] rounded focus:outline-none focus:ring-1 focus:ring-[#9e4a3a]"
+                    placeholder="e.g., 50"
+                  />
+                )}
+                <p className="mt-1 text-xs text-[#5c5c5c]">
+                  {totalPagesToProcess === null
+                    ? 'Will process all available pages after review'
+                    : `Will stop after ${totalPagesToProcess} pages total`}
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6 flex items-center justify-end gap-3">
+              <button
+                onClick={closeConfigModal}
+                className="px-4 py-2 text-[#5c5c5c] hover:text-[#1a1612]"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={startTranslation}
+                disabled={creating === selectedItem.identifier}
+                className="px-6 py-2 bg-[#9e4a3a] text-white rounded hover:bg-[#8a4033] disabled:opacity-50"
+              >
+                {creating === selectedItem.identifier ? 'Starting...' : 'Start Translation'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

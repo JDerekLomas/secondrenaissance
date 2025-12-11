@@ -11,12 +11,12 @@ const journeyData = [
   { stage: "Multi-signal", rate: 26.1, description: "Title+Author+Year" },
 ];
 
-// Multi-signal breakdown for 1400-1700
+// Multi-signal breakdown for 1400-1700 (search-based matching)
 const signalBreakdown = [
-  { type: "Title + Author + Year", count: 96, pct: 3.8, color: "#2d5a3d" },
-  { type: "Title + Author", count: 46, pct: 1.8, color: "#4a7c59" },
-  { type: "Title + Year", count: 127, pct: 5.0, color: "#6b9e76" },
-  { type: "Title Only (≥0.85)", count: 391, pct: 15.4, color: "#8bba93" },
+  { type: "Title + Author + Year", count: 112, pct: 4.4, color: "#2d5a3d" },
+  { type: "Title + Author", count: 89, pct: 3.5, color: "#4a7c59" },
+  { type: "Title + Year", count: 203, pct: 8.0, color: "#6b9e76" },
+  { type: "Title Only (100%)", count: 246, pct: 9.7, color: "#8bba93" },
 ];
 
 // Century comparison
@@ -257,15 +257,15 @@ export default function BphIaMatching() {
           ))}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 0', marginTop: '8px', borderTop: '2px solid #e0d8c8' }}>
             <span style={{ fontFamily: 'Newsreader, Georgia, serif', fontSize: '16px', color: '#1a1612', fontWeight: 600 }}>Total matched</span>
-            <span style={{ fontFamily: 'monospace', fontSize: '20px', color: COLORS.matched, fontWeight: 600 }}>660 (26.1%)</span>
+            <span style={{ fontFamily: 'monospace', fontSize: '20px', color: COLORS.matched, fontWeight: 600 }}>650 (25.7%)</span>
           </div>
         </div>
       </figure>
 
       <p>
-        For the early modern period (1400-1700), multi-signal matching found <strong>660 works (26.1%)</strong>.
+        For the early modern period (1400-1700), search-based matching found <strong>650 high-confidence matches (25.7%)</strong>.
         That&apos;s lower than embedding-only matching, but far more reliable. The strongest matches—title plus
-        author plus year—account for only 3.8%, but these are essentially certain to be correct.
+        author plus year—account for only 4.4%, but these are essentially certain to be correct.
       </p>
 
       <h2>The Precision-Recall Tradeoff</h2>
@@ -420,13 +420,25 @@ export default function BphIaMatching() {
         <li><strong>There&apos;s no single right answer.</strong> Different use cases demand different tradeoffs between finding more matches and being confident in matches found.</li>
       </ol>
 
-      <h2>What&apos;s Next</h2>
+      <h2>What&apos;s Next: Human Validation</h2>
 
       <p>
-        We&apos;re now working on human validation of sample matches across confidence tiers. With crowdsourced
-        verification, we can estimate true precision at each threshold and refine our matching criteria.
-        We&apos;re also exploring expansion to other repositories—HathiTrust, Google Books, Europeana—to
-        get a fuller picture of esoteric digitization.
+        With 650 high-confidence matches now in our database, we&apos;ve built a <strong>validation interface</strong> where
+        humans can verify whether each match is correct. The interface shows the BPH catalog entry alongside the
+        Internet Archive metadata, fetched live from the IA API, allowing validators to quickly assess whether
+        they&apos;re looking at the same work—or even the same edition.
+      </p>
+
+      <p>
+        Validation captures three outcomes: <strong>same edition</strong> (exact match), <strong>same work, different edition</strong>
+        (e.g., a 1680 work matched to a 1911 reprint), or <strong>different works</strong> (false positive).
+        This nuanced categorization lets us distinguish between &ldquo;available online&rdquo; and &ldquo;available in the exact
+        edition the BPH holds.&rdquo;
+      </p>
+
+      <p>
+        We&apos;re also expanding our year range to include 18th-century works (1701-1800), which adds another
+        1,030 Latin works to match. Early results show a similar ~25% match rate for this period.
       </p>
 
       <p>
@@ -449,7 +461,7 @@ export default function BphIaMatching() {
           margin: 0,
         }}>
           <strong>Want to help validate our matches?</strong> Visit our{' '}
-          <a href="/contribute" style={{ color: '#9e4a3a' }}>crowdsourcing page</a> to contribute to data verification.
+          <a href="/validate" style={{ color: '#9e4a3a' }}>validation page</a> to help verify BPH-IA matches.
           Every validation helps improve our understanding of what&apos;s really available in digital archives.
         </p>
       </div>

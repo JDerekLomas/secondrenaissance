@@ -243,6 +243,7 @@ class TranslationWorker:
         identifier = job['ia_identifier']
         prompts = job.get('prompts', {})
         preview_pages = job.get('preview_pages', 30)
+        max_pages = job.get('max_pages')  # Optional limit
         status = job['status']
         pages_processed = job.get('pages_processed', 0)
 
@@ -250,6 +251,8 @@ class TranslationWorker:
         print(f"Processing IA job: {job_id}")
         print(f"Identifier: {identifier}")
         print(f"Status: {status}")
+        if max_pages:
+            print(f"Max pages: {max_pages}")
         print(f"{'='*60}")
 
         try:
@@ -259,7 +262,13 @@ class TranslationWorker:
                 print("Detecting page count...")
                 total_pages = self.detect_ia_page_count(identifier)
                 print(f"Found {total_pages} pages")
-                self.update_job(job_id, total_pages=total_pages)
+
+            # Apply max_pages limit if set
+            if max_pages:
+                total_pages = min(total_pages, max_pages)
+                print(f"Limited to {total_pages} pages")
+
+            self.update_job(job_id, total_pages=total_pages)
 
             # Determine page range
             if status in ['pending', 'processing_preview']:
@@ -440,17 +449,111 @@ class TranslationWorker:
                 error_message=str(e)
             )
 
+    def process_images_job(self, job: Dict[str, Any]):
+        """Process a job from uploaded ZIP of images."""
+        job_id = job['id']
+        images_dir = Path(job['images_dir'])
+        prompts = job.get('prompts', {})
+        preview_pages = job.get('preview_pages', 30)
+        max_pages = job.get('max_pages')  # Optional limit
+        status = job['status']
+        pages_processed = job.get('pages_processed', 0)
+
+        print(f"\n{'='*60}")
+        print(f"Processing images job: {job_id}")
+        print(f"Images dir: {images_dir}")
+        print(f"Status: {status}")
+        print(f"{'='*60}")
+
+        try:
+            # Get list of image files
+            image_files = sorted([
+                f for f in images_dir.iterdir()
+                if f.suffix.lower() in ('.png', '.jpg', '.jpeg')
+            ], key=lambda f: int(''.join(filter(str.isdigit, f.stem)) or 0))
+
+            total_pages = len(image_files)
+            if max_pages:
+                total_pages = min(total_pages, max_pages)
+
+            print(f"Found {len(image_files)} images, will process {total_pages}")
+            self.update_job(job_id, total_pages=total_pages)
+
+            # Determine page range
+            if status in ['pending', 'processing_preview']:
+                start_page = pages_processed
+                end_page = min(preview_pages, total_pages)
+            else:  # processing_full
+                start_page = pages_processed
+                end_page = total_pages
+
+            print(f"Processing pages {start_page + 1} to {end_page}")
+
+            for i, page_num in enumerate(range(start_page, end_page)):
+                if page_num >= len(image_files):
+                    break
+
+                image_path = image_files[page_num]
+                print(f"  Page {page_num + 1}/{end_page}...", end=" ", flush=True)
+
+                with open(image_path, 'rb') as f:
+                    image_data = f.read()
+
+                result = self.process_page(
+                    job_id,
+                    page_num + 1,
+                    image_data,
+                    prompts,
+                    str(image_path)
+                )
+
+                self.update_job(
+                    job_id,
+                    pages_processed=page_num + 1,
+                    current_page=page_num + 1,
+                    page_result=result
+                )
+
+                print(f"{'done' if result['status'] == 'completed' else 'failed'}")
+                time.sleep(1)
+
+            # Update final status
+            if status in ['pending', 'processing_preview']:
+                print("\nPreview complete - awaiting review")
+                self.update_job(
+                    job_id,
+                    status='awaiting_review',
+                    preview_completed_at=datetime.now().isoformat()
+                )
+            else:
+                print("\nJob complete!")
+                self.update_job(
+                    job_id,
+                    status='completed',
+                    completed_at=datetime.now().isoformat()
+                )
+
+        except Exception as e:
+            print(f"\nJob failed: {e}")
+            self.update_job(
+                job_id,
+                status='failed',
+                error_message=str(e)
+            )
+
     def process_job(self, job: Dict[str, Any]):
         """Route job to appropriate processor."""
         if job.get('ia_identifier'):
             self.process_ia_job(job)
         elif job.get('pdf_path'):
             self.process_pdf_job(job)
+        elif job.get('images_dir'):
+            self.process_images_job(job)
         else:
             self.update_job(
                 job['id'],
                 status='failed',
-                error_message='Job has neither ia_identifier nor pdf_path'
+                error_message='Job has no ia_identifier, pdf_path, or images_dir'
             )
 
     def run(self):

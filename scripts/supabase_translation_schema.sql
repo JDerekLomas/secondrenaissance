@@ -8,9 +8,10 @@ CREATE TABLE IF NOT EXISTS translation_jobs (
     id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
     user_id UUID REFERENCES auth.users(id) ON DELETE SET NULL,
 
-    -- Source: either IA identifier OR uploaded PDF
+    -- Source: IA identifier, uploaded PDF, or ZIP of images
     ia_identifier TEXT,                    -- If from IA catalog
     pdf_path TEXT,                         -- If uploaded PDF
+    images_dir TEXT,                       -- If uploaded ZIP of images
     original_filename TEXT,
 
     -- Metadata (from IA or extracted from PDF)
@@ -37,6 +38,7 @@ CREATE TABLE IF NOT EXISTS translation_jobs (
     -- Progress
     total_pages INTEGER,
     preview_pages INTEGER DEFAULT 30,
+    max_pages INTEGER,                     -- Optional limit on total pages to process
     pages_processed INTEGER DEFAULT 0,
     current_page INTEGER,
 
@@ -179,6 +181,7 @@ SELECT
     j.id,
     j.user_id,
     j.ia_identifier,
+    j.images_dir,
     j.original_filename,
     j.title,
     j.creator,
@@ -187,9 +190,11 @@ SELECT
     j.provider,
     j.total_pages,
     j.preview_pages,
+    j.max_pages,
     j.pages_processed,
     CASE
-        WHEN j.total_pages > 0 THEN ROUND(100.0 * j.pages_processed / j.total_pages, 1)
+        WHEN COALESCE(j.max_pages, j.total_pages) > 0
+        THEN ROUND(100.0 * j.pages_processed / COALESCE(j.max_pages, j.total_pages), 1)
         ELSE 0
     END as progress_percent,
     j.created_at,

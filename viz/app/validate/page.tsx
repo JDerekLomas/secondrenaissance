@@ -10,54 +10,88 @@ const supabase = createClient(
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlraHhhZWNiYnhhYXFsdWp1emRlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUwNjExMDEsImV4cCI6MjA4MDYzNzEwMX0.O2chfnHGQWLOaVSFQ-F6UJMlya9EzPbsUh848SEOPj4'
 );
 
-interface MatchValidation {
+interface BPHWorkWithMatch {
   id: string;
-  bph_id: string;
-  bph_title: string;
-  bph_author?: string;
-  bph_year?: number;
-  bph_publisher?: string;
-  bph_city?: string;
+  title: string;
+  author?: string;
+  year?: number;
+  publisher?: string;
+  place?: string;
   ia_identifier: string;
-  ia_title: string;
-  ia_creator?: string;
-  ia_year?: number;
-  ia_publisher?: string;
-  ia_place?: string;
-  match_score: number;
-  match_type: string;
-  is_same_work?: boolean;
-  is_same_edition?: boolean;
-  notes?: string;
-  validated_by?: string;
+  ia_url: string;
+  ia_match_confidence: string;
+  ia_match_method: string;
+  ia_title_similarity?: number;
+  ia_author_match?: boolean;
+  ia_year_match?: boolean;
+  // Validation fields
+  ia_match_validated?: boolean;
+  ia_match_is_same_work?: boolean;
+  ia_match_is_same_edition?: boolean;
+  ia_match_validated_by?: string;
+  ia_match_validation_notes?: string;
+}
+
+interface IAMetadata {
+  title?: string;
+  creator?: string;
+  date?: string;
+  publisher?: string;
+  description?: string;
 }
 
 export default function ValidatePage() {
   // State
   const [validatorName, setValidatorName] = useState<string>('');
   const [showNameInput, setShowNameInput] = useState(true);
-  const [currentMatch, setCurrentMatch] = useState<MatchValidation | null>(null);
+  const [currentMatch, setCurrentMatch] = useState<BPHWorkWithMatch | null>(null);
+  const [iaMetadata, setIaMetadata] = useState<IAMetadata | null>(null);
+  const [loadingIA, setLoadingIA] = useState(false);
   const [loading, setLoading] = useState(false);
   const [validationCount, setValidationCount] = useState(0);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [totalUnvalidated, setTotalUnvalidated] = useState<number | null>(null);
 
+  // Fetch IA metadata
+  const fetchIAMetadata = async (identifier: string) => {
+    setLoadingIA(true);
+    try {
+      const response = await fetch(`https://archive.org/metadata/${identifier}`);
+      const data = await response.json();
+      if (data.metadata) {
+        setIaMetadata({
+          title: data.metadata.title,
+          creator: Array.isArray(data.metadata.creator) ? data.metadata.creator.join(', ') : data.metadata.creator,
+          date: data.metadata.date || data.metadata.year,
+          publisher: data.metadata.publisher,
+          description: data.metadata.description,
+        });
+      }
+    } catch (err) {
+      console.error('Error fetching IA metadata:', err);
+    } finally {
+      setLoadingIA(false);
+    }
+  };
+
   // Load a random unvalidated match
   const loadRandomMatch = async () => {
     setLoading(true);
     setSubmitted(false);
     setError(null);
+    setIaMetadata(null);
 
     try {
-      // Get count of unvalidated matches
+      // Get count of unvalidated matches (has ia_identifier but not validated)
+      // Note: Until validation columns are added, we just count all matches
       const { count } = await supabase
-        .from('match_validations')
+        .from('bph_works')
         .select('*', { count: 'exact', head: true })
-        .is('is_same_work', null);
+        .not('ia_identifier', 'is', null);
 
       if (!count || count === 0) {
-        setError('All matches have been validated! Thank you!');
+        setError('No matches found to validate.');
         setTotalUnvalidated(0);
         setLoading(false);
         return;
@@ -65,17 +99,22 @@ export default function ValidatePage() {
 
       setTotalUnvalidated(count);
 
-      // Get a random unvalidated match
-      const randomOffset = Math.floor(Math.random() * count);
+      // Get a random match
+      const randomOffset = Math.floor(Math.random() * Math.min(count, 1000));
       const { data, error: fetchError } = await supabase
-        .from('match_validations')
-        .select('*')
-        .is('is_same_work', null)
+        .from('bph_works')
+        .select('id, title, author, year, publisher, place, ia_identifier, ia_url, ia_match_confidence, ia_match_method, ia_title_similarity, ia_author_match, ia_year_match')
+        .not('ia_identifier', 'is', null)
         .range(randomOffset, randomOffset)
         .single();
 
       if (fetchError) throw fetchError;
       setCurrentMatch(data);
+
+      // Fetch IA metadata
+      if (data?.ia_identifier) {
+        fetchIAMetadata(data.ia_identifier);
+      }
     } catch (err) {
       console.error('Error loading match:', err);
       setError('Failed to load match. Please try again.');
@@ -89,19 +128,26 @@ export default function ValidatePage() {
     if (!currentMatch) return;
 
     try {
-      // Update the match validation
+      // Try to update the bph_works table with validation
+      // Note: This will fail gracefully if validation columns don't exist yet
       const { error: updateError } = await supabase
-        .from('match_validations')
+        .from('bph_works')
         .update({
-          is_same_work: isSameWork,
-          is_same_edition: isSameEdition ?? null,
-          notes: notes || null,
-          validated_by: validatorName || null,
+          ia_match_validated: true,
+          ia_match_is_same_work: isSameWork,
+          ia_match_is_same_edition: isSameEdition ?? null,
+          ia_match_validation_notes: notes || null,
+          ia_match_validated_by: validatorName || null,
         })
         .eq('id', currentMatch.id);
 
       if (updateError) {
-        console.error('Error updating:', updateError);
+        // Check if it's a column doesn't exist error
+        if (updateError.code === '42703') {
+          console.log('Validation columns not yet added to database. Run the SQL migration first.');
+        } else {
+          console.error('Error updating:', updateError);
+        }
       }
 
       setValidationCount(prev => prev + 1);
@@ -398,7 +444,7 @@ export default function ValidatePage() {
                   alignItems: 'center',
                   gap: '8px',
                 }}>
-                  {currentMatch.match_type && (
+                  {currentMatch.ia_match_confidence && (
                     <span style={{
                       fontFamily: 'Inter, sans-serif',
                       fontSize: '10px',
@@ -409,7 +455,7 @@ export default function ValidatePage() {
                       borderRadius: '4px',
                       textTransform: 'uppercase',
                     }}>
-                      {currentMatch.match_type.replace(/_/g, ' ')}
+                      {currentMatch.ia_match_confidence} confidence
                     </span>
                   )}
                   <span style={{
@@ -417,18 +463,18 @@ export default function ValidatePage() {
                     fontSize: '12px',
                     color: '#888',
                   }}>
-                    {getScoreLabel(currentMatch.match_score)}
+                    {getScoreLabel((currentMatch.ia_title_similarity || 0) / 100)}
                   </span>
                   <span style={{
                     fontFamily: 'Inter, sans-serif',
                     fontSize: '14px',
                     fontWeight: 600,
-                    color: getScoreColor(currentMatch.match_score),
-                    background: `${getScoreColor(currentMatch.match_score)}15`,
+                    color: getScoreColor((currentMatch.ia_title_similarity || 0) / 100),
+                    background: `${getScoreColor((currentMatch.ia_title_similarity || 0) / 100)}15`,
                     padding: '4px 12px',
                     borderRadius: '12px',
                   }}>
-                    {(currentMatch.match_score * 100).toFixed(0)}%
+                    {(currentMatch.ia_title_similarity || 0).toFixed(0)}%
                   </span>
                 </div>
               </div>
@@ -466,7 +512,7 @@ export default function ValidatePage() {
                     lineHeight: 1.4,
                     marginBottom: '12px',
                   }}>
-                    {currentMatch.bph_title}
+                    {currentMatch.title}
                   </h3>
                   <div style={{
                     fontFamily: 'Inter, sans-serif',
@@ -474,35 +520,35 @@ export default function ValidatePage() {
                     color: '#666',
                     lineHeight: 1.6,
                   }}>
-                    {currentMatch.bph_author && (
-                      <p style={{ marginBottom: '4px' }}><strong>Author:</strong> {currentMatch.bph_author}</p>
+                    {currentMatch.author && (
+                      <p style={{ marginBottom: '4px' }}><strong>Author:</strong> {currentMatch.author}</p>
                     )}
-                    {currentMatch.bph_year && (
+                    {currentMatch.year && (
                       <p style={{ marginBottom: '4px' }}>
                         <strong>Year:</strong>{' '}
                         <span style={{
-                          background: currentMatch.ia_year && Number(currentMatch.bph_year) === Number(currentMatch.ia_year) ? '#d4edda' : '#fff3cd',
+                          background: currentMatch.ia_year_match ? '#d4edda' : '#fff3cd',
                           padding: '2px 6px',
                           borderRadius: '4px',
                           fontWeight: 600,
                         }}>
-                          {currentMatch.bph_year}
+                          {currentMatch.year}
                         </span>
                       </p>
                     )}
-                    {currentMatch.bph_publisher && (
-                      <p style={{ marginBottom: '4px' }}><strong>Publisher:</strong> {currentMatch.bph_publisher}</p>
+                    {currentMatch.publisher && (
+                      <p style={{ marginBottom: '4px' }}><strong>Publisher:</strong> {currentMatch.publisher}</p>
                     )}
-                    {currentMatch.bph_city && (
-                      <p style={{ marginBottom: '4px' }}><strong>City:</strong> {currentMatch.bph_city}</p>
+                    {currentMatch.place && (
+                      <p style={{ marginBottom: '4px' }}><strong>Place:</strong> {currentMatch.place}</p>
                     )}
                     <p style={{ marginBottom: '4px', fontSize: '11px', color: '#888' }}>
-                      <strong>ID:</strong> {currentMatch.bph_id?.slice(0, 8)}...
+                      <strong>ID:</strong> {currentMatch.id?.slice(0, 8)}...
                     </p>
                   </div>
                   <div style={{ marginTop: '12px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                     <a
-                      href={`https://embassyofthefreemind.com/en/library/online-catalogue/?mode=gallery&view=table&q=${encodeURIComponent(currentMatch.bph_title.split(' ').slice(0, 4).join(' '))}`}
+                      href={`https://embassyofthefreemind.com/en/library/online-catalogue/?mode=gallery&view=table&q=${encodeURIComponent(currentMatch.title.split(' ').slice(0, 4).join(' '))}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{
@@ -514,9 +560,9 @@ export default function ValidatePage() {
                     >
                       Search BPH →
                     </a>
-                    {currentMatch.bph_author && (
+                    {currentMatch.author && (
                       <a
-                        href={`https://www.google.com/search?q=${encodeURIComponent(currentMatch.bph_author + ' ' + (currentMatch.bph_title.split(' ').slice(0, 3).join(' ')))}`}
+                        href={`https://www.google.com/search?q=${encodeURIComponent(currentMatch.author + ' ' + (currentMatch.title.split(' ').slice(0, 3).join(' ')))}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{
@@ -548,7 +594,7 @@ export default function ValidatePage() {
                     letterSpacing: '0.1em',
                     marginBottom: '12px',
                   }}>
-                    Internet Archive
+                    Internet Archive {loadingIA && <span style={{ color: '#888' }}>(loading...)</span>}
                   </p>
                   <h3 style={{
                     fontFamily: 'Cormorant Garamond, Georgia, serif',
@@ -558,7 +604,7 @@ export default function ValidatePage() {
                     lineHeight: 1.4,
                     marginBottom: '12px',
                   }}>
-                    {currentMatch.ia_title}
+                    {iaMetadata?.title || currentMatch.ia_identifier}
                   </h3>
                   <div style={{
                     fontFamily: 'Inter, sans-serif',
@@ -566,36 +612,46 @@ export default function ValidatePage() {
                     color: '#666',
                     lineHeight: 1.6,
                   }}>
-                    {currentMatch.ia_creator && (
-                      <p style={{ marginBottom: '4px' }}><strong>Creator:</strong> {currentMatch.ia_creator}</p>
+                    {iaMetadata?.creator && (
+                      <p style={{ marginBottom: '4px' }}><strong>Creator:</strong> {iaMetadata.creator}</p>
                     )}
-                    {currentMatch.ia_year && (
+                    {iaMetadata?.date && (
                       <p style={{ marginBottom: '4px' }}>
                         <strong>Year:</strong>{' '}
                         <span style={{
-                          background: currentMatch.bph_year && Number(currentMatch.bph_year) === Number(currentMatch.ia_year) ? '#d4edda' : '#fff3cd',
+                          background: currentMatch.ia_year_match ? '#d4edda' : '#fff3cd',
                           padding: '2px 6px',
                           borderRadius: '4px',
                           fontWeight: 600,
                         }}>
-                          {currentMatch.ia_year}
+                          {iaMetadata.date}
                         </span>
-                        {currentMatch.bph_year && currentMatch.ia_year && Number(currentMatch.bph_year) !== Number(currentMatch.ia_year) && (
+                        {currentMatch.year && iaMetadata.date && !currentMatch.ia_year_match && (
                           <span style={{ marginLeft: '8px', fontSize: '11px', color: '#c44' }}>
-                            (diff: {Math.abs(Number(currentMatch.bph_year) - Number(currentMatch.ia_year))} years)
+                            (year mismatch)
                           </span>
                         )}
                       </p>
                     )}
-                    {currentMatch.ia_publisher && (
-                      <p style={{ marginBottom: '4px' }}><strong>Publisher:</strong> {currentMatch.ia_publisher}</p>
-                    )}
-                    {currentMatch.ia_place && (
-                      <p style={{ marginBottom: '4px' }}><strong>Place:</strong> {currentMatch.ia_place}</p>
+                    {iaMetadata?.publisher && (
+                      <p style={{ marginBottom: '4px' }}><strong>Publisher:</strong> {iaMetadata.publisher}</p>
                     )}
                     <p style={{ marginBottom: '4px', fontSize: '11px', color: '#888' }}>
                       <strong>ID:</strong> {currentMatch.ia_identifier}
                     </p>
+                    {/* Match signals */}
+                    <div style={{ marginTop: '8px', display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                      {currentMatch.ia_author_match && (
+                        <span style={{ fontSize: '10px', background: '#d4edda', padding: '2px 6px', borderRadius: '4px' }}>
+                          Author match
+                        </span>
+                      )}
+                      {currentMatch.ia_year_match && (
+                        <span style={{ fontSize: '10px', background: '#d4edda', padding: '2px 6px', borderRadius: '4px' }}>
+                          Year match
+                        </span>
+                      )}
+                    </div>
                   </div>
                   <div style={{ marginTop: '12px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                     <a
