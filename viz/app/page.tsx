@@ -55,6 +55,7 @@ export default function Home() {
             <Link href="/blog" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>Essays</Link>
             <Link href="/about" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>About</Link>
             <Link href="/contribute" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#9e4a3a', fontWeight: 500, textDecoration: 'none' }}>Contribute</Link>
+            <Link href="/digitizer" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>Digitizer</Link>
             <a
               href="https://www.ancientwisdomtrust.org/become-a-patron"
               target="_blank"
@@ -106,7 +107,7 @@ export default function Home() {
           maxWidth: '600px',
           lineHeight: 1.6,
         }}>
-          The Renaissance itself was written in Latin. We never translated it out.
+          The Renaissance itself was written in Latin. We never translated it.
         </p>
 
         {/* The Numbers */}
@@ -175,6 +176,363 @@ export default function Home() {
         }}>
           ↓ Scroll to explore the gap
         </p>
+      </section>
+
+      {/* The First Renaissance Story */}
+      <section style={{
+        padding: '100px 24px',
+        background: '#fff',
+        borderTop: '1px solid #e8e4dc',
+      }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2 style={{
+            fontFamily: 'Cormorant Garamond, Georgia, serif',
+            fontSize: '36px',
+            fontWeight: 400,
+            color: '#1a1612',
+            marginBottom: '24px',
+            textAlign: 'center',
+          }}>
+            The Story of the First Renaissance
+          </h2>
+          <p style={{
+            fontFamily: 'Newsreader, Georgia, serif',
+            fontSize: '19px',
+            lineHeight: 1.7,
+            color: '#444',
+            marginBottom: '48px',
+            maxWidth: '680px',
+            margin: '0 auto 48px',
+            textAlign: 'center',
+          }}>
+            In 1460, a monk brought a manuscript from Macedonia to Florence.
+            It changed everything.
+          </p>
+
+          {/* First Book: Corpus Hermeticum */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '48px',
+            alignItems: 'center',
+            marginBottom: '80px',
+          }}>
+            <div>
+              <figure style={{
+                margin: 0,
+                position: 'relative',
+              }}>
+                <a
+                  href="https://commons.wikimedia.org/wiki/File:Plut.82.6_C1_The_Dialogues_of_Plato.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://www.meisterdrucke.ie/kunstwerke/1260px/Italian_School_-_Plut_826_C1_The_Dialogues_of_Plato_translated_by_Ficino_and_dedicated_to_Lorenzo_-_%28MeisterDrucke-1523013%29.jpg"
+                    alt="Ficino's Plato translations dedicated to Lorenzo de' Medici"
+                    style={{
+                      width: '100%',
+                      maxWidth: '350px',
+                      boxShadow: '0 8px 32px rgba(0,0,0,0.15)',
+                      borderRadius: '4px',
+                    }}
+                  />
+                </a>
+                <figcaption style={{
+                  fontFamily: 'Inter, sans-serif',
+                  fontSize: '11px',
+                  color: '#888',
+                  marginTop: '12px',
+                  fontStyle: 'italic',
+                }}>
+                  Ficino&apos;s Latin translations of Plato, dedicated to Lorenzo de&apos; Medici. <br />
+                  The book that transmitted Greek philosophy to Renaissance Europe.
+                </figcaption>
+              </figure>
+            </div>
+            <div>
+              <h3 style={{
+                fontFamily: 'Cormorant Garamond, Georgia, serif',
+                fontSize: '28px',
+                fontWeight: 400,
+                color: '#1a1612',
+                marginBottom: '16px',
+              }}>
+                The Rediscovery
+              </h3>
+              <p style={{
+                fontFamily: 'Newsreader, Georgia, serif',
+                fontSize: '17px',
+                lineHeight: 1.7,
+                color: '#444',
+                marginBottom: '16px',
+              }}>
+                When Cosimo de&apos; Medici received a Greek manuscript of the <em>Corpus Hermeticum</em>,
+                he ordered Marsilio Ficino to stop translating Plato and translate this first.
+              </p>
+              <p style={{
+                fontFamily: 'Newsreader, Georgia, serif',
+                fontSize: '17px',
+                lineHeight: 1.7,
+                color: '#444',
+              }}>
+                Ficino&apos;s translations of Hermes, Plato, and Plotinus into Latin sparked the Renaissance.
+                Ideas that had been locked away in Greek for a thousand years suddenly flowed across Europe.
+              </p>
+            </div>
+          </div>
+
+          {/* Second Book: della Porta's Natural Magick */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '48px',
+            alignItems: 'center',
+            marginBottom: '80px',
+          }}>
+            <div style={{ order: 2 }}>
+              <figure style={{
+                margin: 0,
+                position: 'relative',
+              }}>
+                <a
+                  href="https://www.abebooks.com/servlet/BookDetailsPL?bi=32181420104"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://pictures.abebooks.com/inventory/32181420104.jpg"
+                    alt="Title page of della Porta's Magiae Naturalis"
+                    style={{
+                      width: '100%',
+                      maxWidth: '350px',
+                      boxShadow: '0 8px 32px rgba(0,0,0,0.15)',
+                      borderRadius: '4px',
+                    }}
+                  />
+                </a>
+                <figcaption style={{
+                  fontFamily: 'Inter, sans-serif',
+                  fontSize: '11px',
+                  color: '#888',
+                  marginTop: '12px',
+                  fontStyle: 'italic',
+                }}>
+                  Della Porta&apos;s <em>Magia Naturalis</em> (1558). <br />
+                  Where Renaissance &quot;natural magic&quot; became experimental science.
+                </figcaption>
+              </figure>
+            </div>
+            <div style={{ order: 1 }}>
+              <h3 style={{
+                fontFamily: 'Cormorant Garamond, Georgia, serif',
+                fontSize: '28px',
+                fontWeight: 400,
+                color: '#1a1612',
+                marginBottom: '16px',
+              }}>
+                The Path to Science
+              </h3>
+              <p style={{
+                fontFamily: 'Newsreader, Georgia, serif',
+                fontSize: '17px',
+                lineHeight: 1.7,
+                color: '#444',
+                marginBottom: '16px',
+              }}>
+                Renaissance &quot;natural magic&quot; was not superstition—it was the study of nature&apos;s hidden forces.
+                Della Porta&apos;s work on optics, magnetism, and chemistry laid groundwork for the Scientific Revolution.
+              </p>
+              <p style={{
+                fontFamily: 'Newsreader, Georgia, serif',
+                fontSize: '17px',
+                lineHeight: 1.7,
+                color: '#444',
+              }}>
+                All of this was written in Latin—the international language of scholarship.
+                And almost none of it has been translated into English.
+              </p>
+            </div>
+          </div>
+
+          {/* Gallery of Renaissance Illustrations */}
+          <div style={{
+            marginBottom: '80px',
+          }}>
+            <h3 style={{
+              fontFamily: 'Cormorant Garamond, Georgia, serif',
+              fontSize: '28px',
+              fontWeight: 400,
+              color: '#1a1612',
+              marginBottom: '16px',
+              textAlign: 'center',
+            }}>
+              A Library Waiting to Be Unlocked
+            </h3>
+            <p style={{
+              fontFamily: 'Newsreader, Georgia, serif',
+              fontSize: '17px',
+              color: '#666',
+              textAlign: 'center',
+              marginBottom: '32px',
+            }}>
+              Cosmological diagrams, alchemical emblems, anatomical masterpieces—all written in Latin.
+            </p>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+              gap: '24px',
+              maxWidth: '900px',
+              margin: '0 auto',
+            }}>
+              {[
+                {
+                  src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Vitruvian_macrocosm.jpg/500px-Vitruvian_macrocosm.jpg',
+                  href: 'https://commons.wikimedia.org/wiki/File:Vitruvian_macrocosm.jpg',
+                  title: 'Man as Microcosm',
+                  author: 'Robert Fludd, 1617',
+                },
+                {
+                  src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Harley_3469%2C_f.28.jpg/500px-Harley_3469%2C_f.28.jpg',
+                  href: 'https://commons.wikimedia.org/wiki/File:Harley_3469,_f.28.jpg',
+                  title: 'Splendor Solis',
+                  author: 'Alchemical manuscript, 1582',
+                },
+                {
+                  src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Vesalius_Fabrica_p184.jpg/330px-Vesalius_Fabrica_p184.jpg',
+                  href: 'https://commons.wikimedia.org/wiki/File:Vesalius_Fabrica_p184.jpg',
+                  title: 'The Muscle Men',
+                  author: 'Andreas Vesalius, 1543',
+                },
+                {
+                  src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Michael_Maier_Atalanta_Fugiens.jpeg/500px-Michael_Maier_Atalanta_Fugiens.jpeg',
+                  href: 'https://commons.wikimedia.org/wiki/File:Michael_Maier_Atalanta_Fugiens.jpeg',
+                  title: 'Atalanta Fugiens',
+                  author: 'Michael Maier, 1617',
+                },
+              ].map((img, i) => (
+                <a
+                  key={i}
+                  href={img.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    textDecoration: 'none',
+                    display: 'block',
+                  }}
+                >
+                  <figure style={{ margin: 0, textAlign: 'center' }}>
+                    <img
+                      src={img.src}
+                      alt={img.title}
+                      style={{
+                        width: '100%',
+                        height: '220px',
+                        objectFit: 'cover',
+                        boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
+                        borderRadius: '3px',
+                      }}
+                    />
+                    <figcaption style={{
+                      fontFamily: 'Inter, sans-serif',
+                      fontSize: '11px',
+                      color: '#666',
+                      marginTop: '12px',
+                      lineHeight: 1.4,
+                    }}>
+                      <strong style={{ color: '#1a1612', display: 'block' }}>{img.title}</strong>
+                      <span style={{ color: '#888' }}>{img.author}</span>
+                    </figcaption>
+                  </figure>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* The Parallel */}
+          <div style={{
+            background: '#f5f0e8',
+            borderRadius: '12px',
+            padding: '48px',
+            textAlign: 'center',
+          }}>
+            <h3 style={{
+              fontFamily: 'Cormorant Garamond, Georgia, serif',
+              fontSize: '28px',
+              fontWeight: 400,
+              color: '#1a1612',
+              marginBottom: '24px',
+            }}>
+              The Pattern Repeats
+            </h3>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr auto 1fr',
+              gap: '24px',
+              alignItems: 'center',
+              maxWidth: '700px',
+              margin: '0 auto',
+            }}>
+              <div style={{ textAlign: 'center' }}>
+                <p style={{
+                  fontFamily: 'Inter, sans-serif',
+                  fontSize: '12px',
+                  letterSpacing: '0.1em',
+                  color: '#888',
+                  marginBottom: '8px',
+                }}>
+                  1460
+                </p>
+                <p style={{
+                  fontFamily: 'Newsreader, Georgia, serif',
+                  fontSize: '17px',
+                  color: '#444',
+                }}>
+                  Ancient Greek texts<br />
+                  locked away for 1,000 years<br />
+                  <strong>translated into Latin</strong>
+                </p>
+              </div>
+              <div style={{
+                fontFamily: 'Cormorant Garamond, Georgia, serif',
+                fontSize: '36px',
+                color: '#9e4a3a',
+              }}>
+                →
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <p style={{
+                  fontFamily: 'Inter, sans-serif',
+                  fontSize: '12px',
+                  letterSpacing: '0.1em',
+                  color: '#888',
+                  marginBottom: '8px',
+                }}>
+                  2025
+                </p>
+                <p style={{
+                  fontFamily: 'Newsreader, Georgia, serif',
+                  fontSize: '17px',
+                  color: '#444',
+                }}>
+                  Renaissance Latin texts<br />
+                  locked away for 500 years<br />
+                  <strong style={{ color: '#9e4a3a' }}>waiting for translation</strong>
+                </p>
+              </div>
+            </div>
+            <p style={{
+              fontFamily: 'Newsreader, Georgia, serif',
+              fontSize: '19px',
+              color: '#444',
+              marginTop: '32px',
+              fontStyle: 'italic',
+            }}>
+              The Renaissance happened because someone translated old books.<br />
+              It can happen again.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Section 2: The Language Landscape */}
@@ -707,6 +1065,7 @@ export default function Home() {
             <Link href="/blog" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Research Essays</Link>
             <Link href="/contribute" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Contribute</Link>
             <Link href="/about" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>About</Link>
+            <Link href="/translate" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>Translation Prototype</Link>
           </div>
         </div>
       </section>
