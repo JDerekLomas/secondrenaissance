@@ -51,7 +51,10 @@ export default function TranslateDashboard() {
   const [error, setError] = useState<string | null>(null);
 
   const fetchJobs = useCallback(async () => {
-    if (!session?.access_token) return;
+    if (!session?.access_token) {
+      setLoading(false);
+      return;
+    }
 
     try {
       const response = await fetch('/api/translate/jobs', {
@@ -60,13 +63,21 @@ export default function TranslateDashboard() {
         }
       });
 
+      if (response.status === 401) {
+        // Token might be expired, don't show error
+        setLoading(false);
+        return;
+      }
+
       if (!response.ok) {
-        throw new Error('Failed to fetch jobs');
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || 'Failed to fetch jobs');
       }
 
       const data = await response.json();
       setJobs(data.jobs);
     } catch (err) {
+      console.error('Fetch jobs error:', err);
       setError(err instanceof Error ? err.message : 'Failed to load jobs');
     } finally {
       setLoading(false);
