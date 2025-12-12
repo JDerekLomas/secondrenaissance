@@ -1,9 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
-import { getUserFromRequest } from '@/lib/supabase-server';
+import { createClient } from '@supabase/supabase-js';
 import { writeFile, mkdir } from 'fs/promises';
 import path from 'path';
 import AdmZip from 'adm-zip';
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://ykhxaecbbxaaqlujuzde.supabase.co';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlraHhhZWNiYnhhYXFsdWp1emRlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUwNjExMDEsImV4cCI6MjA4MDYzNzEwMX0.O2chfnHGQWLOaVSFQ-F6UJMlya9EzPbsUh848SEOPj4';
+
+// Create a supabase client with the user's auth token for RLS
+function createSupabaseClient(token: string) {
+  return createClient(supabaseUrl, supabaseAnonKey, {
+    global: {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }
+  });
+}
+
+// Get token from request
+function getTokenFromRequest(request: NextRequest): string | null {
+  const authHeader = request.headers.get('Authorization');
+  if (!authHeader?.startsWith('Bearer ')) {
+    return null;
+  }
+  return authHeader.slice(7);
+}
 
 // Default prompts
 const DEFAULT_PROMPTS = {
@@ -44,9 +66,17 @@ Provide only the summary.`
 
 // GET: List user's jobs
 export async function GET(request: NextRequest) {
-  const user = await getUserFromRequest(request);
+  const token = getTokenFromRequest(request);
 
-  if (!user) {
+  if (!token) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  const supabase = createSupabaseClient(token);
+
+  // Verify the token and get user
+  const { data: { user }, error: authError } = await supabase.auth.getUser();
+  if (authError || !user) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
@@ -58,7 +88,6 @@ export async function GET(request: NextRequest) {
     let query = supabase
       .from('translation_jobs')
       .select('*')
-      .eq('user_id', user.id)
       .order('created_at', { ascending: false })
       .limit(limit);
 
@@ -82,9 +111,17 @@ export async function GET(request: NextRequest) {
 
 // POST: Create a new job
 export async function POST(request: NextRequest) {
-  const user = await getUserFromRequest(request);
+  const token = getTokenFromRequest(request);
 
-  if (!user) {
+  if (!token) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  const supabase = createSupabaseClient(token);
+
+  // Verify the token and get user
+  const { data: { user }, error: authError } = await supabase.auth.getUser();
+  if (authError || !user) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
