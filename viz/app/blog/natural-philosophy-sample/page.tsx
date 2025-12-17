@@ -1,5 +1,4 @@
 import BlogLayout from "../BlogLayout";
-import Image from "next/image";
 
 export default function NaturalPhilosophySample() {
   return (
