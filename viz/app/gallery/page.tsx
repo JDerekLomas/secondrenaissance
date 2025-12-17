@@ -35,25 +35,6 @@ interface GalleryData {
 
 const IMAGES_PER_PAGE = 12;
 
-// Convert Wikimedia Commons file page URL to direct image URL
-function getWikimediaImageUrl(wikimediaUrl: string, width?: number): string {
-  // Extract filename from URL like https://commons.wikimedia.org/wiki/File:Xxx.jpg
-  const match = wikimediaUrl.match(/File:(.+)$/);
-  if (!match) return wikimediaUrl;
-
-  const filename = decodeURIComponent(match[1]);
-  // Calculate MD5-based path (Wikimedia uses first 2 chars of MD5 hash)
-  // For simplicity, use the Special:FilePath redirect which handles this
-  const encodedFilename = encodeURIComponent(filename);
-
-  if (width) {
-    // Use thumbnail API
-    return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodedFilename}?width=${width}`;
-  }
-  // Full resolution
-  return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodedFilename}`;
-}
-
 export default function GalleryPage() {
   const [data, setData] = useState<GalleryData | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -231,18 +212,11 @@ export default function GalleryPage() {
                   </div>
                 )}
                 <img
-                  src={getWikimediaImageUrl(image.wikimedia_url, 400)}
+                  src={image.thumb_url}
                   alt={image.title}
                   loading={index < IMAGES_PER_PAGE ? "eager" : "lazy"}
                   fetchPriority={index < 4 ? "high" : "auto"}
                   onLoad={() => setLoadedImages((prev) => new Set(prev).add(image.id))}
-                  onError={(e) => {
-                    // Fallback to thumb_url if Wikimedia fails
-                    const target = e.target as HTMLImageElement;
-                    if (!target.src.includes(image.thumb_url)) {
-                      target.src = image.thumb_url;
-                    }
-                  }}
                   style={{
                     width: "100%",
                     display: "block",
@@ -354,10 +328,10 @@ export default function GalleryPage() {
             }}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Large Image - use high resolution from Wikimedia */}
+            {/* Large Image - use local full resolution */}
             <div style={{ position: "relative", background: "#1a1612" }}>
               <img
-                src={getWikimediaImageUrl(selectedImage.wikimedia_url, 1200)}
+                src={selectedImage.image_url}
                 alt={selectedImage.title}
                 style={{
                   width: "100%",
@@ -443,7 +417,7 @@ export default function GalleryPage() {
               {/* Links */}
               <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
                 <a
-                  href={getWikimediaImageUrl(selectedImage.wikimedia_url)}
+                  href={selectedImage.image_url}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -459,7 +433,7 @@ export default function GalleryPage() {
                     gap: "6px",
                   }}
                 >
-                  Full Resolution ↗
+                  Download Image ↓
                 </a>
                 <a
                   href={selectedImage.wikimedia_url}
@@ -479,7 +453,7 @@ export default function GalleryPage() {
                     gap: "6px",
                   }}
                 >
-                  View on Wikimedia Commons
+                  View on Wikimedia Commons ↗
                 </a>
               </div>
             </div>

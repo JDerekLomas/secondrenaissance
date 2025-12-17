@@ -12,10 +12,13 @@
       "year": 1617,
       "source": "Utriusque Cosmi Historia",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Robert_Fludd_1.gif",
-      "thumb_url": "/gallery/thumbs/fludd-macrocosm.jpg",
-      "image_url": "/gallery/full/fludd-macrocosm.jpg",
+      "thumb_url": "/gallery/thumbs/fludd-macrocosm.gif",
+      "image_url": "/gallery/full/fludd-macrocosm.gif",
       "license": "Public Domain",
-      "categories": ["cosmology", "hermetica"],
+      "categories": [
+        "cosmology",
+        "hermetica"
+      ],
       "description": "The human body as microcosm reflecting the celestial macrocosm"
     },
     {
@@ -28,7 +31,10 @@
       "thumb_url": "/gallery/thumbs/vitruvian-man.jpg",
       "image_url": "/gallery/full/vitruvian-man.jpg",
       "license": "Public Domain",
-      "categories": ["anatomy", "cosmology"],
+      "categories": [
+        "anatomy",
+        "cosmology"
+      ],
       "description": "Leonardo's study of ideal human proportions based on Vitruvius"
     },
     {
@@ -41,7 +47,10 @@
       "thumb_url": "/gallery/thumbs/cellarius-ptolemaic.jpg",
       "image_url": "/gallery/full/cellarius-ptolemaic.jpg",
       "license": "Public Domain",
-      "categories": ["cosmology", "astronomy"],
+      "categories": [
+        "cosmology",
+        "astronomy"
+      ],
       "description": "Ptolemaic geocentric universe from Cellarius's celestial atlas"
     },
     {
@@ -54,7 +63,9 @@
       "thumb_url": "/gallery/thumbs/splendor-solis.jpg",
       "image_url": "/gallery/full/splendor-solis.jpg",
       "license": "Public Domain",
-      "categories": ["alchemy"],
+      "categories": [
+        "alchemy"
+      ],
       "description": "Alchemical treatise with stunning illuminated illustrations"
     },
     {
@@ -67,7 +78,10 @@
       "thumb_url": "/gallery/thumbs/vesalius-muscle.jpg",
       "image_url": "/gallery/full/vesalius-muscle.jpg",
       "license": "Public Domain",
-      "categories": ["anatomy", "medicine"],
+      "categories": [
+        "anatomy",
+        "medicine"
+      ],
       "description": "Revolutionary anatomical illustration from the father of modern anatomy"
     },
     {
@@ -80,7 +94,10 @@
       "thumb_url": "/gallery/thumbs/durer-melencolia.jpg",
       "image_url": "/gallery/full/durer-melencolia.jpg",
       "license": "Public Domain",
-      "categories": ["magic", "alchemy"],
+      "categories": [
+        "magic",
+        "alchemy"
+      ],
       "description": "Dürer's enigmatic engraving filled with alchemical and magical symbolism"
     },
     {
@@ -93,7 +110,9 @@
       "thumb_url": "/gallery/thumbs/bosch-garden.jpg",
       "image_url": "/gallery/full/bosch-garden.jpg",
       "license": "Public Domain",
-      "categories": ["mysticism"],
+      "categories": [
+        "mysticism"
+      ],
       "description": "Bosch's surreal triptych of paradise, earthly pleasures, and hell"
     },
     {
@@ -106,7 +125,9 @@
       "thumb_url": "/gallery/thumbs/flammarion.jpg",
       "image_url": "/gallery/full/flammarion.jpg",
       "license": "Public Domain",
-      "categories": ["cosmology"],
+      "categories": [
+        "cosmology"
+      ],
       "description": "A traveler peers beyond the edge of the firmament to see the cosmic machinery"
     },
     {
@@ -119,7 +140,10 @@
       "thumb_url": "/gallery/thumbs/tree-of-life.jpg",
       "image_url": "/gallery/full/tree-of-life.jpg",
       "license": "Public Domain",
-      "categories": ["kabbalah", "hermetica"],
+      "categories": [
+        "kabbalah",
+        "hermetica"
+      ],
       "description": "The Sephirotic Tree of Life diagram from Christian Kabbalah"
     },
     {
@@ -129,10 +153,12 @@
       "year": 1618,
       "source": "Speculum Sophicum Rhodostauroticum",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Templeofrosycross_highres.png",
-      "thumb_url": "/gallery/thumbs/rosicrucian-temple.jpg",
-      "image_url": "/gallery/full/rosicrucian-temple.jpg",
+      "thumb_url": "/gallery/thumbs/rosicrucian-temple.png",
+      "image_url": "/gallery/full/rosicrucian-temple.png",
       "license": "Public Domain",
-      "categories": ["rosicrucianism"],
+      "categories": [
+        "rosicrucianism"
+      ],
       "description": "Allegorical depiction of the Rosicrucian Brotherhood's invisible college"
     },
     {
@@ -145,7 +171,9 @@
       "thumb_url": "/gallery/thumbs/ficino-portrait.jpg",
       "image_url": "/gallery/full/ficino-portrait.jpg",
       "license": "Public Domain",
-      "categories": ["portraits"],
+      "categories": [
+        "portraits"
+      ],
       "description": "Portrait of the translator who sparked the Renaissance Hermetic revival"
     },
     {
@@ -158,7 +186,10 @@
       "thumb_url": "/gallery/thumbs/paracelsus-portrait.jpg",
       "image_url": "/gallery/full/paracelsus-portrait.jpg",
       "license": "Public Domain",
-      "categories": ["portraits", "medicine"],
+      "categories": [
+        "portraits",
+        "medicine"
+      ],
       "description": "The revolutionary physician-alchemist who transformed medical practice"
     },
     {
@@ -171,7 +202,10 @@
       "thumb_url": "/gallery/thumbs/bruno-portrait.jpg",
       "image_url": "/gallery/full/bruno-portrait.jpg",
       "license": "Public Domain",
-      "categories": ["portraits", "hermetica"],
+      "categories": [
+        "portraits",
+        "hermetica"
+      ],
       "description": "The Hermetic philosopher burned for heresy in 1600"
     },
     {
@@ -184,7 +218,11 @@
       "thumb_url": "/gallery/thumbs/dee-monas.jpg",
       "image_url": "/gallery/full/dee-monas.jpg",
       "license": "Public Domain",
-      "categories": ["magic", "hermetica", "kabbalah"],
+      "categories": [
+        "magic",
+        "hermetica",
+        "kabbalah"
+      ],
       "description": "Dee's hieroglyphic symbol encoding all cosmic wisdom"
     },
     {
@@ -197,7 +235,9 @@
       "thumb_url": "/gallery/thumbs/gutenberg-bible.jpg",
       "image_url": "/gallery/full/gutenberg-bible.jpg",
       "license": "Public Domain",
-      "categories": ["printing"],
+      "categories": [
+        "printing"
+      ],
       "description": "The first major book printed with movable type in the West"
     },
     {
@@ -207,10 +247,13 @@
       "year": 1617,
       "source": "Atalanta Fugiens",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Michael_Maier_Atalanta_Fugiens_Emblem_02.jpeg",
-      "thumb_url": "/gallery/thumbs/atalanta-fugiens.jpg",
-      "image_url": "/gallery/full/atalanta-fugiens.jpg",
+      "thumb_url": "/gallery/thumbs/atalanta-fugiens.jpeg",
+      "image_url": "/gallery/full/atalanta-fugiens.jpeg",
       "license": "Public Domain",
-      "categories": ["alchemy", "hermetica"],
+      "categories": [
+        "alchemy",
+        "hermetica"
+      ],
       "description": "Alchemical emblem book combining images, text, and music"
     },
     {
@@ -223,7 +266,10 @@
       "thumb_url": "/gallery/thumbs/aurora-consurgens.jpg",
       "image_url": "/gallery/full/aurora-consurgens.jpg",
       "license": "Public Domain",
-      "categories": ["alchemy", "mysticism"],
+      "categories": [
+        "alchemy",
+        "mysticism"
+      ],
       "description": "Medieval alchemical manuscript attributed to Thomas Aquinas"
     },
     {
@@ -236,7 +282,9 @@
       "thumb_url": "/gallery/thumbs/mutus-liber.jpg",
       "image_url": "/gallery/full/mutus-liber.jpg",
       "license": "Public Domain",
-      "categories": ["alchemy"],
+      "categories": [
+        "alchemy"
+      ],
       "description": "Wordless alchemical book communicating the Great Work through images alone"
     },
     {
@@ -246,10 +294,12 @@
       "year": 1470,
       "source": "Huntington Library",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Ripley_Scroll_(Huntington_Library).png",
-      "thumb_url": "/gallery/thumbs/ripley-scroll.jpg",
-      "image_url": "/gallery/full/ripley-scroll.jpg",
+      "thumb_url": "/gallery/thumbs/ripley-scroll.png",
+      "image_url": "/gallery/full/ripley-scroll.png",
       "license": "Public Domain",
-      "categories": ["alchemy"],
+      "categories": [
+        "alchemy"
+      ],
       "description": "Symbolic alchemical scroll depicting the Great Work"
     },
     {
@@ -262,7 +312,9 @@
       "thumb_url": "/gallery/thumbs/alchemist-brueghel.jpg",
       "image_url": "/gallery/full/alchemist-brueghel.jpg",
       "license": "CC-BY 4.0",
-      "categories": ["alchemy"],
+      "categories": [
+        "alchemy"
+      ],
       "description": "Satirical depiction of an alchemist wasting his family's fortune"
     },
     {
@@ -275,7 +327,10 @@
       "thumb_url": "/gallery/thumbs/copernicus-heliocentric.jpg",
       "image_url": "/gallery/full/copernicus-heliocentric.jpg",
       "license": "Public Domain",
-      "categories": ["astronomy", "cosmology"],
+      "categories": [
+        "astronomy",
+        "cosmology"
+      ],
       "description": "Copernicus's revolutionary diagram placing the Sun at the center"
     },
     {
@@ -288,7 +343,9 @@
       "thumb_url": "/gallery/thumbs/hermes-trismegistus.jpg",
       "image_url": "/gallery/full/hermes-trismegistus.jpg",
       "license": "Public Domain",
-      "categories": ["hermetica"],
+      "categories": [
+        "hermetica"
+      ],
       "description": "The legendary sage Hermes Trismegistus, author of the Hermetic Corpus"
     },
     {
@@ -301,7 +358,9 @@
       "thumb_url": "/gallery/thumbs/phoenix-philosophers-stone.jpg",
       "image_url": "/gallery/full/phoenix-philosophers-stone.jpg",
       "license": "Public Domain",
-      "categories": ["alchemy"],
+      "categories": [
+        "alchemy"
+      ],
       "description": "The phoenix rising from the flames, symbol of alchemical transformation"
     },
     {
@@ -314,7 +373,10 @@
       "thumb_url": "/gallery/thumbs/nicolas-flamel.jpg",
       "image_url": "/gallery/full/nicolas-flamel.jpg",
       "license": "Public Domain",
-      "categories": ["alchemy", "portraits"],
+      "categories": [
+        "alchemy",
+        "portraits"
+      ],
       "description": "The legendary alchemist said to have achieved the Philosopher's Stone"
     },
     {
@@ -327,7 +389,10 @@
       "thumb_url": "/gallery/thumbs/khunrath-portrait.jpg",
       "image_url": "/gallery/full/khunrath-portrait.jpg",
       "license": "CC-BY 4.0",
-      "categories": ["alchemy", "portraits"],
+      "categories": [
+        "alchemy",
+        "portraits"
+      ],
       "description": "German physician, alchemist, and Hermetic philosopher"
     },
     {
@@ -340,7 +405,10 @@
       "thumb_url": "/gallery/thumbs/ramon-llull.jpg",
       "image_url": "/gallery/full/ramon-llull.jpg",
       "license": "Public Domain",
-      "categories": ["portraits", "kabbalah"],
+      "categories": [
+        "portraits",
+        "kabbalah"
+      ],
       "description": "Majorcan philosopher who influenced Renaissance magic and combinatorics"
     },
     {
@@ -353,7 +421,11 @@
       "thumb_url": "/gallery/thumbs/pico-mirandola.jpg",
       "image_url": "/gallery/full/pico-mirandola.jpg",
       "license": "Public Domain",
-      "categories": ["portraits", "kabbalah", "hermetica"],
+      "categories": [
+        "portraits",
+        "kabbalah",
+        "hermetica"
+      ],
       "description": "Author of the Oration on the Dignity of Man, synthesizer of Kabbalah and Hermeticism"
     },
     {
@@ -366,7 +438,10 @@
       "thumb_url": "/gallery/thumbs/agrippa-portrait.jpg",
       "image_url": "/gallery/full/agrippa-portrait.jpg",
       "license": "CC-BY 4.0",
-      "categories": ["portraits", "magic"],
+      "categories": [
+        "portraits",
+        "magic"
+      ],
       "description": "Author of Three Books of Occult Philosophy, master of Renaissance magic"
     },
     {
@@ -379,7 +454,10 @@
       "thumb_url": "/gallery/thumbs/john-dee-portrait.jpg",
       "image_url": "/gallery/full/john-dee-portrait.jpg",
       "license": "Public Domain",
-      "categories": ["portraits", "magic"],
+      "categories": [
+        "portraits",
+        "magic"
+      ],
       "description": "Elizabethan mathematician, astrologer, and advisor to Queen Elizabeth I"
     },
     {
@@ -392,7 +470,10 @@
       "thumb_url": "/gallery/thumbs/elias-ashmole.jpg",
       "image_url": "/gallery/full/elias-ashmole.jpg",
       "license": "Public Domain",
-      "categories": ["portraits", "alchemy"],
+      "categories": [
+        "portraits",
+        "alchemy"
+      ],
       "description": "Antiquary, collector, and founder of the Ashmolean Museum"
     },
     {
@@ -405,7 +486,10 @@
       "thumb_url": "/gallery/thumbs/ouroboros.jpg",
       "image_url": "/gallery/full/ouroboros.jpg",
       "license": "Public Domain",
-      "categories": ["alchemy", "hermetica"],
+      "categories": [
+        "alchemy",
+        "hermetica"
+      ],
       "description": "The serpent eating its own tail, symbol of eternal return and unity"
     },
     {
@@ -418,7 +502,10 @@
       "thumb_url": "/gallery/thumbs/rebis-hermetic.jpg",
       "image_url": "/gallery/full/rebis-hermetic.jpg",
       "license": "Public Domain",
-      "categories": ["alchemy", "hermetica"],
+      "categories": [
+        "alchemy",
+        "hermetica"
+      ],
       "description": "The alchemical rebis, symbol of the union of opposites"
     },
     {
@@ -431,7 +518,10 @@
       "thumb_url": "/gallery/thumbs/zodiac-medieval.jpg",
       "image_url": "/gallery/full/zodiac-medieval.jpg",
       "license": "Public Domain",
-      "categories": ["cosmology", "astronomy"],
+      "categories": [
+        "cosmology",
+        "astronomy"
+      ],
       "description": "Medieval diagram of zodiacal signs and celestial influences"
     },
     {
@@ -444,7 +534,9 @@
       "thumb_url": "/gallery/thumbs/francis-bacon.jpg",
       "image_url": "/gallery/full/francis-bacon.jpg",
       "license": "Public Domain",
-      "categories": ["portraits"],
+      "categories": [
+        "portraits"
+      ],
       "description": "Father of empiricism and the scientific method"
     },
     {
@@ -457,7 +549,10 @@
       "thumb_url": "/gallery/thumbs/emerald-tablet.jpg",
       "image_url": "/gallery/full/emerald-tablet.jpg",
       "license": "Public Domain",
-      "categories": ["alchemy", "hermetica"],
+      "categories": [
+        "alchemy",
+        "hermetica"
+      ],
       "description": "Depiction of the legendary Emerald Tablet of Hermes Trismegistus"
     },
     {
@@ -470,7 +565,9 @@
       "thumb_url": "/gallery/thumbs/alchemical-lab.jpg",
       "image_url": "/gallery/full/alchemical-lab.jpg",
       "license": "CC-BY 4.0",
-      "categories": ["alchemy"],
+      "categories": [
+        "alchemy"
+      ],
       "description": "An alchemist's laboratory with furnaces and distillation equipment"
     },
     {
@@ -483,7 +580,10 @@
       "thumb_url": "/gallery/thumbs/nostradamus.jpg",
       "image_url": "/gallery/full/nostradamus.jpg",
       "license": "Public Domain",
-      "categories": ["portraits", "magic"],
+      "categories": [
+        "portraits",
+        "magic"
+      ],
       "description": "French astrologer and prophet, author of Les Prophéties"
     },
     {
@@ -496,7 +596,9 @@
       "thumb_url": "/gallery/thumbs/creation-adam.jpg",
       "image_url": "/gallery/full/creation-adam.jpg",
       "license": "Public Domain",
-      "categories": ["mysticism"],
+      "categories": [
+        "mysticism"
+      ],
       "description": "Michelangelo's iconic fresco of divine creation"
     },
     {
@@ -509,7 +611,9 @@
       "thumb_url": "/gallery/thumbs/school-athens.jpg",
       "image_url": "/gallery/full/school-athens.jpg",
       "license": "Public Domain",
-      "categories": ["portraits"],
+      "categories": [
+        "portraits"
+      ],
       "description": "Raphael's celebration of classical philosophy and knowledge"
     },
     {
@@ -522,7 +626,9 @@
       "thumb_url": "/gallery/thumbs/botticelli-primavera.jpg",
       "image_url": "/gallery/full/botticelli-primavera.jpg",
       "license": "Public Domain",
-      "categories": ["mysticism"],
+      "categories": [
+        "mysticism"
+      ],
       "description": "Botticelli's allegorical painting of spring and classical mythology"
     },
     {
@@ -535,7 +641,9 @@
       "thumb_url": "/gallery/thumbs/kircher-portrait.jpg",
       "image_url": "/gallery/full/kircher-portrait.jpg",
       "license": "Public Domain",
-      "categories": ["portraits"],
+      "categories": [
+        "portraits"
+      ],
       "description": "Jesuit polymath who wrote on Egyptology, geology, and universal knowledge"
     },
     {
@@ -545,10 +653,13 @@
       "year": 1617,
       "source": "Utriusque Cosmi Historia",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Robert_Fludd,_%22Utriusque_Cosmi%22,_Tractatus_I,_lib._II.png",
-      "thumb_url": "/gallery/thumbs/fludd-utriusque.jpg",
+      "thumb_url": "/gallery/thumbs/fludd-utriusque.png",
       "image_url": "/gallery/full/fludd-utriusque.png",
       "license": "Public Domain",
-      "categories": ["cosmology", "hermetica"],
+      "categories": [
+        "cosmology",
+        "hermetica"
+      ],
       "description": "Fludd's cosmological diagram showing the universe's structure"
     },
     {
@@ -561,7 +672,10 @@
       "thumb_url": "/gallery/thumbs/bruno-intellectus.jpg",
       "image_url": "/gallery/full/bruno-intellectus.jpg",
       "license": "Public Domain",
-      "categories": ["hermetica", "magic"],
+      "categories": [
+        "hermetica",
+        "magic"
+      ],
       "description": "Bruno's diagram of the intellect from his memory treatise"
     },
     {
@@ -571,10 +685,12 @@
       "year": 1210,
       "source": "Bodleian Library, Oxford",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Ashmole_Bestiary_-_folio_74r.png",
-      "thumb_url": "/gallery/thumbs/ashmole-bestiary.jpg",
+      "thumb_url": "/gallery/thumbs/ashmole-bestiary.png",
       "image_url": "/gallery/full/ashmole-bestiary.png",
       "license": "Public Domain",
-      "categories": ["mysticism"],
+      "categories": [
+        "mysticism"
+      ],
       "description": "Medieval bestiary with allegorical animal illustrations"
     },
     {
@@ -584,10 +700,13 @@
       "year": 1305,
       "source": "Ars Magna",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Ramon_Llull_-_Ars_Magna_Fig_1.png",
-      "thumb_url": "/gallery/thumbs/llull-ars-magna.jpg",
+      "thumb_url": "/gallery/thumbs/llull-ars-magna.png",
       "image_url": "/gallery/full/llull-ars-magna.png",
       "license": "Public Domain",
-      "categories": ["hermetica", "kabbalah"],
+      "categories": [
+        "hermetica",
+        "kabbalah"
+      ],
       "description": "Llull's combinatorial logic diagram for discovering universal truths"
     },
     {
@@ -600,7 +719,10 @@
       "thumb_url": "/gallery/thumbs/cabala-nature-art.jpg",
       "image_url": "/gallery/full/cabala-nature-art.jpg",
       "license": "Public Domain",
-      "categories": ["kabbalah", "alchemy"],
+      "categories": [
+        "kabbalah",
+        "alchemy"
+      ],
       "description": "Alchemical-Kabbalistic illustration showing nature and art united"
     },
     {
@@ -613,7 +735,9 @@
       "thumb_url": "/gallery/thumbs/corpus-hermeticum.jpg",
       "image_url": "/gallery/full/corpus-hermeticum.jpg",
       "license": "Public Domain",
-      "categories": ["hermetica"],
+      "categories": [
+        "hermetica"
+      ],
       "description": "Title page of the foundational Hermetic texts attributed to Hermes Trismegistus"
     },
     {
@@ -623,10 +747,12 @@
       "year": 1600,
       "source": "Alchemical manuscript",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Alchemical_emblem_with_three_suns.png",
-      "thumb_url": "/gallery/thumbs/three-suns-emblem.jpg",
+      "thumb_url": "/gallery/thumbs/three-suns-emblem.png",
       "image_url": "/gallery/full/three-suns-emblem.png",
       "license": "Public Domain",
-      "categories": ["alchemy"],
+      "categories": [
+        "alchemy"
+      ],
       "description": "Alchemical emblem depicting three suns representing transmutation stages"
     },
     {
@@ -639,7 +765,9 @@
       "thumb_url": "/gallery/thumbs/fama-fraternitatis.jpg",
       "image_url": "/gallery/full/fama-fraternitatis.jpg",
       "license": "Public Domain",
-      "categories": ["rosicrucianism"],
+      "categories": [
+        "rosicrucianism"
+      ],
       "description": "First Rosicrucian manifesto announcing the secret brotherhood"
     },
     {
@@ -649,10 +777,12 @@
       "year": 1600,
       "source": "Sylva Philosophorum",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Sylva_Philosophorum_10_Lapis_Philosophorum.png",
-      "thumb_url": "/gallery/thumbs/lapis-philosophorum.jpg",
+      "thumb_url": "/gallery/thumbs/lapis-philosophorum.png",
       "image_url": "/gallery/full/lapis-philosophorum.png",
       "license": "Public Domain",
-      "categories": ["alchemy"],
+      "categories": [
+        "alchemy"
+      ],
       "description": "The Philosophers' Stone, goal of the alchemical Great Work"
     },
     {
@@ -665,7 +795,10 @@
       "thumb_url": "/gallery/thumbs/theatrum-chemicum.jpg",
       "image_url": "/gallery/full/theatrum-chemicum.jpg",
       "license": "Public Domain",
-      "categories": ["alchemy", "printing"],
+      "categories": [
+        "alchemy",
+        "printing"
+      ],
       "description": "Ashmole's collection of English alchemical poetry and texts"
     },
     {
@@ -678,7 +811,10 @@
       "thumb_url": "/gallery/thumbs/musaeum-hermeticum.jpg",
       "image_url": "/gallery/full/musaeum-hermeticum.jpg",
       "license": "Public Domain",
-      "categories": ["alchemy", "hermetica"],
+      "categories": [
+        "alchemy",
+        "hermetica"
+      ],
       "description": "Major compendium of alchemical texts and treatises"
     },
     {
@@ -688,10 +824,12 @@
       "year": 1618,
       "source": "Atalanta Fugiens",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Michael_Maier_Atalanta_Fugiens_Emblem_02.jpeg",
-      "thumb_url": "/gallery/thumbs/maier-emblem.jpg",
+      "thumb_url": "/gallery/thumbs/maier-emblem.jpeg",
       "image_url": "/gallery/full/maier-emblem.jpeg",
       "license": "Public Domain",
-      "categories": ["alchemy"],
+      "categories": [
+        "alchemy"
+      ],
       "description": "Emblem from Maier's alchemical emblem book with musical fugues"
     },
     {
@@ -701,10 +839,13 @@
       "year": 1559,
       "source": "Pseudo-Agrippa",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Fourth_Book_of_Occult_Philosophy_-_p17.png",
-      "thumb_url": "/gallery/thumbs/occult-philosophy.jpg",
+      "thumb_url": "/gallery/thumbs/occult-philosophy.png",
       "image_url": "/gallery/full/occult-philosophy.png",
       "license": "Public Domain",
-      "categories": ["magic", "hermetica"],
+      "categories": [
+        "magic",
+        "hermetica"
+      ],
       "description": "Magical text attributed to Cornelius Agrippa"
     },
     {
@@ -717,7 +858,10 @@
       "thumb_url": "/gallery/thumbs/astronomy-allegory.jpg",
       "image_url": "/gallery/full/astronomy-allegory.jpg",
       "license": "Public Domain",
-      "categories": ["astronomy", "cosmology"],
+      "categories": [
+        "astronomy",
+        "cosmology"
+      ],
       "description": "Allegorical depiction of astronomy and celestial knowledge"
     },
     {
@@ -730,7 +874,9 @@
       "thumb_url": "/gallery/thumbs/kepler-supernova.jpg",
       "image_url": "/gallery/full/kepler-supernova.jpg",
       "license": "Public Domain",
-      "categories": ["astronomy"],
+      "categories": [
+        "astronomy"
+      ],
       "description": "Kepler's observation of the 1604 supernova in Ophiuchus"
     },
     {
@@ -743,7 +889,9 @@
       "thumb_url": "/gallery/thumbs/trithemius-steganographia.jpg",
       "image_url": "/gallery/full/trithemius-steganographia.jpg",
       "license": "Public Domain",
-      "categories": ["magic"],
+      "categories": [
+        "magic"
+      ],
       "description": "Trithemius's treatise on cryptography disguised as angel magic"
     },
     {
@@ -756,7 +904,9 @@
       "thumb_url": "/gallery/thumbs/medieval-bestiary.jpg",
       "image_url": "/gallery/full/medieval-bestiary.jpg",
       "license": "Public Domain",
-      "categories": ["mysticism"],
+      "categories": [
+        "mysticism"
+      ],
       "description": "Illuminated bestiary with symbolic animal representations"
     },
     {
@@ -766,10 +916,12 @@
       "year": 1700,
       "source": "Kabbalistic manuscript",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Kabbalistic_creator.png",
-      "thumb_url": "/gallery/thumbs/kabbalistic-creator.jpg",
+      "thumb_url": "/gallery/thumbs/kabbalistic-creator.png",
       "image_url": "/gallery/full/kabbalistic-creator.png",
       "license": "Public Domain",
-      "categories": ["kabbalah"],
+      "categories": [
+        "kabbalah"
+      ],
       "description": "Kabbalistic diagram of divine emanation and creation"
     },
     {
@@ -782,21 +934,10 @@
       "thumb_url": "/gallery/thumbs/alchemical-sisters.jpg",
       "image_url": "/gallery/full/alchemical-sisters.jpg",
       "license": "Public Domain",
-      "categories": ["alchemy"],
+      "categories": [
+        "alchemy"
+      ],
       "description": "Allegorical depiction of alchemical processes as female figures"
-    },
-    {
-      "id": "kircher-pyrophylacia",
-      "title": "Earth's Underground Fire Chambers",
-      "artist": "Athanasius Kircher",
-      "year": 1665,
-      "source": "Mundus Subterraneus",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Kircher-Subterranean_fire_channels.jpg",
-      "thumb_url": "/gallery/thumbs/kircher-pyrophylacia.jpg",
-      "image_url": "/gallery/full/kircher-pyrophylacia.jpg",
-      "license": "Public Domain",
-      "categories": ["cosmology", "natural philosophy"],
-      "description": "Cross-section of Earth showing volcanic fire chambers connected to a central fire core"
     },
     {
       "id": "kircher-turris-babel",
@@ -808,7 +949,9 @@
       "thumb_url": "/gallery/thumbs/kircher-turris-babel.jpg",
       "image_url": "/gallery/full/kircher-turris-babel.jpg",
       "license": "Public Domain",
-      "categories": ["architecture"],
+      "categories": [
+        "architecture"
+      ],
       "description": "Architectural reconstruction of the Tower of Babel with cutaway interior"
     },
     {
@@ -818,24 +961,13 @@
       "year": 1665,
       "source": "Mundus Subterraneus",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Atlantis_map_kircher.gif",
-      "thumb_url": "/gallery/thumbs/kircher-atlantis.jpg",
+      "thumb_url": "/gallery/thumbs/kircher-atlantis.gif",
       "image_url": "/gallery/full/kircher-atlantis.gif",
       "license": "Public Domain",
-      "categories": ["cartography"],
+      "categories": [
+        "cartography"
+      ],
       "description": "One of the earliest maps of Plato's lost continent positioned in the Atlantic Ocean"
-    },
-    {
-      "id": "kircher-musurgia",
-      "title": "Musurgia Universalis Frontispiece",
-      "artist": "Athanasius Kircher",
-      "year": 1650,
-      "source": "Musurgia Universalis",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Musurgia_Universalis_Frontispiece.jpg",
-      "thumb_url": "/gallery/thumbs/kircher-musurgia.jpg",
-      "image_url": "/gallery/full/kircher-musurgia.jpg",
-      "license": "Public Domain",
-      "categories": ["music", "cosmology"],
-      "description": "Three-tier cosmic harmony showing God's eye, angelic choirs, and earthly music"
     },
     {
       "id": "kircher-china",
@@ -847,34 +979,11 @@
       "thumb_url": "/gallery/thumbs/kircher-china.jpg",
       "image_url": "/gallery/full/kircher-china.jpg",
       "license": "Public Domain",
-      "categories": ["cartography", "portraits"],
+      "categories": [
+        "cartography",
+        "portraits"
+      ],
       "description": "Jesuit missionaries Matteo Ricci and Johann Adam Schall with Society founders above"
-    },
-    {
-      "id": "kircher-arca-noe",
-      "title": "Interior of Noah's Ark",
-      "artist": "Athanasius Kircher",
-      "year": 1675,
-      "source": "Arca Noë",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Kircher-Arca_Noe-Animals_in_Ark.jpg",
-      "thumb_url": "/gallery/thumbs/kircher-arca-noe.jpg",
-      "image_url": "/gallery/full/kircher-arca-noe.jpg",
-      "license": "Public Domain",
-      "categories": ["architecture", "natural philosophy"],
-      "description": "Famous cutaway showing Noah's Ark interior with animals arranged in pens and stables"
-    },
-    {
-      "id": "kircher-vesuvius",
-      "title": "Mount Vesuvius Eruption",
-      "artist": "Athanasius Kircher",
-      "year": 1665,
-      "source": "Mundus Subterraneus",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Kircher_Mundus_Subterraneus_Vesuvius.jpg",
-      "thumb_url": "/gallery/thumbs/kircher-vesuvius.jpg",
-      "image_url": "/gallery/full/kircher-vesuvius.jpg",
-      "license": "Public Domain",
-      "categories": ["natural philosophy"],
-      "description": "Kircher's observation of Vesuvius, which he famously descended during eruption"
     },
     {
       "id": "kircher-magnetic-clock",
@@ -886,34 +995,10 @@
       "thumb_url": "/gallery/thumbs/kircher-magnetic-clock.jpg",
       "image_url": "/gallery/full/kircher-magnetic-clock.jpg",
       "license": "Public Domain",
-      "categories": ["natural philosophy"],
+      "categories": [
+        "natural philosophy"
+      ],
       "description": "Intricate mechanical clock using hidden magnets, demonstrating Kircher's fascination with magnetism"
-    },
-    {
-      "id": "fludd-black-square",
-      "title": "Et Sic in Infinitum",
-      "artist": "Robert Fludd",
-      "year": 1617,
-      "source": "Utriusque Cosmi Historia",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:RobertFlu662.gif",
-      "thumb_url": "/gallery/thumbs/fludd-black-square.jpg",
-      "image_url": "/gallery/full/fludd-black-square.gif",
-      "license": "Public Domain",
-      "categories": ["cosmology", "hermetica"],
-      "description": "The primordial void before creation - a black square predating Malevich by 300 years"
-    },
-    {
-      "id": "fludd-monochord",
-      "title": "The Divine Monochord",
-      "artist": "Robert Fludd",
-      "year": 1617,
-      "source": "Utriusque Cosmi Historia",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Robert_Fludd_Monochord.jpg",
-      "thumb_url": "/gallery/thumbs/fludd-monochord.jpg",
-      "image_url": "/gallery/full/fludd-monochord.jpg",
-      "license": "Public Domain",
-      "categories": ["cosmology", "music", "hermetica"],
-      "description": "The universe as a monochord instrument tuned by God's hand - music of the spheres"
     },
     {
       "id": "fludd-anima-mundi",
@@ -922,10 +1007,13 @@
       "year": 1617,
       "source": "Utriusque Cosmi Historia",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Anima_Mundi_(by_Robert_Fludd,_Utriusque_Cosmi_Historia,_1617).png",
-      "thumb_url": "/gallery/thumbs/fludd-anima-mundi.jpg",
+      "thumb_url": "/gallery/thumbs/fludd-anima-mundi.png",
       "image_url": "/gallery/full/fludd-anima-mundi.png",
       "license": "Public Domain",
-      "categories": ["cosmology", "hermetica"],
+      "categories": [
+        "cosmology",
+        "hermetica"
+      ],
       "description": "The World Soul connecting all levels of existence from spiritual to material"
     },
     {
@@ -938,7 +1026,10 @@
       "thumb_url": "/gallery/thumbs/fludd-summum-bonum.jpg",
       "image_url": "/gallery/full/fludd-summum-bonum.jpg",
       "license": "Public Domain",
-      "categories": ["rosicrucianism", "hermetica"],
+      "categories": [
+        "rosicrucianism",
+        "hermetica"
+      ],
       "description": "Rose Cross symbol with inscription 'The Rose Gives Honey to Bees' - Rosicrucian defense"
     },
     {
@@ -951,7 +1042,10 @@
       "thumb_url": "/gallery/thumbs/fludd-ape-nature.jpg",
       "image_url": "/gallery/full/fludd-ape-nature.jpg",
       "license": "CC-BY 4.0",
-      "categories": ["hermetica", "magic"],
+      "categories": [
+        "hermetica",
+        "magic"
+      ],
       "description": "Wheel of divination with the Ape of Nature at center - man's imitation of nature's creation"
     },
     {
@@ -961,10 +1055,13 @@
       "year": 1647,
       "source": "Selenographia",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Hevelius_Selenographia_frontispiece.png",
-      "thumb_url": "/gallery/thumbs/hevelius-selenographia.jpg",
+      "thumb_url": "/gallery/thumbs/hevelius-selenographia.png",
       "image_url": "/gallery/full/hevelius-selenographia.png",
       "license": "Public Domain",
-      "categories": ["astronomy", "printing"],
+      "categories": [
+        "astronomy",
+        "printing"
+      ],
       "description": "Alhazen and Galileo flank a telescope, with the Moon's surface above - first detailed lunar atlas"
     },
     {
@@ -977,7 +1074,10 @@
       "thumb_url": "/gallery/thumbs/bacon-novum-organum.jpg",
       "image_url": "/gallery/full/bacon-novum-organum.jpg",
       "license": "Public Domain",
-      "categories": ["natural philosophy", "printing"],
+      "categories": [
+        "natural philosophy",
+        "printing"
+      ],
       "description": "Ship sailing through Pillars of Hercules - 'Many will travel and knowledge will increase'"
     },
     {
@@ -990,21 +1090,10 @@
       "thumb_url": "/gallery/thumbs/hobbes-leviathan.jpg",
       "image_url": "/gallery/full/hobbes-leviathan.jpg",
       "license": "Public Domain",
-      "categories": ["printing"],
+      "categories": [
+        "printing"
+      ],
       "description": "Crowned sovereign rising above landscape, body composed of 300 citizens - political philosophy masterpiece"
-    },
-    {
-      "id": "vesalius-fabrica-frontispiece",
-      "title": "De Humani Corporis Fabrica",
-      "artist": "Andreas Vesalius",
-      "year": 1543,
-      "source": "De humani corporis fabrica",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Vesalius_Fabrica_frontispiece.jpg",
-      "thumb_url": "/gallery/thumbs/vesalius-fabrica-frontispiece.jpg",
-      "image_url": "/gallery/full/vesalius-fabrica-frontispiece.jpg",
-      "license": "Public Domain",
-      "categories": ["anatomy", "medicine", "printing"],
-      "description": "Vesalius at center of crowded anatomical theater - revolutionized anatomy"
     },
     {
       "id": "regiomontanus-epitome",
@@ -1016,21 +1105,11 @@
       "thumb_url": "/gallery/thumbs/regiomontanus-epitome.jpg",
       "image_url": "/gallery/full/regiomontanus-epitome.jpg",
       "license": "Public Domain",
-      "categories": ["astronomy", "printing"],
+      "categories": [
+        "astronomy",
+        "printing"
+      ],
       "description": "Ptolemy and Regiomontanus beneath armillary sphere - most important 15th century astronomy text"
-    },
-    {
-      "id": "tycho-mechanica",
-      "title": "Astronomiae Instauratae Mechanica",
-      "artist": "Tycho Brahe",
-      "year": 1598,
-      "source": "Astronomiae Instauratae Mechanica",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Tycho_Brahe_Astronomiae_Instauratae_Mechanica.jpg",
-      "thumb_url": "/gallery/thumbs/tycho-mechanica.jpg",
-      "image_url": "/gallery/full/tycho-mechanica.jpg",
-      "license": "Public Domain",
-      "categories": ["astronomy", "printing"],
-      "description": "Tycho's astronomical instruments and Uraniborg observatory - foundation for Kepler's laws"
     },
     {
       "id": "kepler-mysterium",
@@ -1039,10 +1118,13 @@
       "year": 1596,
       "source": "Mysterium Cosmographicum",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Kepler-solar-system-1.png",
-      "thumb_url": "/gallery/thumbs/kepler-mysterium.jpg",
+      "thumb_url": "/gallery/thumbs/kepler-mysterium.png",
       "image_url": "/gallery/full/kepler-mysterium.png",
       "license": "Public Domain",
-      "categories": ["astronomy", "cosmology"],
+      "categories": [
+        "astronomy",
+        "cosmology"
+      ],
       "description": "Nested Platonic solids representing the heavens - Kepler's first astronomical work"
     },
     {
@@ -1055,86 +1137,11 @@
       "thumb_url": "/gallery/thumbs/khunrath-laboratorium.jpg",
       "image_url": "/gallery/full/khunrath-laboratorium.jpg",
       "license": "Public Domain",
-      "categories": ["alchemy", "hermetica"],
+      "categories": [
+        "alchemy",
+        "hermetica"
+      ],
       "description": "Famous lab-oratorium showing laboratory work and prayer oratory united - 'Pray and Work'"
-    },
-    {
-      "id": "basil-valentine-azoth",
-      "title": "Azoth Mandala",
-      "artist": "Basil Valentine",
-      "year": 1659,
-      "source": "Azoth of the Philosophers",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Basil_Valentine_azoth.jpg",
-      "thumb_url": "/gallery/thumbs/basil-valentine-azoth.jpg",
-      "image_url": "/gallery/full/basil-valentine-azoth.jpg",
-      "license": "Public Domain",
-      "categories": ["alchemy", "hermetica"],
-      "description": "Central alchemical meditation diagram - complete process from prima materia to philosopher's stone"
-    },
-    {
-      "id": "rosarium-bath",
-      "title": "The Alchemical Bath",
-      "artist": "Unknown",
-      "year": 1550,
-      "source": "Rosarium Philosophorum",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Rosarium_philosophorum_(coitus).gif",
-      "thumb_url": "/gallery/thumbs/rosarium-bath.jpg",
-      "image_url": "/gallery/full/rosarium-bath.gif",
-      "license": "Public Domain",
-      "categories": ["alchemy"],
-      "description": "King and Queen (Sol and Luna) united in the alchemical bath - conjunction of opposites"
-    },
-    {
-      "id": "rosarium-death",
-      "title": "The Alchemical Death",
-      "artist": "Unknown",
-      "year": 1550,
-      "source": "Rosarium Philosophorum",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Rosarium_philosophorum_8.jpg",
-      "thumb_url": "/gallery/thumbs/rosarium-death.jpg",
-      "image_url": "/gallery/full/rosarium-death.jpg",
-      "license": "Public Domain",
-      "categories": ["alchemy"],
-      "description": "The nigredo stage - death and putrefaction before resurrection in the Great Work"
-    },
-    {
-      "id": "lambspring-deer-unicorn",
-      "title": "Deer and Unicorn in the Forest",
-      "artist": "Lambspring",
-      "year": 1625,
-      "source": "De Lapide Philosophico",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Lambspring_-_Figure_III_(Wellcome_Library).jpg",
-      "thumb_url": "/gallery/thumbs/lambspring-deer-unicorn.jpg",
-      "image_url": "/gallery/full/lambspring-deer-unicorn.jpg",
-      "license": "CC-BY 4.0",
-      "categories": ["alchemy"],
-      "description": "Soul (stag) and Spirit (unicorn) meet in the Forest (body) - simple allegorical alchemy"
-    },
-    {
-      "id": "basil-valentine-key4",
-      "title": "Fourth Key of Basil Valentine",
-      "artist": "Matthaeus Merian",
-      "year": 1618,
-      "source": "Twelve Keys of Basil Valentine",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Fourth_Key_of_Basil_Valentine.jpg",
-      "thumb_url": "/gallery/thumbs/basil-valentine-key4.jpg",
-      "image_url": "/gallery/full/basil-valentine-key4.jpg",
-      "license": "Public Domain",
-      "categories": ["alchemy"],
-      "description": "The nigredo stage with skeleton - philosophical death before transformation"
-    },
-    {
-      "id": "green-lion",
-      "title": "Green Lion Devouring the Sun",
-      "artist": "Unknown",
-      "year": 1550,
-      "source": "Rosarium Philosophorum",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Lion_vert.jpg",
-      "thumb_url": "/gallery/thumbs/green-lion.jpg",
-      "image_url": "/gallery/full/green-lion.jpg",
-      "license": "Public Domain",
-      "categories": ["alchemy"],
-      "description": "Green lion (vitriol) consuming the golden sun - prima materia dissolving perfected matter"
     },
     {
       "id": "barchusen-laboratory",
@@ -1143,24 +1150,13 @@
       "year": 1718,
       "source": "Elementa Chemiae",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Barchusen_Laboratory.png",
-      "thumb_url": "/gallery/thumbs/barchusen-laboratory.jpg",
+      "thumb_url": "/gallery/thumbs/barchusen-laboratory.png",
       "image_url": "/gallery/full/barchusen-laboratory.png",
       "license": "Public Domain",
-      "categories": ["alchemy"],
+      "categories": [
+        "alchemy"
+      ],
       "description": "Transitional image - alchemy becoming chemistry, with apparatus and instruments"
-    },
-    {
-      "id": "clavis-artis-dragon",
-      "title": "Clavis Artis Dragon",
-      "artist": "Unknown (Zoroaster attributed)",
-      "year": 1700,
-      "source": "Clavis Artis",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Clavis_Artis_MS_Bound_Volume_II_010.jpg",
-      "thumb_url": "/gallery/thumbs/clavis-artis-dragon.jpg",
-      "image_url": "/gallery/full/clavis-artis-dragon.jpg",
-      "license": "Public Domain",
-      "categories": ["alchemy"],
-      "description": "Watercolor alchemical illustration from the mysterious Clavis Artis manuscript"
     },
     {
       "id": "mylius-nigredo",
@@ -1172,7 +1168,9 @@
       "thumb_url": "/gallery/thumbs/mylius-nigredo.jpg",
       "image_url": "/gallery/full/mylius-nigredo.jpg",
       "license": "Public Domain",
-      "categories": ["alchemy"],
+      "categories": [
+        "alchemy"
+      ],
       "description": "Skeleton, crow, and black sun - the putrefaction stage of the Great Work"
     },
     {
@@ -1182,24 +1180,13 @@
       "year": 1610,
       "source": "Sidereus Nuncius",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Galileo%27s_sketches_of_the_moon.png",
-      "thumb_url": "/gallery/thumbs/galileo-sidereus.jpg",
+      "thumb_url": "/gallery/thumbs/galileo-sidereus.png",
       "image_url": "/gallery/full/galileo-sidereus.png",
       "license": "Public Domain",
-      "categories": ["astronomy"],
+      "categories": [
+        "astronomy"
+      ],
       "description": "Galileo's revolutionary telescopic drawings of the Moon's surface"
-    },
-    {
-      "id": "galileo-jupiter",
-      "title": "Jupiter's Moons",
-      "artist": "Galileo Galilei",
-      "year": 1610,
-      "source": "Sidereus Nuncius",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Galileo_Medicean_Stars.png",
-      "thumb_url": "/gallery/thumbs/galileo-jupiter.jpg",
-      "image_url": "/gallery/full/galileo-jupiter.png",
-      "license": "Public Domain",
-      "categories": ["astronomy"],
-      "description": "First observations of Jupiter's moons - proof of objects orbiting another planet"
     },
     {
       "id": "hooke-micrographia-flea",
@@ -1211,21 +1198,10 @@
       "thumb_url": "/gallery/thumbs/hooke-micrographia-flea.jpg",
       "image_url": "/gallery/full/hooke-micrographia-flea.jpg",
       "license": "Public Domain",
-      "categories": ["natural philosophy"],
+      "categories": [
+        "natural philosophy"
+      ],
       "description": "Famous fold-out engraving of a flea - first scientific best-seller"
-    },
-    {
-      "id": "hooke-micrographia-cork",
-      "title": "Cork Cells",
-      "artist": "Robert Hooke",
-      "year": 1665,
-      "source": "Micrographia",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:RobertHookeMicrworographia1702Cork.jpg",
-      "thumb_url": "/gallery/thumbs/hooke-micrographia-cork.jpg",
-      "image_url": "/gallery/full/hooke-micrographia-cork.jpg",
-      "license": "Public Domain",
-      "categories": ["natural philosophy"],
-      "description": "First use of the word 'cell' to describe biological structures"
     },
     {
       "id": "newton-principia",
@@ -1234,37 +1210,14 @@
       "year": 1687,
       "source": "Philosophiæ Naturalis Principia Mathematica",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Prinicipia-title.png",
-      "thumb_url": "/gallery/thumbs/newton-principia.jpg",
+      "thumb_url": "/gallery/thumbs/newton-principia.png",
       "image_url": "/gallery/full/newton-principia.png",
       "license": "Public Domain",
-      "categories": ["natural philosophy", "printing"],
+      "categories": [
+        "natural philosophy",
+        "printing"
+      ],
       "description": "Title page of the foundational work of classical mechanics"
-    },
-    {
-      "id": "newton-opticks",
-      "title": "Opticks - Prism Diagram",
-      "artist": "Isaac Newton",
-      "year": 1704,
-      "source": "Opticks",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Newton%27s_Opticks_-_light_passing_through_a_prism.jpg",
-      "thumb_url": "/gallery/thumbs/newton-opticks.jpg",
-      "image_url": "/gallery/full/newton-opticks.jpg",
-      "license": "Public Domain",
-      "categories": ["natural philosophy"],
-      "description": "Newton's diagram of light dispersed through a prism into spectrum"
-    },
-    {
-      "id": "kepler-harmonices",
-      "title": "Harmonices Mundi",
-      "artist": "Johannes Kepler",
-      "year": 1619,
-      "source": "Harmonices Mundi",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Kepler_Harmonices_Mundi.jpg",
-      "thumb_url": "/gallery/thumbs/kepler-harmonices.jpg",
-      "image_url": "/gallery/full/kepler-harmonices.jpg",
-      "license": "Public Domain",
-      "categories": ["astronomy", "music", "cosmology"],
-      "description": "Musical notation of planetary motions - Kepler's 'music of the spheres'"
     },
     {
       "id": "cellarius-copernican",
@@ -1276,47 +1229,11 @@
       "thumb_url": "/gallery/thumbs/cellarius-copernican.jpg",
       "image_url": "/gallery/full/cellarius-copernican.jpg",
       "license": "Public Domain",
-      "categories": ["astronomy", "cosmology"],
+      "categories": [
+        "astronomy",
+        "cosmology"
+      ],
       "description": "Stunning baroque rendering of the Copernican heliocentric system"
-    },
-    {
-      "id": "cellarius-southern-sky",
-      "title": "Southern Celestial Hemisphere",
-      "artist": "Andreas Cellarius",
-      "year": 1660,
-      "source": "Harmonia Macrocosmica",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Cellarius_southern_celestial_hemisphere.jpg",
-      "thumb_url": "/gallery/thumbs/cellarius-southern-sky.jpg",
-      "image_url": "/gallery/full/cellarius-southern-sky.jpg",
-      "license": "Public Domain",
-      "categories": ["astronomy", "cosmology"],
-      "description": "Ornate star chart of the southern constellations"
-    },
-    {
-      "id": "tycho-mural-quadrant",
-      "title": "Tycho's Mural Quadrant",
-      "artist": "Tycho Brahe",
-      "year": 1598,
-      "source": "Astronomiae Instauratae Mechanica",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Tycho_Brahe_mural_quadrant.jpg",
-      "thumb_url": "/gallery/thumbs/tycho-mural-quadrant.jpg",
-      "image_url": "/gallery/full/tycho-mural-quadrant.jpg",
-      "license": "Public Domain",
-      "categories": ["astronomy"],
-      "description": "Giant wall-mounted instrument at Uraniborg for measuring star positions"
-    },
-    {
-      "id": "hortus-eystettensis",
-      "title": "Hortus Eystettensis - Tulips",
-      "artist": "Basilius Besler",
-      "year": 1613,
-      "source": "Hortus Eystettensis",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Hortus_Eystettensis_-_Tulipa_turcica.jpg",
-      "thumb_url": "/gallery/thumbs/hortus-eystettensis.jpg",
-      "image_url": "/gallery/full/hortus-eystettensis.jpg",
-      "license": "Public Domain",
-      "categories": ["natural philosophy", "botany"],
-      "description": "Near life-size botanical illustration from the greatest Renaissance florilegium"
     },
     {
       "id": "gesner-rhinoceros",
@@ -1328,34 +1245,10 @@
       "thumb_url": "/gallery/thumbs/gesner-rhinoceros.jpg",
       "image_url": "/gallery/full/gesner-rhinoceros.jpg",
       "license": "Public Domain",
-      "categories": ["natural philosophy"],
+      "categories": [
+        "natural philosophy"
+      ],
       "description": "From the first modern zoological encyclopedia - based on Dürer's famous woodcut"
-    },
-    {
-      "id": "aldrovandi-dragon",
-      "title": "Dragon",
-      "artist": "Ulisse Aldrovandi",
-      "year": 1640,
-      "source": "Serpentum et Draconum Historiae",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Aldrovandi_dragon.jpg",
-      "thumb_url": "/gallery/thumbs/aldrovandi-dragon.jpg",
-      "image_url": "/gallery/full/aldrovandi-dragon.jpg",
-      "license": "Public Domain",
-      "categories": ["natural philosophy"],
-      "description": "Renaissance natural history treated dragons as potentially real creatures"
-    },
-    {
-      "id": "aldrovandi-monsters",
-      "title": "Monstrorum Historia",
-      "artist": "Ulisse Aldrovandi",
-      "year": 1642,
-      "source": "Monstrorum Historia",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Aldrovandi_Monstrorum_Historia.jpg",
-      "thumb_url": "/gallery/thumbs/aldrovandi-monsters.jpg",
-      "image_url": "/gallery/full/aldrovandi-monsters.jpg",
-      "license": "Public Domain",
-      "categories": ["natural philosophy"],
-      "description": "Encyclopedic study of monstrous births and prodigies - Renaissance teratology"
     },
     {
       "id": "durer-rhinoceros",
@@ -1367,7 +1260,10 @@
       "thumb_url": "/gallery/thumbs/durer-rhinoceros.jpg",
       "image_url": "/gallery/full/durer-rhinoceros.jpg",
       "license": "Public Domain",
-      "categories": ["natural philosophy", "printing"],
+      "categories": [
+        "natural philosophy",
+        "printing"
+      ],
       "description": "Dürer's iconic rhinoceros - made without seeing the animal, yet widely copied for centuries"
     },
     {
@@ -1377,10 +1273,12 @@
       "year": 1617,
       "source": "Atalanta Fugiens",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Michael_Maier_Atalanta_Fugiens_Emblem_21.jpeg",
-      "thumb_url": "/gallery/thumbs/maier-emblem21.jpg",
+      "thumb_url": "/gallery/thumbs/maier-emblem21.jpeg",
       "image_url": "/gallery/full/maier-emblem21.jpeg",
       "license": "Public Domain",
-      "categories": ["alchemy"],
+      "categories": [
+        "alchemy"
+      ],
       "description": "Make a circle of man and woman, then a square, then a triangle - geometric alchemy"
     },
     {
@@ -1390,37 +1288,13 @@
       "year": 1617,
       "source": "Atalanta Fugiens",
       "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Michael_Maier_Atalanta_Fugiens_Emblem_42.jpeg",
-      "thumb_url": "/gallery/thumbs/maier-emblem42.jpg",
+      "thumb_url": "/gallery/thumbs/maier-emblem42.jpeg",
       "image_url": "/gallery/full/maier-emblem42.jpeg",
       "license": "Public Domain",
-      "categories": ["alchemy"],
+      "categories": [
+        "alchemy"
+      ],
       "description": "The philosophical egg in the furnace - incubation of the Great Work"
-    },
-    {
-      "id": "splendor-solis-sun",
-      "title": "Splendor Solis - The Sun",
-      "artist": "Salomon Trismosin (attributed)",
-      "year": 1582,
-      "source": "Splendor Solis",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Splendor_Solis_07.jpg",
-      "thumb_url": "/gallery/thumbs/splendor-solis-sun.jpg",
-      "image_url": "/gallery/full/splendor-solis-sun.jpg",
-      "license": "Public Domain",
-      "categories": ["alchemy"],
-      "description": "The radiant sun - culmination of the alchemical work"
-    },
-    {
-      "id": "splendor-solis-black",
-      "title": "Splendor Solis - Nigredo",
-      "artist": "Salomon Trismosin (attributed)",
-      "year": 1582,
-      "source": "Splendor Solis",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Splendor_Solis_04.jpg",
-      "thumb_url": "/gallery/thumbs/splendor-solis-black.jpg",
-      "image_url": "/gallery/full/splendor-solis-black.jpg",
-      "license": "Public Domain",
-      "categories": ["alchemy"],
-      "description": "The black sun of nigredo - the dark night of the soul in alchemy"
     },
     {
       "id": "euclid-elements",
@@ -1432,151 +1306,11 @@
       "thumb_url": "/gallery/thumbs/euclid-elements.jpg",
       "image_url": "/gallery/full/euclid-elements.jpg",
       "license": "Public Domain",
-      "categories": ["printing", "natural philosophy"],
+      "categories": [
+        "printing",
+        "natural philosophy"
+      ],
       "description": "First printed edition of Euclid - foundation of mathematical knowledge"
-    },
-    {
-      "id": "pacioli-divina",
-      "title": "De Divina Proportione",
-      "artist": "Leonardo da Vinci",
-      "year": 1509,
-      "source": "De Divina Proportione",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Leonardo_polyridge.png",
-      "thumb_url": "/gallery/thumbs/pacioli-divina.jpg",
-      "image_url": "/gallery/full/pacioli-divina.png",
-      "license": "Public Domain",
-      "categories": ["natural philosophy"],
-      "description": "Leonardo's illustrations of Platonic solids for Pacioli's treatise on divine proportion"
-    },
-    {
-      "id": "durer-polyhedron",
-      "title": "Melencolia Polyhedron",
-      "artist": "Albrecht Dürer",
-      "year": 1514,
-      "source": "Melencolia I (detail)",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Melencolia_I_(Durero)_cropped.jpg",
-      "thumb_url": "/gallery/thumbs/durer-polyhedron.jpg",
-      "image_url": "/gallery/full/durer-polyhedron.jpg",
-      "license": "Public Domain",
-      "categories": ["alchemy", "magic"],
-      "description": "The mysterious truncated rhombohedron - mathematical and alchemical symbolism intertwined"
-    },
-    {
-      "id": "fludd-weather",
-      "title": "Meteorological Diagram",
-      "artist": "Robert Fludd",
-      "year": 1617,
-      "source": "Utriusque Cosmi Historia",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:RobertFluddWeather.gif",
-      "thumb_url": "/gallery/thumbs/fludd-weather.jpg",
-      "image_url": "/gallery/full/fludd-weather.gif",
-      "license": "Public Domain",
-      "categories": ["cosmology", "natural philosophy"],
-      "description": "Weather and atmospheric phenomena - wind, clouds, rain in hermetic cosmology"
-    },
-    {
-      "id": "fludd-fortress",
-      "title": "Fortress of the Mind",
-      "artist": "Robert Fludd",
-      "year": 1619,
-      "source": "Utriusque Cosmi Historia",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:RobertFludd_Mind.jpg",
-      "thumb_url": "/gallery/thumbs/fludd-fortress.jpg",
-      "image_url": "/gallery/full/fludd-fortress.jpg",
-      "license": "Public Domain",
-      "categories": ["hermetica"],
-      "description": "The mind as a fortified castle - Renaissance psychology and memory arts"
-    },
-    {
-      "id": "kircher-optics",
-      "title": "Magic Lantern",
-      "artist": "Athanasius Kircher",
-      "year": 1646,
-      "source": "Ars Magna Lucis et Umbrae",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Kircher_-_Lanterna_magica.jpg",
-      "thumb_url": "/gallery/thumbs/kircher-optics.jpg",
-      "image_url": "/gallery/full/kircher-optics.jpg",
-      "license": "Public Domain",
-      "categories": ["natural philosophy"],
-      "description": "Early description of projection technology - precursor to cinema"
-    },
-    {
-      "id": "kircher-tarantism",
-      "title": "Tarantella Dance",
-      "artist": "Athanasius Kircher",
-      "year": 1641,
-      "source": "Magnes sive De Arte Magnetica",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Kircher-Tarantism.jpg",
-      "thumb_url": "/gallery/thumbs/kircher-tarantism.jpg",
-      "image_url": "/gallery/full/kircher-tarantism.jpg",
-      "license": "Public Domain",
-      "categories": ["music", "medicine"],
-      "description": "Musical cure for tarantula bites - the famous tarantella dance"
-    },
-    {
-      "id": "kircher-babel-interior",
-      "title": "Tower of Babel Interior",
-      "artist": "Athanasius Kircher",
-      "year": 1679,
-      "source": "Turris Babel",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Kircher_turris_babel_spiraling_ramp.jpg",
-      "thumb_url": "/gallery/thumbs/kircher-babel-interior.jpg",
-      "image_url": "/gallery/full/kircher-babel-interior.jpg",
-      "license": "Public Domain",
-      "categories": ["architecture"],
-      "description": "Interior spiraling ramp of the Tower - showing construction methods"
-    },
-    {
-      "id": "della-porta-physiognomy",
-      "title": "Physiognomy Comparisons",
-      "artist": "Giambattista della Porta",
-      "year": 1586,
-      "source": "De Humana Physiognomonia",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Della_Porta_-_De_humana_physiognomonia.jpg",
-      "thumb_url": "/gallery/thumbs/della-porta-physiognomy.jpg",
-      "image_url": "/gallery/full/della-porta-physiognomy.jpg",
-      "license": "Public Domain",
-      "categories": ["natural philosophy"],
-      "description": "Comparing human faces to animals - Renaissance character reading from facial features"
-    },
-    {
-      "id": "agrippa-elements",
-      "title": "Elemental Correspondences",
-      "artist": "Cornelius Agrippa",
-      "year": 1533,
-      "source": "De Occulta Philosophia",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Agrippa_-_Four_Elements.jpg",
-      "thumb_url": "/gallery/thumbs/agrippa-elements.jpg",
-      "image_url": "/gallery/full/agrippa-elements.jpg",
-      "license": "Public Domain",
-      "categories": ["magic", "hermetica"],
-      "description": "The four elements and their qualities - foundation of Renaissance magic"
-    },
-    {
-      "id": "agrippa-pentagram",
-      "title": "Man in Pentagram",
-      "artist": "Cornelius Agrippa",
-      "year": 1533,
-      "source": "De Occulta Philosophia",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Agrippa_Pentagram.png",
-      "thumb_url": "/gallery/thumbs/agrippa-pentagram.jpg",
-      "image_url": "/gallery/full/agrippa-pentagram.png",
-      "license": "Public Domain",
-      "categories": ["magic", "hermetica"],
-      "description": "Human body inscribed in pentagram - microcosm reflecting macrocosm"
-    },
-    {
-      "id": "bruno-memory-wheel",
-      "title": "Memory Wheel",
-      "artist": "Giordano Bruno",
-      "year": 1582,
-      "source": "De Umbris Idearum",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Giordano_Bruno_-_Memory_wheel_1.jpg",
-      "thumb_url": "/gallery/thumbs/bruno-memory-wheel.jpg",
-      "image_url": "/gallery/full/bruno-memory-wheel.jpg",
-      "license": "Public Domain",
-      "categories": ["hermetica", "magic"],
-      "description": "Bruno's combinatorial memory system - ars memoriae meets hermetic magic"
     },
     {
       "id": "porta-camera-obscura",
@@ -1588,66 +1322,97 @@
       "thumb_url": "/gallery/thumbs/porta-camera-obscura.jpg",
       "image_url": "/gallery/full/porta-camera-obscura.jpg",
       "license": "Public Domain",
-      "categories": ["natural philosophy"],
+      "categories": [
+        "natural philosophy"
+      ],
       "description": "Della Porta's camera obscura - natural magic becomes optical science"
-    },
-    {
-      "id": "mutus-liber-dew",
-      "title": "Mutus Liber - Collecting Dew",
-      "artist": "Altus",
-      "year": 1677,
-      "source": "Mutus Liber",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Mutus_Liber_Plate_4.jpg",
-      "thumb_url": "/gallery/thumbs/mutus-liber-dew.jpg",
-      "image_url": "/gallery/full/mutus-liber-dew.jpg",
-      "license": "Public Domain",
-      "categories": ["alchemy"],
-      "description": "Alchemists collecting morning dew - the wordless book's most famous image"
-    },
-    {
-      "id": "rosarium-rebis",
-      "title": "The Rebis",
-      "artist": "Unknown",
-      "year": 1550,
-      "source": "Rosarium Philosophorum",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Rebis_Rosarium.png",
-      "thumb_url": "/gallery/thumbs/rosarium-rebis.jpg",
-      "image_url": "/gallery/full/rosarium-rebis.png",
-      "license": "Public Domain",
-      "categories": ["alchemy"],
-      "description": "The hermaphrodite rebis - union of opposites, completion of the Great Work"
-    },
-    {
-      "id": "basil-valentine-key12",
-      "title": "Twelfth Key of Basil Valentine",
-      "artist": "Matthaeus Merian",
-      "year": 1618,
-      "source": "Twelve Keys of Basil Valentine",
-      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Twelve_Keys_of_Basil_Valentine_12.jpg",
-      "thumb_url": "/gallery/thumbs/basil-valentine-key12.jpg",
-      "image_url": "/gallery/full/basil-valentine-key12.jpg",
-      "license": "Public Domain",
-      "categories": ["alchemy"],
-      "description": "The triumphant lion crowned - completion of the philosopher's stone"
     }
   ],
   "categories": [
-    {"id": "cosmology", "label": "Cosmology & Astronomy", "color": "#3498db"},
-    {"id": "alchemy", "label": "Alchemy & Chemistry", "color": "#f1c40f"},
-    {"id": "anatomy", "label": "Anatomy & Medicine", "color": "#e74c3c"},
-    {"id": "medicine", "label": "Medicine", "color": "#e67e22"},
-    {"id": "hermetica", "label": "Hermetica & Magic", "color": "#9b59b6"},
-    {"id": "magic", "label": "Magic", "color": "#8e44ad"},
-    {"id": "kabbalah", "label": "Kabbalah", "color": "#2ecc71"},
-    {"id": "printing", "label": "Frontispieces & Printing", "color": "#34495e"},
-    {"id": "portraits", "label": "Portraits of Scholars", "color": "#7f8c8d"},
-    {"id": "mysticism", "label": "Mysticism", "color": "#1abc9c"},
-    {"id": "rosicrucianism", "label": "Rosicrucianism", "color": "#c0392b"},
-    {"id": "astronomy", "label": "Astronomy", "color": "#2980b9"},
-    {"id": "natural philosophy", "label": "Natural Philosophy", "color": "#16a085"},
-    {"id": "architecture", "label": "Architecture", "color": "#95a5a6"},
-    {"id": "cartography", "label": "Cartography & Maps", "color": "#d35400"},
-    {"id": "music", "label": "Music & Harmony", "color": "#8e44ad"},
-    {"id": "botany", "label": "Botany & Natural History", "color": "#27ae60"}
+    {
+      "id": "cosmology",
+      "label": "Cosmology & Astronomy",
+      "color": "#3498db"
+    },
+    {
+      "id": "alchemy",
+      "label": "Alchemy & Chemistry",
+      "color": "#f1c40f"
+    },
+    {
+      "id": "anatomy",
+      "label": "Anatomy & Medicine",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "medicine",
+      "label": "Medicine",
+      "color": "#e67e22"
+    },
+    {
+      "id": "hermetica",
+      "label": "Hermetica & Magic",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "magic",
+      "label": "Magic",
+      "color": "#8e44ad"
+    },
+    {
+      "id": "kabbalah",
+      "label": "Kabbalah",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "printing",
+      "label": "Frontispieces & Printing",
+      "color": "#34495e"
+    },
+    {
+      "id": "portraits",
+      "label": "Portraits of Scholars",
+      "color": "#7f8c8d"
+    },
+    {
+      "id": "mysticism",
+      "label": "Mysticism",
+      "color": "#1abc9c"
+    },
+    {
+      "id": "rosicrucianism",
+      "label": "Rosicrucianism",
+      "color": "#c0392b"
+    },
+    {
+      "id": "astronomy",
+      "label": "Astronomy",
+      "color": "#2980b9"
+    },
+    {
+      "id": "natural philosophy",
+      "label": "Natural Philosophy",
+      "color": "#16a085"
+    },
+    {
+      "id": "architecture",
+      "label": "Architecture",
+      "color": "#95a5a6"
+    },
+    {
+      "id": "cartography",
+      "label": "Cartography & Maps",
+      "color": "#d35400"
+    },
+    {
+      "id": "music",
+      "label": "Music & Harmony",
+      "color": "#8e44ad"
+    },
+    {
+      "id": "botany",
+      "label": "Botany & Natural History",
+      "color": "#27ae60"
+    }
   ]
 }
