@@ -60,7 +60,6 @@ const categories: CategoryConfig[] = [
 const START_YEAR = 1450;
 const END_YEAR = 1720;
 const YEAR_RANGE = END_YEAR - START_YEAR;
-const DECADE_WIDTH = 27; // 270 years / 10 = 27 decades
 
 export default function EditionsTimeline() {
   const [data, setData] = useState<AuthorEditions | null>(null);
