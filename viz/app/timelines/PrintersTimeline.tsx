@@ -21,55 +21,51 @@ const data: Region[] = [
     name: "Low Countries",
     color: "#e07b39",
     printers: [
-      { name: "Plantiniana", start: 1518, end: 1700, works: 2562, cities: "Amsterdam, Antwerp" },
-      { name: "Plantin, Christophe", start: 1555, end: 1629, works: 1922, cities: "Antwerp, Paris" },
-      { name: "Elzevier", start: 1580, end: 1700, works: 1456, cities: "Leiden, Amsterdam" },
-      { name: "Nisius, Johann", start: 1652, end: 1694, works: 2303, cities: "Amsterdam, Frankfurt" },
-      { name: "Blaeu", start: 1596, end: 1672, works: 892, cities: "Amsterdam" },
+      { name: "Officina Plantiniana", start: 1555, end: 1700, works: 4484, cities: "Antwerp (Plantin, then Moretus family)" },
+      { name: "Elzevier Press", start: 1580, end: 1712, works: 1456, cities: "Leiden, Amsterdam" },
+      { name: "Blaeu Press", start: 1596, end: 1672, works: 892, cities: "Amsterdam (maps, atlases)" },
+      { name: "Nisius Press", start: 1652, end: 1694, works: 2303, cities: "Amsterdam, Frankfurt" },
     ]
   },
   {
     name: "German Lands",
     color: "#9e4a3a",
     printers: [
-      { name: "Müller, Henning", start: 1629, end: 1681, works: 2641, cities: "Helmstedt" },
-      { name: "Gormann, Johann", start: 1506, end: 1631, works: 1999, cities: "Wittenberg" },
-      { name: "Steinmann, Tobias", start: 1584, end: 1646, works: 2090, cities: "Erfurt, Jena, Leipzig" },
-      { name: "Röhner, Johann", start: 1540, end: 1670, works: 1794, cities: "Jena, Wittenberg" },
-      { name: "Henckel, Matthäus", start: 1610, end: 1698, works: 1743, cities: "Wittenberg" },
-      { name: "Lufft, Hans", start: 1523, end: 1584, works: 1127, cities: "Wittenberg" },
-      { name: "Froben, Johann", start: 1491, end: 1527, works: 986, cities: "Basel" },
+      { name: "Froben Press", start: 1491, end: 1564, works: 986, cities: "Basel (Erasmus's printer)" },
+      { name: "Lufft Press", start: 1523, end: 1584, works: 1127, cities: "Wittenberg (Luther's Bible)" },
+      { name: "Wechel Press", start: 1526, end: 1627, works: 1156, cities: "Paris → Frankfurt" },
+      { name: "Steinmann Press", start: 1584, end: 1646, works: 2090, cities: "Erfurt, Jena, Leipzig" },
+      { name: "Röhner Press", start: 1540, end: 1670, works: 1794, cities: "Jena, Wittenberg" },
+      { name: "Henckel Press", start: 1610, end: 1698, works: 1743, cities: "Wittenberg" },
     ]
   },
   {
     name: "France",
     color: "#546b8a",
     printers: [
-      { name: "Petit, Jean", start: 1495, end: 1612, works: 2011, cities: "Paris" },
-      { name: "Estienne family", start: 1502, end: 1674, works: 1534, cities: "Paris, Geneva" },
-      { name: "Gryphe, Sébastien", start: 1524, end: 1556, works: 1289, cities: "Lyon" },
-      { name: "Wechel", start: 1526, end: 1627, works: 1156, cities: "Paris, Frankfurt" },
-      { name: "Bade, Josse", start: 1503, end: 1535, works: 1045, cities: "Paris" },
+      { name: "Estienne Press", start: 1502, end: 1674, works: 1534, cities: "Paris, Geneva (Greek scholarship)" },
+      { name: "Badius Ascensius", start: 1503, end: 1535, works: 1045, cities: "Paris (classical editions)" },
+      { name: "Gryphe Press", start: 1524, end: 1556, works: 1289, cities: "Lyon" },
+      { name: "Petit Press", start: 1495, end: 1612, works: 2011, cities: "Paris" },
     ]
   },
   {
     name: "Italy",
     color: "#8b9a7d",
     printers: [
-      { name: "Camera Apostolica", start: 1596, end: 1700, works: 1798, cities: "Rome" },
-      { name: "Tipografia Apostolica", start: 1651, end: 1700, works: 1718, cities: "Rome, Venice" },
-      { name: "Aldus Manutius", start: 1494, end: 1515, works: 876, cities: "Venice" },
-      { name: "Giunti", start: 1489, end: 1657, works: 1345, cities: "Venice, Florence" },
-      { name: "Ziletti", start: 1549, end: 1587, works: 734, cities: "Venice" },
+      { name: "Aldine Press", start: 1494, end: 1597, works: 876, cities: "Venice (Aldus → Paolo → Aldus Jr.)" },
+      { name: "Giunti Press", start: 1489, end: 1657, works: 1345, cities: "Venice, Florence, Lyon" },
+      { name: "Ziletti Press", start: 1549, end: 1587, works: 734, cities: "Venice" },
+      { name: "Vatican Press", start: 1587, end: 1700, works: 3516, cities: "Rome (Tipografia Vaticana)" },
     ]
   },
   {
     name: "Iberia",
     color: "#8b5cf6",
     printers: [
-      { name: "Craesbeeck", start: 1597, end: 1700, works: 687, cities: "Lisbon, Coimbra" },
-      { name: "Portonariis", start: 1551, end: 1617, works: 612, cities: "Salamanca" },
-      { name: "Mey, Felipe", start: 1574, end: 1612, works: 534, cities: "Valencia, Tarragona" },
+      { name: "Craesbeeck Press", start: 1597, end: 1700, works: 687, cities: "Lisbon, Coimbra" },
+      { name: "Portonariis Press", start: 1551, end: 1617, works: 612, cities: "Salamanca" },
+      { name: "Mey Press", start: 1574, end: 1612, works: 534, cities: "Valencia, Tarragona" },
     ]
   },
 ];
