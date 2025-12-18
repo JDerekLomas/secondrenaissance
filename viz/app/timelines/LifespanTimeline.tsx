@@ -357,19 +357,6 @@ export default function LifespanTimeline() {
           alignItems: 'flex-start',
           border: `3px solid ${data.find(c => c.name === selected.category)?.color}`,
         }}>
-          {selected.person.image && (
-            <img
-              src={selected.person.image}
-              alt={selected.person.name}
-              style={{
-                width: '80px',
-                height: '80px',
-                objectFit: 'cover',
-                borderRadius: '8px',
-                flexShrink: 0,
-              }}
-            />
-          )}
           <div style={{ flex: 1 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
               <div>
