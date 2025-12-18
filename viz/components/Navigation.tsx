@@ -26,7 +26,7 @@ const NAV_SECTIONS = {
     items: [
       { href: '/blog', label: 'Essays', description: 'Research articles and findings' },
       { href: '/gallery', label: 'Image Gallery', description: 'Renaissance illustrations and diagrams' },
-      { href: '/rivers', label: 'Rivers of Life', description: 'Animated flow of esoteric traditions' },
+      { href: '/rivers/static', label: 'Rivers of Life', description: 'Flow of esoteric traditions 1469-1750' },
       { href: '/timelines', label: 'Timelines', description: 'Charts of Latin printing history' },
       { href: '/map', label: 'Printing Map', description: 'Animated map of printing centers' },
       { href: '/data', label: 'Data Dashboard', description: 'Statistics and coverage' },

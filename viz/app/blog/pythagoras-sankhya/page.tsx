@@ -22,6 +22,31 @@ export default function PythagorasSankhya() {
         found the &ldquo;Indian Pythagoras.&rdquo;
       </p>
 
+      {/* The Famous Cover Board - Hero Image */}
+      <figure style={{
+        margin: '32px 0',
+        textAlign: 'center',
+      }}>
+        <img
+          src="/manuscripts/whish147_cover.png"
+          alt="Whish No. 147 wooden cover board showing 'SĀNKHYA-SAPTATI or golden verses of Pythagoras'"
+          style={{
+            width: '100%',
+            maxWidth: '800px',
+            borderRadius: '8px',
+            border: '2px solid #9e4a3a',
+          }}
+        />
+        <figcaption style={{
+          fontSize: '14px',
+          color: '#666',
+          marginTop: '12px',
+          fontStyle: 'italic',
+        }}>
+          The wooden cover board of Whish No. 147, with Whish&apos;s handwritten table of contents (c. 1822)
+        </figcaption>
+      </figure>
+
       <h2>The Manuscript: Whish No. 147</h2>
 
       <figure style={{
@@ -114,34 +139,8 @@ export default function PythagorasSankhya() {
       <h2>The &ldquo;Pythagoras&rdquo; Connection</h2>
 
       <p>
-        The key evidence is the wooden cover board itself, where Whish wrote his table of contents
-        in English. The first line reads:
+        Whish&apos;s table of contents on the cover board lists the manuscript&apos;s contents:
       </p>
-
-      {/* The Famous Cover Board */}
-      <figure style={{
-        margin: '32px 0',
-        textAlign: 'center',
-      }}>
-        <img
-          src="/manuscripts/whish147_cover.jpg"
-          alt="Whish No. 147 wooden cover board with handwritten label"
-          style={{
-            width: '100%',
-            maxWidth: '700px',
-            borderRadius: '8px',
-            border: '2px solid #9e4a3a',
-          }}
-        />
-        <figcaption style={{
-          fontSize: '14px',
-          color: '#666',
-          marginTop: '12px',
-          fontStyle: 'italic',
-        }}>
-          The wooden cover board of Whish No. 147 with Whish&apos;s handwritten table of contents
-        </figcaption>
-      </figure>
 
       <figure style={{
         background: '#f5f0e8',
