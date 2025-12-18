@@ -114,21 +114,50 @@ export default function PythagorasSankhya() {
       <h2>The &ldquo;Pythagoras&rdquo; Connection</h2>
 
       <p>
-        The English label on the manuscript&apos;s wooden cover is striking:
+        The key evidence is the wooden cover board itself, where Whish wrote his table of contents
+        in English. The first line reads:
       </p>
 
+      {/* The Famous Cover Board */}
       <figure style={{
-        background: '#1a1612',
-        color: '#f5f0e8',
-        padding: '24px 32px',
-        borderRadius: '8px',
         margin: '32px 0',
-        fontFamily: 'Newsreader, Georgia, serif',
-        fontSize: '20px',
-        fontStyle: 'italic',
         textAlign: 'center',
       }}>
-        &ldquo;SĀṄKHYA-SAPTATI or golden verses of Pythagoras&rdquo;
+        <img
+          src="/manuscripts/whish147_cover.jpg"
+          alt="Whish No. 147 wooden cover board with handwritten label"
+          style={{
+            width: '100%',
+            maxWidth: '700px',
+            borderRadius: '8px',
+            border: '2px solid #9e4a3a',
+          }}
+        />
+        <figcaption style={{
+          fontSize: '14px',
+          color: '#666',
+          marginTop: '12px',
+          fontStyle: 'italic',
+        }}>
+          The wooden cover board of Whish No. 147 with Whish&apos;s handwritten table of contents
+        </figcaption>
+      </figure>
+
+      <figure style={{
+        background: '#f5f0e8',
+        border: '1px solid #e0d8c8',
+        borderRadius: '8px',
+        padding: '24px',
+        margin: '32px 0',
+        fontFamily: 'monospace',
+        fontSize: '14px',
+        lineHeight: 1.8,
+      }}>
+        <p style={{ margin: '0 0 8px 0' }}><strong>1.</strong> SĀNKHYA-SAPTATI or <em>golden verses of Pythagoras</em>—</p>
+        <p style={{ margin: '0 0 8px 0' }}><strong>2.</strong> Saukara&apos;s comment of Do: JAYA-MANGALA</p>
+        <p style={{ margin: '0 0 8px 0' }}><strong>3.</strong> Vachespati misris do of do: TATWA KAUMADI</p>
+        <p style={{ margin: '0 0 8px 0' }}><strong>4.</strong> Tarkha Sangraham. NYAYA-SASTRAM</p>
+        <p style={{ margin: 0 }}><strong>5.</strong> comment of do by its author—</p>
       </figure>
 
       <p>
