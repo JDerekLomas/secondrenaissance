@@ -400,6 +400,343 @@ export default function PythagorasSankhya() {
         in its intellectual ambition: to find unity in the ancient wisdom of East and West.
       </p>
 
+      <h2>Complete Transcription</h2>
+
+      <p>
+        The following transcription was made directly from the palm-leaf folios of Whish No. 147.
+        The text is written in Malayalam script, the standard script for Sanskrit in Kerala.
+      </p>
+
+      <figure style={{
+        background: '#f5f0e8',
+        border: '1px solid #e0d8c8',
+        borderRadius: '8px',
+        padding: '24px',
+        margin: '32px 0',
+        overflowX: 'auto',
+      }}>
+        <table style={{
+          width: '100%',
+          fontFamily: 'monospace',
+          fontSize: '13px',
+          borderCollapse: 'collapse',
+        }}>
+          <thead>
+            <tr style={{ borderBottom: '2px solid #e0d8c8' }}>
+              <th style={{ textAlign: 'left', padding: '12px 8px', color: '#9e4a3a', fontWeight: 600, width: '60px' }}>Folio</th>
+              <th style={{ textAlign: 'left', padding: '12px 8px', color: '#9e4a3a', fontWeight: 600 }}>Malayalam Script</th>
+              <th style={{ textAlign: 'left', padding: '12px 8px', color: '#9e4a3a', fontWeight: 600 }}>IAST Romanization</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style={{ borderBottom: '1px solid #e0d8c8' }}>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', color: '#666' }}>F1</td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', lineHeight: 1.6 }}>
+                ഹരിഃ ശ്രീ ഗണപതയേ നമഃ അവിഘ്നമസ്തു <strong>[V1]</strong> ദുഃഖത്രയാഭിഘാതാജിജ്ഞാസാ തദപഘാതകേ ഹേതൗ ദൃഷ്ടേ സാ പാര്‌ഥാ ചന്നൈകാന്താത്യന്തതോƒഭാവാത്
+              </td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', fontStyle: 'italic', color: '#666', lineHeight: 1.6 }}>
+                Hariḥ Śrī Gaṇapataye namaḥ avighnam astu <strong>[V1]</strong> duḥkhatrayābhighātājjijñāsā tadapaghātake hetau dṛṣṭe sā pārthā cen naikāntātyantato&apos;bhāvāt
+              </td>
+            </tr>
+            <tr style={{ borderBottom: '1px solid #e0d8c8' }}>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', color: '#666' }}>F1</td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', lineHeight: 1.6 }}>
+                <strong>[V2]</strong> ദൃഷ്ടവദാനുശ്രവികഃ സ ഹ്യവിശുദ്ധി ക്ഷയാതിശയയുക്തഃ തദ്വിപരീതഃ ശ്രേയാന് വ്യക്താവ്യക്തജ്ഞവിജ്ഞാനാത്
+              </td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', fontStyle: 'italic', color: '#666', lineHeight: 1.6 }}>
+                <strong>[V2]</strong> dṛṣṭavad ānuśravikaḥ sa hy aviśuddhi kṣayātiśayayuktaḥ tadviparītaḥ śreyān vyaktāvyaktajña-vijñānāt
+              </td>
+            </tr>
+            <tr style={{ borderBottom: '1px solid #e0d8c8' }}>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', color: '#666' }}>F1</td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', lineHeight: 1.6 }}>
+                <strong>[V3]</strong> മൂലപ്രകൃതിരവികൃതിഃ മഹദാദ്യാഃ പ്രകൃതിവികൃതയഃ സപ്ത ഷോഡശകസ്തു വികാരോ ന പ്രകൃതിര്ന വികൃതിഃ പുരുഷഃ
+              </td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', fontStyle: 'italic', color: '#666', lineHeight: 1.6 }}>
+                <strong>[V3]</strong> mūlaprakṛtir avikṛtiḥ mahadādyāḥ prakṛtivikṛtayaḥ sapta ṣoḍaśakas tu vikāro na prakṛtir na vikṛtiḥ puruṣaḥ
+              </td>
+            </tr>
+            <tr style={{ borderBottom: '1px solid #e0d8c8' }}>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', color: '#666' }}>F3</td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', lineHeight: 1.6 }}>
+                <strong>[V11]</strong> ത്രിഗുണമവിവേകി വിഷയസ്സാമാന്യമചേതനം പ്രസവധര്‍മ്മി വ്യക്തം തഥാപ്രധാനം തദ്വിപരീതഃ തഥാ ച പുമാന്‍
+              </td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', fontStyle: 'italic', color: '#666', lineHeight: 1.6 }}>
+                <strong>[V11]</strong> triguṇam aviveki viṣayas sāmānyam acetanaṃ prasavadharmi vyaktaṃ tathā pradhānaṃ tadviparītaḥ tathā ca pumān
+              </td>
+            </tr>
+            <tr style={{ borderBottom: '1px solid #e0d8c8' }}>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', color: '#666' }}>F4</td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', lineHeight: 1.6 }}>
+                <strong>[V17]</strong> സംഘാതപരാര്‌ഥത്വാത് ത്രിഗുണാദിവിപര്യയാദ് അധിഷ്ഠാനാത് പുരുഷോƒസ്തി...
+              </td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', fontStyle: 'italic', color: '#666', lineHeight: 1.6 }}>
+                <strong>[V17]</strong> saṃghātaparārthatvāt triguṇādiviparyayād adhiṣṭhānāt puruṣo&apos;sti...
+              </td>
+            </tr>
+            <tr style={{ borderBottom: '1px solid #e0d8c8' }}>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', color: '#666' }}>F12</td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', lineHeight: 1.6 }}>
+                <strong>[V64]</strong> ...അവിപര്യയാദ് വിശുദ്ധം കേവലമുത്പദ്യതേ ജ്ഞാനം
+              </td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', fontStyle: 'italic', color: '#666', lineHeight: 1.6 }}>
+                <strong>[V64]</strong> ...aviparyayād viśuddhaṃ kevalamutpadyate jñānaṃ
+              </td>
+            </tr>
+            <tr style={{ borderBottom: '1px solid #e0d8c8' }}>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', color: '#666' }}>F13</td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', lineHeight: 1.6 }}>
+                <strong>[V70]</strong> ഏതത് പവിത്രമഗ്ര്യം മുനിരാസുരയേƒനുകമ്പയാ... പ്രദദൗ । ആസുരിരപി പഞ്ചശിഖായ... ഈശ്വരകൃഷ്പേന ചൈതദാര്യാഭിഃ...
+              </td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', fontStyle: 'italic', color: '#666', lineHeight: 1.6 }}>
+                <strong>[V70]</strong> etat pavitram agryaṃ munir āsuraye&apos;nukampayā... pradadau | āsurirapi pañcaśikhāya... īśvarakṛṣṇena caitad āryābhiḥ...
+              </td>
+            </tr>
+            <tr>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', color: '#666' }}>F13</td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', lineHeight: 1.6 }}>
+                <strong>[V72]</strong> ...സാംഖ്യസപ്തതിഃ സമാപ്താ ॥
+              </td>
+              <td style={{ padding: '12px 8px', verticalAlign: 'top', fontStyle: 'italic', color: '#666', lineHeight: 1.6 }}>
+                <strong>[V72]</strong> ...sāṃkhyasaptatiḥ samāptā ॥
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <h2>Complete Translation</h2>
+
+      <h3>I. Introduction: The Problem of Suffering (Verses 1–2)</h3>
+
+      <figure style={{
+        background: '#fff',
+        borderLeft: '4px solid #9e4a3a',
+        padding: '16px 24px',
+        margin: '24px 0',
+        fontFamily: 'Newsreader, Georgia, serif',
+        fontSize: '16px',
+        lineHeight: 1.8,
+      }}>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V1:</strong> Because of the assault of the <em>Threefold Suffering</em> (Internal, External, Divine),
+          an inquiry arises into the means of terminating it. Visible means (medicine, wealth) are insufficient
+          because they lack permanence.
+        </p>
+        <p style={{ margin: 0 }}>
+          <strong>V2:</strong> Scriptural means (rituals) are like visible ones—impure and decaying.
+          The superior method is the <em>discriminative knowledge</em> of the Manifest, the Unmanifest, and the Knower (Spirit).
+        </p>
+      </figure>
+
+      <h3>II. The 25 Principles &amp; Epistemology (Verses 3–8)</h3>
+
+      <figure style={{
+        background: '#fff',
+        borderLeft: '4px solid #9e4a3a',
+        padding: '16px 24px',
+        margin: '24px 0',
+        fontFamily: 'Newsreader, Georgia, serif',
+        fontSize: '16px',
+        lineHeight: 1.8,
+      }}>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V3:</strong> Primordial Nature (<em>Prakṛti</em>) is uncaused. The seven (<em>Mahat</em>, etc.)
+          are both causes and effects. The sixteen are merely effects. The Spirit (<em>Puruṣa</em>) is neither cause nor effect.
+        </p>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V4–6:</strong> Three proofs are accepted: Perception, Inference, and Valid Testimony.
+          Things beyond the senses are known via inference; things beyond inference are known via scripture.
+        </p>
+        <p style={{ margin: 0 }}>
+          <strong>V7–8:</strong> Non-perception of Nature is due to its subtlety, not its non-existence.
+          It is known through its effects (Intellect, etc.).
+        </p>
+      </figure>
+
+      <h3>III. Metaphysics: Cause &amp; Effect (Verses 9–11)</h3>
+
+      <figure style={{
+        background: '#fff',
+        borderLeft: '4px solid #9e4a3a',
+        padding: '16px 24px',
+        margin: '24px 0',
+        fontFamily: 'Newsreader, Georgia, serif',
+        fontSize: '16px',
+        lineHeight: 1.8,
+      }}>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V9 (Satkāryavāda):</strong> The effect pre-exists in the cause. Nothing can come from nothing;
+          a specific cause produces a specific effect.
+        </p>
+        <p style={{ margin: 0 }}>
+          <strong>V10–11:</strong> The Manifest is caused, non-eternal, active, and manifold. The Unmanifest is the reverse.
+          Both possess the three <em>Guṇas</em> (qualities). The Spirit is the opposite of both (unconscious vs conscious).
+        </p>
+      </figure>
+
+      <h3>IV. The Three Guṇas (Verses 12–16)</h3>
+
+      <figure style={{
+        background: '#fff',
+        borderLeft: '4px solid #9e4a3a',
+        padding: '16px 24px',
+        margin: '24px 0',
+        fontFamily: 'Newsreader, Georgia, serif',
+        fontSize: '16px',
+        lineHeight: 1.8,
+      }}>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V12–13:</strong> The <em>Guṇas</em> are <em>Sattva</em> (Light/Pleasure), <em>Rajas</em> (Motion/Pain),
+          and <em>Tamas</em> (Heavy/Delusion). They function together like a lamp (wick, oil, and fire cooperating for light).
+        </p>
+        <p style={{ margin: 0 }}>
+          <strong>V14–16:</strong> Since the effects (world) possess these <em>Guṇas</em>, the Cause (Nature) must also possess them.
+          Nature transforms like water, taking different forms based on the container.
+        </p>
+      </figure>
+
+      <h3>V. The Spirit—Puruṣa (Verses 17–21)</h3>
+
+      <figure style={{
+        background: '#fff',
+        borderLeft: '4px solid #9e4a3a',
+        padding: '16px 24px',
+        margin: '24px 0',
+        fontFamily: 'Newsreader, Georgia, serif',
+        fontSize: '16px',
+        lineHeight: 1.8,
+      }}>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V17:</strong> The Spirit exists because: (1) composites are for another&apos;s use (like a bed is for a sleeper),
+          (2) there must be a controller, and (3) there must be an experiencer.
+        </p>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V18:</strong> There are <em>many</em> Spirits (plurality of souls), proven by the fact that
+          birth and death happen at different times for different people.
+        </p>
+        <p style={{ margin: 0 }}>
+          <strong>V19–21:</strong> The Spirit is a witness, isolated, neutral, and a non-agent.
+          Matter is active but unconscious. Their union is like a <strong>Lame Man (Spirit) riding a Blind Man (Matter)</strong>.
+        </p>
+      </figure>
+
+      <h3>VI. Evolution &amp; Psychology (Verses 22–40)</h3>
+
+      <figure style={{
+        background: '#fff',
+        borderLeft: '4px solid #9e4a3a',
+        padding: '16px 24px',
+        margin: '24px 0',
+        fontFamily: 'Newsreader, Georgia, serif',
+        fontSize: '16px',
+        lineHeight: 1.8,
+      }}>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V22:</strong> From Nature comes Intellect → Ego → Mind + Senses + Subtle Elements → Gross Elements.
+        </p>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V23–37:</strong> Detailed psychology. <em>Buddhi</em> (Intellect) determines.
+          <em>Ahaṃkāra</em> (Ego) identifies &ldquo;I am.&rdquo; <em>Manas</em> (Mind) deliberates.
+          The Senses perceive. They are like &ldquo;Gatekeepers&rdquo; presenting data to the Spirit.
+        </p>
+        <p style={{ margin: 0 }}>
+          <strong>V38–40:</strong> The <strong>Subtle Body</strong> (<em>Liṅga Śarīra</em>).
+          This is the vehicle of the soul that transmigrates. It is composed of the Intellect, Ego, and Subtle Elements.
+        </p>
+      </figure>
+
+      <h3>VII. Karma &amp; Transmigration (Verses 41–52)</h3>
+
+      <figure style={{
+        background: '#fff',
+        borderLeft: '4px solid #9e4a3a',
+        padding: '16px 24px',
+        margin: '24px 0',
+        fontFamily: 'Newsreader, Georgia, serif',
+        fontSize: '16px',
+        lineHeight: 1.8,
+      }}>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V41–42:</strong> Just as a painting needs a canvas, the Subtle Body needs the &ldquo;Specifics&rdquo;
+          (subtle elements) to exist. It acts like a <strong>Dramatic Actor</strong>, taking on different roles/bodies.
+        </p>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V43–45:</strong> Mental dispositions determine rebirth. Virtue leads upwards (Heaven);
+          Vice leads downwards (Hell). Knowledge leads to Liberation.
+        </p>
+        <p style={{ margin: 0 }}>
+          <strong>V46–52:</strong> The &ldquo;Intellectual Creation.&rdquo; A classification of 50 mental states
+          (Ignorance, Contentment, Perfection). Only the 8 Perfections (Reasoning, Study, etc.) lead to freedom.
+        </p>
+      </figure>
+
+      <h3>VIII. Teleology: Why Does the Universe Exist? (Verses 56–59)</h3>
+
+      <figure style={{
+        background: '#fff',
+        borderLeft: '4px solid #9e4a3a',
+        padding: '16px 24px',
+        margin: '24px 0',
+        fontFamily: 'Newsreader, Georgia, serif',
+        fontSize: '16px',
+        lineHeight: 1.8,
+      }}>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V57:</strong> Just as unconscious <strong>milk</strong> flows to nourish the calf,
+          unconscious Nature evolves to liberate the Spirit.
+        </p>
+        <p style={{ margin: 0 }}>
+          <strong>V59:</strong> Just as a <strong>Dancer</strong> stops dancing after she has been seen by the audience,
+          Nature stops her activity once the Spirit realizes &ldquo;I am not this.&rdquo;
+        </p>
+      </figure>
+
+      <h3>IX. Liberation &amp; Conclusion (Verses 60–72)</h3>
+
+      <figure style={{
+        background: '#fff',
+        borderLeft: '4px solid #9e4a3a',
+        padding: '16px 24px',
+        margin: '24px 0',
+        fontFamily: 'Newsreader, Georgia, serif',
+        fontSize: '16px',
+        lineHeight: 1.8,
+      }}>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V61:</strong> &ldquo;Nothing is more delicate/modest than Nature. Once seen, she never exposes herself to the Spirit again.&rdquo;
+        </p>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V64:</strong> Knowledge arises: &ldquo;I do not exist (as agent), nothing is mine, I am not.&rdquo;
+          This is pure, absolute isolation (<em>Kaivalya</em>).
+        </p>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V67:</strong> The body continues for a while due to past momentum, like a <strong>Potter&apos;s Wheel</strong> spinning after the push stops.
+        </p>
+        <p style={{ margin: '0 0 16px 0' }}>
+          <strong>V68:</strong> Upon death, the Spirit attains final, absolute release.
+        </p>
+        <p style={{ margin: 0 }}>
+          <strong>V70–72:</strong> This doctrine was taught by <strong>Kapila</strong> → <strong>Āsuri</strong> → <strong>Pañcaśikha</strong> → <strong>Īśvarakṛṣṇa</strong>.
+          It is a summary of the <em>Ṣaṣṭitantra</em> (Science of Sixty Topics).
+        </p>
+      </figure>
+
+      <p style={{
+        textAlign: 'center',
+        fontFamily: 'Newsreader, Georgia, serif',
+        fontSize: '18px',
+        fontStyle: 'italic',
+        color: '#9e4a3a',
+        margin: '48px 0',
+      }}>
+        ॥ सांख्यसप्ततिः समाप्ता ॥
+        <br />
+        <span style={{ fontSize: '14px', color: '#666' }}>
+          Thus concludes the Sāṃkhyasaptati
+        </span>
+      </p>
+
       <h2>Further Reading</h2>
 
       <ul>
