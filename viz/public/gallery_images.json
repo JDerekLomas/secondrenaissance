@@ -3108,6 +3108,97 @@
         "hermetica"
       ],
       "description": "The famous Oratory-Laboratory plate showing prayer and alchemical work united"
+    },
+    {
+      "id": "drebbel-portrait",
+      "title": "Portrait of Cornelis Drebbel",
+      "artist": "Christoffel van Sichem",
+      "year": 1631,
+      "source": "Wikimedia Commons",
+      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Drebbel_Van_Sichem_ca_1631_groot.jpg",
+      "thumb_url": "/gallery/full/drebbel-portrait.jpg",
+      "image_url": "/gallery/full/drebbel-portrait.jpg",
+      "license": "Public Domain",
+      "categories": ["machines", "portraits"],
+      "description": "Engraving of Cornelis Drebbel (1572-1633), Dutch inventor and alchemist"
+    },
+    {
+      "id": "drebbel-perpetuum-mobile",
+      "title": "Drebbel's Perpetuum Mobile",
+      "artist": "Heinrich Hiesserle von Choda",
+      "year": 1612,
+      "source": "Wikimedia Commons",
+      "wikimedia_url": "https://commons.wikimedia.org/wiki/File:Drebbel-Clock.jpg",
+      "thumb_url": "/gallery/full/drebbel-perpetuum-mobile.jpg",
+      "image_url": "/gallery/full/drebbel-perpetuum-mobile.jpg",
+      "license": "Public Domain",
+      "categories": ["machines", "alchemy"],
+      "description": "The atmospheric pressure clock that ran without winding"
+    },
+    {
+      "id": "drebbel-oven-diagram",
+      "title": "Drebbel's Self-Regulating Oven",
+      "artist": "Unknown (modern reconstruction)",
+      "year": 1598,
+      "source": "Nautilus Magazine",
+      "wikimedia_url": "",
+      "thumb_url": "/gallery/full/drebbel-oven-diagram.png",
+      "image_url": "/gallery/full/drebbel-oven-diagram.png",
+      "license": "Fair Use",
+      "categories": ["machines", "alchemy"],
+      "description": "Diagram of the first feedback control system - a thermostatically regulated furnace"
+    },
+    {
+      "id": "drebbel-submarine-painting",
+      "title": "Drebbel's Submarine on the Thames",
+      "artist": "G.H. Tweedale",
+      "year": 1621,
+      "source": "Royal Submarine Museum",
+      "wikimedia_url": "",
+      "thumb_url": "/gallery/full/drebbel-submarine-painting.jpg",
+      "image_url": "/gallery/full/drebbel-submarine-painting.jpg",
+      "license": "Public Domain",
+      "categories": ["machines"],
+      "description": "Historical painting of the first navigable submarine (1620)"
+    },
+    {
+      "id": "drebbel-china-thermostat",
+      "title": "Japanese Diagram of Drebbel's Thermostat",
+      "artist": "Unknown",
+      "year": 1800,
+      "source": "drebbel.net",
+      "wikimedia_url": "",
+      "thumb_url": "/gallery/full/drebbel-china-2.jpg",
+      "image_url": "/gallery/full/drebbel-china-2.jpg",
+      "license": "Public Domain",
+      "categories": ["machines", "alchemy"],
+      "description": "Japanese diagram showing Drebbel's feedback control system with Chinese text"
+    },
+    {
+      "id": "drebbel-incubator",
+      "title": "Drebbel's Egg Incubator",
+      "artist": "Unknown",
+      "year": 1620,
+      "source": "drebbel.net",
+      "wikimedia_url": "",
+      "thumb_url": "/gallery/full/drebbel-china-3.jpg",
+      "image_url": "/gallery/full/drebbel-china-3.jpg",
+      "license": "Public Domain",
+      "categories": ["machines", "alchemy"],
+      "description": "Historical diagram of Drebbel's thermostatically-controlled egg incubator"
+    },
+    {
+      "id": "drebbel-replica",
+      "title": "Drebbel Submarine Replica",
+      "artist": "Mark Edwards (BBC)",
+      "year": 2002,
+      "source": "Historic UK",
+      "wikimedia_url": "",
+      "thumb_url": "/gallery/full/drebbel-replica-historicuk.jpg",
+      "image_url": "/gallery/full/drebbel-replica-historicuk.jpg",
+      "license": "Fair Use",
+      "categories": ["machines"],
+      "description": "Modern replica of Drebbel's submarine built for BBC documentary"
     }
   ],
   "categories": [

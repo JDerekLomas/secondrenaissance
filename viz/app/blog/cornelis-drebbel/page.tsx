@@ -162,16 +162,16 @@ export default function CornelisDrebbel() {
         have noted, &quot;the first feedback system invented since antiquity.&quot;
       </p>
 
-      {/* Thermostat/Furnace Image
-          Source: Use alchemical laboratory image as context
-          Or search for Drebbel furnace diagrams at drebbel.net
-      */}
+      {/* Thermostat/Furnace Image - Drebbel's actual oven diagram */}
       <figure style={{ margin: '0 0 32px 0' }}>
         <img
-          src="/gallery/full/alchemical-lab.jpg"
-          alt="Alchemical laboratory with furnaces"
+          src="/gallery/full/drebbel-oven-diagram.png"
+          alt="Diagram of Drebbel's self-regulating oven showing the thermostat mechanism"
           style={{
             width: '100%',
+            maxWidth: '700px',
+            display: 'block',
+            margin: '0 auto',
             borderRadius: '8px',
             border: '1px solid #e8e4dc'
           }}
@@ -183,7 +183,7 @@ export default function CornelisDrebbel() {
           marginTop: '12px',
           textAlign: 'center',
         }}>
-          An alchemical laboratory with furnaces. Drebbel&apos;s self-regulating oven used similar equipment to achieve automatic temperature control.
+          Drebbel&apos;s self-regulating oven: an L-shaped glass tube filled with alcohol and mercury controlled a damper to maintain constant temperature.
         </figcaption>
       </figure>
 
@@ -238,15 +238,11 @@ export default function CornelisDrebbel() {
         The Submarine: Sailing Beneath the Thames
       </h2>
 
-      {/* Submarine Image
-          Source: There are no contemporary images of Drebbel's submarine.
-          Modern reconstructions: https://commons.wikimedia.org/wiki/File:Drebbel%27s_submarine.jpg
-          Or use photo of replica near Richmond Bridge, London
-      */}
+      {/* Submarine Image - Historical painting */}
       <figure style={{ margin: '0 0 32px 0' }}>
         <img
-          src="/gallery/full/drebbel-submarine.jpg"
-          alt="Reconstruction of Drebbel's submarine"
+          src="/gallery/full/drebbel-submarine-painting.jpg"
+          alt="Historical painting of Drebbel's submarine on the River Thames"
           style={{
             width: '100%',
             borderRadius: '8px',
@@ -260,7 +256,7 @@ export default function CornelisDrebbel() {
           marginTop: '12px',
           textAlign: 'center',
         }}>
-          A modern reconstruction of Drebbel&apos;s submarine. The original was covered in greased leather over a wooden frame. No contemporary images survive.
+          Drebbel&apos;s submarine on the River Thames (c. 1621). The vessel was a wooden frame covered in greased leather, with oars protruding through sealed ports.
         </figcaption>
       </figure>
 
@@ -552,6 +548,84 @@ export default function CornelisDrebbel() {
       <p style={{ marginBottom: '24px' }}>
         Drebbel&apos;s work on pneumatics, feedback control, and chemical processes anticipated the research
         programs that Boyle, Hooke, and their colleagues would pursue at the Royal Society.
+      </p>
+
+      {/* Asia Section */}
+      <h2 style={{
+        fontFamily: 'Cormorant Garamond, Georgia, serif',
+        fontSize: '28px',
+        fontWeight: 400,
+        color: '#1a1612',
+        marginTop: '48px',
+        marginBottom: '24px',
+      }}>
+        Drebbel in the East: Technology Transfer to China and Japan
+      </h2>
+
+      <p style={{ marginBottom: '24px' }}>
+        Drebbel&apos;s fame spread far beyond Europe. Through Jesuit missionaries and Dutch trade networks,
+        knowledge of his inventions reached China and Japan in the 17th and 18th centuries.
+      </p>
+
+      <figure style={{ margin: '0 0 32px 0' }}>
+        <img
+          src="/gallery/full/drebbel-china-3.jpg"
+          alt="Historical diagram of Drebbel's egg incubator"
+          style={{
+            width: '100%',
+            maxWidth: '600px',
+            display: 'block',
+            margin: '0 auto',
+            borderRadius: '8px',
+            border: '1px solid #e8e4dc'
+          }}
+        />
+        <figcaption style={{
+          fontFamily: 'Inter, sans-serif',
+          fontSize: '12px',
+          color: '#888',
+          marginTop: '12px',
+          textAlign: 'center',
+        }}>
+          A diagram of Drebbel&apos;s thermostatically-controlled incubator, showing the feedback mechanism that maintained constant temperature.
+        </figcaption>
+      </figure>
+
+      <p style={{ marginBottom: '24px' }}>
+        The <em>Qi qi tu shuo</em> (&quot;Illustrations and Explanations of Wonderful Machines&quot;), compiled in 1627 by
+        Jesuit missionary Johann Schreck and Chinese scholar Wang Zheng, introduced Western mechanical technology to China.
+        Telescopes and microscopes possibly made by Drebbel were sold in Rome by his son-in-law Jacob Kuffeler,
+        from where Jesuits brought them to the Chinese court.
+      </p>
+
+      <figure style={{ margin: '0 0 32px 0' }}>
+        <img
+          src="/gallery/full/drebbel-china-2.jpg"
+          alt="Japanese diagram of Drebbel's thermostat feedback system"
+          style={{
+            width: '100%',
+            maxWidth: '500px',
+            display: 'block',
+            margin: '0 auto',
+            borderRadius: '8px',
+            border: '1px solid #e8e4dc'
+          }}
+        />
+        <figcaption style={{
+          fontFamily: 'Inter, sans-serif',
+          fontSize: '12px',
+          color: '#888',
+          marginTop: '12px',
+          textAlign: 'center',
+        }}>
+          A Japanese diagram with Chinese text describing Drebbel&apos;s feedback control system. The Japanese were &quot;also familiar with Drebbel&apos;s regulator.&quot;
+        </figcaption>
+      </figure>
+
+      <p style={{ marginBottom: '24px' }}>
+        Through <em>Rangaku</em> (&quot;Dutch learning&quot;), Japanese scholars in the Edo period studied Western science
+        via Dutch sources at Dejima. Drebbel&apos;s thermostat — described as a device that &quot;was not only used for smelting,
+        but also to maintain constant temperature in an incubator&quot; — became known to Japanese natural philosophers.
       </p>
 
       {/* Prague Section */}
