@@ -28,6 +28,14 @@ const pinnedPosts = [
 // All posts in reverse chronological order (newest first)
 const posts = [
   {
+    slug: "progress-studies",
+    title: "Progress Studies and the Renaissance: Ten Questions We Can Finally Answer",
+    date: "Dec 20, 2025",
+    excerpt: "Patrick Collison and Tyler Cowen want to understand what conditions enable progress. We have 500,000 data points they haven't seen.",
+    tag: "Research",
+    category: "History",
+  },
+  {
     slug: "pythagoras-sankhya",
     title: "The Golden Verses of Pythagoras: A 19th-Century Manuscript Mystery",
     date: "Dec 18, 2025",
