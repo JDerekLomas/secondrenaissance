@@ -546,9 +546,11 @@ const graphData = {
         "Wonder-vondt van de eeuwighe bewegingh (1607)",
         "Een kort Tractaet van de Natuere der Elementen (1621)",
         "First navigable submarine (1620)",
-        "Self-regulating oven / thermostat (1598)"
+        "Self-regulating oven / thermostat (1598)",
+        "Engravings: Seven Liberal Arts, Five Senses (after Goltzius)",
+        "Bird's-eye view of Alkmaar (1597)"
       ],
-      "note": "Dutch polymath who invented the thermostat, submarine, and compound microscope. His work influenced the Royal Society, Francis Bacon, and the development of cybernetics."
+      "note": "Dutch polymath trained as engraver under Goltzius. Invented the thermostat, submarine, and compound microscope. His work influenced the Royal Society, Francis Bacon, and the development of cybernetics."
     },
 
     // NETHERLANDS - HAARLEM ACADEMY
@@ -593,6 +595,64 @@ const graphData = {
         "Bathsheba at Her Bath"
       ],
       "note": "Third member of the Haarlem Mannerists alongside Goltzius and Van Mander."
+    },
+
+    // GOLTZIUS WORKSHOP ENGRAVERS
+    {
+      "id": "matham",
+      "label": "Jacob Matham",
+      "birth": 1571,
+      "death": 1631,
+      "place": "Haarlem",
+      "group": "netherlands",
+      "role": "Engraver",
+      "key_works": [
+        "Engravings after Goltzius",
+        "Took over workshop after 1600"
+      ],
+      "note": "Goltzius's stepson. In workshop from c. 1579. Became Drebbel's brother-in-law (both married into Goltzius family). Took over workshop management when Goltzius turned to painting."
+    },
+    {
+      "id": "saenredam",
+      "label": "Jan Saenredam",
+      "birth": 1565,
+      "death": 1607,
+      "place": "Haarlem",
+      "group": "netherlands",
+      "role": "Engraver, cartographer",
+      "key_works": [
+        "Allegory of Sight (after Goltzius, c. 1598)",
+        "Mythological and biblical engravings"
+      ],
+      "note": "Fellow Goltzius apprentice c. 1589-1592. So close to master's style that some works misattributed. His Allegory of Sight shows painter and model — figures resemble Drebbel and Sophia (unconfirmed)."
+    },
+    {
+      "id": "muller",
+      "label": "Jan Muller",
+      "birth": 1571,
+      "death": 1628,
+      "place": "Haarlem → Prague → Amsterdam",
+      "group": "netherlands",
+      "role": "Engraver",
+      "key_works": [
+        "Engravings after Goltzius and Spranger",
+        "Works for Rudolf II's court"
+      ],
+      "note": "In Goltzius workshop from 1589. Later worked in Prague 1594-1602 — knew Rudolf's court before Drebbel arrived. Bold, sweeping engraving style."
+    },
+    {
+      "id": "de_gheyn",
+      "label": "Jacob de Gheyn II",
+      "birth": 1565,
+      "death": 1629,
+      "place": "Haarlem → The Hague",
+      "group": "netherlands",
+      "role": "Engraver, painter, draughtsman",
+      "key_works": [
+        "Wapenhandelinghe (arms manual, 1607)",
+        "Vanitas still lifes"
+      ],
+      "note": "In Goltzius workshop late 1580s. Considered most talented student. Later worked for Maurice of Nassau. Father of Jacob de Gheyn III who knew Huygens."
     },
     {
       "id": "sophia",
@@ -748,7 +808,7 @@ const graphData = {
         "Astronomia nova (1609)",
         "Dioptrice (1611)"
       ],
-      "note": "At Rudolf's court 1600-1612. Overlapped with Drebbel in Prague."
+      "note": "At Rudolf's court 1600-1612. Published Dioptrice (optical theory) in Prague 1611 while Drebbel was there. Drebbel's later twin-convex microscopes match Kepler's optical design — likely influenced by Dioptrice or court contact."
     },
     {
       "id": "khunrath",
@@ -1027,6 +1087,32 @@ const graphData = {
      "citation": "Drebbel, Wonder-vondt van de eeuwighe bewegingh. Alkmaar: Gerrit Pietersz Schagen, 1607.",
      "evidence": "Title page of first edition names Schagen as publisher."},
 
+    // GOLTZIUS WORKSHOP ENGRAVERS
+    {"source": "goltzius", "target": "matham", "type": "family", "label": "Stepson",
+     "citation": "Hollstein's Dutch & Flemish Etchings, vol. XI; Wikipedia: Jacob Matham.",
+     "evidence": "Goltzius married Matham's mother. Jacob entered workshop c. 1579 age 8."},
+    {"source": "matham", "target": "drebbel", "type": "colleague", "label": "Fellow apprentices & brothers-in-law",
+     "citation": "Tierie (1932); workshop chronology.",
+     "evidence": "Both in Goltzius workshop c. 1589-1595. Both married into Goltzius family."},
+    {"source": "goltzius", "target": "saenredam", "type": "teacher", "label": "Master engraver",
+     "citation": "Wikipedia: Jan Saenredam; Hollstein's Dutch & Flemish Etchings.",
+     "evidence": "Saenredam trained under Goltzius, became master 1589. Style so close works sometimes misattributed."},
+    {"source": "saenredam", "target": "drebbel", "type": "colleague", "label": "Fellow apprentices c. 1589-1592",
+     "citation": "Workshop chronology; Tierie (1932).",
+     "evidence": "Overlapped in Goltzius workshop. Saenredam's Allegory of Sight (c. 1598) may depict figures from workshop circle."},
+    {"source": "goltzius", "target": "muller", "type": "teacher", "label": "Master engraver",
+     "citation": "Westmont College: Jan Muller; Hollstein's Dutch & Flemish Etchings.",
+     "evidence": "Muller in Goltzius workshop from 1589. Known for bold, sweeping line style."},
+    {"source": "muller", "target": "drebbel", "type": "colleague", "label": "Fellow apprentices",
+     "citation": "Workshop chronology.",
+     "evidence": "Both in workshop 1589-1595. Muller later worked in Prague 1594-1602 — knew Rudolf's court before Drebbel."},
+    {"source": "goltzius", "target": "de_gheyn", "type": "teacher", "label": "Master engraver",
+     "citation": "Van Mander, Het Schilder-Boeck, 1604; Hollstein's Dutch & Flemish Etchings.",
+     "evidence": "De Gheyn in workshop late 1580s. Van Mander called him most talented student."},
+    {"source": "de_gheyn", "target": "drebbel", "type": "colleague", "label": "Fellow apprentices",
+     "citation": "Workshop chronology.",
+     "evidence": "Overlapped in Goltzius workshop. De Gheyn later worked for Maurice of Nassau."},
+
     // NETHERLANDS - Middelburg optics
     {"source": "lippershey", "target": "drebbel", "type": "teacher", "label": "Taught lens grinding",
      "citation": "Tierie (1932), pp. 22-24; Van Helden, Albert. The Invention of the Telescope, 1977.",
@@ -1073,6 +1159,9 @@ const graphData = {
     {"source": "rudolf", "target": "kepler", "type": "patron", "label": "Imperial mathematician",
      "citation": "Caspar, Max. Kepler. 1948; trans. C. Doris Hellman, 1959.",
      "evidence": "Kepler appointed Imperial Mathematician 1601, served until Rudolf's death 1612."},
+    {"source": "kepler", "target": "drebbel", "type": "influenced", "label": "Optical theory (Dioptrice 1611)",
+     "citation": "Kepler, Dioptrice (Prague, 1611); The Renaissance Mathematicus blog, 2020.",
+     "evidence": "Kepler published Dioptrice in Prague 1611 while Drebbel was there. Drebbel's later twin-convex microscopes match Kepler's optical design exactly — 'cannot be a coincidence.'"},
     {"source": "rudolf", "target": "khunrath", "type": "patron", "label": "Court alchemist",
      "citation": "Evans, Rudolf II and His World (1973), pp. 196-199.",
      "evidence": "Khunrath dedicated Amphitheatrum to Rudolf 1595; died September 9, 1605."},
