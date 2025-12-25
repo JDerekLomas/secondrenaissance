@@ -547,6 +547,65 @@ const graphData = {
       "note": "Alkmaar bookseller who published Drebbel's first philosophical work."
     },
 
+    // NETHERLANDS - ALKMAAR CONNECTIONS
+    {
+      "id": "leeghwater",
+      "label": "Jan Leeghwater",
+      "birth": 1575,
+      "death": 1650,
+      "place": "De Rijp (near Alkmaar)",
+      "group": "netherlands",
+      "role": "Millwright, engineer",
+      "key_works": [
+        "Haarlemmermeer drainage plans",
+        "Windmill innovations"
+      ],
+      "note": "Fellow Anabaptist from near Alkmaar. Famous for land reclamation engineering. Drebbel's late Fen drainage work echoed Leeghwater's methods."
+    },
+    {
+      "id": "jacob_metius",
+      "label": "Jacob Metius",
+      "birth": 1571,
+      "death": 1628,
+      "place": "Alkmaar",
+      "group": "optics",
+      "role": "Instrument maker",
+      "key_works": [
+        "Telescope patent application (1608)"
+      ],
+      "note": "Alkmaar instrument maker who applied for telescope patent weeks after Lippershey. Son of burgomaster Adriaan Anthonisz."
+    },
+    {
+      "id": "adriaan_metius",
+      "label": "Adriaan Metius",
+      "birth": 1571,
+      "death": 1635,
+      "place": "Alkmaar → Franeker",
+      "group": "science",
+      "role": "Astronomer, geometer",
+      "key_works": [
+        "Institutiones Astronomicae (1614)",
+        "Published father's pi approximation 355/113"
+      ],
+      "note": "Jacob's brother. Professor at Franeker. His astronomy book appears in Vermeer's The Astronomer."
+    },
+
+    // ENGLAND - PRINCE HENRY'S CIRCLE
+    {
+      "id": "de_caus",
+      "label": "Salomon de Caus",
+      "birth": 1576,
+      "death": 1626,
+      "place": "France → England → Heidelberg",
+      "group": "science",
+      "role": "Hydraulic engineer, garden designer",
+      "key_works": [
+        "Les Raisons des forces mouvantes (1615)",
+        "Hortus Palatinus gardens"
+      ],
+      "note": "Fellow engineer at Prince Henry's court. Both Drebbel and de Caus cited as models for Bacon's Salomon's House (Colie 1955)."
+    },
+
     // PRAGUE - RUDOLF II'S COURT
     {
       "id": "rudolf",
@@ -669,7 +728,7 @@ const graphData = {
         "Novum Organum (1620)",
         "New Atlantis (1627)"
       ],
-      "note": "Salomon's House in New Atlantis was partly inspired by Drebbel's inventions. On the commission that approved Drebbel's lodgings at Eltham."
+      "note": "Salomon's House in New Atlantis was partly inspired by Drebbel's inventions (per Colie 1955). Visited Eltham Palace where Drebbel resided."
     },
     {
       "id": "boyle",
@@ -751,7 +810,7 @@ const graphData = {
       "key_works": [
         "The Tempest (1611)"
       ],
-      "note": "Prospero may be partly inspired by Drebbel (and Dee). The Tempest written during Drebbel's fame at court."
+      "note": "Prospero may be partly inspired by Drebbel (per Grudin 1991 in Huntington Library Quarterly). Speculative but plausible given Drebbel's fame at court 1604-1611."
     },
 
     // ENGLAND - KUFFLER FAMILY (DREBBEL'S LEGACY)
@@ -855,6 +914,16 @@ const graphData = {
     {"source": "janssen", "target": "drebbel", "type": "colleague", "label": "Fellow lens maker"},
     {"source": "lippershey", "target": "janssen", "type": "colleague", "label": "Middelburg spectacle makers"},
 
+    // NETHERLANDS - Alkmaar connections
+    {"source": "leeghwater", "target": "drebbel", "type": "colleague", "label": "Fellow Anabaptist engineer"},
+    {"source": "jacob_metius", "target": "drebbel", "type": "colleague", "label": "Alkmaar instrument makers"},
+    {"source": "jacob_metius", "target": "adriaan_metius", "type": "family", "label": "Brothers"},
+    {"source": "jacob_metius", "target": "lippershey", "type": "colleague", "label": "Rival telescope claimants"},
+
+    // ENGLAND - Prince Henry's engineers
+    {"source": "de_caus", "target": "drebbel", "type": "colleague", "label": "Both at Prince Henry's court"},
+    {"source": "henry", "target": "de_caus", "type": "patron", "label": "Engineer and tutor"},
+
     // PRAGUE - Rudolf's court
     {"source": "rudolf", "target": "drebbel", "type": "patron", "label": "Invited to Prague 1610"},
     {"source": "sendivogius", "target": "drebbel", "type": "collaborated", "label": "Taught oxygen/saltpeter"},
@@ -864,7 +933,8 @@ const graphData = {
     {"source": "rudolf", "target": "dee", "type": "patron", "label": "Invited 1584"},
     {"source": "dee", "target": "kelley", "type": "collaborated", "label": "Angelic magic partner"},
     {"source": "dee", "target": "khunrath", "type": "influenced", "label": "Met Bremen 1589"},
-    {"source": "khunrath", "target": "drebbel", "type": "influenced", "label": "Hermetic tradition"},
+    // NOTE: Khunrath died 1605, Drebbel arrived Prague 1610 - no direct meeting
+    // Influence was via tradition, not personal contact
 
     // ENGLAND - Royalty
     {"source": "james", "target": "drebbel", "type": "patron", "label": "Patron from 1604"},
