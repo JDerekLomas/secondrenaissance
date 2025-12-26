@@ -619,7 +619,7 @@ export default function CornelisDrebbel() {
 
       <figure style={{ margin: '0 0 32px 0' }}>
         <img
-          src="/gallery/full/drebbel-china-woodblock.jpg"
+          src="/gallery/full/drebbel-china-woodblock.png"
           alt="Chinese woodblock print of Drebbel's thermostat incubator"
           style={{
             width: '100%',
