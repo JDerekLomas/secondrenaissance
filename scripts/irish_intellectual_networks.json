@@ -1,0 +1,418 @@
+{
+  "title": "Irish Intellectual Networks 1450-1700",
+  "summary": {
+    "dublin_printing": {
+      "total_editions": 2906,
+      "first_printed": 1551,
+      "first_work": "Book of Common Prayer (Powell, Humphrey)",
+      "first_irish_language": 1571
+    },
+    "irish_language_works": 29,
+    "works_about_ireland": 5118,
+    "protestant_british_network_editions": 426,
+    "catholic_exile_network_editions": 277
+  },
+  "exile_colleges": {
+    "louvain": {
+      "name": "Irish Franciscan College of St Anthony",
+      "founded": 1607,
+      "works": 38,
+      "key_output": "Irish-language catechisms, dictionaries, hagiography"
+    },
+    "rome": {
+      "name": "St Isidore's College",
+      "founded": 1625,
+      "works": 53,
+      "key_figure": "Luke Wadding"
+    },
+    "salamanca": {
+      "name": "Irish College of Salamanca",
+      "founded": 1592,
+      "works": "minimal in USTC"
+    },
+    "paris": {
+      "name": "Irish College of Paris",
+      "founded": 1578,
+      "works": "mixed with general Paris output"
+    }
+  },
+  "key_figures": [
+    {
+      "name": "Thomas Stapleton",
+      "dates": "1535-1598",
+      "editions": 180,
+      "places": [
+        "Antwerp",
+        "Paris",
+        "Cologne"
+      ],
+      "significance": "Counter-Reformation theologian, actually English but key figure in Catholic networks",
+      "tradition": "Catholic"
+    },
+    {
+      "name": "James Ussher",
+      "dates": "1581-1656",
+      "editions": 144,
+      "places": [
+        "London",
+        "Oxford",
+        "Dublin"
+      ],
+      "significance": "Archbishop of Armagh, chronologist (famous for dating Creation to 4004 BC)",
+      "tradition": "Protestant"
+    },
+    {
+      "name": "Richard Stanihurst",
+      "dates": "1547-1618",
+      "editions": 59,
+      "places": [
+        "Antwerp",
+        "Cologne",
+        "Douai"
+      ],
+      "significance": "Historian of Ireland, De rebus in Hibernia gestis",
+      "tradition": "Catholic (converted)"
+    },
+    {
+      "name": "Luke Wadding",
+      "dates": "1588-1657",
+      "editions": 32,
+      "places": [
+        "Rome",
+        "Lyon",
+        "Louvain"
+      ],
+      "significance": "Founder of St Isidore's College Rome, Annales Minorum (Franciscan history)",
+      "tradition": "Catholic Franciscan"
+    },
+    {
+      "name": "Richard FitzRalph",
+      "dates": "1300-1360",
+      "editions": 14,
+      "places": [
+        "Paris",
+        "Lyon"
+      ],
+      "significance": "Archbishop of Armagh, anti-mendicant polemicist (medieval)",
+      "tradition": "Catholic (pre-Reformation)"
+    },
+    {
+      "name": "John Colgan",
+      "dates": "1592-1658",
+      "editions": 6,
+      "places": [
+        "Louvain"
+      ],
+      "significance": "Acta Sanctorum Hiberniae - hagiography of Irish saints",
+      "tradition": "Catholic Franciscan"
+    },
+    {
+      "name": "Michael O'Clery",
+      "dates": "1590-1643",
+      "editions": 3,
+      "places": [
+        "Louvain"
+      ],
+      "significance": "Irish dictionary (Focl\u00f3ir), one of the Four Masters (Annals of Ireland)",
+      "tradition": "Catholic Franciscan"
+    },
+    {
+      "name": "Thomas Hibernicus",
+      "dates": "fl. 1306",
+      "editions": 49,
+      "places": [
+        "Venice",
+        "Paris",
+        "Lyon",
+        "Piacenza"
+      ],
+      "significance": "Manipulus Florum - medieval compilation of quotations",
+      "tradition": "Catholic (medieval)"
+    }
+  ],
+  "key_works": [
+    {
+      "title": "Manipulus Florum (Handbook of Flowers)",
+      "author": "Thomas Hibernicus",
+      "year": 1306,
+      "editions": 35,
+      "description": "Compilation of patristic quotations, used throughout medieval Europe"
+    },
+    {
+      "title": "Annales Minorum",
+      "author": "Luke Wadding",
+      "year": 1625,
+      "editions": 8,
+      "description": "Comprehensive history of the Franciscan Order"
+    },
+    {
+      "title": "Acta Sanctorum Hiberniae",
+      "author": "John Colgan",
+      "year": 1645,
+      "editions": 4,
+      "description": "Lives of Irish saints, foundational for Irish hagiography"
+    },
+    {
+      "title": "Focl\u00f3ir (Irish Dictionary)",
+      "author": "Michael O'Clery",
+      "year": 1643,
+      "editions": 2,
+      "description": "First Irish-language dictionary, printed at Louvain"
+    },
+    {
+      "title": "Aibidil Gaoidheilge (Irish Catechism)",
+      "author": "John Kearney",
+      "year": 1571,
+      "editions": 1,
+      "description": "First book printed in Irish, in Dublin"
+    }
+  ],
+  "themes": [
+    "Medieval Irish scholars (Duns Scotus: 191 ed) were major figures in European philosophy",
+    "Early medieval Irish (Eriugena) preserved and transmitted classical learning",
+    "Catholic exile networks centered on Louvain, Rome, and Spanish Netherlands",
+    "Protestant scholarship centered on Dublin, London, Oxford",
+    "Irish-language printing almost exclusively by Catholic exiles at Louvain",
+    "Sharp confessional divide in intellectual networks after Reformation",
+    "Medieval Irish scholars (Thomas Hibernicus, FitzRalph) widely read across Europe",
+    "Counter-Reformation hagiography (Colgan) preserving pre-Reformation Irish culture",
+    "Protestant Irish integrated into Royal Society and London publishing",
+    "Robert Boyle (264 editions) - most published Irish-born author",
+    "Sharp divide: Catholic exiles preserved Irish language; Protestants published in English/Latin through London",
+    "Hartlib Circle connected Irish (Boyle, Petty) to European scientific reform movement",
+    "Dublin Philosophical Society (1683) created institutional base for Irish science",
+    "Molyneux-Locke correspondence linked Dublin to London empiricism",
+    "Ulster Presbyterian networks fed into Scottish Enlightenment (Hutcheson)",
+    "Irish contributions to natural law, toleration, and political economy debates"
+  ],
+  "protestant_irish_in_britain": {
+    "description": "Irish-born scholars integrated into British intellectual networks (Royal Society, universities, London publishing)",
+    "key_figures": [
+      {
+        "name": "Robert Boyle",
+        "dates": "1627-1691",
+        "birthplace": "Lismore Castle, Co. Waterford",
+        "editions": 264,
+        "places": [
+          "London",
+          "Geneva",
+          "Oxford",
+          "Amsterdam",
+          "Rotterdam"
+        ],
+        "significance": "Founder of modern chemistry, Boyle's Law, The Sceptical Chymist",
+        "networks": [
+          "Royal Society (founding member)",
+          "Oxford"
+        ]
+      },
+      {
+        "name": "James Ussher",
+        "dates": "1581-1656",
+        "birthplace": "Dublin",
+        "editions": 144,
+        "places": [
+          "London",
+          "Oxford",
+          "Dublin"
+        ],
+        "significance": "Archbishop of Armagh, chronologist (dated Creation to 4004 BC)",
+        "networks": [
+          "Church of Ireland",
+          "Trinity College Dublin"
+        ]
+      },
+      {
+        "name": "John Toland",
+        "dates": "1670-1722",
+        "birthplace": "Inishowen, Co. Donegal",
+        "editions": 11,
+        "places": [
+          "London"
+        ],
+        "significance": "Freethinker, Christianity Not Mysterious (1696) burned by Irish Parliament",
+        "networks": [
+          "Deist circles",
+          "Whig politics"
+        ]
+      },
+      {
+        "name": "William Molyneux",
+        "dates": "1656-1698",
+        "birthplace": "Dublin",
+        "editions": 7,
+        "places": [
+          "Dublin",
+          "London"
+        ],
+        "significance": "Optics, The Case of Ireland (1698) - constitutional rights argument",
+        "networks": [
+          "Dublin Philosophical Society",
+          "Royal Society",
+          "John Locke correspondence"
+        ]
+      }
+    ]
+  },
+  "enlightenment_roots": {
+    "description": "Irish contributions to the intellectual foundations of the Enlightenment",
+    "hartlib_circle": {
+      "description": "International network of scientific reformers (1630s-1660s)",
+      "irish_connections": [
+        {
+          "name": "Robert Boyle",
+          "editions": 264,
+          "contribution": "Experimental philosophy, chemistry"
+        },
+        {
+          "name": "William Petty",
+          "editions": 36,
+          "contribution": "Political arithmetic (statistics/demography)"
+        }
+      ],
+      "other_members": [
+        {
+          "name": "Samuel Hartlib",
+          "editions": 27
+        },
+        {
+          "name": "John Dury",
+          "editions": 38
+        },
+        {
+          "name": "Comenius",
+          "editions": 495
+        }
+      ]
+    },
+    "dublin_philosophical_society": {
+      "founded": 1683,
+      "description": "Irish equivalent of Royal Society",
+      "key_figures": [
+        {
+          "name": "William Molyneux",
+          "editions": 7,
+          "contribution": "Optics, constitutional theory, Locke correspondent"
+        },
+        {
+          "name": "Narcissus Marsh",
+          "editions": 3,
+          "contribution": "Founded Marsh's Library"
+        },
+        {
+          "name": "William Petty",
+          "editions": 36,
+          "contribution": "Political arithmetic"
+        },
+        {
+          "name": "St George Ashe",
+          "contribution": "Mathematics, Trinity Provost"
+        }
+      ],
+      "locke_connection": "Molyneux corresponded extensively with Locke; raised the Molyneux Problem (blind man seeing)"
+    },
+    "key_works": [
+      {
+        "author": "Robert Boyle",
+        "title": "The Sceptical Chymist",
+        "year": 1661,
+        "significance": "Foundation of modern chemistry, critique of Aristotelian elements"
+      },
+      {
+        "author": "William Petty",
+        "title": "Political Arithmetic",
+        "year": 1690,
+        "significance": "Foundation of statistical/demographic analysis"
+      },
+      {
+        "author": "William Molyneux",
+        "title": "The Case of Ireland",
+        "year": 1698,
+        "significance": "Constitutional rights argument, influenced American colonists"
+      },
+      {
+        "author": "John Toland",
+        "title": "Christianity Not Mysterious",
+        "year": 1696,
+        "significance": "Deist manifesto, burned by Irish Parliament"
+      }
+    ],
+    "locke_connections": {
+      "locke_editions": 50,
+      "irish_correspondents": [
+        "William Molyneux (Dublin Philosophical Society)"
+      ],
+      "influence": "Molyneux raised epistemological questions Locke addressed in Essay"
+    },
+    "scottish_enlightenment_precursors": {
+      "description": "Ulster Scots and Irish connections to Glasgow/Edinburgh",
+      "pattern": "Many Ulster Presbyterians studied at Scottish universities, creating intellectual pipeline",
+      "key_figure": "Francis Hutcheson (1694-1746) - born Ulster, Professor at Glasgow, \"father of Scottish Enlightenment\"",
+      "note": "Hutcheson post-dates USTC (ends 1700) but roots visible in earlier networks"
+    }
+  },
+  "medieval_irish_scholars": {
+    "description": "Medieval Irish scholars whose works were printed in the Renaissance (1450-1700)",
+    "early_medieval": {
+      "period": "6th-9th centuries - \"Island of Saints and Scholars\"",
+      "context": "Irish monasteries preserved classical learning during European dark ages",
+      "figures": [
+        {
+          "name": "John Scotus Eriugena",
+          "dates": "c. 815-877",
+          "editions": 2,
+          "significance": "Greatest philosopher between Augustine and Aquinas. Translated Pseudo-Dionysius. De divisione naturae. At court of Charles the Bald.",
+          "note": "Editions rare - works suspected of pantheism"
+        },
+        {
+          "name": "Dungalus Hibernicus",
+          "dates": "fl. 811-827",
+          "editions": 1,
+          "significance": "Defended icons against Claudius of Turin. Carolingian scholar."
+        },
+        {
+          "name": "Sedulius Scottus",
+          "dates": "fl. 848-860",
+          "editions": 0,
+          "significance": "Poet at Li\u00e8ge. De rectoribus Christianis (mirrors for princes). Works survive but rarely printed.",
+          "note": "Not to be confused with Caelius Sedulius (5th c.)"
+        },
+        {
+          "name": "Dicuil",
+          "dates": "fl. 825",
+          "editions": 0,
+          "significance": "De mensura orbis terrae - early medieval geography. First mention of Iceland.",
+          "note": "Not printed until 19th century"
+        }
+      ]
+    },
+    "high_medieval": {
+      "period": "12th-14th centuries - Universities and Scholasticism",
+      "figures": [
+        {
+          "name": "Duns Scotus",
+          "dates": "c. 1266-1308",
+          "editions": 191,
+          "significance": "\"Subtle Doctor\". Major scholastic philosopher. Franciscan. Rival of Aquinas. Birthplace disputed (Ireland, Scotland, or England).",
+          "key_works": "Quaestiones on Sentences, Quodlibeta",
+          "places": "Mainly Venice (87), Lyon (28), Paris (26)"
+        },
+        {
+          "name": "Thomas Hibernicus",
+          "dates": "fl. 1306",
+          "editions": 51,
+          "significance": "Manipulus Florum - florilegium of patristic quotations. Standard reference work for preachers.",
+          "places": "Venice, Piacenza, Paris"
+        },
+        {
+          "name": "Richard FitzRalph",
+          "dates": "c. 1300-1360",
+          "editions": 42,
+          "significance": "Archbishop of Armagh. Defensorium Curatorum - attacked mendicant privileges. Summa de quaestionibus Armenorum.",
+          "places": "Paris, Lyon, Rouen, Leuven"
+        }
+      ]
+    },
+    "key_insight": "Medieval Irish scholars were deeply integrated into European intellectual life. Duns Scotus (191 editions) was one of the most printed philosophers of the Renaissance - more than Ficino (106). Irish contribution to scholasticism is underappreciated."
+  }
+}

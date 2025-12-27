@@ -35,6 +35,14 @@ const pinnedPosts = [
 // All posts in reverse chronological order (newest first)
 const posts = [
   {
+    slug: "irish-intellect",
+    title: "Irish Intellectual History: The Hidden Tradition",
+    date: "Dec 27, 2025",
+    excerpt: "Duns Scotus (191 editions) was more printed than Ficino (106). From Eriugena to Boyle, Irish scholars were central to European thought—but are rarely framed as Irish. An interactive timeline and analysis.",
+    tag: "Research",
+    category: "Data",
+  },
+  {
     slug: "ficino-network",
     title: "Mapping the Transmission: From Ficino's Academy to Copernicus",
     date: "Dec 25, 2025",

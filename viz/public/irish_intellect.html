@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irish Intellectual History: The Hidden Tradition</title>
+    <meta name="description" content="Interactive timeline of Irish scholars from 800-1750 CE, showing edition counts from USTC. Duns Scotus had more editions than Ficino.">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Irish Intellectual History: The Hidden Tradition">
+    <meta property="og:description" content="Duns Scotus (191 editions) was more printed than Ficino (106). Explore the hidden Irish contribution to European thought.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.secondrenaissance.ai/irish_intellect.html">
+    <meta property="og:image" content="https://www.secondrenaissance.ai/irish_intellect_preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Irish Intellectual History: The Hidden Tradition">
+    <meta name="twitter:description" content="Duns Scotus had more Renaissance editions than Ficino. Explore the hidden Irish contribution to European thought.">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(255,255,255,0.1);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #8892b0;
+            margin-bottom: 20px;
+        }
+
+        .key-insight {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 20px 30px;
+            margin: 20px auto;
+            max-width: 700px;
+        }
+
+        .key-insight p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .key-insight strong {
+            color: #64ffda;
+        }
+
+        .key-insight .compare {
+            color: #c9a227;
+        }
+
+        #chart-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #chart {
+            width: 100%;
+            height: 700px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .legend-circle {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+
+        .legend-medieval { background: #9b59b6; box-shadow: 0 0 10px rgba(155,89,182,0.5); }
+        .legend-protestant { background: #3498db; box-shadow: 0 0 10px rgba(52,152,219,0.5); }
+        .legend-catholic { background: #c9a227; box-shadow: 0 0 10px rgba(201,162,39,0.5); }
+
+        .tooltip {
+            position: absolute;
+            visibility: hidden;
+            background: rgba(20,20,40,0.95);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 16px 20px;
+            max-width: 320px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .tooltip h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .tooltip .dates {
+            color: #8892b0;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .tooltip .editions {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .tooltip .editions span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #8892b0;
+        }
+
+        .tooltip .significance {
+            color: #ccc;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .tooltip .tradition {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .detail-panel {
+            position: fixed;
+            right: -400px;
+            top: 0;
+            width: 380px;
+            height: 100vh;
+            background: rgba(20,20,40,0.98);
+            border-left: 1px solid rgba(255,255,255,0.1);
+            padding: 30px;
+            overflow-y: auto;
+            transition: right 0.3s ease;
+            z-index: 100;
+        }
+
+        .detail-panel.open {
+            right: 0;
+        }
+
+        .detail-panel .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #8892b0;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .detail-panel h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            padding-right: 40px;
+        }
+
+        .detail-panel .meta {
+            color: #8892b0;
+            margin-bottom: 20px;
+        }
+
+        .detail-panel .stat {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        .detail-panel .stat span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #8892b0;
+        }
+
+        .detail-panel .description {
+            line-height: 1.7;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .detail-panel .context {
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .detail-panel .context h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8892b0;
+            margin-bottom: 10px;
+        }
+
+        .comparison-bar {
+            height: 8px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .comparison-bar .fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+
+        .comparison-bar .marker {
+            position: absolute;
+            top: -5px;
+            width: 2px;
+            height: 18px;
+            background: #c9a227;
+        }
+
+        .comparison-bar .marker-label {
+            position: absolute;
+            top: 15px;
+            font-size: 0.75rem;
+            color: #c9a227;
+            white-space: nowrap;
+            transform: translateX(-50%);
+        }
+
+        .social-share {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .share-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .share-btn.twitter {
+            background: #1da1f2;
+            color: white;
+        }
+
+        .share-btn.linkedin {
+            background: #0077b5;
+            color: white;
+        }
+
+        .share-btn.copy {
+            background: rgba(255,255,255,0.1);
+            color: #e8e8e8;
+            border: 1px solid rgba(255,255,255,0.2);
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #8892b0;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #64ffda;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            #chart { height: 500px; }
+            .legend { gap: 20px; }
+            .detail-panel { width: 100%; right: -100%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Irish Intellectual History: The Hidden Tradition</h1>
+        <p class="subtitle">Edition counts from the Universal Short Title Catalogue (1450-1700)</p>
+
+        <div class="key-insight">
+            <p>
+                <strong>Duns Scotus</strong> (191 editions) was more printed in the Renaissance than
+                <span class="compare">Marsilio Ficino</span> (106 editions). Irish scholars were central
+                to European thought—but are rarely framed as "Irish."
+            </p>
+        </div>
+    </header>
+
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-circle legend-medieval"></div>
+            <span>Medieval (9th-14th c.)</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-circle legend-protestant"></div>
+            <span>Protestant → Britain</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-circle legend-catholic"></div>
+            <span>Catholic → Exile</span>
+        </div>
+    </div>
+
+    <div id="chart-container">
+        <svg id="chart"></svg>
+    </div>
+
+    <div class="social-share">
+        <a href="https://twitter.com/intent/tweet?text=Duns%20Scotus%20(191%20editions)%20was%20more%20printed%20than%20Ficino%20(106).%20The%20hidden%20Irish%20contribution%20to%20European%20thought.&url=https://www.secondrenaissance.ai/irish_intellect.html"
+           target="_blank" class="share-btn twitter">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Share on X
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.secondrenaissance.ai/irish_intellect.html"
+           target="_blank" class="share-btn linkedin">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+        </a>
+        <button class="share-btn copy" onclick="copyLink()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Copy Link
+        </button>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <div class="detail-panel" id="detail-panel">
+        <button class="close-btn" onclick="closePanel()">×</button>
+        <div id="panel-content"></div>
+    </div>
+
+    <footer>
+        <p>Data from <a href="https://ustc.ac.uk" target="_blank">Universal Short Title Catalogue</a> ·
+        Part of <a href="/">Second Renaissance</a> ·
+        <a href="/blog/irish-intellect">Read the analysis →</a></p>
+    </footer>
+
+    <script>
+        // Scholar data
+        const scholars = [
+            // Early Medieval
+            { name: "John Scotus Eriugena", birth: 815, death: 877, editions: 2,
+              significance: "Greatest philosopher between Augustine and Aquinas. Translated Pseudo-Dionysius. De divisione naturae.",
+              tradition: "medieval", period: "Early Medieval", places: "Court of Charles the Bald, France" },
+            { name: "Dungalus Hibernicus", birth: 795, death: 835, editions: 1,
+              significance: "Defended icons against Claudius of Turin. Carolingian scholar at Pavia.",
+              tradition: "medieval", period: "Early Medieval", places: "Pavia, Italy" },
+            { name: "Sedulius Scottus", birth: 830, death: 870, editions: 0,
+              significance: "Carolingian poet and scholar. De rectoribus Christianis (mirrors for princes). Works survive in manuscript only.",
+              tradition: "medieval", period: "Early Medieval", places: "Liège" },
+
+            // High Medieval
+            { name: "Duns Scotus", birth: 1266, death: 1308, editions: 191,
+              significance: "\"Subtle Doctor\". Major scholastic philosopher. Franciscan rival of Aquinas. Birthplace disputed (Ireland, Scotland, or England).",
+              tradition: "medieval", period: "High Medieval", places: "Venice (87), Lyon (28), Paris (26)",
+              keyWorks: "Quaestiones on Sentences, Quodlibeta" },
+            { name: "Thomas Hibernicus", birth: 1280, death: 1330, editions: 51,
+              significance: "Manipulus Florum - florilegium of patristic quotations. Standard reference work for medieval preachers.",
+              tradition: "medieval", period: "High Medieval", places: "Venice, Piacenza, Paris" },
+            { name: "Richard FitzRalph", birth: 1300, death: 1360, editions: 42,
+              significance: "Archbishop of Armagh. Defensorium Curatorum - attacked mendicant privileges. Major anti-Franciscan polemicist.",
+              tradition: "medieval", period: "High Medieval", places: "Paris, Lyon, Rouen, Leuven" },
+
+            // Protestant British
+            { name: "Robert Boyle", birth: 1627, death: 1691, editions: 264,
+              significance: "Founder of modern chemistry. The Sceptical Chymist. Boyle's Law. Born Lismore Castle, Ireland.",
+              tradition: "protestant", period: "Early Modern", places: "London (113), Geneva (76), Oxford (19)",
+              keyWorks: "The Sceptical Chymist (1661)" },
+            { name: "James Ussher", birth: 1581, death: 1656, editions: 144,
+              significance: "Archbishop of Armagh. Famous for dating Creation to 4004 BC. Major chronologist and church historian.",
+              tradition: "protestant", period: "Early Modern", places: "London, Oxford, Dublin" },
+            { name: "William Molyneux", birth: 1656, death: 1698, editions: 7,
+              significance: "Dublin Philosophical Society. The Case of Ireland (1698). Raised 'Molyneux Problem' in correspondence with Locke.",
+              tradition: "protestant", period: "Early Modern", places: "Dublin, London" },
+            { name: "John Toland", birth: 1670, death: 1722, editions: 11,
+              significance: "Christianity Not Mysterious (1696) - burned by Irish Parliament. Pioneer of Deism and freethought.",
+              tradition: "protestant", period: "Early Modern", places: "London" },
+
+            // Catholic Exile
+            { name: "Thomas Stapleton", birth: 1535, death: 1598, editions: 180,
+              significance: "Counter-Reformation theologian. Professor at Louvain and Douai. Actually English but key figure in Irish Catholic networks.",
+              tradition: "catholic", period: "Early Modern", places: "Antwerp, Paris, Cologne" },
+            { name: "Richard Stanihurst", birth: 1547, death: 1618, editions: 59,
+              significance: "Dublin historian. De rebus in Hibernia gestis. Converted to Catholicism, spent later life in Spanish Netherlands.",
+              tradition: "catholic", period: "Early Modern", places: "Antwerp, Cologne, Douai" },
+            { name: "Luke Wadding", birth: 1588, death: 1657, editions: 32,
+              significance: "Founded St Isidore's Irish College in Rome (1625). Annales Minorum - comprehensive Franciscan history.",
+              tradition: "catholic", period: "Early Modern", places: "Rome, Lyon, Louvain" },
+            { name: "John Colgan", birth: 1592, death: 1658, editions: 6,
+              significance: "Acta Sanctorum Hiberniae - foundational work on Irish saints. Irish Franciscan College at Louvain.",
+              tradition: "catholic", period: "Early Modern", places: "Louvain" }
+        ];
+
+        // Color schemes
+        const colors = {
+            medieval: '#9b59b6',
+            protestant: '#3498db',
+            catholic: '#c9a227',
+            ficino: '#e74c3c'
+        };
+
+        // Set up SVG
+        const svg = d3.select('#chart');
+        const container = document.getElementById('chart-container');
+
+        function drawChart() {
+            const width = container.clientWidth - 40;
+            const height = 700;
+            const margin = { top: 60, right: 60, bottom: 80, left: 60 };
+            const innerWidth = width - margin.left - margin.right;
+            const innerHeight = height - margin.top - margin.bottom;
+
+            svg.attr('width', width).attr('height', height);
+            svg.selectAll('*').remove();
+
+            // Create defs for glow effects
+            const defs = svg.append('defs');
+
+            // Glow filter
+            const filter = defs.append('filter')
+                .attr('id', 'glow')
+                .attr('x', '-50%')
+                .attr('y', '-50%')
+                .attr('width', '200%')
+                .attr('height', '200%');
+            filter.append('feGaussianBlur')
+                .attr('stdDeviation', '3')
+                .attr('result', 'coloredBlur');
+            const feMerge = filter.append('feMerge');
+            feMerge.append('feMergeNode').attr('in', 'coloredBlur');
+            feMerge.append('feMergeNode').attr('in', 'SourceGraphic');
+
+            const g = svg.append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`);
+
+            // X scale (time)
+            const xScale = d3.scaleLinear()
+                .domain([800, 1750])
+                .range([0, innerWidth]);
+
+            // Y positions for traditions
+            const yPositions = {
+                medieval: innerHeight * 0.5,
+                protestant: innerHeight * 0.25,
+                catholic: innerHeight * 0.75
+            };
+
+            // Size scale for editions
+            const sizeScale = d3.scaleSqrt()
+                .domain([0, 264])
+                .range([6, 50]);
+
+            // Draw timeline axis
+            const xAxis = d3.axisBottom(xScale)
+                .tickValues([800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700])
+                .tickFormat(d => d);
+
+            g.append('g')
+                .attr('transform', `translate(0,${innerHeight + 20})`)
+                .call(xAxis)
+                .selectAll('text')
+                .style('fill', '#8892b0')
+                .style('font-size', '12px');
+
+            g.selectAll('.domain, .tick line')
+                .style('stroke', 'rgba(255,255,255,0.2)');
+
+            // Draw era backgrounds
+            const eras = [
+                { x1: 800, x2: 1000, label: 'Early Medieval', y: innerHeight * 0.5 },
+                { x1: 1200, x2: 1400, label: 'High Medieval', y: innerHeight * 0.5 },
+                { x1: 1500, x2: 1750, label: 'Early Modern', y: innerHeight * 0.5 }
+            ];
+
+            // Draw tradition labels
+            g.append('text')
+                .attr('x', innerWidth + 10)
+                .attr('y', yPositions.protestant)
+                .attr('fill', colors.protestant)
+                .attr('font-size', '12px')
+                .attr('dominant-baseline', 'middle')
+                .text('Protestant → Britain');
+
+            g.append('text')
+                .attr('x', innerWidth + 10)
+                .attr('y', yPositions.catholic)
+                .attr('fill', colors.catholic)
+                .attr('font-size', '12px')
+                .attr('dominant-baseline', 'middle')
+                .text('Catholic → Exile');
+
+            // Draw Ficino reference line
+            const ficinoEditions = 106;
+            const ficinoRadius = sizeScale(ficinoEditions);
+
+            g.append('line')
+                .attr('x1', 0)
+                .attr('x2', innerWidth)
+                .attr('y1', innerHeight * 0.5 + 100)
+                .attr('y2', innerHeight * 0.5 + 100)
+                .attr('stroke', 'rgba(231,76,60,0.3)')
+                .attr('stroke-dasharray', '5,5');
+
+            g.append('text')
+                .attr('x', 10)
+                .attr('y', innerHeight * 0.5 + 95)
+                .attr('fill', '#e74c3c')
+                .attr('font-size', '11px')
+                .text('Ficino: 106 editions (for comparison)');
+
+            // Draw connecting lines for traditions
+            const protestantScholars = scholars.filter(s => s.tradition === 'protestant');
+            const catholicScholars = scholars.filter(s => s.tradition === 'catholic');
+
+            // Protestant line
+            if (protestantScholars.length > 1) {
+                const line = d3.line()
+                    .x(d => xScale((d.birth + d.death) / 2))
+                    .y(d => yPositions.protestant)
+                    .curve(d3.curveCardinal);
+
+                g.append('path')
+                    .datum(protestantScholars.sort((a, b) => a.birth - b.birth))
+                    .attr('fill', 'none')
+                    .attr('stroke', colors.protestant)
+                    .attr('stroke-width', 2)
+                    .attr('stroke-opacity', 0.3)
+                    .attr('d', line);
+            }
+
+            // Catholic line
+            if (catholicScholars.length > 1) {
+                const line = d3.line()
+                    .x(d => xScale((d.birth + d.death) / 2))
+                    .y(d => yPositions.catholic)
+                    .curve(d3.curveCardinal);
+
+                g.append('path')
+                    .datum(catholicScholars.sort((a, b) => a.birth - b.birth))
+                    .attr('fill', 'none')
+                    .attr('stroke', colors.catholic)
+                    .attr('stroke-width', 2)
+                    .attr('stroke-opacity', 0.3)
+                    .attr('d', line);
+            }
+
+            // Draw nodes
+            const nodes = g.selectAll('.scholar-node')
+                .data(scholars)
+                .join('g')
+                .attr('class', 'scholar-node')
+                .attr('transform', d => {
+                    const x = xScale((d.birth + d.death) / 2);
+                    const y = yPositions[d.tradition];
+                    return `translate(${x},${y})`;
+                })
+                .style('cursor', 'pointer')
+                .on('mouseover', showTooltip)
+                .on('mousemove', moveTooltip)
+                .on('mouseout', hideTooltip)
+                .on('click', showDetail);
+
+            // Outer glow circle
+            nodes.append('circle')
+                .attr('r', d => sizeScale(d.editions) + 5)
+                .attr('fill', d => colors[d.tradition])
+                .attr('opacity', 0.2)
+                .attr('filter', 'url(#glow)');
+
+            // Main circle
+            nodes.append('circle')
+                .attr('r', d => Math.max(sizeScale(d.editions), 6))
+                .attr('fill', d => colors[d.tradition])
+                .attr('stroke', '#fff')
+                .attr('stroke-width', d => d.editions > 50 ? 2 : 1)
+                .attr('filter', 'url(#glow)');
+
+            // Labels for major figures
+            nodes.filter(d => d.editions > 30 || d.name === 'John Scotus Eriugena')
+                .append('text')
+                .attr('y', d => -sizeScale(d.editions) - 10)
+                .attr('text-anchor', 'middle')
+                .attr('fill', '#fff')
+                .attr('font-size', d => d.editions > 100 ? '13px' : '11px')
+                .attr('font-weight', d => d.editions > 100 ? '600' : '400')
+                .text(d => d.name.split(' ').slice(-1)[0]); // Last name only
+
+            // Edition count labels for major figures
+            nodes.filter(d => d.editions > 30)
+                .append('text')
+                .attr('y', 4)
+                .attr('text-anchor', 'middle')
+                .attr('fill', '#fff')
+                .attr('font-size', '11px')
+                .attr('font-weight', '600')
+                .text(d => d.editions);
+        }
+
+        // Tooltip functions
+        const tooltip = d3.select('#tooltip');
+
+        function showTooltip(event, d) {
+            const traditionLabels = {
+                medieval: 'Medieval Scholar',
+                protestant: 'Protestant → British Networks',
+                catholic: 'Catholic → Continental Exile'
+            };
+
+            tooltip.style('visibility', 'visible')
+                .html(`
+                    <h3>${d.name}</h3>
+                    <div class="dates">${d.birth}–${d.death}</div>
+                    <div class="editions" style="color: ${colors[d.tradition]}">${d.editions} <span>editions</span></div>
+                    <div class="significance">${d.significance}</div>
+                    <div class="tradition" style="color: ${colors[d.tradition]}">${traditionLabels[d.tradition]}</div>
+                `);
+        }
+
+        function moveTooltip(event) {
+            tooltip
+                .style('top', (event.pageY - 10) + 'px')
+                .style('left', (event.pageX + 15) + 'px');
+        }
+
+        function hideTooltip() {
+            tooltip.style('visibility', 'hidden');
+        }
+
+        // Detail panel
+        function showDetail(event, d) {
+            const panel = document.getElementById('detail-panel');
+            const content = document.getElementById('panel-content');
+
+            const maxEditions = 264; // Boyle
+            const ficinoEditions = 106;
+            const barWidth = (d.editions / maxEditions) * 100;
+            const ficinoMarker = (ficinoEditions / maxEditions) * 100;
+
+            content.innerHTML = `
+                <h2 style="color: ${colors[d.tradition]}">${d.name}</h2>
+                <div class="meta">${d.birth}–${d.death} · ${d.period}</div>
+
+                <div class="stat" style="color: ${colors[d.tradition]}">
+                    ${d.editions} <span>editions in USTC</span>
+                </div>
+
+                <div class="description">${d.significance}</div>
+
+                ${d.keyWorks ? `<p><strong>Key works:</strong> ${d.keyWorks}</p>` : ''}
+                <p><strong>Published in:</strong> ${d.places}</p>
+
+                <div class="context">
+                    <h4>In Context</h4>
+                    <div class="comparison-bar">
+                        <div class="fill" style="width: ${barWidth}%; background: ${colors[d.tradition]}"></div>
+                        <div class="marker" style="left: ${ficinoMarker}%"></div>
+                        <div class="marker-label" style="left: ${ficinoMarker}%">Ficino (106)</div>
+                    </div>
+                    <p style="margin-top: 25px; font-size: 0.9rem; color: #8892b0;">
+                        ${d.editions > ficinoEditions ?
+                            `${d.name} was printed ${Math.round((d.editions / ficinoEditions - 1) * 100)}% more than Ficino.` :
+                            d.editions < ficinoEditions ?
+                            `Ficino had ${Math.round((ficinoEditions / d.editions - 1) * 100)}% more editions than ${d.name}.` :
+                            `Equal to Ficino's edition count.`
+                        }
+                    </p>
+                </div>
+            `;
+
+            panel.classList.add('open');
+        }
+
+        function closePanel() {
+            document.getElementById('detail-panel').classList.remove('open');
+        }
+
+        // Copy link function
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            const btn = document.querySelector('.share-btn.copy');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '✓ Copied!';
+            setTimeout(() => { btn.innerHTML = originalText; }, 2000);
+        }
+
+        // Close panel on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closePanel();
+        });
+
+        // Initial draw
+        drawChart();
+
+        // Redraw on resize
+        window.addEventListener('resize', drawChart);
+    </script>
+</body>
+</html>

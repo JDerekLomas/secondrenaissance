@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "Mapping the Transmission: From Ficino's Academy to Copernicus",
+  description: "An interactive network visualization of 57 Renaissance scholars connected by 116 documented relationships. Each node links to real USTC publication data.",
+  slug: "ficino-network",
+  date: "2025-12-25",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function FicinoNetwork() {
   return (
@@ -7,6 +18,8 @@ export default function FicinoNetwork() {
       tag="Visualization"
       slug="ficino-network"
       prevPost={{ href: "/blog/famous-humanists", title: "Even Ficino Isn't Fully Translated" }}
+      nextPost={{ href: "/blog/irish-intellect", title: "Irish Intellectual History" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',
