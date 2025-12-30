@@ -20,98 +20,72 @@
             min-height: 100vh;
         }
 
-        nav {
+        /* Header */
+        .header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 24px;
             border-bottom: 1px solid #e8e4dc;
-            padding: 16px 24px;
+            background: #fdfcf9;
             position: sticky;
             top: 0;
-            background: #fdfcf9;
             z-index: 100;
         }
 
-        nav a {
-            font-size: 12px;
+        .header-bar a {
+            font-size: 11px;
             font-weight: 500;
             letter-spacing: 0.1em;
             color: #666;
             text-decoration: none;
         }
 
-        nav a:hover { color: #9e4a3a; }
+        .header-bar a:hover { color: #9e4a3a; }
 
-        header {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 48px 24px 32px;
-            text-align: center;
-        }
-
-        .tag {
-            display: inline-block;
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            padding: 4px 10px;
-            border-radius: 4px;
-            background: #e8f0f5;
-            color: #546b8a;
-            margin-bottom: 16px;
-        }
-
-        h1 {
+        .header-title {
             font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 38px;
-            font-weight: 400;
-            color: #1a1612;
-            line-height: 1.2;
-            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 500;
         }
 
-        .intro {
-            font-size: 17px;
-            color: #555;
-            line-height: 1.7;
-            max-width: 600px;
-            margin: 0 auto 32px;
-        }
-
-        /* Timeline slider */
-        .timeline-control {
-            max-width: 600px;
-            margin: 0 auto 32px;
-            padding: 0 24px;
+        /* Timeline control bar */
+        .timeline-bar {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 16px 24px;
+            background: #f8f6f2;
+            border-bottom: 1px solid #e8e4dc;
         }
 
         .year-display {
             font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 64px;
+            font-size: 48px;
             font-weight: 500;
             color: #1a1612;
-            text-align: center;
-            margin-bottom: 4px;
+            min-width: 100px;
         }
 
-        .year-label {
-            text-align: center;
-            font-size: 13px;
-            color: #888;
-            margin-bottom: 12px;
+        .slider-container {
+            flex: 1;
+            max-width: 400px;
         }
 
         #year-slider {
             width: 100%;
-            height: 8px;
+            height: 6px;
             -webkit-appearance: none;
-            background: #e8e4dc;
-            border-radius: 4px;
+            background: #e0dcd4;
+            border-radius: 3px;
             outline: none;
             cursor: pointer;
         }
 
         #year-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             background: #9e4a3a;
             border-radius: 50%;
             cursor: pointer;
@@ -121,20 +95,18 @@
         .slider-labels {
             display: flex;
             justify-content: space-between;
-            margin-top: 6px;
-            font-size: 10px;
+            margin-top: 4px;
+            font-size: 9px;
             color: #999;
         }
 
         .controls {
             display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 12px;
+            gap: 8px;
         }
 
         .controls button {
-            padding: 8px 18px;
+            padding: 8px 16px;
             font-family: 'Inter', sans-serif;
             font-size: 12px;
             font-weight: 500;
@@ -143,84 +115,214 @@
             color: #666;
             border-radius: 6px;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.15s;
         }
 
-        .controls button:hover { background: #f5f2ed; }
+        .controls button:hover { background: #f0ebe5; }
 
         #play-btn {
-            padding: 14px 36px;
-            font-size: 15px;
-            font-weight: 600;
+            padding: 8px 20px;
             background: #9e4a3a;
             color: #fff;
             border: none;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(158, 74, 58, 0.3);
         }
 
-        #play-btn:hover {
-            background: #b5574a;
-            box-shadow: 0 4px 12px rgba(158, 74, 58, 0.4);
-            transform: translateY(-1px);
+        #play-btn:hover { background: #b5574a; }
+        #play-btn.active { background: #7a3a2e; }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 12px;
+            color: #666;
         }
 
-        #play-btn.active {
-            background: #7a3a2e;
+        .stat-value {
+            font-weight: 600;
+            color: #9e4a3a;
         }
 
-        /* Legend */
-        .legend {
+        /* Main 3-column layout */
+        .main-container {
+            display: grid;
+            grid-template-columns: 320px 1fr 380px;
+            height: calc(100vh - 130px);
+            overflow: hidden;
+        }
+
+        @media (max-width: 1200px) {
+            .main-container {
+                grid-template-columns: 280px 1fr 320px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+            .events-column, .map-column, .books-column {
+                height: 500px;
+            }
+        }
+
+        /* Events column (left) */
+        .events-column {
+            border-right: 1px solid #e8e4dc;
+            overflow-y: auto;
+            background: linear-gradient(180deg, #fffbf0 0%, #fdfcf9 100%);
+        }
+
+        .column-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid #e8e4dc;
+            background: inherit;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .column-header h2 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 18px;
+            font-weight: 500;
+            color: #1a1612;
+        }
+
+        .column-header .subtitle {
+            font-size: 11px;
+            color: #888;
+            margin-top: 2px;
+        }
+
+        .events-list {
+            padding: 0;
+        }
+
+        .event-item {
+            padding: 16px 20px;
+            border-bottom: 1px solid #f0e8d8;
+            transition: background 0.15s;
+        }
+
+        .event-item:hover {
+            background: #fff8e8;
+        }
+
+        .event-item.current {
+            background: #fff8e8;
+            border-left: 3px solid #d4a017;
+        }
+
+        .event-item.faded {
+            opacity: 0.5;
+        }
+
+        .event-header {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+
+        .event-year {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #9e4a3a;
+        }
+
+        .event-title {
+            font-weight: 600;
+            font-size: 13px;
+            color: #1a1612;
+        }
+
+        .event-type {
+            display: inline-block;
+            font-size: 8px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            margin-left: auto;
+        }
+
+        .event-type.milestone { background: #e8f0f5; color: #5078a0; }
+        .event-type.publication { background: #e8f5e8; color: #3d6d3d; }
+        .event-type.expansion { background: #fce8e8; color: #9e4a3a; }
+        .event-type.crisis { background: #f5e0c8; color: #8b5a2b; }
+        .event-type.innovation { background: #f0e8f5; color: #6b4d8a; }
+        .event-type.foundation { background: #e8f0e8; color: #4a7c4a; }
+        .event-type.migration { background: #f5f0e0; color: #7a6530; }
+
+        .event-desc {
+            font-size: 12px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .no-events {
+            padding: 40px 20px;
+            text-align: center;
+            color: #999;
+            font-size: 13px;
+        }
+
+        /* Map column (center) */
+        .map-column {
+            display: flex;
+            flex-direction: column;
+            background: #f0ebe5;
+            position: relative;
+        }
+
+        #map {
+            flex: 1;
+            width: 100%;
+            cursor: grab;
+        }
+
+        #map:active {
+            cursor: grabbing;
+        }
+
+        .map-legend {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 12px;
             flex-wrap: wrap;
-            margin-top: 12px;
-            padding: 10px 0;
+            padding: 10px 16px;
+            background: rgba(253, 252, 249, 0.95);
+            border-top: 1px solid #e8e4dc;
+            font-size: 10px;
         }
 
         .legend-item {
             display: flex;
             align-items: center;
-            gap: 6px;
-            font-size: 11px;
+            gap: 4px;
             color: #666;
         }
 
         .legend-dot {
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
-            border: 1px solid rgba(0,0,0,0.1);
         }
 
-        /* Main layout */
-        .main-container {
-            display: grid;
-            grid-template-columns: 1fr 400px;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 24px;
-            gap: 32px;
-        }
-
-        @media (max-width: 1000px) {
-            .main-container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Map */
-        #map-container {
-            position: relative;
-        }
-
-        #map {
-            width: 100%;
-            height: 450px;
-            background: #f5f2ed;
-            border-radius: 12px;
-            border: 1px solid #e8e4dc;
+        .zoom-hint {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 10px;
+            color: #888;
+            background: rgba(255,255,255,0.9);
+            padding: 4px 10px;
+            border-radius: 4px;
+            pointer-events: none;
         }
 
         .city-node {
@@ -244,72 +346,35 @@
         .connection {
             fill: none;
             stroke: #9e4a3a;
-            stroke-opacity: 0.25;
-            stroke-width: 1;
+            stroke-opacity: 0.4;
+            stroke-width: 1.5;
+            pointer-events: stroke;
+            cursor: pointer;
         }
 
-        /* Stats */
-        .stats-row {
-            display: flex;
-            gap: 16px;
-            margin-top: 16px;
+        .connection.notable {
+            stroke: #d4a017;
+            stroke-width: 2;
+            stroke-opacity: 0.7;
         }
 
-        .stat-box {
-            flex: 1;
-            background: #f5f2ed;
-            border-radius: 6px;
-            padding: 12px;
-            text-align: center;
+        .connection:hover {
+            stroke-opacity: 0.9;
+            stroke-width: 2.5;
         }
 
-        .stat-box .number {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 24px;
-            font-weight: 500;
-            color: #9e4a3a;
-        }
-
-        .stat-box .label {
-            font-size: 10px;
-            color: #666;
-        }
-
-        /* Book list panel */
-        .book-panel {
+        /* Books column (right) */
+        .books-column {
+            border-left: 1px solid #e8e4dc;
+            overflow-y: auto;
             background: #fff;
-            border: 1px solid #e8e4dc;
-            border-radius: 12px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            max-height: 600px;
-        }
-
-        .book-panel-header {
-            padding: 16px 20px;
-            border-bottom: 1px solid #e8e4dc;
-            background: #fdfcf9;
-        }
-
-        .book-panel-header h2 {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 20px;
-            font-weight: 500;
-            color: #1a1612;
-            margin-bottom: 4px;
-        }
-
-        .book-panel-header .subtitle {
-            font-size: 12px;
-            color: #888;
         }
 
         .filter-info {
             display: flex;
             align-items: center;
             gap: 8px;
-            margin-top: 12px;
+            margin-top: 8px;
             flex-wrap: wrap;
         }
 
@@ -338,20 +403,18 @@
         .filter-tag button:hover { opacity: 1; }
 
         .book-list {
-            flex: 1;
-            overflow-y: auto;
-            padding: 8px 0;
+            padding: 0;
         }
 
         .book-item {
-            padding: 12px 20px;
+            padding: 14px 20px;
             border-bottom: 1px solid #f0ebe3;
             transition: background 0.15s;
+            cursor: pointer;
         }
 
         .book-item:hover {
             background: #faf8f5;
-            cursor: pointer;
         }
 
         .book-item.expanded {
@@ -359,11 +422,16 @@
             border-left: 3px solid #5078a0;
         }
 
+        .book-item.highlighted {
+            background: #fff8e8;
+            border-left: 3px solid #d97706;
+        }
+
         .book-item .year-city {
             font-size: 10px;
             font-weight: 500;
             color: #9e4a3a;
-            margin-bottom: 2px;
+            margin-bottom: 3px;
         }
 
         .book-item .title {
@@ -390,21 +458,10 @@
             font-weight: 500;
         }
 
-        .book-item.highlighted {
-            background: #fff8e8;
-            border-left: 3px solid #d97706;
-        }
-
         .book-details {
-            margin-top: 10px;
-            padding-top: 10px;
+            margin-top: 12px;
+            padding-top: 12px;
             border-top: 1px solid #e8e4dc;
-        }
-
-        .book-details .loading {
-            font-size: 11px;
-            color: #888;
-            font-style: italic;
         }
 
         .book-summary {
@@ -437,13 +494,8 @@
             transition: background 0.15s;
         }
 
-        .digital-link:hover {
-            background: #d0e0ea;
-        }
-
-        .digital-link::before {
-            content: "📄";
-        }
+        .digital-link:hover { background: #d0e0ea; }
+        .digital-link::before { content: "📄"; }
 
         .no-digital {
             font-size: 11px;
@@ -498,9 +550,7 @@
             cursor: pointer;
         }
 
-        .load-more button:hover {
-            background: #ebe6de;
-        }
+        .load-more button:hover { background: #ebe6de; }
 
         /* Tooltip */
         .tooltip {
@@ -510,7 +560,7 @@
             border: 1px solid #e8e4dc;
             border-radius: 8px;
             padding: 12px 16px;
-            max-width: 220px;
+            max-width: 250px;
             box-shadow: 0 8px 24px rgba(0,0,0,0.12);
             pointer-events: none;
             z-index: 1000;
@@ -531,6 +581,7 @@
         .tooltip p {
             font-size: 12px;
             color: #666;
+            line-height: 1.4;
         }
 
         .tooltip .click-hint {
@@ -539,86 +590,62 @@
             margin-top: 8px;
             font-style: italic;
         }
-
-        footer {
-            border-top: 1px solid #e8e4dc;
-            padding: 32px 24px;
-            text-align: center;
-            margin-top: 48px;
-        }
-
-        footer p {
-            font-size: 12px;
-            color: #888;
-        }
-
-        footer a { color: #666; text-decoration: none; }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="/blog">← RESEARCH ESSAYS</a>
-    </nav>
+    <div class="header-bar">
+        <a href="/blog">← RESEARCH</a>
+        <div class="header-title">The Spread of Printing: 1450–1500</div>
+        <a href="/printing-migrations.md">About →</a>
+    </div>
 
-    <header>
-        <span class="tag">DATA VISUALIZATION</span>
-        <h1>The Spread of Printing</h1>
-        <p class="intro">
-            In 1454, Mainz had Europe's only press. By 1500, over 250 cities had presses producing
-            <strong>26,000+ editions</strong>. The lines show <strong>printer migrations</strong>—craftsmen
-            carrying their trade secrets to new cities. <a href="/printing-migrations.md" style="color: #9e4a3a;">Read the full story →</a>
-        </p>
-    </header>
-
-    <div class="timeline-control">
+    <div class="timeline-bar">
         <div class="year-display" id="year-display">1454</div>
-        <div class="year-label">Drag to travel through time</div>
-        <input type="range" id="year-slider" min="1454" max="1500" value="1454">
-        <div class="slider-labels">
-            <span>1454</span>
-            <span>1470</span>
-            <span>1485</span>
-            <span>1500</span>
+        <div class="slider-container">
+            <input type="range" id="year-slider" min="1454" max="1500" value="1454">
+            <div class="slider-labels">
+                <span>1454</span>
+                <span>1470</span>
+                <span>1485</span>
+                <span>1500</span>
+            </div>
         </div>
         <div class="controls">
-            <button id="play-btn">&#9658; Play Timeline</button>
+            <button id="play-btn">▶ Play</button>
             <button id="reset-btn">Reset</button>
         </div>
-        <div class="legend">
-            <div class="legend-item"><span class="legend-dot" style="background: #e8a838;"></span> Italy</div>
-            <div class="legend-item"><span class="legend-dot" style="background: #5a9e5a;"></span> Germany</div>
-            <div class="legend-item"><span class="legend-dot" style="background: #5078a0;"></span> France</div>
-            <div class="legend-item"><span class="legend-dot" style="background: #8b6bb3;"></span> Low Countries</div>
-            <div class="legend-item"><span class="legend-dot" style="background: #c44040;"></span> Spain</div>
-            <div class="legend-item"><span class="legend-dot" style="background: #9e4a3a;"></span> Other</div>
-            <div class="legend-item" style="margin-left: 20px; border-left: 1px solid #ddd; padding-left: 20px;">
-                <span style="display: inline-block; width: 20px; height: 2px; background: #9e4a3a; opacity: 0.5; vertical-align: middle;"></span>
-                <span style="margin-left: 6px;">Printer migration</span>
-            </div>
+        <div class="stats">
+            <span><span class="stat-value" id="stat-cities">1</span> cities</span>
+            <span><span class="stat-value" id="stat-books">0</span> books</span>
         </div>
     </div>
 
     <div class="main-container">
-        <div id="map-container">
+        <!-- Events column (left) -->
+        <div class="events-column">
+            <div class="column-header">
+                <h2>Historical Events</h2>
+                <div class="subtitle">Key moments in printing history</div>
+            </div>
+            <div class="events-list" id="events-list"></div>
+        </div>
+
+        <!-- Map column (center) -->
+        <div class="map-column">
             <svg id="map"></svg>
-            <div class="stats-row">
-                <div class="stat-box">
-                    <div class="number" id="stat-cities">1</div>
-                    <div class="label">Cities</div>
-                </div>
-                <div class="stat-box">
-                    <div class="number" id="stat-books">0</div>
-                    <div class="label">Books</div>
-                </div>
-                <div class="stat-box">
-                    <div class="number" id="stat-visible">0</div>
-                    <div class="label">Shown</div>
-                </div>
+            <div class="zoom-hint">Scroll to zoom · Drag to pan</div>
+            <div class="map-legend">
+                <div class="legend-item"><span class="legend-dot" style="background: #e8a838;"></span> Italy</div>
+                <div class="legend-item"><span class="legend-dot" style="background: #5a9e5a;"></span> Germany</div>
+                <div class="legend-item"><span class="legend-dot" style="background: #5078a0;"></span> France</div>
+                <div class="legend-item"><span class="legend-dot" style="background: #8b6bb3;"></span> Low Countries</div>
+                <div class="legend-item"><span class="legend-dot" style="background: #c44040;"></span> Spain</div>
             </div>
         </div>
 
-        <div class="book-panel">
-            <div class="book-panel-header">
+        <!-- Books column (right) -->
+        <div class="books-column">
+            <div class="column-header">
                 <h2>Books Printed</h2>
                 <div class="subtitle" id="book-count">Loading...</div>
                 <div class="filter-info" id="filter-info"></div>
@@ -632,44 +659,75 @@
 
     <div class="tooltip" id="tooltip"></div>
 
-    <footer>
-        <p>
-            Data from <a href="https://data.cerl.org/istc/_search" target="_blank">ISTC (Incunabula Short Title Catalogue)</a>,
-            British Library 2025 ·
-            Part of <a href="/">Second Renaissance</a>
-        </p>
-    </footer>
-
     <script>
         let data, books;
         let currentYear = 1454;
         let selectedCity = null;
         let isPlaying = false;
         let playInterval;
-        let displayLimit = 100;
+        let displayLimit = 50;
         let expandedBook = null;
 
         const tooltip = d3.select('#tooltip');
 
+        // Initial projection (will be modified by zoom)
         const projection = d3.geoMercator()
-            .center([10, 47])
-            .scale(1400)
-            .translate([450, 300]);
+            .center([8, 48])
+            .scale(1200)
+            .translate([300, 250]);
 
         const cityColors = {
-            // Italy - warm orange
-            'Venezia': '#e8a838', 'Roma': '#e8a838', 'Milano': '#e8a838',
-            'Firenze': '#e8a838', 'Bologna': '#e8a838', 'Napoli': '#e8a838',
-            // France - blue
+            'Venice': '#e8a838', 'Rome': '#e8a838', 'Milan': '#e8a838',
+            'Florence': '#e8a838', 'Bologna': '#e8a838', 'Naples': '#e8a838',
+            'Padua': '#e8a838', 'Ferrara': '#e8a838', 'Pavia': '#e8a838',
+            'Brescia': '#e8a838', 'Subiaco': '#e8a838',
             'Paris': '#5078a0', 'Lyon': '#5078a0',
-            // Germany - green
             'Mainz': '#5a9e5a', 'Köln': '#5a9e5a', 'Strasbourg': '#5a9e5a',
             'Nürnberg': '#5a9e5a', 'Augsburg': '#5a9e5a', 'Leipzig': '#5a9e5a',
-            'Basel': '#5a9e5a',
-            // Low Countries - purple
-            'Antwerpen': '#8b6bb3', 'Brugge': '#8b6bb3', 'Leuven': '#8b6bb3',
-            // Spain - deep red
+            'Basel': '#5a9e5a', 'Bamberg': '#5a9e5a', 'Speyer': '#5a9e5a',
+            'Ulm': '#5a9e5a', 'Lübeck': '#5a9e5a', 'Reutlingen': '#5a9e5a',
+            'Wien': '#5a9e5a',
+            'Antwerpen': '#8b6bb3', 'Bruges': '#8b6bb3', 'Louvain': '#8b6bb3',
+            'Deventer': '#8b6bb3', 'Westminster': '#8b6bb3',
             'Sevilla': '#c44040', 'Barcelona': '#c44040', 'Valencia': '#c44040'
+        };
+
+        // Map place names in books to node IDs
+        const placeToNodeId = {
+            'Venice': 'Venice', 'Venezia': 'Venice',
+            'Rome': 'Rome', 'Roma': 'Rome',
+            'Milan': 'Milan', 'Milano': 'Milan',
+            'Florence': 'Florence', 'Firenze': 'Florence',
+            'Bologna': 'Bologna',
+            'Naples': 'Naples', 'Napoli': 'Naples',
+            'Padua': 'Padua', 'Padova': 'Padua',
+            'Ferrara': 'Ferrara',
+            'Pavia': 'Pavia',
+            'Brescia': 'Brescia',
+            'Subiaco': 'Subiaco',
+            'Paris': 'Paris',
+            'Lyon': 'Lyon', 'Lyons': 'Lyon',
+            'Mainz': 'Mainz',
+            'Cologne': 'Köln', 'Köln': 'Köln',
+            'Strasbourg': 'Strasbourg', 'Strassburg': 'Strasbourg',
+            'Nuremberg': 'Nürnberg', 'Nürnberg': 'Nürnberg',
+            'Augsburg': 'Augsburg',
+            'Leipzig': 'Leipzig',
+            'Basel': 'Basel', 'Basle': 'Basel',
+            'Bamberg': 'Bamberg',
+            'Speyer': 'Speyer', 'Speier': 'Speyer',
+            'Ulm': 'Ulm',
+            'Lübeck': 'Lübeck', 'Lubeck': 'Lübeck',
+            'Reutlingen': 'Reutlingen',
+            'Vienna': 'Wien', 'Wien': 'Wien',
+            'Antwerp': 'Antwerpen', 'Antwerpen': 'Antwerpen',
+            'Bruges': 'Bruges', 'Brugge': 'Bruges',
+            'Louvain': 'Louvain', 'Leuven': 'Louvain',
+            'Deventer': 'Deventer',
+            'Westminster': 'Westminster', 'London': 'Westminster',
+            'Seville': 'Sevilla', 'Sevilla': 'Sevilla',
+            'Barcelona': 'Barcelona',
+            'Valencia': 'Valencia'
         };
 
         async function init() {
@@ -679,20 +737,64 @@
             ]);
 
             const svg = d3.select('#map');
-            svg.attr('viewBox', '0 0 900 500');
+            const mapColumn = document.querySelector('.map-column');
+            const width = mapColumn.clientWidth;
+            const height = mapColumn.clientHeight - 40; // Account for legend
 
-            // Load and draw Europe map
+            svg.attr('width', width).attr('height', height);
+
+            // Update projection for container size
+            projection
+                .center([8, 48])
+                .scale(Math.min(width, height) * 2)
+                .translate([width / 2, height / 2]);
+
+            // Add arrowhead markers
+            const defs = svg.append('defs');
+            defs.append('marker')
+                .attr('id', 'arrowhead')
+                .attr('viewBox', '0 -5 10 10')
+                .attr('refX', 8)
+                .attr('refY', 0)
+                .attr('markerWidth', 5)
+                .attr('markerHeight', 5)
+                .attr('orient', 'auto')
+                .append('path')
+                .attr('d', 'M0,-5L10,0L0,5')
+                .attr('fill', '#9e4a3a')
+                .attr('opacity', 0.6);
+
+            defs.append('marker')
+                .attr('id', 'arrowhead-notable')
+                .attr('viewBox', '0 -5 10 10')
+                .attr('refX', 8)
+                .attr('refY', 0)
+                .attr('markerWidth', 5)
+                .attr('markerHeight', 5)
+                .attr('orient', 'auto')
+                .append('path')
+                .attr('d', 'M0,-5L10,0L0,5')
+                .attr('fill', '#d4a017')
+                .attr('opacity', 0.8);
+
+            // Load Europe map
             const europeData = await d3.json('https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/TopoJSON/europe.topojson');
             const path = d3.geoPath().projection(projection);
 
+            // Create main group for zoom
+            const g = svg.append('g').attr('class', 'map-group');
+
             // Draw water background
-            svg.append('rect')
-                .attr('width', 900)
-                .attr('height', 500)
-                .attr('fill', '#e8f0f5');
+            g.append('rect')
+                .attr('class', 'water')
+                .attr('x', -1000)
+                .attr('y', -1000)
+                .attr('width', 4000)
+                .attr('height', 4000)
+                .attr('fill', '#dce8f0');
 
             // Draw countries
-            svg.append('g')
+            g.append('g')
                 .attr('class', 'countries')
                 .selectAll('path')
                 .data(topojson.feature(europeData, europeData.objects.europe).features)
@@ -702,10 +804,19 @@
                 .attr('stroke', '#d0cbc0')
                 .attr('stroke-width', 0.5);
 
-            svg.append('g').attr('class', 'connections');
-            svg.append('g').attr('class', 'cities');
+            g.append('g').attr('class', 'connections');
+            g.append('g').attr('class', 'cities');
 
-            // Slider
+            // Add zoom behavior
+            const zoom = d3.zoom()
+                .scaleExtent([0.5, 8])
+                .on('zoom', (event) => {
+                    g.attr('transform', event.transform);
+                });
+
+            svg.call(zoom);
+
+            // Event listeners
             document.getElementById('year-slider').addEventListener('input', (e) => {
                 currentYear = parseInt(e.target.value);
                 update();
@@ -715,6 +826,13 @@
             document.getElementById('reset-btn').addEventListener('click', reset);
             document.getElementById('load-more-btn').addEventListener('click', loadMore);
 
+            // Handle resize
+            window.addEventListener('resize', () => {
+                const newWidth = mapColumn.clientWidth;
+                const newHeight = mapColumn.clientHeight - 40;
+                svg.attr('width', newWidth).attr('height', newHeight);
+            });
+
             update();
         }
 
@@ -722,58 +840,101 @@
             document.getElementById('year-display').textContent = currentYear;
 
             const svg = d3.select('#map');
+            const g = svg.select('.map-group');
             const activeCities = data.nodes.filter(n => n.year <= currentYear);
             const activeEdges = data.edges.filter(e => e.year <= currentYear);
 
             // Stats
             document.getElementById('stat-cities').textContent = activeCities.length;
-
-            // Filter books by year and city
-            let filteredBooks = books.filter(b => b.year <= currentYear);
-            if (selectedCity) {
-                filteredBooks = filteredBooks.filter(b => b.city === selectedCity);
-            }
-
             document.getElementById('stat-books').textContent =
                 books.filter(b => b.year <= currentYear).length.toLocaleString();
 
-            // Update filter info
-            updateFilterInfo();
+            // Render events
+            renderEvents(currentYear);
 
-            // Render book list
+            // Filter books
+            let filteredBooks = books.filter(b => b.year <= currentYear);
+            if (selectedCity) {
+                filteredBooks = filteredBooks.filter(b => {
+                    const nodeId = placeToNodeId[b.place] || b.place;
+                    return nodeId === selectedCity;
+                });
+            }
+
+            updateFilterInfo();
             renderBooks(filteredBooks);
 
             // Draw connections
-            const connections = svg.select('.connections')
+            const connections = g.select('.connections')
                 .selectAll('.connection')
                 .data(activeEdges, d => `${d.source}-${d.target}-${d.printer}`);
 
-            connections.enter()
+            const connectionsEnter = connections.enter()
                 .append('path')
-                .attr('class', 'connection')
+                .attr('class', d => d.note ? 'connection notable' : 'connection')
                 .attr('d', d => {
                     const source = data.nodes.find(n => n.id === d.source);
                     const target = data.nodes.find(n => n.id === d.target);
                     if (!source || !target) return '';
                     const [x1, y1] = projection([source.x, source.y]);
                     const [x2, y2] = projection([target.x, target.y]);
-                    const midX = (x1 + x2) / 2;
-                    const midY = (y1 + y2) / 2 - 20;
+                    const dx = x2 - x1;
+                    const dy = y2 - y1;
+                    const midX = (x1 + x2) / 2 - dy * 0.15;
+                    const midY = (y1 + y2) / 2 + dx * 0.15;
                     return `M ${x1} ${y1} Q ${midX} ${midY} ${x2} ${y2}`;
                 })
-                .attr('stroke-opacity', 0)
-                .transition().duration(400)
-                .attr('stroke-opacity', 0.25);
+                .attr('marker-end', d => d.note ? 'url(#arrowhead-notable)' : 'url(#arrowhead)')
+                .attr('stroke-opacity', 0);
+
+            connectionsEnter
+                .on('mouseover', function(event, d) {
+                    d3.select(this).attr('stroke-opacity', 0.9).attr('stroke-width', 3);
+                    tooltip.style('visibility', 'visible')
+                        .html(`
+                            <h3>${d.printer}</h3>
+                            <div class="meta">${d.source} → ${d.target} (${d.year})</div>
+                            ${d.note ? `<p>${d.note}</p>` : ''}
+                        `)
+                        .style('left', (event.clientX + 12) + 'px')
+                        .style('top', (event.clientY - 10) + 'px');
+                })
+                .on('mouseout', function(event, d) {
+                    d3.select(this)
+                        .attr('stroke-opacity', d.note ? 0.7 : 0.25)
+                        .attr('stroke-width', d.note ? 2 : 1.5);
+                    tooltip.style('visibility', 'hidden');
+                });
+
+            connectionsEnter.transition().duration(400)
+                .attr('stroke-opacity', d => d.note ? 0.7 : 0.25);
 
             connections.exit().transition().duration(200)
                 .attr('stroke-opacity', 0).remove();
 
-            // Draw cities
-            const cities = svg.select('.cities')
+            // Calculate cumulative book counts per city up to current year
+            const cityCounts = {};
+            books.forEach(b => {
+                if (b.year <= currentYear && b.place) {
+                    const nodeId = placeToNodeId[b.place] || b.place;
+                    cityCounts[nodeId] = (cityCounts[nodeId] || 0) + 1;
+                }
+            });
+
+            // Helper to get radius from count
+            const getRadius = (count) => Math.sqrt(count || 1) / 3 + 3;
+
+            // Draw cities using join pattern for proper enter/update/exit
+            const cityGroups = g.select('.cities')
                 .selectAll('.city-group')
                 .data(activeCities, d => d.id);
 
-            const cityEnter = cities.enter()
+            // Exit
+            cityGroups.exit().transition().duration(200)
+                .style('opacity', 0).remove();
+
+            // Enter
+            const cityEnter = cityGroups.enter()
                 .append('g')
                 .attr('class', 'city-group')
                 .attr('transform', d => {
@@ -784,16 +945,46 @@
 
             cityEnter.append('circle')
                 .attr('class', 'city-node')
-                .attr('r', d => Math.sqrt(d.count) / 4 + 5)
                 .attr('fill', d => cityColors[d.id] || '#9e4a3a')
                 .attr('stroke', '#fff')
-                .attr('stroke-width', 2)
+                .attr('stroke-width', 1.5);
+
+            cityEnter.append('text')
+                .attr('class', 'city-label')
+                .attr('text-anchor', 'middle')
+                .text(d => d.id);
+
+            cityEnter.transition().duration(400).style('opacity', 1);
+
+            // Update ALL cities (enter + existing) with current counts
+            const allCities = g.select('.cities').selectAll('.city-group');
+
+            allCities.each(function(d) {
+                const count = cityCounts[d.id] || 0;
+                const radius = getRadius(count);
+
+                d3.select(this).select('.city-node')
+                    .transition().duration(150)
+                    .attr('r', radius);
+
+                d3.select(this).select('.city-label')
+                    .transition().duration(150)
+                    .attr('y', -radius - 4);
+
+                // Store count for tooltip
+                d.currentCount = count;
+            });
+
+            // Re-bindtooltip events (need fresh data)
+            allCities.select('.city-node')
                 .on('mouseover', function(event, d) {
+                    const count = cityCounts[d.id] || 0;
                     tooltip.style('visibility', 'visible')
                         .html(`
                             <h3>${d.id}</h3>
                             <div class="meta">First press: ${d.year}</div>
-                            <p>${d.count.toLocaleString()} books by 1500</p>
+                            <p><strong>${count.toLocaleString()}</strong> books by ${currentYear}</p>
+                            <p style="font-size:10px;color:#888;">${d.count.toLocaleString()} total by 1500</p>
                             <div class="click-hint">Click to filter books</div>
                         `)
                         .style('left', (event.clientX + 12) + 'px')
@@ -805,36 +996,54 @@
                     selectCity(d.id);
                 });
 
-            cityEnter.append('text')
-                .attr('class', 'city-label')
-                .attr('y', d => -Math.sqrt(d.count) / 4 - 8)
-                .attr('text-anchor', 'middle')
-                .text(d => d.id);
-
-            cityEnter.transition().duration(400).style('opacity', 1);
-
-            cities.exit().transition().duration(200)
-                .style('opacity', 0).remove();
-
-            // Update selected state
-            svg.selectAll('.city-node')
+            allCities.select('.city-node')
                 .classed('selected', d => d.id === selectedCity);
         }
 
-        function selectCity(cityId) {
-            if (selectedCity === cityId) {
-                selectedCity = null;
-            } else {
-                selectedCity = cityId;
+        function renderEvents(year) {
+            const eventsList = document.getElementById('events-list');
+
+            // Show all events up to current year, most recent first
+            const allEvents = data.events.filter(e => e.year <= year).sort((a, b) => b.year - a.year);
+
+            if (allEvents.length === 0) {
+                eventsList.innerHTML = '<div class="no-events">No events yet. Move the timeline forward.</div>';
+                return;
             }
-            displayLimit = 100;
+
+            const html = allEvents.map(event => {
+                const isCurrent = event.year === year;
+                const isRecent = event.year >= year - 2;
+                const className = isCurrent ? 'current' : (isRecent ? '' : 'faded');
+                return `
+                    <div class="event-item ${className}">
+                        <div class="event-header">
+                            <span class="event-year">${event.year}</span>
+                            <span class="event-title">${event.title}</span>
+                            <span class="event-type ${event.type}">${event.type}</span>
+                        </div>
+                        <div class="event-desc">${event.desc}</div>
+                    </div>
+                `;
+            }).join('');
+
+            eventsList.innerHTML = html;
+
+            // Scroll to top (most recent) if playing
+            if (isPlaying) {
+                eventsList.scrollTop = 0;
+            }
+        }
+
+        function selectCity(cityId) {
+            selectedCity = selectedCity === cityId ? null : cityId;
+            displayLimit = 50;
             update();
         }
 
         function updateFilterInfo() {
             const container = document.getElementById('filter-info');
             container.innerHTML = '';
-
             if (selectedCity) {
                 const tag = document.createElement('div');
                 tag.className = 'filter-tag';
@@ -845,7 +1054,7 @@
 
         function clearFilter() {
             selectedCity = null;
-            displayLimit = 100;
+            displayLimit = 50;
             update();
         }
 
@@ -858,41 +1067,35 @@
             const hasMore = filteredBooks.length > displayLimit;
 
             countEl.textContent = `${filteredBooks.length.toLocaleString()} books${selectedCity ? ' in ' + selectedCity : ''} by ${currentYear}`;
-            document.getElementById('stat-visible').textContent = displayBooks.length;
 
             if (displayBooks.length === 0) {
-                container.innerHTML = '<div class="no-books">No books yet. Move the slider forward in time.</div>';
+                container.innerHTML = '<div class="no-books">No books yet. Move the timeline forward.</div>';
                 loadMoreEl.style.display = 'none';
                 return;
             }
 
-            container.innerHTML = displayBooks.map((book, idx) => `
+            container.innerHTML = displayBooks.map(book => `
                 <div class="book-item${book.year === currentYear ? ' highlighted' : ''}${expandedBook === book.id ? ' expanded' : ''}"
                      data-id="${book.id}" onclick="toggleBook('${book.id}')">
                     <div class="year-city">
-                        ${book.year} · ${book.city}
-                        ${book.digital_links && book.digital_links.length > 0 ? `<span class="digital-indicator">📄 ${book.digital_links.length} online</span>` : ''}
+                        ${book.year} · ${book.place || 'Unknown'}
+                        ${book.digital_links && book.digital_links.length > 0 ? `<span class="digital-indicator">📄 ${book.digital_links.length}</span>` : ''}
                     </div>
                     <div class="title">${book.title}</div>
-                    <div class="meta">${book.printer || 'Unknown printer'}${book.holdings_count ? ` · ${book.holdings_count} copies worldwide` : ''}</div>
+                    <div class="meta">${book.printer || 'Unknown printer'}${book.holdings_count ? ` · ${book.holdings_count} copies` : ''}</div>
                     ${expandedBook === book.id ? `<div class="book-details" id="details-${book.id}"></div>` : ''}
                 </div>
             `).join('');
 
             loadMoreEl.style.display = hasMore ? 'block' : 'none';
 
-            // If a book is expanded, render its details
             if (expandedBook) {
                 renderBookDetails(expandedBook);
             }
         }
 
         function toggleBook(bookId) {
-            if (expandedBook === bookId) {
-                expandedBook = null;
-            } else {
-                expandedBook = bookId;
-            }
+            expandedBook = expandedBook === bookId ? null : bookId;
             update();
         }
 
@@ -900,47 +1103,43 @@
             const detailsEl = document.getElementById(`details-${bookId}`);
             if (!detailsEl) return;
 
-            // Find book in data
             const book = books.find(b => b.id === bookId);
             if (!book) {
-                detailsEl.innerHTML = `<a class="istc-link" href="https://data.cerl.org/istc/${bookId}" target="_blank">View in ISTC catalogue →</a>`;
+                detailsEl.innerHTML = `<a class="istc-link" href="https://data.cerl.org/istc/${bookId}" target="_blank">View in ISTC →</a>`;
                 return;
             }
 
             const digitalLinks = book.digital_links || [];
-            const holdingsCount = book.holdings_count || 0;
-
             let html = '';
 
-            // Show AI-generated summary if available
             if (book.summary) {
                 html += `<div class="book-summary">${book.summary}</div>`;
             }
 
             if (digitalLinks.length > 0) {
                 html += '<div class="digital-links">';
-                digitalLinks.slice(0, 5).forEach(link => {
+                digitalLinks.slice(0, 3).forEach(link => {
                     html += `<a class="digital-link" href="${link.url}" target="_blank">${link.name}</a>`;
                 });
-                if (digitalLinks.length > 5) {
-                    html += `<div class="more-links">+${digitalLinks.length - 5} more digital copies</div>`;
+                if (digitalLinks.length > 3) {
+                    html += `<div class="more-links">+${digitalLinks.length - 3} more</div>`;
                 }
                 html += '</div>';
             } else {
-                html += '<div class="no-digital">No digital facsimile available</div>';
+                html += '<div class="no-digital">No digital copy available</div>';
             }
 
-            if (holdingsCount > 0) {
-                html += `<div class="holdings-info">Held by ${holdingsCount} institution${holdingsCount > 1 ? 's' : ''} worldwide</div>`;
+            if (book.holdings_count > 0) {
+                html += `<div class="holdings-info">Held by ${book.holdings_count} institution${book.holdings_count > 1 ? 's' : ''}</div>`;
             }
 
-            html += `<a class="istc-link" href="https://data.cerl.org/istc/${bookId}" target="_blank">View full ISTC record →</a>`;
+            html += `<a class="istc-link" href="https://data.cerl.org/istc/${bookId}" target="_blank">View full record →</a>`;
 
             detailsEl.innerHTML = html;
         }
 
         function loadMore() {
-            displayLimit += 100;
+            displayLimit += 50;
             update();
         }
 
@@ -948,14 +1147,14 @@
             const btn = document.getElementById('play-btn');
             if (isPlaying) {
                 clearInterval(playInterval);
-                btn.innerHTML = '&#9658; Play Timeline';
+                btn.innerHTML = '▶ Play';
                 btn.classList.remove('active');
             } else {
                 if (currentYear >= 1500) {
                     currentYear = 1454;
                     document.getElementById('year-slider').value = 1454;
                 }
-                btn.innerHTML = '&#10074;&#10074; Pause';
+                btn.innerHTML = '⏸ Pause';
                 btn.classList.add('active');
                 playInterval = setInterval(() => {
                     currentYear++;
@@ -965,7 +1164,7 @@
                     }
                     document.getElementById('year-slider').value = currentYear;
                     update();
-                }, 150);
+                }, 200);
             }
             isPlaying = !isPlaying;
         }
@@ -974,17 +1173,16 @@
             if (isPlaying) togglePlay();
             currentYear = 1454;
             selectedCity = null;
-            displayLimit = 100;
+            displayLimit = 50;
             document.getElementById('year-slider').value = 1454;
             update();
         }
 
-        // Click outside to clear selection
         document.addEventListener('click', (e) => {
-            if (!e.target.closest('.city-node') && !e.target.closest('.book-panel') && !e.target.closest('.filter-tag')) {
+            if (!e.target.closest('.city-node') && !e.target.closest('.books-column') && !e.target.closest('.filter-tag')) {
                 if (selectedCity) {
                     selectedCity = null;
-                    displayLimit = 100;
+                    displayLimit = 50;
                     update();
                 }
             }

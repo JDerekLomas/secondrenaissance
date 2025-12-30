@@ -1,670 +1,150 @@
 {
   "nodes": [
-    {
-      "id": "Venice",
-      "year": 1469,
-      "count": 3241,
-      "x": 12.34,
-      "y": 45.43
-    },
-    {
-      "id": "Paris",
-      "year": 1465,
-      "count": 2220,
-      "x": 2.35,
-      "y": 48.86
-    },
-    {
-      "id": "Rome",
-      "year": 1467,
-      "count": 1503,
-      "x": 12.49,
-      "y": 41.89
-    },
-    {
-      "id": "K\u00f6ln",
-      "year": 1465,
-      "count": 1322,
-      "x": 6.96,
-      "y": 50.94
-    },
-    {
-      "id": "Lyon",
-      "year": 1473,
-      "count": 1073,
-      "x": 4.84,
-      "y": 45.76
-    },
-    {
-      "id": "Augsburg",
-      "year": 1468,
-      "count": 1059,
-      "x": 10.89,
-      "y": 48.37
-    },
-    {
-      "id": "Milan",
-      "year": 1471,
-      "count": 995,
-      "x": 9.19,
-      "y": 45.46
-    },
-    {
-      "id": "Strasbourg",
-      "year": 1460,
-      "count": 974,
-      "x": 7.75,
-      "y": 48.58
-    },
-    {
-      "id": "Leipzig",
-      "year": 1480,
-      "count": 946,
-      "x": 12.37,
-      "y": 51.34
-    },
-    {
-      "id": "N\u00fcrnberg",
-      "year": 1469,
-      "count": 798,
-      "x": 11.0775,
-      "y": 49.4541666666667
-    },
-    {
-      "id": "Florence",
-      "year": 1471,
-      "count": 703,
-      "x": 11.26,
-      "y": 43.77
-    },
-    {
-      "id": "Basel",
-      "year": 1470,
-      "count": 655,
-      "x": 7.59,
-      "y": 47.56
-    },
-    {
-      "id": "Bologna",
-      "year": 1470,
-      "count": 501,
-      "x": 11.35,
-      "y": 44.49
-    },
-    {
-      "id": "Deventer",
-      "year": 1477,
-      "count": 403,
-      "x": 6.16,
-      "y": 52.25
-    },
-    {
-      "id": "Mainz",
-      "year": 1454,
-      "count": 351,
-      "x": 8.27,
-      "y": 49.99
-    },
-    {
-      "id": "Ulm",
-      "year": 1473,
-      "count": 320,
-      "x": 10.0,
-      "y": 48.4
-    },
-    {
-      "id": "Pavia",
-      "year": 1473,
-      "count": 302,
-      "x": 9.16,
-      "y": 45.19
-    },
-    {
-      "id": "Speyer",
-      "year": 1471,
-      "count": 297,
-      "x": 8.43,
-      "y": 49.32
-    },
-    {
-      "id": "Antwerpen",
-      "year": 1481,
-      "count": 287,
-      "x": 4.4,
-      "y": 51.22
-    },
-    {
-      "id": "Naples",
-      "year": 1469,
-      "count": 259,
-      "x": 14.25,
-      "y": 40.84
-    },
-    {
-      "id": "L\u00fcbeck",
-      "year": 1474,
-      "count": 252,
-      "x": 10.6872222222222,
-      "y": 53.8688888888889
-    },
-    {
-      "id": "Brescia",
-      "year": 1473,
-      "count": 250,
-      "x": 10.22,
-      "y": 45.54
-    },
-    {
-      "id": "Reutlingen",
-      "year": 1474,
-      "count": 208,
-      "x": 9.21,
-      "y": 48.49
-    },
-    {
-      "id": "Westminster",
-      "year": 1476,
-      "count": 174,
-      "x": -0.16,
-      "y": 51.51
-    },
-    {
-      "id": "Padua",
-      "year": 1471,
-      "count": 160,
-      "x": 11.88,
-      "y": 45.41
-    }
+    {"id": "Mainz", "year": 1454, "count": 351, "x": 8.27, "y": 49.99},
+    {"id": "Strasbourg", "year": 1460, "count": 974, "x": 7.75, "y": 48.58},
+    {"id": "Bamberg", "year": 1460, "count": 130, "x": 10.90, "y": 49.90},
+    {"id": "Köln", "year": 1465, "count": 1322, "x": 6.96, "y": 50.94},
+    {"id": "Subiaco", "year": 1465, "count": 45, "x": 13.09, "y": 41.93},
+    {"id": "Paris", "year": 1470, "count": 2220, "x": 2.35, "y": 48.86},
+    {"id": "Rome", "year": 1467, "count": 1503, "x": 12.49, "y": 41.89},
+    {"id": "Venice", "year": 1469, "count": 3241, "x": 12.34, "y": 45.43},
+    {"id": "Augsburg", "year": 1468, "count": 1059, "x": 10.89, "y": 48.37},
+    {"id": "Nürnberg", "year": 1469, "count": 798, "x": 11.08, "y": 49.45},
+    {"id": "Basel", "year": 1470, "count": 655, "x": 7.59, "y": 47.56},
+    {"id": "Bologna", "year": 1470, "count": 501, "x": 11.35, "y": 44.49},
+    {"id": "Milan", "year": 1471, "count": 995, "x": 9.19, "y": 45.46},
+    {"id": "Florence", "year": 1471, "count": 703, "x": 11.26, "y": 43.77},
+    {"id": "Speyer", "year": 1471, "count": 297, "x": 8.43, "y": 49.32},
+    {"id": "Padua", "year": 1471, "count": 160, "x": 11.88, "y": 45.41},
+    {"id": "Ferrara", "year": 1471, "count": 142, "x": 11.62, "y": 44.84},
+    {"id": "Lyon", "year": 1473, "count": 1073, "x": 4.84, "y": 45.76},
+    {"id": "Ulm", "year": 1473, "count": 320, "x": 10.0, "y": 48.4},
+    {"id": "Pavia", "year": 1473, "count": 302, "x": 9.16, "y": 45.19},
+    {"id": "Brescia", "year": 1473, "count": 250, "x": 10.22, "y": 45.54},
+    {"id": "Lübeck", "year": 1474, "count": 252, "x": 10.69, "y": 53.87},
+    {"id": "Reutlingen", "year": 1474, "count": 208, "x": 9.21, "y": 48.49},
+    {"id": "Bruges", "year": 1475, "count": 98, "x": 3.22, "y": 51.21},
+    {"id": "Westminster", "year": 1476, "count": 174, "x": -0.13, "y": 51.50},
+    {"id": "Deventer", "year": 1477, "count": 403, "x": 6.16, "y": 52.25},
+    {"id": "Leipzig", "year": 1480, "count": 946, "x": 12.37, "y": 51.34},
+    {"id": "Antwerpen", "year": 1481, "count": 287, "x": 4.4, "y": 51.22},
+    {"id": "Naples", "year": 1469, "count": 259, "x": 14.25, "y": 40.84},
+    {"id": "Sevilla", "year": 1477, "count": 156, "x": -5.98, "y": 37.39},
+    {"id": "Barcelona", "year": 1475, "count": 189, "x": 2.17, "y": 41.39},
+    {"id": "Valencia", "year": 1474, "count": 167, "x": -0.38, "y": 39.47},
+    {"id": "Louvain", "year": 1473, "count": 189, "x": 4.70, "y": 50.88},
+    {"id": "Wien", "year": 1482, "count": 145, "x": 16.37, "y": 48.21}
   ],
   "edges": [
-    {
-      "source": "Bologna",
-      "target": "Venezia",
-      "printer": "Aliotti, Cherubino de",
-      "year": 1492
-    },
-    {
-      "source": "Roma",
-      "target": "Paris",
-      "printer": "Amsterdam, Martinus de",
-      "year": 1500
-    },
-    {
-      "source": "Paris",
-      "target": "Lyon",
-      "printer": "Baligault, F\u00e9lix",
-      "year": 1493
-    },
-    {
-      "source": "Lyon",
-      "target": "Firenze",
-      "printer": "Balsarin, Guillaume",
-      "year": 1487
-    },
-    {
-      "source": "Venezia",
-      "target": "Firenze",
-      "printer": "Bartolommeo Miscomini, Antonio di",
-      "year": 1481
-    },
-    {
-      "source": "Bologna",
-      "target": "Venezia",
-      "printer": "Benedictis, Franciscus de",
-      "year": 1487
-    },
-    {
-      "source": "Venezia",
-      "target": "Lyon",
-      "printer": "Benedictis, Nicolaus de",
-      "year": 1497
-    },
-    {
-      "source": "Bologna",
-      "target": "Venezia",
-      "printer": "Bertochus, Dionysius",
-      "year": 1484
-    },
-    {
-      "source": "Roma",
-      "target": "Basel",
-      "printer": "Besicken, Johann",
-      "year": 1482
-    },
-    {
-      "source": "Wien",
-      "target": "Lyon",
-      "printer": "Bouttellier (Schenck), Pierre",
-      "year": 1487
-    },
-    {
-      "source": "Wien",
-      "target": "Lyon",
-      "printer": "Bouttellier, Pierre",
-      "year": 1487
-    },
-    {
-      "source": "Barcelona",
-      "target": "Sevilla",
-      "printer": "Brun, Pedro",
-      "year": 1483
-    },
-    {
-      "source": "Barcelona",
-      "target": "Sevilla",
-      "printer": "Brun, Peter",
-      "year": 1490
-    },
-    {
-      "source": "Firenze",
-      "target": "Venezia",
-      "printer": "Carlo, Jacopo di",
-      "year": 1491
-    },
-    {
-      "source": "K\u00f6ln",
-      "target": "Westminster",
-      "printer": "Caxton, William",
-      "year": 1476
-    },
-    {
-      "source": "Lyon",
-      "target": "Paris",
-      "printer": "Chaussard, Barnab\u00e9",
-      "year": 1495
-    },
-    {
-      "source": "Paris",
-      "target": "Roma",
-      "printer": "Doliatoris, Simon",
-      "year": 1483
-    },
-    {
-      "source": "Venezia",
-      "target": "Paris",
-      "printer": "Dominici, Lucas",
-      "year": 1483
-    },
-    {
-      "source": "Paris",
-      "target": "Lyon",
-      "printer": "Dru, Pierre Le",
-      "year": 1495
-    },
-    {
-      "source": "Basel",
-      "target": "Strasbourg",
-      "printer": "Flach, Martin",
-      "year": 1487
-    },
-    {
-      "source": "Firenze",
-      "target": "Venezia",
-      "printer": "Francisci, Antonius",
-      "year": 1499
-    },
-    {
-      "source": "N\u00fcrnberg",
-      "target": "Leipzig",
-      "printer": "Frisner, Andreas",
-      "year": 1486
-    },
-    {
-      "source": "Paris",
-      "target": "Lyon",
-      "printer": "Gering, Ulrich",
-      "year": 1478
-    },
-    {
-      "source": "Venezia",
-      "target": "Lyon",
-      "printer": "Giunta, Lucantonio",
-      "year": 1500
-    },
-    {
-      "source": "N\u00fcrnberg",
-      "target": "Leipzig",
-      "printer": "Haller, Johann",
-      "year": 1500
-    },
-    {
-      "source": "Bologna",
-      "target": "Venezia",
-      "printer": "Harlem, Henricus de",
-      "year": 1484
-    },
-    {
-      "source": "Augsburg",
-      "target": "Basel",
-      "printer": "Hohenwang, Ludwig",
-      "year": 1487
-    },
-    {
-      "source": "N\u00fcrnberg",
-      "target": "Augsburg",
-      "printer": "Huber, Ambrosius",
-      "year": 1499
-    },
-    {
-      "source": "Lyon",
-      "target": "Paris",
-      "printer": "Johannes Fabri (Smedh)",
-      "year": 1490
-    },
-    {
-      "source": "N\u00fcrnberg",
-      "target": "Strasbourg",
-      "printer": "Koberger, Anton",
-      "year": 1480
-    },
-    {
-      "source": "Sevilla",
-      "target": "Venezia",
-      "printer": "Lavezari, Guido",
-      "year": 1500
-    },
-    {
-      "source": "Antwerpen",
-      "target": "Paris",
-      "printer": "Leeu, Gerard",
-      "year": 1488
-    },
-    {
-      "source": "Venezia",
-      "target": "Paris",
-      "printer": "Lisa, Gerardus de",
-      "year": 1478
-    },
-    {
-      "source": "Bologna",
-      "target": "Venezia",
-      "printer": "Malpiglius, Scipio",
-      "year": 1500
-    },
-    {
-      "source": "Venezia",
-      "target": "Milano",
-      "printer": "Mangius, Benedictus",
-      "year": 1499
-    },
-    {
-      "source": "Venezia",
-      "target": "Paris",
-      "printer": "Manutius, Aldus",
-      "year": 1497
-    },
-    {
-      "source": "Paris",
-      "target": "Lyon",
-      "printer": "Marchant, Guy",
-      "year": 1483
-    },
-    {
-      "source": "Paris",
-      "target": "Lyon",
-      "printer": "Marnef, Geoffroy de",
-      "year": 1497
-    },
-    {
-      "source": "Deventer",
-      "target": "Antwerpen",
-      "printer": "Martens, Thierry",
-      "year": 1493
-    },
-    {
-      "source": "Paris",
-      "target": "Lyon",
-      "printer": "Mittelhus, Georg",
-      "year": 1495
-    },
-    {
-      "source": "Lyon",
-      "target": "Wien",
-      "printer": "Mittelhus, Georg",
-      "year": 1495
-    },
-    {
-      "source": "Mainz",
-      "target": "Lyon",
-      "printer": "Neumeister, Johann",
-      "year": 1487
-    },
-    {
-      "source": "Paris",
-      "target": "Lyon",
-      "printer": "Noir, Michel le",
-      "year": 1495
-    },
-    {
-      "source": "Lyon",
-      "target": "Paris",
-      "printer": "Ortuin, Gaspard",
-      "year": 1495
-    },
-    {
-      "source": "Milano",
-      "target": "Bologna",
-      "printer": "Pachel, Leonardus",
-      "year": 1492
-    },
-    {
-      "source": "Bologna",
-      "target": "Venezia",
-      "printer": "Pachel, Leonardus",
-      "year": 1494
-    },
-    {
-      "source": "Paris",
-      "target": "Lyon",
-      "printer": "Petit, Jean",
-      "year": 1495
-    },
-    {
-      "source": "Firenze",
-      "target": "Venezia",
-      "printer": "Petri, Johann",
-      "year": 1499
-    },
-    {
-      "source": "Lyon",
-      "target": "Paris",
-      "printer": "Philippi, Nicolaus",
-      "year": 1478
-    },
-    {
-      "source": "Roma",
-      "target": "Paris",
-      "printer": "Plannck, Stephan",
-      "year": 1485
-    },
-    {
-      "source": "Lyon",
-      "target": "Paris",
-      "printer": "Printer of Andrelinus, Carmen panegyricum",
-      "year": 1495
-    },
-    {
-      "source": "Strasbourg",
-      "target": "Lyon",
-      "printer": "Printer of the 'Antichristus'",
-      "year": 1492
-    },
-    {
-      "source": "Antwerpen",
-      "target": "Paris",
-      "printer": "Printer of the 'Mensa philosophica'",
-      "year": 1487
-    },
-    {
-      "source": "Paris",
-      "target": "Lyon",
-      "printer": "Pr\u00e9, Jean Du",
-      "year": 1487
-    },
-    {
-      "source": "Venezia",
-      "target": "Bologna",
-      "printer": "Ragazonibus, Jacobus de",
-      "year": 1495
-    },
-    {
-      "source": "Venezia",
-      "target": "Augsburg",
-      "printer": "Ratdolt, Erhard",
-      "year": 1485
-    },
-    {
-      "source": "Paris",
-      "target": "Lyon",
-      "printer": "Richard, Jean",
-      "year": 1500
-    },
-    {
-      "source": "Roma",
-      "target": "Paris",
-      "printer": "Rot, Adam",
-      "year": 1472
-    },
-    {
-      "source": "Venezia",
-      "target": "Lyon",
-      "printer": "Saracenus, Marinus",
-      "year": 1491
-    },
-    {
-      "source": "K\u00f6ln",
-      "target": "Basel",
-      "printer": "Schilling, Johann",
-      "year": 1473
-    },
-    {
-      "source": "Basel",
-      "target": "Paris",
-      "printer": "Schilling, Johann",
-      "year": 1478
-    },
-    {
-      "source": "Venezia",
-      "target": "Bologna",
-      "printer": "Schriber, Johannes",
-      "year": 1478
-    },
-    {
-      "source": "Paris",
-      "target": "Lyon",
-      "printer": "Soncino, Joshua Solomon",
-      "year": 1484
-    },
-    {
-      "source": "Venezia",
-      "target": "Lyon",
-      "printer": "Stahel, Conrad",
-      "year": 1488
-    },
-    {
-      "source": "Venezia",
-      "target": "Lyon",
-      "printer": "Suigus, Jacobinus",
-      "year": 1496
-    },
-    {
-      "source": "Paris",
-      "target": "Lyon",
-      "printer": "Symonel, Louis",
-      "year": 1478
-    },
-    {
-      "source": "Milano",
-      "target": "Paris",
-      "printer": "Uldericus Scinzenzeler",
-      "year": 1492
-    },
-    {
-      "source": "Venezia",
-      "target": "Milano",
-      "printer": "Valdarfer, Christophorus",
-      "year": 1474
-    },
-    {
-      "source": "Bologna",
-      "target": "Venezia",
-      "printer": "Walbeck, Johannes",
-      "year": 1483
-    },
-    {
-      "source": "Basel",
-      "target": "Lyon",
-      "printer": "Wenssler, Michael",
-      "year": 1495
-    },
-    {
-      "source": "Lyon",
-      "target": "Paris",
-      "printer": "Wolf, Nicolaus",
-      "year": 1497
-    },
-    {
-      "source": "Milano",
-      "target": "Firenze",
-      "printer": "Zarotus, Antonius",
-      "year": 1490
-    },
-    {
-      "source": "N\u00fcrnberg",
-      "target": "Venezia",
-      "printer": "Zeninger, Conrad",
-      "year": 1486
-    },
-    {
-      "source": "Paris",
-      "target": "Lyon",
-      "printer": "du Pr\u00e9, Jean",
-      "year": 1485
-    },
-    {
-      "source": "Bologna",
-      "target": "Paris",
-      "printer": "himself",
-      "year": 1497
-    }
+    {"source": "Mainz", "target": "Strasbourg", "printer": "Johann Mentelin", "year": 1460, "type": "apprentice", "note": "Former Gutenberg worker, first printer outside Mainz"},
+    {"source": "Mainz", "target": "Bamberg", "printer": "Albrecht Pfister", "year": 1460, "type": "apprentice", "note": "First illustrated printed books"},
+    {"source": "Mainz", "target": "Subiaco", "printer": "Sweynheym & Pannartz", "year": 1465, "type": "apprentice", "note": "Brought printing to Italy at Benedictine monastery"},
+    {"source": "Mainz", "target": "Köln", "printer": "Ulrich Zell", "year": 1465, "type": "apprentice", "note": "Claimed to have learned from Gutenberg himself"},
+    {"source": "Subiaco", "target": "Rome", "printer": "Sweynheym & Pannartz", "year": 1467, "type": "relocation", "note": "Moved from monastery to papal city"},
+    {"source": "Mainz", "target": "Venice", "printer": "Johann von Speyer", "year": 1469, "type": "apprentice", "note": "First Venice printer, died 1470"},
+    {"source": "Mainz", "target": "Venice", "printer": "Nicolas Jenson", "year": 1470, "type": "trained", "note": "French engraver, created Romen typeface still used today"},
+    {"source": "Mainz", "target": "Paris", "printer": "Michael Friburger", "year": 1470, "type": "invited", "note": "Invited by Sorbonne to establish first French press"},
+    {"source": "Mainz", "target": "Paris", "printer": "Ulrich Gering", "year": 1470, "type": "invited", "note": "Co-founder of first Paris press with Friburger"},
+    {"source": "Mainz", "target": "Paris", "printer": "Martin Crantz", "year": 1470, "type": "invited", "note": "Third founder of Sorbonne press"},
+    {"source": "Strasbourg", "target": "Basel", "printer": "Berthold Ruppel", "year": 1468, "type": "trained", "note": "Established Basel as major printing center"},
+    {"source": "Köln", "target": "Westminster", "printer": "William Caxton", "year": 1476, "type": "trained", "note": "First English printer, learned craft as merchant"},
+    {"source": "Köln", "target": "Bruges", "printer": "Colard Mansion", "year": 1475, "type": "partnership", "note": "Helped Caxton print first English book"},
+    {"source": "Venice", "target": "Augsburg", "printer": "Erhard Ratdolt", "year": 1486, "type": "return", "note": "Pioneered scientific illustration, color printing"},
+    {"source": "Strasbourg", "target": "Lyon", "printer": "Guillaume Le Roy", "year": 1473, "type": "expansion", "note": "Established Lyon's first press with Buyer"},
+    {"source": "Paris", "target": "Lyon", "printer": "Gering, Ulrich", "year": 1478, "type": "opportunity"},
+    {"source": "Venice", "target": "Paris", "printer": "Lisa, Gerardus de", "year": 1478, "type": "opportunity"},
+    {"source": "Lyon", "target": "Paris", "printer": "Philippi, Nicolaus", "year": 1478, "type": "opportunity"},
+    {"source": "Basel", "target": "Paris", "printer": "Schilling, Johann", "year": 1478, "type": "opportunity"},
+    {"source": "Venice", "target": "Bologna", "printer": "Schriber, Johannes", "year": 1478, "type": "expansion"},
+    {"source": "Paris", "target": "Lyon", "printer": "Symonel, Louis", "year": 1478, "type": "opportunity"},
+    {"source": "Nürnberg", "target": "Strasbourg", "printer": "Koberger, Anton", "year": 1480, "type": "branch", "note": "Opened branch; largest publisher in Germany"},
+    {"source": "Venice", "target": "Florence", "printer": "Bartolommeo Miscomini", "year": 1481, "type": "expansion"},
+    {"source": "Rome", "target": "Basel", "printer": "Besicken, Johann", "year": 1482, "type": "opportunity"},
+    {"source": "Barcelona", "target": "Sevilla", "printer": "Brun, Pedro", "year": 1483, "type": "expansion", "note": "Spread printing in Iberia"},
+    {"source": "Paris", "target": "Rome", "printer": "Doliatoris, Simon", "year": 1483, "type": "opportunity"},
+    {"source": "Venice", "target": "Paris", "printer": "Dominici, Lucas", "year": 1483, "type": "opportunity"},
+    {"source": "Paris", "target": "Lyon", "printer": "Marchant, Guy", "year": 1483, "type": "opportunity"},
+    {"source": "Bologna", "target": "Venice", "printer": "Walbeck, Johannes", "year": 1483, "type": "opportunity"},
+    {"source": "Bologna", "target": "Venice", "printer": "Bertochus, Dionysius", "year": 1484, "type": "opportunity"},
+    {"source": "Bologna", "target": "Venice", "printer": "Harlem, Henricus de", "year": 1484, "type": "opportunity"},
+    {"source": "Paris", "target": "Lyon", "printer": "Soncino, Joshua Solomon", "year": 1484, "type": "expansion", "note": "Hebrew printer"},
+    {"source": "Rome", "target": "Paris", "printer": "Plannck, Stephan", "year": 1485, "type": "opportunity"},
+    {"source": "Paris", "target": "Lyon", "printer": "du Pré, Jean", "year": 1485, "type": "opportunity"},
+    {"source": "Nürnberg", "target": "Leipzig", "printer": "Frisner, Andreas", "year": 1486, "type": "expansion"},
+    {"source": "Nürnberg", "target": "Venice", "printer": "Zeninger, Conrad", "year": 1486, "type": "opportunity"},
+    {"source": "Lyon", "target": "Florence", "printer": "Balsarin, Guillaume", "year": 1487, "type": "opportunity"},
+    {"source": "Bologna", "target": "Venice", "printer": "Benedictis, Franciscus", "year": 1487, "type": "opportunity"},
+    {"source": "Wien", "target": "Lyon", "printer": "Bouttellier, Pierre", "year": 1487, "type": "opportunity"},
+    {"source": "Basel", "target": "Strasbourg", "printer": "Flach, Martin", "year": 1487, "type": "opportunity"},
+    {"source": "Augsburg", "target": "Basel", "printer": "Hohenwang, Ludwig", "year": 1487, "type": "opportunity"},
+    {"source": "Mainz", "target": "Lyon", "printer": "Neumeister, Johann", "year": 1487, "type": "opportunity", "note": "Original Mainz printer"},
+    {"source": "Antwerpen", "target": "Paris", "printer": "Printer of Mensa philosophica", "year": 1487, "type": "opportunity"},
+    {"source": "Paris", "target": "Lyon", "printer": "Pré, Jean Du", "year": 1487, "type": "opportunity"},
+    {"source": "Antwerpen", "target": "Paris", "printer": "Leeu, Gerard", "year": 1488, "type": "opportunity"},
+    {"source": "Venice", "target": "Lyon", "printer": "Stahel, Conrad", "year": 1488, "type": "opportunity"},
+    {"source": "Ferrara", "target": "Venice", "printer": "Aldus Manutius", "year": 1490, "type": "foundation", "note": "Founded Aldine Press, invented italic type"},
+    {"source": "Barcelona", "target": "Sevilla", "printer": "Brun, Peter", "year": 1490, "type": "expansion"},
+    {"source": "Lyon", "target": "Paris", "printer": "Johannes Fabri", "year": 1490, "type": "opportunity"},
+    {"source": "Milan", "target": "Florence", "printer": "Zarotus, Antonius", "year": 1490, "type": "expansion"},
+    {"source": "Florence", "target": "Venice", "printer": "Carlo, Jacopo di", "year": 1491, "type": "opportunity"},
+    {"source": "Venice", "target": "Lyon", "printer": "Saracenus, Marinus", "year": 1491, "type": "opportunity"},
+    {"source": "Bologna", "target": "Venice", "printer": "Aliotti, Cherubino de", "year": 1492, "type": "opportunity"},
+    {"source": "Milan", "target": "Bologna", "printer": "Pachel, Leonardus", "year": 1492, "type": "opportunity"},
+    {"source": "Strasbourg", "target": "Lyon", "printer": "Printer of Antichristus", "year": 1492, "type": "opportunity"},
+    {"source": "Milan", "target": "Paris", "printer": "Uldericus Scinzenzeler", "year": 1492, "type": "opportunity"},
+    {"source": "Paris", "target": "Lyon", "printer": "Baligault, Félix", "year": 1493, "type": "opportunity"},
+    {"source": "Deventer", "target": "Antwerpen", "printer": "Martens, Thierry", "year": 1493, "type": "expansion"},
+    {"source": "Bologna", "target": "Venice", "printer": "Pachel, Leonardus", "year": 1494, "type": "opportunity"},
+    {"source": "Lyon", "target": "Paris", "printer": "Chaussard, Barnabé", "year": 1495, "type": "opportunity"},
+    {"source": "Paris", "target": "Lyon", "printer": "Dru, Pierre Le", "year": 1495, "type": "opportunity"},
+    {"source": "Paris", "target": "Lyon", "printer": "Mittelhus, Georg", "year": 1495, "type": "opportunity"},
+    {"source": "Lyon", "target": "Wien", "printer": "Mittelhus, Georg", "year": 1495, "type": "expansion"},
+    {"source": "Paris", "target": "Lyon", "printer": "Noir, Michel le", "year": 1495, "type": "opportunity"},
+    {"source": "Lyon", "target": "Paris", "printer": "Ortuin, Gaspard", "year": 1495, "type": "opportunity"},
+    {"source": "Paris", "target": "Lyon", "printer": "Petit, Jean", "year": 1495, "type": "opportunity"},
+    {"source": "Venice", "target": "Bologna", "printer": "Ragazonibus, Jacobus de", "year": 1495, "type": "opportunity"},
+    {"source": "Basel", "target": "Lyon", "printer": "Wenssler, Michael", "year": 1495, "type": "opportunity"},
+    {"source": "Venice", "target": "Lyon", "printer": "Suigus, Jacobinus", "year": 1496, "type": "opportunity"},
+    {"source": "Venice", "target": "Lyon", "printer": "Benedictis, Nicolaus de", "year": 1497, "type": "opportunity"},
+    {"source": "Paris", "target": "Lyon", "printer": "Marnef, Geoffroy de", "year": 1497, "type": "opportunity"},
+    {"source": "Lyon", "target": "Paris", "printer": "Wolf, Nicolaus", "year": 1497, "type": "opportunity"},
+    {"source": "Florence", "target": "Venice", "printer": "Francisci, Antonius", "year": 1499, "type": "opportunity"},
+    {"source": "Nürnberg", "target": "Augsburg", "printer": "Huber, Ambrosius", "year": 1499, "type": "opportunity"},
+    {"source": "Venice", "target": "Milan", "printer": "Mangius, Benedictus", "year": 1499, "type": "opportunity"},
+    {"source": "Florence", "target": "Venice", "printer": "Petri, Johann", "year": 1499, "type": "opportunity"},
+    {"source": "Rome", "target": "Paris", "printer": "Amsterdam, Martinus de", "year": 1500, "type": "opportunity"},
+    {"source": "Venice", "target": "Lyon", "printer": "Giunta, Lucantonio", "year": 1500, "type": "branch", "note": "Giunta dynasty opened Lyon branch"},
+    {"source": "Nürnberg", "target": "Leipzig", "printer": "Haller, Johann", "year": 1500, "type": "expansion"},
+    {"source": "Bologna", "target": "Venice", "printer": "Malpiglius, Scipio", "year": 1500, "type": "opportunity"},
+    {"source": "Paris", "target": "Lyon", "printer": "Richard, Jean", "year": 1500, "type": "opportunity"}
   ],
   "events": [
-    {
-      "year": 1455,
-      "city": "Mainz",
-      "event": "Gutenberg Bible",
-      "desc": "First major book printed with movable type"
-    },
-    {
-      "year": 1465,
-      "city": "Subiaco",
-      "event": "First Italian Press",
-      "desc": "Sweynheym & Pannartz bring printing to Italy"
-    },
-    {
-      "year": 1469,
-      "city": "Venice",
-      "event": "Venice Begins",
-      "desc": "Johann von Speyer opens first Venice press"
-    },
-    {
-      "year": 1470,
-      "city": "Paris",
-      "event": "Sorbonne Press",
-      "desc": "First French printing at the university"
-    },
-    {
-      "year": 1476,
-      "city": "Westminster",
-      "event": "Caxton's Press",
-      "desc": "First English printing press"
-    },
-    {
-      "year": 1490,
-      "city": "Venice",
-      "event": "Aldus Manutius",
-      "desc": "Revolutionary pocket editions begin"
-    }
+    {"year": 1450, "type": "milestone", "title": "Gutenberg's Press", "desc": "After years of secret experiments, Johannes Gutenberg perfects movable metal type in Mainz. His innovation: individual letter molds cast from a precise alloy of lead, tin, and antimony. The technique will remain a trade secret for 90 years—no manual published until 1540.", "city": "Mainz"},
+    {"year": 1455, "type": "publication", "title": "Gutenberg Bible", "desc": "The 42-line Bible emerges from Gutenberg's workshop—180 copies on paper and vellum. Each page required setting 2,500 individual pieces of type. Some copies sell for 30 florins (three years' wages for a clerk). 49 copies survive today.", "city": "Mainz"},
+    {"year": 1457, "type": "publication", "title": "Mainz Psalter", "desc": "Fust & Schöffer (Gutenberg's former partners) print the first book with a colophon naming printer and date, a printer's device, and two-color printing using separate impressions. The technology leaps forward.", "city": "Mainz"},
+    {"year": 1460, "type": "expansion", "title": "First Press Outside Mainz", "desc": "Johann Mentelin, who likely trained in Gutenberg's workshop, opens the first press outside Mainz in Strasbourg. The monopoly is broken. Within two years, trained printers will scatter across Europe.", "city": "Strasbourg"},
+    {"year": 1461, "type": "publication", "title": "First Illustrated Book", "desc": "Albrecht Pfister in Bamberg prints 'Der Edelstein' (The Gemstone) with 101 woodcut illustrations—the first printed book combining text and images. A new medium for visual communication is born.", "city": "Bamberg"},
+    {"year": 1462, "type": "crisis", "title": "Sack of Mainz", "desc": "Archbishop Adolf II of Nassau attacks Mainz in a succession dispute. The city is looted; 400 citizens killed. Workers from the Fust-Schöffer workshop flee, carrying printing's secrets to Cologne, Strasbourg, Basel, Rome, and Venice. Disaster becomes catalyst.", "city": "Mainz"},
+    {"year": 1465, "type": "expansion", "title": "Printing Reaches Italy", "desc": "German printers Conrad Sweynheym and Arnold Pannartz establish Italy's first press at the Benedictine monastery of Subiaco, 50 miles from Rome. They bring Gothic type but soon develop Roman letterforms inspired by Italian humanist scripts.", "city": "Subiaco"},
+    {"year": 1467, "type": "expansion", "title": "Printing Reaches Rome", "desc": "Sweynheym & Pannartz relocate to Rome, seeking the larger market of the papal court. They print classical texts for humanist scholars—Cicero, Livy, Virgil. By 1472 they've printed 12,000 volumes but face bankruptcy from overproduction.", "city": "Rome"},
+    {"year": 1469, "type": "expansion", "title": "Venice Press Opens", "desc": "Johann von Speyer receives a 5-year monopoly from the Venetian Senate to print in the city. He produces Cicero's 'Epistolae ad familiares' in 300 copies. But Speyer dies in 1470, and his monopoly dies with him—opening Venice to all comers.", "city": "Venice"},
+    {"year": 1470, "type": "innovation", "title": "Roman Typeface Created", "desc": "French engraver Nicolas Jenson, who learned printing in Mainz, perfects the Roman typeface in Venice. His letterforms—based on Carolingian minuscule—become the foundation of all modern book typography. At his peak, Jenson runs 12 presses simultaneously.", "city": "Venice"},
+    {"year": 1470, "type": "expansion", "title": "Sorbonne Press", "desc": "The Sorbonne's rector invites three German printers—Gering, Friburger, and Crantz—to establish France's first press. They set up in the university's library, printing classical and theological texts. Paris becomes a major center within a decade.", "city": "Paris"},
+    {"year": 1472, "type": "milestone", "title": "First Book in Italian", "desc": "Dante's 'Divine Comedy' is printed in Foligno—the first book in the Italian vernacular. Printing begins its transformation of European languages, standardizing spelling and spreading literacy beyond Latin-educated clergy.", "city": "Foligno"},
+    {"year": 1473, "type": "expansion", "title": "Lyon Press Opens", "desc": "Wealthy merchant Barthélemy Buyer finances Lyon's first press. The city's tax-free trade fairs, Italian banking connections, and position between France and Italy make it ideal. By 1500, Lyon will rival Paris in output.", "city": "Lyon"},
+    {"year": 1475, "type": "publication", "title": "First Book in English", "desc": "English merchant William Caxton, who learned printing in Cologne, produces 'Recuyell of the Historyes of Troye' in Bruges—the first book printed in English. He translates it himself from French. A language finds its print voice.", "city": "Bruges"},
+    {"year": 1476, "type": "expansion", "title": "Printing Reaches England", "desc": "Caxton returns to England and establishes the first English press at Westminster, near the royal court and abbey. He prints Chaucer's Canterbury Tales, Malory's Morte d'Arthur, and nearly 100 other titles before his death in 1492.", "city": "Westminster"},
+    {"year": 1477, "type": "milestone", "title": "110 Cities Have Presses", "desc": "Just 27 years after Gutenberg, printing has spread to 110 European cities. The technology travels along trade routes: Rhine to Low Countries, Alpine passes to Italy, Atlantic coast to Iberia. Each new press creates demand for more.", "city": "Europe"},
+    {"year": 1480, "type": "milestone", "title": "Venice Dominates", "desc": "Venice now produces more books than any other city—about 13% of all European output. The reasons: largest city in Europe, major seaport for paper imports, abundant merchant capital, skilled artisan workforce, and less church censorship than elsewhere.", "city": "Venice"},
+    {"year": 1482, "type": "publication", "title": "First Star Atlas", "desc": "Erhard Ratdolt prints Hyginus's 'Poeticon Astronomicon' with 47 woodcut constellation diagrams—the first printed star atlas. Ratdolt pioneers scientific illustration, solving the challenge of printing images that must be precise.", "city": "Venice"},
+    {"year": 1482, "type": "publication", "title": "Euclid's Elements", "desc": "Ratdolt prints the first edition of Euclid with mathematical diagrams—600 geometric figures in the margins. He invents new techniques for printing technical illustrations that will enable the Scientific Revolution.", "city": "Venice"},
+    {"year": 1486, "type": "migration", "title": "Ratdolt Returns to Augsburg", "desc": "Master printer Erhard Ratdolt returns to his native Augsburg at the bishop's invitation, bringing Venetian innovations—decorative borders, title pages, multi-color printing—back to Germany. Knowledge flows both ways.", "city": "Augsburg"},
+    {"year": 1490, "type": "foundation", "title": "Aldine Press Founded", "desc": "Scholar Aldus Manutius, age 40, opens a press in Venice dedicated to printing Greek and Latin classics in accurate editions. He recruits Greek scholars, designs new typefaces, and builds the most influential publishing house of the Renaissance.", "city": "Venice"},
+    {"year": 1493, "type": "publication", "title": "Nuremberg Chronicle", "desc": "Anton Koberger—godfather of Albrecht Dürer—publishes the Nuremberg Chronicle with 1,809 woodcut illustrations (from 645 blocks, many reused). The most ambitious illustrated book yet printed, it depicts world history from Creation to 1493.", "city": "Nürnberg"},
+    {"year": 1494, "type": "innovation", "title": "Greek Classics in Print", "desc": "Aldus begins his monumental project: printing the complete works of Aristotle in Greek. He employs exiled Byzantine scholars, creates new Greek typefaces, and makes the philosophical corpus available to scholars across Europe.", "city": "Venice"},
+    {"year": 1495, "type": "publication", "title": "Bembo Typeface Debuts", "desc": "Aldus prints Pietro Bembo's 'De Aetna' using a new Roman typeface cut by Francesco Griffo. This design—refined and elegant—becomes the model for Garamond, Times New Roman, and most book typography for 500 years.", "city": "Venice"},
+    {"year": 1499, "type": "publication", "title": "Hypnerotomachia Poliphili", "desc": "Aldus prints the 'Dream of Poliphilus'—an enigmatic romance with 172 woodcut illustrations. Considered the most beautiful book of the Renaissance, its harmonious integration of type and image sets new standards for book design.", "city": "Venice"},
+    {"year": 1500, "type": "milestone", "title": "20 Million Books Printed", "desc": "The incunabula era ends. In 50 years: over 250 cities have presses, 27,000+ editions printed, perhaps 20 million individual books produced for a European population of 70 million. More books now exist than in all previous human history.", "city": "Europe"}
   ],
-  "source": "ISTC (Incunabula Short Title Catalogue), British Library 2025"
+  "source": "ISTC (Incunabula Short Title Catalogue), British Library 2025; Historical research from multiple sources"
 }
