@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incunabula Map: The Birth of Printing (1450-1500)</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            background: #1a1a2e;
+            color: #e8e0d5;
+            min-height: 100vh;
+        }
+
+        .header {
+            padding: 20px 30px;
+            background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+            border-bottom: 1px solid #2d3a5c;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 400;
+            color: #d4af37;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #8b9dc3;
+        }
+
+        .container {
+            display: flex;
+            height: calc(100vh - 100px);
+        }
+
+        .map-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .sidebar {
+            width: 380px;
+            background: #16213e;
+            border-left: 1px solid #2d3a5c;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .controls {
+            margin-bottom: 20px;
+        }
+
+        .control-group {
+            margin-bottom: 15px;
+        }
+
+        .control-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8b9dc3;
+            margin-bottom: 8px;
+        }
+
+        .year-display {
+            font-size: 48px;
+            font-weight: 300;
+            color: #d4af37;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .year-slider {
+            width: 100%;
+            height: 6px;
+            -webkit-appearance: none;
+            background: #2d3a5c;
+            border-radius: 3px;
+            outline: none;
+        }
+
+        .year-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            background: #d4af37;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .play-btn {
+            width: 100%;
+            padding: 10px;
+            background: #2d3a5c;
+            border: 1px solid #3d4a6c;
+            color: #e8e0d5;
+            font-size: 13px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .play-btn:hover {
+            background: #3d4a6c;
+        }
+
+        .play-btn.active {
+            background: #d4af37;
+            color: #1a1a2e;
+        }
+
+        .legend {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #2d3a5c;
+        }
+
+        .legend-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8b9dc3;
+            margin-bottom: 12px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .stats {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #2d3a5c;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .stat-label {
+            color: #8b9dc3;
+        }
+
+        .stat-value {
+            color: #d4af37;
+            font-weight: 500;
+        }
+
+        .city-info {
+            margin-top: 20px;
+            padding: 15px;
+            background: #1a1a2e;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .city-info.active {
+            display: block;
+        }
+
+        .city-name {
+            font-size: 18px;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .city-stats {
+            font-size: 13px;
+            color: #8b9dc3;
+            margin-bottom: 10px;
+        }
+
+        .book-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .book-item {
+            padding: 10px;
+            background: #16213e;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .book-item:hover {
+            background: #2d3a5c;
+        }
+
+        .book-title {
+            font-size: 12px;
+            color: #e8e0d5;
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+
+        .book-meta {
+            font-size: 11px;
+            color: #6b7a9a;
+        }
+
+        .book-summary {
+            font-size: 11px;
+            color: #8b9dc3;
+            margin-top: 6px;
+            line-height: 1.4;
+            display: none;
+        }
+
+        .book-item.expanded .book-summary {
+            display: block;
+        }
+
+        .digital-badge {
+            display: inline-block;
+            font-size: 9px;
+            padding: 2px 6px;
+            background: #2d5a3d;
+            color: #8fd1a8;
+            border-radius: 3px;
+            margin-left: 6px;
+        }
+
+        /* Map styles */
+        .land {
+            fill: #2d3a5c;
+            stroke: #3d4a6c;
+            stroke-width: 0.5;
+        }
+
+        .water {
+            fill: #1a1a2e;
+        }
+
+        .city-circle {
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .city-circle:hover {
+            stroke: #fff;
+            stroke-width: 2;
+        }
+
+        .city-label {
+            font-size: 10px;
+            fill: #e8e0d5;
+            pointer-events: none;
+            text-shadow: 0 0 3px #1a1a2e, 0 0 5px #1a1a2e;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: #16213e;
+            border: 1px solid #3d4a6c;
+            border-radius: 4px;
+            padding: 10px 14px;
+            font-size: 12px;
+            pointer-events: none;
+            z-index: 1000;
+            max-width: 250px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .tooltip-city {
+            color: #d4af37;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .tooltip-count {
+            color: #e8e0d5;
+        }
+
+        .zoom-controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .zoom-btn {
+            width: 36px;
+            height: 36px;
+            background: #16213e;
+            border: 1px solid #3d4a6c;
+            color: #e8e0d5;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .zoom-btn:hover {
+            background: #2d3a5c;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>The Birth of Printing in Europe</h1>
+        <div class="subtitle">24,290 incunabula from the ISTC (1450-1500)</div>
+    </div>
+
+    <div class="container">
+        <div class="map-container">
+            <svg id="map"></svg>
+            <div class="zoom-controls">
+                <button class="zoom-btn" id="zoom-in">+</button>
+                <button class="zoom-btn" id="zoom-out">-</button>
+                <button class="zoom-btn" id="zoom-reset">R</button>
+            </div>
+            <div class="tooltip" style="display: none;"></div>
+        </div>
+
+        <div class="sidebar">
+            <div class="controls">
+                <div class="control-group">
+                    <div class="control-label">Year</div>
+                    <div class="year-display" id="year-display">1500</div>
+                    <input type="range" class="year-slider" id="year-slider" min="1450" max="1500" value="1500">
+                </div>
+                <div class="control-group">
+                    <button class="play-btn" id="play-btn">Play Timeline</button>
+                </div>
+            </div>
+
+            <div class="legend">
+                <div class="legend-title">Language</div>
+                <div class="legend-item"><span class="legend-dot" style="background: #c9a227;"></span> Latin</div>
+                <div class="legend-item"><span class="legend-dot" style="background: #4a90d9;"></span> German</div>
+                <div class="legend-item"><span class="legend-dot" style="background: #d94a4a;"></span> Italian</div>
+                <div class="legend-item"><span class="legend-dot" style="background: #7b4ad9;"></span> French</div>
+                <div class="legend-item"><span class="legend-dot" style="background: #4ad98b;"></span> Other</div>
+            </div>
+
+            <div class="stats" id="stats">
+                <div class="stat-row">
+                    <span class="stat-label">Total Books</span>
+                    <span class="stat-value" id="stat-total">0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Cities</span>
+                    <span class="stat-value" id="stat-cities">0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">With Digital</span>
+                    <span class="stat-value" id="stat-digital">0</span>
+                </div>
+            </div>
+
+            <div class="city-info" id="city-info">
+                <div class="city-name" id="city-name"></div>
+                <div class="city-stats" id="city-stats"></div>
+                <div class="book-list" id="book-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Color scheme for languages
+        const languageColors = {
+            'Latin': '#c9a227',
+            'German': '#4a90d9',
+            'Italian': '#d94a4a',
+            'French': '#7b4ad9',
+            'Dutch': '#4ad98b',
+            'Spanish': '#d97b4a',
+            'English': '#4ad9d9',
+            'default': '#888888'
+        };
+
+        function getLanguageColor(lang) {
+            if (!lang) return languageColors.default;
+            for (const [key, color] of Object.entries(languageColors)) {
+                if (lang.toLowerCase().includes(key.toLowerCase())) return color;
+            }
+            return languageColors.default;
+        }
+
+        // State
+        let books = [];
+        let currentYear = 1500;
+        let isPlaying = false;
+        let playInterval;
+        let selectedCity = null;
+
+        // Load data
+        async function loadData() {
+            const response = await fetch('incunabula_books.json');
+            books = await response.json();
+            console.log(`Loaded ${books.length} books`);
+            initMap();
+        }
+
+        // Initialize map
+        async function initMap() {
+            const svg = d3.select('#map');
+            const container = document.querySelector('.map-container');
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+
+            svg.attr('width', width).attr('height', height);
+
+            // European-focused projection
+            const projection = d3.geoMercator()
+                .center([8, 48])
+                .scale(width * 1.2)
+                .translate([width / 2, height / 2]);
+
+            const path = d3.geoPath().projection(projection);
+
+            // Zoom behavior
+            const zoom = d3.zoom()
+                .scaleExtent([0.5, 8])
+                .on('zoom', (event) => {
+                    g.attr('transform', event.transform);
+                });
+
+            svg.call(zoom);
+
+            // Zoom controls
+            d3.select('#zoom-in').on('click', () => svg.transition().call(zoom.scaleBy, 1.5));
+            d3.select('#zoom-out').on('click', () => svg.transition().call(zoom.scaleBy, 0.67));
+            d3.select('#zoom-reset').on('click', () => svg.transition().call(zoom.transform, d3.zoomIdentity));
+
+            // Main group
+            const g = svg.append('g');
+
+            // Load European map
+            const europeData = await d3.json('https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/TopoJSON/europe.topojson');
+
+            // Draw countries
+            g.append('g')
+                .selectAll('path')
+                .data(topojson.feature(europeData, europeData.objects.europe).features)
+                .join('path')
+                .attr('class', 'land')
+                .attr('d', path);
+
+            // Cities group
+            const citiesGroup = g.append('g').attr('class', 'cities');
+
+            // Tooltip
+            const tooltip = d3.select('.tooltip');
+
+            // Update function
+            window.updateMap = function() {
+                // Filter books by year
+                const filtered = books.filter(b => {
+                    const year = b.year || parseInt(b.date);
+                    return year && year <= currentYear;
+                });
+
+                // Group by city
+                const cityData = {};
+                filtered.forEach(b => {
+                    if (!b.lat || !b.lon) return;
+                    const key = `${b.lat.toFixed(2)},${b.lon.toFixed(2)}`;
+                    if (!cityData[key]) {
+                        cityData[key] = {
+                            lat: b.lat,
+                            lon: b.lon,
+                            place: b.place,
+                            books: [],
+                            languages: {}
+                        };
+                    }
+                    cityData[key].books.push(b);
+                    const lang = b.language || 'Unknown';
+                    cityData[key].languages[lang] = (cityData[key].languages[lang] || 0) + 1;
+                });
+
+                const cities = Object.values(cityData).filter(c => c.books.length > 0);
+
+                // Size scale
+                const maxBooks = d3.max(cities, d => d.books.length) || 1;
+                const sizeScale = d3.scaleSqrt().domain([1, maxBooks]).range([4, 40]);
+
+                // Draw circles
+                const circles = citiesGroup.selectAll('.city-circle')
+                    .data(cities, d => `${d.lat},${d.lon}`);
+
+                circles.exit().remove();
+
+                const circlesEnter = circles.enter()
+                    .append('circle')
+                    .attr('class', 'city-circle');
+
+                circles.merge(circlesEnter)
+                    .attr('cx', d => projection([d.lon, d.lat])[0])
+                    .attr('cy', d => projection([d.lon, d.lat])[1])
+                    .attr('r', d => sizeScale(d.books.length))
+                    .attr('fill', d => {
+                        // Use dominant language color
+                        const langs = Object.entries(d.languages).sort((a, b) => b[1] - a[1]);
+                        return getLanguageColor(langs[0]?.[0]);
+                    })
+                    .attr('fill-opacity', 0.7)
+                    .attr('stroke', d => {
+                        const langs = Object.entries(d.languages).sort((a, b) => b[1] - a[1]);
+                        return d3.color(getLanguageColor(langs[0]?.[0])).brighter(0.5);
+                    })
+                    .attr('stroke-width', 1)
+                    .on('mouseover', function(event, d) {
+                        d3.select(this).attr('fill-opacity', 1);
+                        tooltip.style('display', 'block')
+                            .html(`
+                                <div class="tooltip-city">${d.place?.replace(/[\[\]]/g, '') || 'Unknown'}</div>
+                                <div class="tooltip-count">${d.books.length.toLocaleString()} books</div>
+                            `);
+                    })
+                    .on('mousemove', function(event) {
+                        tooltip
+                            .style('left', (event.pageX + 15) + 'px')
+                            .style('top', (event.pageY - 10) + 'px');
+                    })
+                    .on('mouseout', function() {
+                        d3.select(this).attr('fill-opacity', 0.7);
+                        tooltip.style('display', 'none');
+                    })
+                    .on('click', function(event, d) {
+                        showCityDetails(d);
+                    });
+
+                // Labels for major cities
+                const labels = citiesGroup.selectAll('.city-label')
+                    .data(cities.filter(c => c.books.length > 100), d => `${d.lat},${d.lon}`);
+
+                labels.exit().remove();
+
+                labels.enter()
+                    .append('text')
+                    .attr('class', 'city-label')
+                    .merge(labels)
+                    .attr('x', d => projection([d.lon, d.lat])[0])
+                    .attr('y', d => projection([d.lon, d.lat])[1] - sizeScale(d.books.length) - 5)
+                    .attr('text-anchor', 'middle')
+                    .text(d => d.place?.replace(/[\[\]]/g, ''));
+
+                // Update stats
+                const digitalCount = filtered.filter(b => b.digital_links?.length > 0).length;
+                document.getElementById('stat-total').textContent = filtered.length.toLocaleString();
+                document.getElementById('stat-cities').textContent = cities.length.toLocaleString();
+                document.getElementById('stat-digital').textContent = digitalCount.toLocaleString();
+            };
+
+            // Initial render
+            updateMap();
+        }
+
+        function showCityDetails(city) {
+            const cityInfo = document.getElementById('city-info');
+            const cityName = document.getElementById('city-name');
+            const cityStats = document.getElementById('city-stats');
+            const bookList = document.getElementById('book-list');
+
+            cityName.textContent = city.place?.replace(/[\[\]]/g, '') || 'Unknown';
+
+            const digitalCount = city.books.filter(b => b.digital_links?.length > 0).length;
+            cityStats.innerHTML = `${city.books.length} books (${digitalCount} with digital copies)`;
+
+            // Sort by year
+            const sortedBooks = [...city.books].sort((a, b) => (a.year || 0) - (b.year || 0));
+
+            bookList.innerHTML = sortedBooks.slice(0, 50).map(book => `
+                <div class="book-item" onclick="this.classList.toggle('expanded')">
+                    <div class="book-title">
+                        ${book.title?.substring(0, 100) || 'Unknown'}
+                        ${book.digital_links?.length ? '<span class="digital-badge">Digital</span>' : ''}
+                    </div>
+                    <div class="book-meta">${book.date || 'n.d.'} | ${book.language || 'Unknown'}</div>
+                    ${book.summary ? `<div class="book-summary">${book.summary}</div>` : ''}
+                </div>
+            `).join('');
+
+            cityInfo.classList.add('active');
+        }
+
+        // Year slider
+        document.getElementById('year-slider').addEventListener('input', function() {
+            currentYear = parseInt(this.value);
+            document.getElementById('year-display').textContent = currentYear;
+            updateMap();
+        });
+
+        // Play button
+        document.getElementById('play-btn').addEventListener('click', function() {
+            if (isPlaying) {
+                clearInterval(playInterval);
+                this.textContent = 'Play Timeline';
+                this.classList.remove('active');
+            } else {
+                if (currentYear >= 1500) currentYear = 1450;
+                playInterval = setInterval(() => {
+                    currentYear++;
+                    document.getElementById('year-slider').value = currentYear;
+                    document.getElementById('year-display').textContent = currentYear;
+                    updateMap();
+                    if (currentYear >= 1500) {
+                        clearInterval(playInterval);
+                        document.getElementById('play-btn').textContent = 'Play Timeline';
+                        document.getElementById('play-btn').classList.remove('active');
+                        isPlaying = false;
+                    }
+                }, 200);
+                this.textContent = 'Pause';
+                this.classList.add('active');
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Handle resize
+        window.addEventListener('resize', () => {
+            const container = document.querySelector('.map-container');
+            d3.select('#map')
+                .attr('width', container.clientWidth)
+                .attr('height', container.clientHeight);
+        });
+
+        // Load data on start
+        loadData();
+    </script>
+</body>
+</html>

@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Spread of Printing: 1450–1500</title>
+    <meta name="description" content="Watch printing technology spread across Europe in the 50 years after Gutenberg. An interactive map of the incunabula era.">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fdfcf9;
+            color: #1a1612;
+            min-height: 100vh;
+        }
+
+        nav {
+            border-bottom: 1px solid #e8e4dc;
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            background: #fdfcf9;
+            z-index: 100;
+        }
+
+        nav a {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: #666;
+            text-decoration: none;
+        }
+
+        nav a:hover { color: #9e4a3a; }
+
+        header {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 48px 24px 32px;
+            text-align: center;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            padding: 4px 10px;
+            border-radius: 4px;
+            background: #e8f0f5;
+            color: #546b8a;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 38px;
+            font-weight: 400;
+            color: #1a1612;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            font-size: 17px;
+            color: #555;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        /* Timeline slider */
+        .timeline-control {
+            max-width: 600px;
+            margin: 0 auto 32px;
+            padding: 0 24px;
+        }
+
+        .year-display {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 64px;
+            font-weight: 500;
+            color: #1a1612;
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
+        .year-label {
+            text-align: center;
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 12px;
+        }
+
+        #year-slider {
+            width: 100%;
+            height: 8px;
+            -webkit-appearance: none;
+            background: #e8e4dc;
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        #year-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #9e4a3a;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 6px;
+            font-size: 10px;
+            color: #999;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .controls button {
+            padding: 8px 18px;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid #e8e4dc;
+            background: #fff;
+            color: #666;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .controls button:hover { background: #f5f2ed; }
+
+        #play-btn {
+            padding: 14px 36px;
+            font-size: 15px;
+            font-weight: 600;
+            background: #9e4a3a;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(158, 74, 58, 0.3);
+        }
+
+        #play-btn:hover {
+            background: #b5574a;
+            box-shadow: 0 4px 12px rgba(158, 74, 58, 0.4);
+            transform: translateY(-1px);
+        }
+
+        #play-btn.active {
+            background: #7a3a2e;
+        }
+
+        /* Legend */
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+            padding: 10px 0;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            color: #666;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        /* Main layout */
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            gap: 32px;
+        }
+
+        @media (max-width: 1000px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Map */
+        #map-container {
+            position: relative;
+        }
+
+        #map {
+            width: 100%;
+            height: 450px;
+            background: #f5f2ed;
+            border-radius: 12px;
+            border: 1px solid #e8e4dc;
+        }
+
+        .city-node {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .city-node:hover, .city-node.selected {
+            filter: brightness(1.1);
+            stroke-width: 3px;
+        }
+
+        .city-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 9px;
+            font-weight: 500;
+            fill: #333;
+            pointer-events: none;
+        }
+
+        .connection {
+            fill: none;
+            stroke: #9e4a3a;
+            stroke-opacity: 0.25;
+            stroke-width: 1;
+        }
+
+        /* Stats */
+        .stats-row {
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .stat-box {
+            flex: 1;
+            background: #f5f2ed;
+            border-radius: 6px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .stat-box .number {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 24px;
+            font-weight: 500;
+            color: #9e4a3a;
+        }
+
+        .stat-box .label {
+            font-size: 10px;
+            color: #666;
+        }
+
+        /* Book list panel */
+        .book-panel {
+            background: #fff;
+            border: 1px solid #e8e4dc;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            max-height: 600px;
+        }
+
+        .book-panel-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid #e8e4dc;
+            background: #fdfcf9;
+        }
+
+        .book-panel-header h2 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 20px;
+            font-weight: 500;
+            color: #1a1612;
+            margin-bottom: 4px;
+        }
+
+        .book-panel-header .subtitle {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .filter-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+
+        .filter-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            background: #9e4a3a;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .filter-tag button {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 1;
+            opacity: 0.8;
+        }
+
+        .filter-tag button:hover { opacity: 1; }
+
+        .book-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 8px 0;
+        }
+
+        .book-item {
+            padding: 12px 20px;
+            border-bottom: 1px solid #f0ebe3;
+            transition: background 0.15s;
+        }
+
+        .book-item:hover {
+            background: #faf8f5;
+            cursor: pointer;
+        }
+
+        .book-item.expanded {
+            background: #f8f6f2;
+            border-left: 3px solid #5078a0;
+        }
+
+        .book-item .year-city {
+            font-size: 10px;
+            font-weight: 500;
+            color: #9e4a3a;
+            margin-bottom: 2px;
+        }
+
+        .book-item .title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 14px;
+            color: #1a1612;
+            line-height: 1.3;
+            margin-bottom: 4px;
+        }
+
+        .book-item .meta {
+            font-size: 11px;
+            color: #888;
+        }
+
+        .digital-indicator {
+            display: inline-block;
+            font-size: 9px;
+            padding: 2px 6px;
+            background: #e8f0f5;
+            color: #5078a0;
+            border-radius: 3px;
+            margin-left: 8px;
+            font-weight: 500;
+        }
+
+        .book-item.highlighted {
+            background: #fff8e8;
+            border-left: 3px solid #d97706;
+        }
+
+        .book-details {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #e8e4dc;
+        }
+
+        .book-details .loading {
+            font-size: 11px;
+            color: #888;
+            font-style: italic;
+        }
+
+        .book-summary {
+            font-size: 12px;
+            line-height: 1.5;
+            color: #444;
+            margin-bottom: 12px;
+            padding: 10px 12px;
+            background: #fafafa;
+            border-left: 3px solid #8b7355;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .digital-links {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .digital-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            color: #5078a0;
+            text-decoration: none;
+            padding: 6px 10px;
+            background: #e8f0f5;
+            border-radius: 4px;
+            transition: background 0.15s;
+        }
+
+        .digital-link:hover {
+            background: #d0e0ea;
+        }
+
+        .digital-link::before {
+            content: "📄";
+        }
+
+        .no-digital {
+            font-size: 11px;
+            color: #999;
+            font-style: italic;
+        }
+
+        .holdings-info {
+            margin-top: 8px;
+            font-size: 10px;
+            color: #666;
+        }
+
+        .istc-link {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 10px;
+            color: #5078a0;
+            text-decoration: none;
+        }
+
+        .istc-link:hover { text-decoration: underline; }
+
+        .more-links {
+            font-size: 10px;
+            color: #666;
+            font-style: italic;
+            padding: 4px 0;
+        }
+
+        .no-books {
+            padding: 40px 20px;
+            text-align: center;
+            color: #888;
+            font-size: 13px;
+        }
+
+        .load-more {
+            padding: 12px 20px;
+            text-align: center;
+            border-top: 1px solid #e8e4dc;
+        }
+
+        .load-more button {
+            padding: 8px 24px;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            background: #f5f2ed;
+            border: 1px solid #e8e4dc;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .load-more button:hover {
+            background: #ebe6de;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: fixed;
+            visibility: hidden;
+            background: #fff;
+            border: 1px solid #e8e4dc;
+            border-radius: 8px;
+            padding: 12px 16px;
+            max-width: 220px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .tooltip h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 18px;
+            color: #1a1612;
+        }
+
+        .tooltip .meta {
+            font-size: 11px;
+            color: #9e4a3a;
+            margin-bottom: 6px;
+        }
+
+        .tooltip p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .tooltip .click-hint {
+            font-size: 10px;
+            color: #999;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        footer {
+            border-top: 1px solid #e8e4dc;
+            padding: 32px 24px;
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        footer p {
+            font-size: 12px;
+            color: #888;
+        }
+
+        footer a { color: #666; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/blog">← RESEARCH ESSAYS</a>
+    </nav>
+
+    <header>
+        <span class="tag">DATA VISUALIZATION</span>
+        <h1>The Spread of Printing</h1>
+        <p class="intro">
+            In 1454, Mainz had Europe's only press. By 1500, over 250 cities had presses producing
+            <strong>26,000+ editions</strong>. The lines show <strong>printer migrations</strong>—craftsmen
+            carrying their trade secrets to new cities. <a href="/printing-migrations.md" style="color: #9e4a3a;">Read the full story →</a>
+        </p>
+    </header>
+
+    <div class="timeline-control">
+        <div class="year-display" id="year-display">1454</div>
+        <div class="year-label">Drag to travel through time</div>
+        <input type="range" id="year-slider" min="1454" max="1500" value="1454">
+        <div class="slider-labels">
+            <span>1454</span>
+            <span>1470</span>
+            <span>1485</span>
+            <span>1500</span>
+        </div>
+        <div class="controls">
+            <button id="play-btn">&#9658; Play Timeline</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+        <div class="legend">
+            <div class="legend-item"><span class="legend-dot" style="background: #e8a838;"></span> Italy</div>
+            <div class="legend-item"><span class="legend-dot" style="background: #5a9e5a;"></span> Germany</div>
+            <div class="legend-item"><span class="legend-dot" style="background: #5078a0;"></span> France</div>
+            <div class="legend-item"><span class="legend-dot" style="background: #8b6bb3;"></span> Low Countries</div>
+            <div class="legend-item"><span class="legend-dot" style="background: #c44040;"></span> Spain</div>
+            <div class="legend-item"><span class="legend-dot" style="background: #9e4a3a;"></span> Other</div>
+            <div class="legend-item" style="margin-left: 20px; border-left: 1px solid #ddd; padding-left: 20px;">
+                <span style="display: inline-block; width: 20px; height: 2px; background: #9e4a3a; opacity: 0.5; vertical-align: middle;"></span>
+                <span style="margin-left: 6px;">Printer migration</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div id="map-container">
+            <svg id="map"></svg>
+            <div class="stats-row">
+                <div class="stat-box">
+                    <div class="number" id="stat-cities">1</div>
+                    <div class="label">Cities</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number" id="stat-books">0</div>
+                    <div class="label">Books</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number" id="stat-visible">0</div>
+                    <div class="label">Shown</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-panel">
+            <div class="book-panel-header">
+                <h2>Books Printed</h2>
+                <div class="subtitle" id="book-count">Loading...</div>
+                <div class="filter-info" id="filter-info"></div>
+            </div>
+            <div class="book-list" id="book-list"></div>
+            <div class="load-more" id="load-more" style="display: none;">
+                <button id="load-more-btn">Load more books</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <footer>
+        <p>
+            Data from <a href="https://data.cerl.org/istc/_search" target="_blank">ISTC (Incunabula Short Title Catalogue)</a>,
+            British Library 2025 ·
+            Part of <a href="/">Second Renaissance</a>
+        </p>
+    </footer>
+
+    <script>
+        let data, books;
+        let currentYear = 1454;
+        let selectedCity = null;
+        let isPlaying = false;
+        let playInterval;
+        let displayLimit = 100;
+        let expandedBook = null;
+
+        const tooltip = d3.select('#tooltip');
+
+        const projection = d3.geoMercator()
+            .center([10, 47])
+            .scale(1400)
+            .translate([450, 300]);
+
+        const cityColors = {
+            // Italy - warm orange
+            'Venezia': '#e8a838', 'Roma': '#e8a838', 'Milano': '#e8a838',
+            'Firenze': '#e8a838', 'Bologna': '#e8a838', 'Napoli': '#e8a838',
+            // France - blue
+            'Paris': '#5078a0', 'Lyon': '#5078a0',
+            // Germany - green
+            'Mainz': '#5a9e5a', 'Köln': '#5a9e5a', 'Strasbourg': '#5a9e5a',
+            'Nürnberg': '#5a9e5a', 'Augsburg': '#5a9e5a', 'Leipzig': '#5a9e5a',
+            'Basel': '#5a9e5a',
+            // Low Countries - purple
+            'Antwerpen': '#8b6bb3', 'Brugge': '#8b6bb3', 'Leuven': '#8b6bb3',
+            // Spain - deep red
+            'Sevilla': '#c44040', 'Barcelona': '#c44040', 'Valencia': '#c44040'
+        };
+
+        async function init() {
+            [data, books] = await Promise.all([
+                d3.json('/incunabula_data.json'),
+                d3.json('/incunabula_books.json')
+            ]);
+
+            const svg = d3.select('#map');
+            svg.attr('viewBox', '0 0 900 500');
+
+            // Load and draw Europe map
+            const europeData = await d3.json('https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/TopoJSON/europe.topojson');
+            const path = d3.geoPath().projection(projection);
+
+            // Draw water background
+            svg.append('rect')
+                .attr('width', 900)
+                .attr('height', 500)
+                .attr('fill', '#e8f0f5');
+
+            // Draw countries
+            svg.append('g')
+                .attr('class', 'countries')
+                .selectAll('path')
+                .data(topojson.feature(europeData, europeData.objects.europe).features)
+                .join('path')
+                .attr('d', path)
+                .attr('fill', '#f5f2ed')
+                .attr('stroke', '#d0cbc0')
+                .attr('stroke-width', 0.5);
+
+            svg.append('g').attr('class', 'connections');
+            svg.append('g').attr('class', 'cities');
+
+            // Slider
+            document.getElementById('year-slider').addEventListener('input', (e) => {
+                currentYear = parseInt(e.target.value);
+                update();
+            });
+
+            document.getElementById('play-btn').addEventListener('click', togglePlay);
+            document.getElementById('reset-btn').addEventListener('click', reset);
+            document.getElementById('load-more-btn').addEventListener('click', loadMore);
+
+            update();
+        }
+
+        function update() {
+            document.getElementById('year-display').textContent = currentYear;
+
+            const svg = d3.select('#map');
+            const activeCities = data.nodes.filter(n => n.year <= currentYear);
+            const activeEdges = data.edges.filter(e => e.year <= currentYear);
+
+            // Stats
+            document.getElementById('stat-cities').textContent = activeCities.length;
+
+            // Filter books by year and city
+            let filteredBooks = books.filter(b => b.year <= currentYear);
+            if (selectedCity) {
+                filteredBooks = filteredBooks.filter(b => b.city === selectedCity);
+            }
+
+            document.getElementById('stat-books').textContent =
+                books.filter(b => b.year <= currentYear).length.toLocaleString();
+
+            // Update filter info
+            updateFilterInfo();
+
+            // Render book list
+            renderBooks(filteredBooks);
+
+            // Draw connections
+            const connections = svg.select('.connections')
+                .selectAll('.connection')
+                .data(activeEdges, d => `${d.source}-${d.target}-${d.printer}`);
+
+            connections.enter()
+                .append('path')
+                .attr('class', 'connection')
+                .attr('d', d => {
+                    const source = data.nodes.find(n => n.id === d.source);
+                    const target = data.nodes.find(n => n.id === d.target);
+                    if (!source || !target) return '';
+                    const [x1, y1] = projection([source.x, source.y]);
+                    const [x2, y2] = projection([target.x, target.y]);
+                    const midX = (x1 + x2) / 2;
+                    const midY = (y1 + y2) / 2 - 20;
+                    return `M ${x1} ${y1} Q ${midX} ${midY} ${x2} ${y2}`;
+                })
+                .attr('stroke-opacity', 0)
+                .transition().duration(400)
+                .attr('stroke-opacity', 0.25);
+
+            connections.exit().transition().duration(200)
+                .attr('stroke-opacity', 0).remove();
+
+            // Draw cities
+            const cities = svg.select('.cities')
+                .selectAll('.city-group')
+                .data(activeCities, d => d.id);
+
+            const cityEnter = cities.enter()
+                .append('g')
+                .attr('class', 'city-group')
+                .attr('transform', d => {
+                    const [x, y] = projection([d.x, d.y]);
+                    return `translate(${x}, ${y})`;
+                })
+                .style('opacity', 0);
+
+            cityEnter.append('circle')
+                .attr('class', 'city-node')
+                .attr('r', d => Math.sqrt(d.count) / 4 + 5)
+                .attr('fill', d => cityColors[d.id] || '#9e4a3a')
+                .attr('stroke', '#fff')
+                .attr('stroke-width', 2)
+                .on('mouseover', function(event, d) {
+                    tooltip.style('visibility', 'visible')
+                        .html(`
+                            <h3>${d.id}</h3>
+                            <div class="meta">First press: ${d.year}</div>
+                            <p>${d.count.toLocaleString()} books by 1500</p>
+                            <div class="click-hint">Click to filter books</div>
+                        `)
+                        .style('left', (event.clientX + 12) + 'px')
+                        .style('top', (event.clientY - 10) + 'px');
+                })
+                .on('mouseout', () => tooltip.style('visibility', 'hidden'))
+                .on('click', function(event, d) {
+                    event.stopPropagation();
+                    selectCity(d.id);
+                });
+
+            cityEnter.append('text')
+                .attr('class', 'city-label')
+                .attr('y', d => -Math.sqrt(d.count) / 4 - 8)
+                .attr('text-anchor', 'middle')
+                .text(d => d.id);
+
+            cityEnter.transition().duration(400).style('opacity', 1);
+
+            cities.exit().transition().duration(200)
+                .style('opacity', 0).remove();
+
+            // Update selected state
+            svg.selectAll('.city-node')
+                .classed('selected', d => d.id === selectedCity);
+        }
+
+        function selectCity(cityId) {
+            if (selectedCity === cityId) {
+                selectedCity = null;
+            } else {
+                selectedCity = cityId;
+            }
+            displayLimit = 100;
+            update();
+        }
+
+        function updateFilterInfo() {
+            const container = document.getElementById('filter-info');
+            container.innerHTML = '';
+
+            if (selectedCity) {
+                const tag = document.createElement('div');
+                tag.className = 'filter-tag';
+                tag.innerHTML = `${selectedCity} <button onclick="clearFilter()">&times;</button>`;
+                container.appendChild(tag);
+            }
+        }
+
+        function clearFilter() {
+            selectedCity = null;
+            displayLimit = 100;
+            update();
+        }
+
+        function renderBooks(filteredBooks) {
+            const container = document.getElementById('book-list');
+            const countEl = document.getElementById('book-count');
+            const loadMoreEl = document.getElementById('load-more');
+
+            const displayBooks = filteredBooks.slice(0, displayLimit);
+            const hasMore = filteredBooks.length > displayLimit;
+
+            countEl.textContent = `${filteredBooks.length.toLocaleString()} books${selectedCity ? ' in ' + selectedCity : ''} by ${currentYear}`;
+            document.getElementById('stat-visible').textContent = displayBooks.length;
+
+            if (displayBooks.length === 0) {
+                container.innerHTML = '<div class="no-books">No books yet. Move the slider forward in time.</div>';
+                loadMoreEl.style.display = 'none';
+                return;
+            }
+
+            container.innerHTML = displayBooks.map((book, idx) => `
+                <div class="book-item${book.year === currentYear ? ' highlighted' : ''}${expandedBook === book.id ? ' expanded' : ''}"
+                     data-id="${book.id}" onclick="toggleBook('${book.id}')">
+                    <div class="year-city">
+                        ${book.year} · ${book.city}
+                        ${book.digital_links && book.digital_links.length > 0 ? `<span class="digital-indicator">📄 ${book.digital_links.length} online</span>` : ''}
+                    </div>
+                    <div class="title">${book.title}</div>
+                    <div class="meta">${book.printer || 'Unknown printer'}${book.holdings_count ? ` · ${book.holdings_count} copies worldwide` : ''}</div>
+                    ${expandedBook === book.id ? `<div class="book-details" id="details-${book.id}"></div>` : ''}
+                </div>
+            `).join('');
+
+            loadMoreEl.style.display = hasMore ? 'block' : 'none';
+
+            // If a book is expanded, render its details
+            if (expandedBook) {
+                renderBookDetails(expandedBook);
+            }
+        }
+
+        function toggleBook(bookId) {
+            if (expandedBook === bookId) {
+                expandedBook = null;
+            } else {
+                expandedBook = bookId;
+            }
+            update();
+        }
+
+        function renderBookDetails(bookId) {
+            const detailsEl = document.getElementById(`details-${bookId}`);
+            if (!detailsEl) return;
+
+            // Find book in data
+            const book = books.find(b => b.id === bookId);
+            if (!book) {
+                detailsEl.innerHTML = `<a class="istc-link" href="https://data.cerl.org/istc/${bookId}" target="_blank">View in ISTC catalogue →</a>`;
+                return;
+            }
+
+            const digitalLinks = book.digital_links || [];
+            const holdingsCount = book.holdings_count || 0;
+
+            let html = '';
+
+            // Show AI-generated summary if available
+            if (book.summary) {
+                html += `<div class="book-summary">${book.summary}</div>`;
+            }
+
+            if (digitalLinks.length > 0) {
+                html += '<div class="digital-links">';
+                digitalLinks.slice(0, 5).forEach(link => {
+                    html += `<a class="digital-link" href="${link.url}" target="_blank">${link.name}</a>`;
+                });
+                if (digitalLinks.length > 5) {
+                    html += `<div class="more-links">+${digitalLinks.length - 5} more digital copies</div>`;
+                }
+                html += '</div>';
+            } else {
+                html += '<div class="no-digital">No digital facsimile available</div>';
+            }
+
+            if (holdingsCount > 0) {
+                html += `<div class="holdings-info">Held by ${holdingsCount} institution${holdingsCount > 1 ? 's' : ''} worldwide</div>`;
+            }
+
+            html += `<a class="istc-link" href="https://data.cerl.org/istc/${bookId}" target="_blank">View full ISTC record →</a>`;
+
+            detailsEl.innerHTML = html;
+        }
+
+        function loadMore() {
+            displayLimit += 100;
+            update();
+        }
+
+        function togglePlay() {
+            const btn = document.getElementById('play-btn');
+            if (isPlaying) {
+                clearInterval(playInterval);
+                btn.innerHTML = '&#9658; Play Timeline';
+                btn.classList.remove('active');
+            } else {
+                if (currentYear >= 1500) {
+                    currentYear = 1454;
+                    document.getElementById('year-slider').value = 1454;
+                }
+                btn.innerHTML = '&#10074;&#10074; Pause';
+                btn.classList.add('active');
+                playInterval = setInterval(() => {
+                    currentYear++;
+                    if (currentYear > 1500) {
+                        togglePlay();
+                        return;
+                    }
+                    document.getElementById('year-slider').value = currentYear;
+                    update();
+                }, 150);
+            }
+            isPlaying = !isPlaying;
+        }
+
+        function reset() {
+            if (isPlaying) togglePlay();
+            currentYear = 1454;
+            selectedCity = null;
+            displayLimit = 100;
+            document.getElementById('year-slider').value = 1454;
+            update();
+        }
+
+        // Click outside to clear selection
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.city-node') && !e.target.closest('.book-panel') && !e.target.closest('.filter-tag')) {
+                if (selectedCity) {
+                    selectedCity = null;
+                    displayLimit = 100;
+                    update();
+                }
+            }
+        });
+
+        init();
+    </script>
+</body>
+</html>

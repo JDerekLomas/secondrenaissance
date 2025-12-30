@@ -1,0 +1,670 @@
+{
+  "nodes": [
+    {
+      "id": "Venice",
+      "year": 1469,
+      "count": 3241,
+      "x": 12.34,
+      "y": 45.43
+    },
+    {
+      "id": "Paris",
+      "year": 1465,
+      "count": 2220,
+      "x": 2.35,
+      "y": 48.86
+    },
+    {
+      "id": "Rome",
+      "year": 1467,
+      "count": 1503,
+      "x": 12.49,
+      "y": 41.89
+    },
+    {
+      "id": "K\u00f6ln",
+      "year": 1465,
+      "count": 1322,
+      "x": 6.96,
+      "y": 50.94
+    },
+    {
+      "id": "Lyon",
+      "year": 1473,
+      "count": 1073,
+      "x": 4.84,
+      "y": 45.76
+    },
+    {
+      "id": "Augsburg",
+      "year": 1468,
+      "count": 1059,
+      "x": 10.89,
+      "y": 48.37
+    },
+    {
+      "id": "Milan",
+      "year": 1471,
+      "count": 995,
+      "x": 9.19,
+      "y": 45.46
+    },
+    {
+      "id": "Strasbourg",
+      "year": 1460,
+      "count": 974,
+      "x": 7.75,
+      "y": 48.58
+    },
+    {
+      "id": "Leipzig",
+      "year": 1480,
+      "count": 946,
+      "x": 12.37,
+      "y": 51.34
+    },
+    {
+      "id": "N\u00fcrnberg",
+      "year": 1469,
+      "count": 798,
+      "x": 11.0775,
+      "y": 49.4541666666667
+    },
+    {
+      "id": "Florence",
+      "year": 1471,
+      "count": 703,
+      "x": 11.26,
+      "y": 43.77
+    },
+    {
+      "id": "Basel",
+      "year": 1470,
+      "count": 655,
+      "x": 7.59,
+      "y": 47.56
+    },
+    {
+      "id": "Bologna",
+      "year": 1470,
+      "count": 501,
+      "x": 11.35,
+      "y": 44.49
+    },
+    {
+      "id": "Deventer",
+      "year": 1477,
+      "count": 403,
+      "x": 6.16,
+      "y": 52.25
+    },
+    {
+      "id": "Mainz",
+      "year": 1454,
+      "count": 351,
+      "x": 8.27,
+      "y": 49.99
+    },
+    {
+      "id": "Ulm",
+      "year": 1473,
+      "count": 320,
+      "x": 10.0,
+      "y": 48.4
+    },
+    {
+      "id": "Pavia",
+      "year": 1473,
+      "count": 302,
+      "x": 9.16,
+      "y": 45.19
+    },
+    {
+      "id": "Speyer",
+      "year": 1471,
+      "count": 297,
+      "x": 8.43,
+      "y": 49.32
+    },
+    {
+      "id": "Antwerpen",
+      "year": 1481,
+      "count": 287,
+      "x": 4.4,
+      "y": 51.22
+    },
+    {
+      "id": "Naples",
+      "year": 1469,
+      "count": 259,
+      "x": 14.25,
+      "y": 40.84
+    },
+    {
+      "id": "L\u00fcbeck",
+      "year": 1474,
+      "count": 252,
+      "x": 10.6872222222222,
+      "y": 53.8688888888889
+    },
+    {
+      "id": "Brescia",
+      "year": 1473,
+      "count": 250,
+      "x": 10.22,
+      "y": 45.54
+    },
+    {
+      "id": "Reutlingen",
+      "year": 1474,
+      "count": 208,
+      "x": 9.21,
+      "y": 48.49
+    },
+    {
+      "id": "Westminster",
+      "year": 1476,
+      "count": 174,
+      "x": -0.16,
+      "y": 51.51
+    },
+    {
+      "id": "Padua",
+      "year": 1471,
+      "count": 160,
+      "x": 11.88,
+      "y": 45.41
+    }
+  ],
+  "edges": [
+    {
+      "source": "Bologna",
+      "target": "Venezia",
+      "printer": "Aliotti, Cherubino de",
+      "year": 1492
+    },
+    {
+      "source": "Roma",
+      "target": "Paris",
+      "printer": "Amsterdam, Martinus de",
+      "year": 1500
+    },
+    {
+      "source": "Paris",
+      "target": "Lyon",
+      "printer": "Baligault, F\u00e9lix",
+      "year": 1493
+    },
+    {
+      "source": "Lyon",
+      "target": "Firenze",
+      "printer": "Balsarin, Guillaume",
+      "year": 1487
+    },
+    {
+      "source": "Venezia",
+      "target": "Firenze",
+      "printer": "Bartolommeo Miscomini, Antonio di",
+      "year": 1481
+    },
+    {
+      "source": "Bologna",
+      "target": "Venezia",
+      "printer": "Benedictis, Franciscus de",
+      "year": 1487
+    },
+    {
+      "source": "Venezia",
+      "target": "Lyon",
+      "printer": "Benedictis, Nicolaus de",
+      "year": 1497
+    },
+    {
+      "source": "Bologna",
+      "target": "Venezia",
+      "printer": "Bertochus, Dionysius",
+      "year": 1484
+    },
+    {
+      "source": "Roma",
+      "target": "Basel",
+      "printer": "Besicken, Johann",
+      "year": 1482
+    },
+    {
+      "source": "Wien",
+      "target": "Lyon",
+      "printer": "Bouttellier (Schenck), Pierre",
+      "year": 1487
+    },
+    {
+      "source": "Wien",
+      "target": "Lyon",
+      "printer": "Bouttellier, Pierre",
+      "year": 1487
+    },
+    {
+      "source": "Barcelona",
+      "target": "Sevilla",
+      "printer": "Brun, Pedro",
+      "year": 1483
+    },
+    {
+      "source": "Barcelona",
+      "target": "Sevilla",
+      "printer": "Brun, Peter",
+      "year": 1490
+    },
+    {
+      "source": "Firenze",
+      "target": "Venezia",
+      "printer": "Carlo, Jacopo di",
+      "year": 1491
+    },
+    {
+      "source": "K\u00f6ln",
+      "target": "Westminster",
+      "printer": "Caxton, William",
+      "year": 1476
+    },
+    {
+      "source": "Lyon",
+      "target": "Paris",
+      "printer": "Chaussard, Barnab\u00e9",
+      "year": 1495
+    },
+    {
+      "source": "Paris",
+      "target": "Roma",
+      "printer": "Doliatoris, Simon",
+      "year": 1483
+    },
+    {
+      "source": "Venezia",
+      "target": "Paris",
+      "printer": "Dominici, Lucas",
+      "year": 1483
+    },
+    {
+      "source": "Paris",
+      "target": "Lyon",
+      "printer": "Dru, Pierre Le",
+      "year": 1495
+    },
+    {
+      "source": "Basel",
+      "target": "Strasbourg",
+      "printer": "Flach, Martin",
+      "year": 1487
+    },
+    {
+      "source": "Firenze",
+      "target": "Venezia",
+      "printer": "Francisci, Antonius",
+      "year": 1499
+    },
+    {
+      "source": "N\u00fcrnberg",
+      "target": "Leipzig",
+      "printer": "Frisner, Andreas",
+      "year": 1486
+    },
+    {
+      "source": "Paris",
+      "target": "Lyon",
+      "printer": "Gering, Ulrich",
+      "year": 1478
+    },
+    {
+      "source": "Venezia",
+      "target": "Lyon",
+      "printer": "Giunta, Lucantonio",
+      "year": 1500
+    },
+    {
+      "source": "N\u00fcrnberg",
+      "target": "Leipzig",
+      "printer": "Haller, Johann",
+      "year": 1500
+    },
+    {
+      "source": "Bologna",
+      "target": "Venezia",
+      "printer": "Harlem, Henricus de",
+      "year": 1484
+    },
+    {
+      "source": "Augsburg",
+      "target": "Basel",
+      "printer": "Hohenwang, Ludwig",
+      "year": 1487
+    },
+    {
+      "source": "N\u00fcrnberg",
+      "target": "Augsburg",
+      "printer": "Huber, Ambrosius",
+      "year": 1499
+    },
+    {
+      "source": "Lyon",
+      "target": "Paris",
+      "printer": "Johannes Fabri (Smedh)",
+      "year": 1490
+    },
+    {
+      "source": "N\u00fcrnberg",
+      "target": "Strasbourg",
+      "printer": "Koberger, Anton",
+      "year": 1480
+    },
+    {
+      "source": "Sevilla",
+      "target": "Venezia",
+      "printer": "Lavezari, Guido",
+      "year": 1500
+    },
+    {
+      "source": "Antwerpen",
+      "target": "Paris",
+      "printer": "Leeu, Gerard",
+      "year": 1488
+    },
+    {
+      "source": "Venezia",
+      "target": "Paris",
+      "printer": "Lisa, Gerardus de",
+      "year": 1478
+    },
+    {
+      "source": "Bologna",
+      "target": "Venezia",
+      "printer": "Malpiglius, Scipio",
+      "year": 1500
+    },
+    {
+      "source": "Venezia",
+      "target": "Milano",
+      "printer": "Mangius, Benedictus",
+      "year": 1499
+    },
+    {
+      "source": "Venezia",
+      "target": "Paris",
+      "printer": "Manutius, Aldus",
+      "year": 1497
+    },
+    {
+      "source": "Paris",
+      "target": "Lyon",
+      "printer": "Marchant, Guy",
+      "year": 1483
+    },
+    {
+      "source": "Paris",
+      "target": "Lyon",
+      "printer": "Marnef, Geoffroy de",
+      "year": 1497
+    },
+    {
+      "source": "Deventer",
+      "target": "Antwerpen",
+      "printer": "Martens, Thierry",
+      "year": 1493
+    },
+    {
+      "source": "Paris",
+      "target": "Lyon",
+      "printer": "Mittelhus, Georg",
+      "year": 1495
+    },
+    {
+      "source": "Lyon",
+      "target": "Wien",
+      "printer": "Mittelhus, Georg",
+      "year": 1495
+    },
+    {
+      "source": "Mainz",
+      "target": "Lyon",
+      "printer": "Neumeister, Johann",
+      "year": 1487
+    },
+    {
+      "source": "Paris",
+      "target": "Lyon",
+      "printer": "Noir, Michel le",
+      "year": 1495
+    },
+    {
+      "source": "Lyon",
+      "target": "Paris",
+      "printer": "Ortuin, Gaspard",
+      "year": 1495
+    },
+    {
+      "source": "Milano",
+      "target": "Bologna",
+      "printer": "Pachel, Leonardus",
+      "year": 1492
+    },
+    {
+      "source": "Bologna",
+      "target": "Venezia",
+      "printer": "Pachel, Leonardus",
+      "year": 1494
+    },
+    {
+      "source": "Paris",
+      "target": "Lyon",
+      "printer": "Petit, Jean",
+      "year": 1495
+    },
+    {
+      "source": "Firenze",
+      "target": "Venezia",
+      "printer": "Petri, Johann",
+      "year": 1499
+    },
+    {
+      "source": "Lyon",
+      "target": "Paris",
+      "printer": "Philippi, Nicolaus",
+      "year": 1478
+    },
+    {
+      "source": "Roma",
+      "target": "Paris",
+      "printer": "Plannck, Stephan",
+      "year": 1485
+    },
+    {
+      "source": "Lyon",
+      "target": "Paris",
+      "printer": "Printer of Andrelinus, Carmen panegyricum",
+      "year": 1495
+    },
+    {
+      "source": "Strasbourg",
+      "target": "Lyon",
+      "printer": "Printer of the 'Antichristus'",
+      "year": 1492
+    },
+    {
+      "source": "Antwerpen",
+      "target": "Paris",
+      "printer": "Printer of the 'Mensa philosophica'",
+      "year": 1487
+    },
+    {
+      "source": "Paris",
+      "target": "Lyon",
+      "printer": "Pr\u00e9, Jean Du",
+      "year": 1487
+    },
+    {
+      "source": "Venezia",
+      "target": "Bologna",
+      "printer": "Ragazonibus, Jacobus de",
+      "year": 1495
+    },
+    {
+      "source": "Venezia",
+      "target": "Augsburg",
+      "printer": "Ratdolt, Erhard",
+      "year": 1485
+    },
+    {
+      "source": "Paris",
+      "target": "Lyon",
+      "printer": "Richard, Jean",
+      "year": 1500
+    },
+    {
+      "source": "Roma",
+      "target": "Paris",
+      "printer": "Rot, Adam",
+      "year": 1472
+    },
+    {
+      "source": "Venezia",
+      "target": "Lyon",
+      "printer": "Saracenus, Marinus",
+      "year": 1491
+    },
+    {
+      "source": "K\u00f6ln",
+      "target": "Basel",
+      "printer": "Schilling, Johann",
+      "year": 1473
+    },
+    {
+      "source": "Basel",
+      "target": "Paris",
+      "printer": "Schilling, Johann",
+      "year": 1478
+    },
+    {
+      "source": "Venezia",
+      "target": "Bologna",
+      "printer": "Schriber, Johannes",
+      "year": 1478
+    },
+    {
+      "source": "Paris",
+      "target": "Lyon",
+      "printer": "Soncino, Joshua Solomon",
+      "year": 1484
+    },
+    {
+      "source": "Venezia",
+      "target": "Lyon",
+      "printer": "Stahel, Conrad",
+      "year": 1488
+    },
+    {
+      "source": "Venezia",
+      "target": "Lyon",
+      "printer": "Suigus, Jacobinus",
+      "year": 1496
+    },
+    {
+      "source": "Paris",
+      "target": "Lyon",
+      "printer": "Symonel, Louis",
+      "year": 1478
+    },
+    {
+      "source": "Milano",
+      "target": "Paris",
+      "printer": "Uldericus Scinzenzeler",
+      "year": 1492
+    },
+    {
+      "source": "Venezia",
+      "target": "Milano",
+      "printer": "Valdarfer, Christophorus",
+      "year": 1474
+    },
+    {
+      "source": "Bologna",
+      "target": "Venezia",
+      "printer": "Walbeck, Johannes",
+      "year": 1483
+    },
+    {
+      "source": "Basel",
+      "target": "Lyon",
+      "printer": "Wenssler, Michael",
+      "year": 1495
+    },
+    {
+      "source": "Lyon",
+      "target": "Paris",
+      "printer": "Wolf, Nicolaus",
+      "year": 1497
+    },
+    {
+      "source": "Milano",
+      "target": "Firenze",
+      "printer": "Zarotus, Antonius",
+      "year": 1490
+    },
+    {
+      "source": "N\u00fcrnberg",
+      "target": "Venezia",
+      "printer": "Zeninger, Conrad",
+      "year": 1486
+    },
+    {
+      "source": "Paris",
+      "target": "Lyon",
+      "printer": "du Pr\u00e9, Jean",
+      "year": 1485
+    },
+    {
+      "source": "Bologna",
+      "target": "Paris",
+      "printer": "himself",
+      "year": 1497
+    }
+  ],
+  "events": [
+    {
+      "year": 1455,
+      "city": "Mainz",
+      "event": "Gutenberg Bible",
+      "desc": "First major book printed with movable type"
+    },
+    {
+      "year": 1465,
+      "city": "Subiaco",
+      "event": "First Italian Press",
+      "desc": "Sweynheym & Pannartz bring printing to Italy"
+    },
+    {
+      "year": 1469,
+      "city": "Venice",
+      "event": "Venice Begins",
+      "desc": "Johann von Speyer opens first Venice press"
+    },
+    {
+      "year": 1470,
+      "city": "Paris",
+      "event": "Sorbonne Press",
+      "desc": "First French printing at the university"
+    },
+    {
+      "year": 1476,
+      "city": "Westminster",
+      "event": "Caxton's Press",
+      "desc": "First English printing press"
+    },
+    {
+      "year": 1490,
+      "city": "Venice",
+      "event": "Aldus Manutius",
+      "desc": "Revolutionary pocket editions begin"
+    }
+  ],
+  "source": "ISTC (Incunabula Short Title Catalogue), British Library 2025"
+}
