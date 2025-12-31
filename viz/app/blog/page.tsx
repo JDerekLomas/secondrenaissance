@@ -35,6 +35,14 @@ const pinnedPosts = [
 // All posts in reverse chronological order (newest first)
 const posts = [
   {
+    slug: "spread-of-printing",
+    title: "How the Printing Press Spread Across Europe: An Interactive Map (1450-1500)",
+    date: "Dec 31, 2025",
+    excerpt: "Watch Gutenberg's invention spread from Mainz to 250 cities in 50 years. Interactive map of 24,000+ incunabula, printer migrations, and the Sack of Mainz that scattered printing across Europe.",
+    tag: "Visualization",
+    category: "Data",
+  },
+  {
     slug: "irish-intellect",
     title: "Irish Intellectual History: The Hidden Tradition",
     date: "Dec 27, 2025",
@@ -277,6 +285,7 @@ const tagColors: Record<string, { bg: string; text: string }> = {
   Analysis: { bg: '#f5f0e8', text: '#8a6b3a' },
   Methods: { bg: '#e8f5e8', text: '#3a8a5a' },
   Authors: { bg: '#f0e8f5', text: '#6b3a8a' },
+  Visualization: { bg: '#e8f5f0', text: '#3a8a6b' },
   Draft: { bg: '#f5f5f5', text: '#888' },
 };
 
