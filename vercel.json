@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd viz && npm run build",
+  "outputDirectory": "viz/.next",
+  "installCommand": "cd viz && npm install",
+  "framework": "nextjs"
+}
