@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "Methodology: How We Estimated Digitization Rates",
+  description: "Documenting the sources and methods behind our accessibility estimates. How we derived the 18% digitized, 8% OCR, and 3% translated figures.",
+  slug: "methodology",
+  date: "2025-11-10",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function Methodology() {
   return (
@@ -7,6 +18,7 @@ export default function Methodology() {
       tag="Methods"
       slug="methodology"
       prevPost={{ href: "/blog/gaps-of-the-greats", title: "Gaps of the Greats" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

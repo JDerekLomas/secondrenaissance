@@ -460,13 +460,13 @@
         </div>
 
         <div id="legend">
-            <h3>Locations</h3>
+            <h3>Regions</h3>
             <div class="legend-item"><div class="legend-dot" style="background: var(--netherlands);"></div> Netherlands</div>
-            <div class="legend-item"><div class="legend-dot" style="background: var(--prague);"></div> Prague</div>
-            <div class="legend-item"><div class="legend-dot" style="background: var(--england);"></div> England</div>
+            <div class="legend-item"><div class="legend-dot" style="background: var(--prague);"></div> Prague / Empire</div>
+            <div class="legend-item"><div class="legend-dot" style="background: var(--england);"></div> England / Britain</div>
             <div class="legend-item"><div class="legend-dot" style="background: var(--family);"></div> Drebbel Family</div>
-            <div class="legend-item"><div class="legend-dot" style="background: var(--science);"></div> Natural Philosophy</div>
-            <div class="legend-item"><div class="legend-dot" style="background: var(--optics);"></div> Optics / Instruments</div>
+            <div class="legend-item"><div class="legend-dot" style="background: var(--optics);"></div> Optics (Middelburg)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: var(--science);"></div> Continental Science</div>
         </div>
 
         <div id="controls">
@@ -483,7 +483,7 @@
             <h3>Network</h3>
             <div class="stat">Figures<span class="stat-value" id="stat-nodes">0</span></div>
             <div class="stat">Connections<span class="stat-value" id="stat-edges">0</span></div>
-            <div class="stat">Timespan<span class="stat-value">1526–1695</span></div>
+            <div class="stat">Timespan<span class="stat-value">1527–1706</span></div>
         </div>
 
         <div id="tooltip"></div>
@@ -694,19 +694,60 @@ const graphData = {
       "note": "Colleague of Lippershey. Drebbel knew both Middelburg lens makers."
     },
 
-    // NETHERLANDS - PUBLISHERS
+    // NETHERLANDS - ALKMAAR CIRCLE (Anabaptists)
     {
       "id": "schagen",
       "label": "Gerrit Pietersz Schagen",
+      "birth": 1573,
+      "death": 1616,
+      "place": "Alkmaar",
+      "group": "netherlands",
+      "role": "Friend, polymath, Anabaptist",
+      "key_works": [
+        "Eulogy for Drebbel in Wonder-vondt (1607)",
+        "Letter to Adriaen Anthoniszoon praising Drebbel"
+      ],
+      "note": "Intimate friend of Drebbel, described as 'sharp-witted' and a 'universal genius.' Wrote commending letter praising Drebbel's Perpetuum Mobile. Drebbel wanted to take him to England but Schagen declined. Fellow Anabaptist."
+    },
+    {
+      "id": "rietwijck",
+      "label": "Ysbrandt van Rietwijck",
       "birth": 1560,
       "death": 1620,
       "place": "Alkmaar",
       "group": "netherlands",
-      "role": "Publisher, bookseller",
+      "role": "Friend, correspondent",
       "key_works": [
-        "Published Wonder-vondt (1607)"
+        "Provided De Quinta Essentia manuscript to Morsius"
       ],
-      "note": "Alkmaar bookseller who published Drebbel's first philosophical work."
+      "note": "Intimate Alkmaar friend to whom Drebbel wrote letter c. 1608 describing his camera magica/magic lantern. Later provided Drebbel's manuscript to Joachim Morsius for publication."
+    },
+    {
+      "id": "adriaan_anthonisz",
+      "label": "Adriaen Anthoniszoon",
+      "birth": 1527,
+      "death": 1607,
+      "place": "Alkmaar",
+      "group": "science",
+      "role": "Burgomaster, mathematician",
+      "key_works": [
+        "Discovered π approximation 355/113"
+      ],
+      "note": "Burgomaster of Alkmaar, greatly interested in mathematical sciences. Father of Adriaan and Jacob Metius. Credited with discovering the ratio π = 355/113."
+    },
+    {
+      "id": "de_houtman",
+      "label": "Frederik de Houtman",
+      "birth": 1540,
+      "death": 1627,
+      "place": "Alkmaar → East Indies",
+      "group": "netherlands",
+      "role": "Explorer, astronomer",
+      "key_works": [
+        "First Malayan Dictionary",
+        "Southern hemisphere star observations"
+      ],
+      "note": "Pupil of Adriaan Metius. First Dutchman to visit East Indies (1596). Made astronomical observations while imprisoned at Atjeh. Drebbel appeared as guardian at 1597 estate division — indicating family connection."
     },
 
     // NETHERLANDS - ALKMAAR CONNECTIONS
@@ -901,12 +942,12 @@ const graphData = {
       "birth": 1566,
       "death": 1625,
       "place": "London",
-      "group": "royalty",
+      "group": "england",
       "role": "King of England & Scotland",
       "key_works": [
         "Daemonologie (1597)"
       ],
-      "note": "Drebbel's patron from 1604. Rode in the submarine on the Thames. Housed Drebbel at Eltham Palace."
+      "note": "Drebbel's patron from 1604. Rode in the submarine on the Thames. Housed Drebbel at Eltham Palace. James called Drebbel an 'everlasting inventor' though said nothing achieved cost-benefits."
     },
     {
       "id": "henry",
@@ -914,10 +955,34 @@ const graphData = {
       "birth": 1594,
       "death": 1612,
       "place": "London",
-      "group": "royalty",
+      "group": "england",
       "role": "Prince of Wales",
       "key_works": [],
-      "note": "The 'Renaissance Prince.' Drebbel's major sponsor 1608-1612. Secured Drebbel's release from Prague prison. Died at 18."
+      "note": "The 'Renaissance Prince.' Drebbel's major sponsor 1608-1612. Paid Drebbel £20 in 1609 and 1610. Gave permission for Prague journey. Secured his release from Prague prison. Died November 1612 at 18."
+    },
+    {
+      "id": "buckingham",
+      "label": "George Villiers, Duke of Buckingham",
+      "birth": 1592,
+      "death": 1628,
+      "place": "London",
+      "group": "england",
+      "role": "Royal favourite, admiral",
+      "key_works": [
+        "Led expeditions to La Rochelle (1627-28)"
+      ],
+      "note": "Drebbel's patron after Prince Henry's death. Provided Drebbel with workshop and lodgings in the Minories. Commissioned Drebbel's fire-ships and water engines for La Rochelle expeditions."
+    },
+    {
+      "id": "charles",
+      "label": "King Charles I",
+      "birth": 1600,
+      "death": 1649,
+      "place": "London",
+      "group": "england",
+      "role": "King of England & Scotland",
+      "key_works": [],
+      "note": "Drebbel served Charles I after James I's death in 1625 until his own death in 1633."
     },
 
     // ENGLAND - PHILOSOPHERS & SCIENTISTS
@@ -927,13 +992,92 @@ const graphData = {
       "birth": 1561,
       "death": 1626,
       "place": "London",
-      "group": "science",
+      "group": "england",
       "role": "Philosopher, statesman",
       "key_works": [
         "Novum Organum (1620)",
         "New Atlantis (1627)"
       ],
-      "note": "Salomon's House in New Atlantis was partly inspired by Drebbel's inventions (per Colie 1955). Visited Eltham Palace where Drebbel resided."
+      "note": "Salomon's House in New Atlantis was partly inspired by Drebbel's inventions (per Colie 1955). Huygens compared Drebbel to Bacon, calling Drebbel a 'moon' to Bacon's 'sun.'"
+    },
+    {
+      "id": "fludd",
+      "label": "Robert Fludd",
+      "birth": 1574,
+      "death": 1637,
+      "place": "London",
+      "group": "england",
+      "role": "Physician, Hermetic philosopher",
+      "key_works": [
+        "Utriusque Cosmi Historia (1617-21)",
+        "Medicina Catholica (1629)"
+      ],
+      "note": "Medical man doing alchemical experiments in London. Acquaintance of Drebbel. Both moved in Rosicrucian-adjacent circles."
+    },
+    {
+      "id": "chaloner",
+      "label": "Thomas Chaloner",
+      "birth": 1561,
+      "death": 1615,
+      "place": "London",
+      "group": "england",
+      "role": "Courtier, chemist",
+      "key_works": [
+        "Discovered English alum deposits"
+      ],
+      "note": "Tutor to Prince Henry. Active in chemistry. Acquaintance of Drebbel at Prince Henry's court."
+    },
+    {
+      "id": "tymme",
+      "label": "Thomas Tymme",
+      "birth": 1545,
+      "death": 1620,
+      "place": "London",
+      "group": "england",
+      "role": "Clergyman, alchemical writer",
+      "key_works": [
+        "A Dialogue Philosophicall (1612)"
+      ],
+      "note": "Wrote about Drebbel's perpetual motion in 1612. Stated he was 'very familiar' with Drebbel and observed his work firsthand."
+    },
+    {
+      "id": "gerbier",
+      "label": "Balthasar Gerbier",
+      "birth": 1592,
+      "death": 1667,
+      "place": "Antwerp → London",
+      "group": "england",
+      "role": "Painter, diplomat, adventurer",
+      "key_works": [
+        "Elegy on death of Hendrik Goltzius (1618)"
+      ],
+      "note": "Met Drebbel in London as young man. Wrote elegy on Goltzius's death (1618) giving Drebbel 'very high praise' — indicating intimate relation between Gerbier, Goltzius and Drebbel. Called Drebbel 'naturalist, servant of His Royal Majesty of Great Britain.'"
+    },
+    {
+      "id": "rubens",
+      "label": "Peter Paul Rubens",
+      "birth": 1577,
+      "death": 1640,
+      "place": "Antwerp",
+      "group": "netherlands",
+      "role": "Painter, diplomat",
+      "key_works": [
+        "Descent from the Cross (1614)"
+      ],
+      "note": "Met Drebbel in London in 1629. Said: 'I never remember having seen a man of more extraordinary personal appearance than he.' Received instructions from de Peiresc to examine Drebbel's perpetuum mobile in Brussels."
+    },
+    {
+      "id": "peiresc",
+      "label": "Nicolas-Claude Fabri de Peiresc",
+      "birth": 1580,
+      "death": 1637,
+      "place": "Aix-en-Provence",
+      "group": "science",
+      "role": "Antiquarian, astronomer",
+      "key_works": [
+        "Correspondence (unpublished)"
+      ],
+      "note": "French savant who never met Drebbel personally but obtained extensive data from the Kuffler brothers c. 1627. Primary historical source for Drebbel's character and inventions. Wrote: 'He is a man of good understanding, sharp-witted and full of ideas about great inventions.'"
     },
     {
       "id": "boyle",
@@ -941,7 +1085,7 @@ const graphData = {
       "birth": 1627,
       "death": 1691,
       "place": "London",
-      "group": "science",
+      "group": "england",
       "role": "Natural philosopher, chemist",
       "key_works": [
         "The Sceptical Chymist (1661)"
@@ -954,7 +1098,7 @@ const graphData = {
       "birth": 1635,
       "death": 1703,
       "place": "London",
-      "group": "science",
+      "group": "england",
       "role": "Natural philosopher",
       "key_works": [
         "Micrographia (1665)"
@@ -996,7 +1140,7 @@ const graphData = {
       "birth": 1572,
       "death": 1637,
       "place": "London",
-      "group": "literature",
+      "group": "england",
       "role": "Playwright, poet",
       "key_works": [
         "The Alchemist (1610)",
@@ -1010,7 +1154,7 @@ const graphData = {
       "birth": 1564,
       "death": 1616,
       "place": "London",
-      "group": "literature",
+      "group": "england",
       "role": "Playwright, poet",
       "key_works": [
         "The Tempest (1611)"
@@ -1024,39 +1168,242 @@ const graphData = {
       "label": "Abraham Kuffler",
       "birth": 1598,
       "death": 1657,
-      "place": "London",
+      "place": "Cologne → London → Amsterdam",
       "group": "family",
       "role": "Inventor, dye maker",
       "key_works": [
-        "Bow Dye Works (1643)"
+        "Stratford-Bow Dye Works",
+        "Received 20 shillings per diem for fire-ship work"
       ],
-      "note": "Drebbel's son-in-law (married Anna 1623). Continued scarlet dye business. Promoted Drebbel's inventions."
+      "note": "Son of Jacob Kuffler and Margaretha van Redinghoven. Came to England c. 1620. Married Anna Drebbel 1623. Described as 'not learned but handsome in appearance.' After Drebbel's death formed company with brothers to run dye works. Left England during Cromwell's time, settled in Holland."
+    },
+    {
+      "id": "jacob_kuffler_son",
+      "label": "Jacob Kuffler",
+      "birth": 1595,
+      "death": 1622,
+      "place": "Cologne → London → Rome",
+      "group": "family",
+      "role": "Agent, promoter",
+      "key_works": [
+        "Carried Drebbel microscope to Rome (1622)"
+      ],
+      "note": "Brother of Abraham. Came to England with Abraham c. 1620. Sent to France and Italy in 1622 to market Drebbel's microscopes and lenses. Died of plague at Rome, November 1622."
     },
     {
       "id": "johannes_kuffler",
       "label": "Johannes Sibertus Kuffler",
-      "birth": 1595,
+      "birth": 1591,
       "death": 1677,
-      "place": "London",
+      "place": "Cologne → Padua → London",
       "group": "family",
-      "role": "Inventor, chemist",
+      "role": "Physician, inventor",
       "key_works": [
-        "Petitioned Parliament for £10,000 to demonstrate 'secret of sinking ships'"
+        "Doctor of Medicine, Padua (1618)",
+        "Physician in ordinary to Duke of York",
+        "Petitioned Parliament for 'secret of sinking ships'"
       ],
-      "note": "Drebbel's son-in-law (married Catharina 1627). PhD Padua. Taught Robert Hooke glass grinding."
+      "note": "Third Kuffler brother. Studied at Padua. Married Catherina Drebbel 1627. 'After Drebbel's death did most to make his inventions known.' Succeeded Abraham as head of dye works at Stratford-Bow after 1657. Acquainted with Royal Society members."
+    },
+    {
+      "id": "gilles_kuffler",
+      "label": "Gilles (Aegidus) Kuffler",
+      "birth": 1596,
+      "death": 1658,
+      "place": "Amsterdam → Delft → Zeist",
+      "group": "family",
+      "role": "Dyer, merchant",
+      "key_works": [
+        "Dyeworks at Zeist (1649)"
+      ],
+      "note": "Fourth Kuffler brother. Apprenticed to uncle Abraham Kuffler, woollen draper in Amsterdam. Married Magdalena van Gheel at Delft 1639. Began dyeworks at Zeist in 1649. Remained in Holland while brothers returned to England."
     },
     {
       "id": "augustus_kuffler",
       "label": "Augustus Kuffler",
-      "birth": 1630,
+      "birth": 1644,
       "death": 1690,
       "place": "London",
       "group": "family",
       "role": "Chemist",
       "key_works": [
-        "Chymical Operations manuscript (1690, Cambridge)"
+        "A Very Good Collection of Approved Receipts of Chymical Operations (Cambridge MS, 1690)"
       ],
-      "note": "Drebbel's grandson. Preserved family alchemical knowledge in manuscript form."
+      "note": "Drebbel's grandson. Son of Johannes Sibertus and Catherina Drebbel. Compiled family alchemical knowledge in manuscript now at Cambridge."
+    },
+
+    // ROYAL SOCIETY & LATER SCIENTISTS
+    {
+      "id": "faber",
+      "label": "Giovanni Faber",
+      "birth": 1574,
+      "death": 1629,
+      "place": "Rome",
+      "group": "science",
+      "role": "Naturalist, Lincean academician",
+      "key_works": [
+        "Named the 'microscope' (1625)"
+      ],
+      "note": "Italian savant who received microscope gift from Abraham and Gilles Kuffler. Credited with naming the 'microscope' in 1625 to correspond with 'telescope.' Wrote detailed account of Drebbel's submarine."
+    },
+    {
+      "id": "digby",
+      "label": "Kenelm Digby",
+      "birth": 1603,
+      "death": 1665,
+      "place": "London",
+      "group": "england",
+      "role": "Courtier, natural philosopher",
+      "key_works": [
+        "Two Treatises (1644)"
+      ],
+      "note": "Possible eyewitness to submarine demonstration. Wrote detailed account of saltpetre extraction and air purification method used in Drebbel's submarine."
+    },
+    {
+      "id": "napier",
+      "label": "John Napier",
+      "birth": 1550,
+      "death": 1617,
+      "place": "Edinburgh",
+      "group": "england",
+      "role": "Mathematician, inventor",
+      "key_works": [
+        "Logarithms (1614)",
+        "Secret Inventions (1596)"
+      ],
+      "note": "Scottish mathematician interested in submarine technology. His 'Secret Inventions' (1596) included underwater craft. Henry Briggs visited him 1615-1616 and knew Drebbel."
+    },
+    {
+      "id": "mayow",
+      "label": "John Mayow",
+      "birth": 1641,
+      "death": 1679,
+      "place": "Oxford",
+      "group": "england",
+      "role": "Chemist, physician",
+      "key_works": [
+        "Tractatus quinque (1674)"
+      ],
+      "note": "Built theory of respiration and combustion based on Hooke's and Boyle's views, which agreed with Drebbel's discoveries about 'aerial nitre' (oxygen)."
+    },
+    {
+      "id": "oldenburg",
+      "label": "Henry Oldenburg",
+      "birth": 1619,
+      "death": 1677,
+      "place": "London",
+      "group": "england",
+      "role": "Secretary of Royal Society",
+      "key_works": [
+        "Philosophical Transactions editor"
+      ],
+      "note": "Confirmed Drebbel's ability to extract 'subtle spirit from the air.' Intermediary between Boyle and Spinoza regarding oxygen extraction research."
+    },
+    {
+      "id": "spinoza",
+      "label": "Baruch Spinoza",
+      "birth": 1632,
+      "death": 1677,
+      "place": "Amsterdam",
+      "group": "science",
+      "role": "Philosopher, lens grinder",
+      "key_works": [
+        "Ethics (1677)"
+      ],
+      "note": "Urged by Boyle through Oldenburg to work on extracting oxygen from saltpetre following Drebbel's method. Discovered oxycellulose and nitrocellulose during this research."
+    },
+    {
+      "id": "pepys",
+      "label": "Samuel Pepys",
+      "birth": 1633,
+      "death": 1703,
+      "place": "London",
+      "group": "england",
+      "role": "Diarist, naval administrator",
+      "key_works": [
+        "Diary (1660-1669)"
+      ],
+      "note": "Recorded in diary (March 14, 1662) details of Dr. Kuffler's ship-blowing engine demonstration based on Drebbel's invention."
+    },
+    {
+      "id": "evelyn",
+      "label": "John Evelyn",
+      "birth": 1620,
+      "death": 1706,
+      "place": "London",
+      "group": "england",
+      "role": "Diarist, writer",
+      "key_works": [
+        "Diary",
+        "Sylva (1664)"
+      ],
+      "note": "Mentioned Drebbel as inventor of 'dyed scarlet' in his Diary. Visited 'Dr Keffler, who married ye daughter of ye famous chemist Drebbel' in August 1666."
+    },
+    {
+      "id": "petty",
+      "label": "William Petty",
+      "birth": 1623,
+      "death": 1687,
+      "place": "London",
+      "group": "england",
+      "role": "Economist, scientist",
+      "key_works": [
+        "Political Arithmetic (1690)"
+      ],
+      "note": "Lectured before Royal Society (April 30, 1662) on dyeing, discussing pewter use at Bow-dye works established by the Kufflers using Drebbel's method."
+    },
+    {
+      "id": "descartes",
+      "label": "René Descartes",
+      "birth": 1596,
+      "death": 1650,
+      "place": "France → Netherlands",
+      "group": "science",
+      "role": "Philosopher, mathematician",
+      "key_works": [
+        "Discourse on Method (1637)",
+        "Meditations (1641)"
+      ],
+      "note": "Studied mathematics and astronomy at Franeker under Adriaan Metius (Drebbel's fellow Alkmaar townsman). Participated in siege of La Rochelle (1627) where Drebbel's petards were used."
+    },
+    {
+      "id": "torrentius",
+      "label": "Johannes Torrentius",
+      "birth": 1589,
+      "death": 1644,
+      "place": "Amsterdam → Haarlem",
+      "group": "netherlands",
+      "role": "Painter",
+      "key_works": [
+        "Emblematic Still Life (1614)"
+      ],
+      "note": "Painter suspected of using Drebbel's camera obscura in his art. Constantijn Huygens and Jacob de Gheyn concurred with this theory."
+    },
+    {
+      "id": "moray",
+      "label": "Sir Robert Moray",
+      "birth": 1608,
+      "death": 1673,
+      "place": "London",
+      "group": "england",
+      "role": "Founding Fellow of Royal Society",
+      "key_works": [
+        "Royal Society founding (1660)"
+      ],
+      "note": "Presented Drebbel's furnace temperature control method to Royal Society (October 1662). Key figure in preserving knowledge of Drebbel's inventions."
+    },
+    {
+      "id": "briggs",
+      "label": "Henry Briggs",
+      "birth": 1561,
+      "death": 1630,
+      "place": "London → Oxford",
+      "group": "england",
+      "role": "Mathematician",
+      "key_works": [
+        "Arithmetica Logarithmica (1624)"
+      ],
+      "note": "Professor at Gresham College, later Oxford. Friend and visitor of John Napier. Acquaintance of Drebbel; associated with him in plans for draining lands around Cambridge."
     },
 
     // ROSICRUCIAN / HERMETIC NETWORK
@@ -1079,7 +1426,7 @@ const graphData = {
       "birth": 1543,
       "death": 1607,
       "place": "London",
-      "group": "alchemy",
+      "group": "england",
       "role": "Poet, alchemist, courtier",
       "key_works": [
         "My Mind to Me a Kingdom Is"
@@ -1327,7 +1674,175 @@ const graphData = {
     // GALILEO
     {"source": "drebbel", "target": "galileo", "type": "influenced", "label": "Microscope seen in Rome 1624",
      "citation": "Galileo correspondence; Bedini, Silvio. 'The Instruments of Galileo Galilei.' Physis 17 (1975).",
-     "evidence": "Giovanni Kuffler brought Drebbel microscope to Rome 1623. Galileo examined it 1624, built improved version, sent to Federico Cesi."}
+     "evidence": "Giovanni Kuffler brought Drebbel microscope to Rome 1623. Galileo examined it 1624, built improved version, sent to Federico Cesi."},
+
+    // NEW FROM TIERIE (1932)
+    // Alkmaar Circle
+    {"source": "schagen", "target": "drebbel", "type": "colleague", "label": "Intimate friend, fellow Anabaptist",
+     "citation": "Tierie (1932), pp. 21-22.",
+     "evidence": "Schagen wrote eulogy praising Drebbel. Drebbel wanted to take him to England but Schagen declined. Letter to Adriaen Anthoniszoon praises Drebbel's Perpetuum Mobile."},
+    {"source": "rietwijck", "target": "drebbel", "type": "colleague", "label": "Intimate friend, correspondent",
+     "citation": "Tierie (1932), pp. 25-26.",
+     "evidence": "Drebbel wrote to Rietwijck c. 1608 describing camera magica. Rietwijck later provided Drebbel's manuscript to Morsius for publication."},
+    {"source": "rietwijck", "target": "morsius", "type": "collaborated", "label": "Provided manuscript",
+     "citation": "Tierie (1932), p. 26.",
+     "evidence": "Rietwijck gave Drebbel's De Quinta Essentia manuscript to Morsius for Latin publication."},
+    {"source": "adriaan_anthonisz", "target": "jacob_metius", "type": "family", "label": "Father",
+     "citation": "Tierie (1932), p. 21.",
+     "evidence": "Adriaan Anthoniszoon was burgomaster of Alkmaar and father of both Metius brothers."},
+    {"source": "adriaan_anthonisz", "target": "adriaan_metius", "type": "family", "label": "Father",
+     "citation": "Tierie (1932), p. 21.",
+     "evidence": "Adriaan Anthoniszoon was father of both Metius brothers."},
+    {"source": "de_houtman", "target": "drebbel", "type": "colleague", "label": "Family connection",
+     "citation": "Tierie (1932), p. 22.",
+     "evidence": "Drebbel appeared as guardian/blood-relation at 1597 estate division of de Houtman family. Indicates family connection."},
+    {"source": "de_houtman", "target": "adriaan_metius", "type": "teacher", "label": "Astronomy pupil",
+     "citation": "Tierie (1932), p. 22.",
+     "evidence": "Frederik de Houtman was pupil of Adriaan Metius in astronomy before voyage to East Indies."},
+
+    // English patrons and circle
+    {"source": "buckingham", "target": "drebbel", "type": "patron", "label": "Patron, provided workshop",
+     "citation": "Tierie (1932), pp. 11-12.",
+     "evidence": "Buckingham provided Drebbel with workshop and lodgings in the Minories. Commissioned fire-ships for La Rochelle."},
+    {"source": "charles", "target": "drebbel", "type": "patron", "label": "Patron from 1625",
+     "citation": "Tierie (1932), p. 12.",
+     "evidence": "Drebbel served Charles I after James I's death in 1625."},
+    {"source": "buckingham", "target": "gerbier", "type": "patron", "label": "Agent and entertainer",
+     "citation": "Tierie (1932), p. 24.",
+     "evidence": "Gerbier came in contact with Buckingham through Noel de Caron; responsible for Duke's entertainments."},
+    {"source": "chaloner", "target": "drebbel", "type": "colleague", "label": "Acquaintance at court",
+     "citation": "Tierie (1932), p. 23.",
+     "evidence": "Chaloner was tutor to Prince Henry and active in chemistry; acquaintance of Drebbel."},
+    {"source": "henry", "target": "chaloner", "type": "patron", "label": "Tutor",
+     "citation": "Tierie (1932), p. 23.",
+     "evidence": "Thomas Chaloner was tutor to Prince Henry."},
+    {"source": "fludd", "target": "drebbel", "type": "colleague", "label": "London alchemists",
+     "citation": "Tierie (1932), p. 23.",
+     "evidence": "Both medical men doing alchemical experiments in London. Acquaintances."},
+    {"source": "tymme", "target": "drebbel", "type": "colleague", "label": "'Very familiar'",
+     "citation": "Tymme, Thomas. A Dialogue Philosophicall (1612); Tierie (1932), pp. 31-32.",
+     "evidence": "Tymme stated he was 'very familiar' with Drebbel and observed his perpetuum mobile firsthand."},
+    {"source": "gerbier", "target": "drebbel", "type": "colleague", "label": "Friend, praised highly",
+     "citation": "Tierie (1932), pp. 24-25.",
+     "evidence": "Gerbier's 1618 elegy on Goltzius gives Drebbel 'very high praise' indicating intimate relation. Called him 'naturalist, servant of His Royal Majesty.'"},
+    {"source": "gerbier", "target": "goltzius", "type": "colleague", "label": "Wrote elegy on death",
+     "citation": "Tierie (1932), p. 24.",
+     "evidence": "Gerbier wrote elegy on Goltzius's death published at The Hague 1620."},
+
+    // Continental connections
+    {"source": "rubens", "target": "drebbel", "type": "colleague", "label": "Met in London 1629",
+     "citation": "Tierie (1932), p. 15.",
+     "evidence": "Rubens met Drebbel in London 1629. Said: 'I never remember having seen a man of more extraordinary personal appearance than he.'"},
+    {"source": "peiresc", "target": "rubens", "type": "colleague", "label": "Correspondent",
+     "citation": "Tierie (1932), p. 33.",
+     "evidence": "De Peiresc sent detailed instructions to Rubens to examine Drebbel's perpetuum mobile in Brussels."},
+    {"source": "peiresc", "target": "drebbel", "type": "influenced", "label": "Primary historical source",
+     "citation": "Tierie (1932), pp. 14-15.",
+     "evidence": "De Peiresc obtained extensive data from Kuffler brothers c. 1627. Never met Drebbel but wrote key character descriptions."},
+    {"source": "peiresc", "target": "johannes_kuffler", "type": "colleague", "label": "Source of information",
+     "citation": "Tierie (1932), p. 14.",
+     "evidence": "Kuffler brothers paid repeated visits to de Peiresc providing information about Drebbel."},
+    {"source": "peiresc", "target": "abraham_kuffler", "type": "colleague", "label": "Source of information",
+     "citation": "Tierie (1932), p. 14.",
+     "evidence": "Kuffler brothers visited de Peiresc providing information about Drebbel."},
+
+    // Extended Kuffler family
+    {"source": "jacob_kuffler_son", "target": "abraham_kuffler", "type": "family", "label": "Brothers",
+     "citation": "Tierie (1932), p. 9.",
+     "evidence": "Sons of Jacob Kuffler of Cologne."},
+    {"source": "jacob_kuffler_son", "target": "johannes_kuffler", "type": "family", "label": "Brothers",
+     "citation": "Tierie (1932), p. 9.",
+     "evidence": "Sons of Jacob Kuffler of Cologne."},
+    {"source": "gilles_kuffler", "target": "abraham_kuffler", "type": "family", "label": "Brothers",
+     "citation": "Tierie (1932), p. 9.",
+     "evidence": "Fourth Kuffler brother."},
+    {"source": "jacob_kuffler_son", "target": "galileo", "type": "influenced", "label": "Brought microscope to Rome",
+     "citation": "Tierie (1932), pp. 9-10; Galileo correspondence.",
+     "evidence": "Jacob Kuffler carried Drebbel's microscope to Rome 1622. Died of plague there November 1622."},
+
+    // Huygens detailed connections
+    {"source": "huygens_const", "target": "drebbel", "type": "teacher", "label": "Pupil, bought telescope",
+     "citation": "Tierie (1932), pp. 24-25; Huygens, Autobiography.",
+     "evidence": "Huygens visited London 1621, 'saw a great deal of Drebbel,' received lessons, 'more affectionate to me than to any of his friends.' Bought telescope for 40 guilders. Parents worried about association with 'magician.'"},
+    {"source": "huygens_const", "target": "bacon", "type": "colleague", "label": "Compared Drebbel to Bacon",
+     "citation": "Tierie (1932), p. 25.",
+     "evidence": "Huygens wrote of Drebbel 'whom I have spoken of in the same breath with Bacon.'"},
+
+    // NEW FROM TIERIE PAGES 51-90
+    // Royal Society connections
+    {"source": "faber", "target": "drebbel", "type": "influenced", "label": "Named microscope after seeing Drebbel's",
+     "citation": "Tierie (1932), pp. 56-57.",
+     "evidence": "Faber named the 'microscope' in 1625 after receiving one from Abraham and Gilles Kuffler. Wrote detailed account of Drebbel's submarine."},
+    {"source": "abraham_kuffler", "target": "faber", "type": "collaborated", "label": "Gave microscope as gift",
+     "citation": "Tierie (1932), p. 56.",
+     "evidence": "Abraham and Gilles Kuffler gave microscope to Giovanni Faber in Rome."},
+    {"source": "digby", "target": "drebbel", "type": "influenced", "label": "Eyewitness, documented submarine",
+     "citation": "Tierie (1932), pp. 63-64.",
+     "evidence": "Possible eyewitness to submarine demonstration. Wrote detailed account of saltpetre extraction and air purification."},
+    {"source": "mayow", "target": "drebbel", "type": "influenced", "label": "Built on Drebbel's oxygen work",
+     "citation": "Tierie (1932), p. 65.",
+     "evidence": "Built theory of respiration and combustion based on views that agreed with Drebbel's discoveries about 'aerial nitre.'"},
+    {"source": "mayow", "target": "hooke", "type": "colleague", "label": "Built on same foundations",
+     "citation": "Tierie (1932), p. 65.",
+     "evidence": "Both built theories of respiration agreeing with Drebbel's discoveries."},
+    {"source": "mayow", "target": "boyle", "type": "colleague", "label": "Built on same foundations",
+     "citation": "Tierie (1932), p. 65.",
+     "evidence": "Both pursued Drebbel's air purification research."},
+    {"source": "oldenburg", "target": "drebbel", "type": "influenced", "label": "Confirmed air extraction ability",
+     "citation": "Tierie (1932), p. 64.",
+     "evidence": "Confirmed Drebbel's ability to extract 'subtle spirit from the air.'"},
+    {"source": "oldenburg", "target": "boyle", "type": "collaborated", "label": "Royal Society correspondence",
+     "citation": "Tierie (1932), p. 72.",
+     "evidence": "Intermediary between Boyle and Spinoza regarding oxygen extraction research."},
+    {"source": "oldenburg", "target": "spinoza", "type": "collaborated", "label": "Urged oxygen research",
+     "citation": "Tierie (1932), p. 72.",
+     "evidence": "At Boyle's request, urged Spinoza to work on extracting oxygen from saltpetre."},
+    {"source": "spinoza", "target": "drebbel", "type": "influenced", "label": "Pursued oxygen extraction method",
+     "citation": "Tierie (1932), p. 72.",
+     "evidence": "Urged to work on Drebbel's method. Discovered oxycellulose and nitrocellulose during this research."},
+    {"source": "pepys", "target": "johannes_kuffler", "type": "colleague", "label": "Witnessed demonstration",
+     "citation": "Pepys, Diary (March 14, 1662); Tierie (1932), p. 75.",
+     "evidence": "Recorded details of Dr. Kuffler's ship-blowing engine demonstration based on Drebbel's invention."},
+    {"source": "evelyn", "target": "johannes_kuffler", "type": "colleague", "label": "Visited dye works",
+     "citation": "Evelyn, Diary (August 1666); Tierie (1932), p. 78.",
+     "evidence": "Visited 'Dr Keffler, who married ye daughter of ye famous chemist Drebbel.'"},
+    {"source": "evelyn", "target": "drebbel", "type": "influenced", "label": "Called inventor of scarlet dye",
+     "citation": "Tierie (1932), p. 78.",
+     "evidence": "Mentioned Drebbel as inventor of 'dyed scarlet' in Diary."},
+    {"source": "petty", "target": "drebbel", "type": "influenced", "label": "Lectured on Drebbel's dye method",
+     "citation": "Tierie (1932), p. 77.",
+     "evidence": "Lectured before Royal Society (April 30, 1662) on dyeing, discussing pewter use at Bow-dye works."},
+    {"source": "moray", "target": "drebbel", "type": "influenced", "label": "Presented furnace method",
+     "citation": "Tierie (1932), p. 46.",
+     "evidence": "Presented Drebbel's furnace temperature control method to Royal Society (October 1662)."},
+    {"source": "briggs", "target": "drebbel", "type": "collaborated", "label": "Drainage project",
+     "citation": "Tierie (1932), p. 84.",
+     "evidence": "Associated with Drebbel in plans for draining lands around Cambridge."},
+    {"source": "briggs", "target": "napier", "type": "colleague", "label": "Visited, published logarithms",
+     "citation": "Tierie (1932), p. 62.",
+     "evidence": "Friend and visitor of Napier 1615-1616; published commentary on Napier's logarithms."},
+    {"source": "descartes", "target": "adriaan_metius", "type": "teacher", "label": "Studied under at Franeker",
+     "citation": "Tierie (1932), p. 83.",
+     "evidence": "Studied mathematics and astronomy at Franeker under Adriaan Metius."},
+    {"source": "torrentius", "target": "drebbel", "type": "influenced", "label": "May have used camera obscura",
+     "citation": "Tierie (1932), pp. 51-52.",
+     "evidence": "Painter suspected of using Drebbel's camera obscura. Huygens and de Gheyn concurred with this theory."},
+    {"source": "huygens_const", "target": "torrentius", "type": "colleague", "label": "Suspected camera obscura use",
+     "citation": "Tierie (1932), p. 52.",
+     "evidence": "Huygens theorized Torrentius used Drebbel's camera obscura for his paintings."},
+    {"source": "de_gheyn", "target": "torrentius", "type": "colleague", "label": "Suspected camera obscura use",
+     "citation": "Tierie (1932), p. 52.",
+     "evidence": "Concurred with Huygens about Torrentius using camera obscura."},
+
+    // Submarine and military
+    {"source": "napier", "target": "drebbel", "type": "influenced", "label": "Earlier submarine theorist",
+     "citation": "Tierie (1932), p. 62.",
+     "evidence": "Napier's 'Secret Inventions' (1596) included underwater craft, predating but influencing the field Drebbel mastered."},
+
+    // Boyle's key quote about Drebbel
+    {"source": "boyle", "target": "drebbel", "type": "influenced", "label": "'Great singular learned mechanic'",
+     "citation": "Tierie (1932), p. 80.",
+     "evidence": "Boyle called Drebbel 'that great singular learned mechanic.' Experimentally confirmed pewter's role in scarlet dyeing."}
   ]
 };
 

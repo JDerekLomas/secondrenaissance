@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "Progress Studies and the Renaissance: Ten Questions We Can Finally Answer",
+  description: "Patrick Collison and Tyler Cowen want to understand what conditions enable progress. We have 500,000 data points they haven't seen.",
+  slug: "progress-studies",
+  date: "2025-12-20",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function ProgressStudies() {
   return (
@@ -8,6 +19,7 @@ export default function ProgressStudies() {
       slug="progress-studies"
       date="December 2025"
       prevPost={{ href: "/blog/why-latin-matters", title: "Why Latin Matters" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

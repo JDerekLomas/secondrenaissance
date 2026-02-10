@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "Why Latin Matters: 500,000 Unread Books",
+  description: "The Renaissance produced half a million Latin works. 97% have never been translated into English. This isn't a footnote in history—it's a catastrophic loss of human knowledge.",
+  slug: "why-latin-matters",
+  date: "2025-12-01",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function WhyLatinMatters() {
   return (
@@ -7,6 +18,7 @@ export default function WhyLatinMatters() {
       tag="Mission"
       slug="why-latin-matters"
       nextPost={{ href: "/blog/forgotten-authors", title: "The Forgotten Giants" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

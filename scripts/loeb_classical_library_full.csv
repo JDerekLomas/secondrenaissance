@@ -1,0 +1,185 @@
+pub_year,author,english_title,translator,publisher,series,original_year,lcl_number
+1950,Ammianus Marcellinus,Roman History Volume I: Books 14-19,J. C. Rolfe,Harvard University Press,Loeb Classical Library,380,L300
+1940,Ammianus Marcellinus,Roman History Volume II: Books 20-26,J. C. Rolfe,Harvard University Press,Loeb Classical Library,380,L315
+1939,Ammianus Marcellinus,Roman History Volume III: Books 27-31,J. C. Rolfe,Harvard University Press,Loeb Classical Library,380,L331
+1996,Apuleius,"Metamorphoses (The Golden Ass) Volume I: Books 1-6",J. Arthur Hanson,Harvard University Press,Loeb Classical Library,170,L044
+1996,Apuleius,"Metamorphoses (The Golden Ass) Volume II: Books 7-11",J. Arthur Hanson,Harvard University Press,Loeb Classical Library,170,L453
+2017,Apuleius,"Apologia. Florida. De Deo Socratis",Christopher P. Jones,Harvard University Press,Loeb Classical Library,160,L534
+1912,Augustine,"Confessions Volume I: Books 1-8",William Watts,Harvard University Press,Loeb Classical Library,400,L026
+1912,Augustine,"Confessions Volume II: Books 9-13",William Watts,Harvard University Press,Loeb Classical Library,400,L027
+1930,Augustine,Select Letters,James Houston Baxter,Harvard University Press,Loeb Classical Library,420,L239
+1957,Augustine,"City of God Volume I: Books 1-3",George E. McCracken,Harvard University Press,Loeb Classical Library,426,L411
+1963,Augustine,"City of God Volume II: Books 4-7",William M. Green,Harvard University Press,Loeb Classical Library,426,L412
+1968,Augustine,"City of God Volume III: Books 8-11",David S. Wiesen,Harvard University Press,Loeb Classical Library,426,L413
+1966,Augustine,"City of God Volume IV: Books 12-15",Philip Levine,Harvard University Press,Loeb Classical Library,426,L414
+1965,Augustine,"City of God Volume V: Books 16-18.35",Eva M. Sanford; William M. Green,Harvard University Press,Loeb Classical Library,426,L415
+1960,Augustine,"City of God Volume VI: Books 18.36-20",William M. Green,Harvard University Press,Loeb Classical Library,426,L416
+1972,Augustine,"City of God Volume VII: Books 21-22",William M. Green,Harvard University Press,Loeb Classical Library,426,L417
+1919,Ausonius,"Volume I: Books 1-17",Hugh G. Evelyn-White,Harvard University Press,Loeb Classical Library,380,L096
+1921,Ausonius,"Volume II: Books 18-20. Paulinus Pellaeus: Eucharisticus",Hugh G. Evelyn-White,Harvard University Press,Loeb Classical Library,380,L115
+1930,Bede,"Ecclesiastical History Volume I: Books 1-3",J. E. King,Harvard University Press,Loeb Classical Library,731,L246
+1930,Bede,"Ecclesiastical History Volume II: Books 4-5",J. E. King,Harvard University Press,Loeb Classical Library,731,L248
+1918,Boethius,"Theological Tractates. The Consolation of Philosophy",H. F. Stewart; E. K. Rand,Harvard University Press,Loeb Classical Library,524,L074
+1917,Caesar,Gallic War,H. J. Edwards,Harvard University Press,Loeb Classical Library,-52,L072
+1914,Caesar,Civil Wars,A. G. Peskett,Harvard University Press,Loeb Classical Library,-48,L039
+1955,Caesar,"Alexandrian War. African War. Spanish War",A. G. Way,Harvard University Press,Loeb Classical Library,-45,L402
+1913,Catullus; Tibullus,"Catullus. Tibullus. Pervigilium Veneris",F. W. Cornish; J. P. Postgate; J. W. Mackail,Harvard University Press,Loeb Classical Library,-54,L006
+1934,Cato; Varro,On Agriculture,W. D. Hooper; Harrison Boyd Ash,Harvard University Press,Loeb Classical Library,-160,L283
+1935,Celsus,"On Medicine Volume I: Books 1-4",W. G. Spencer,Harvard University Press,Loeb Classical Library,30,L292
+1938,Celsus,"On Medicine Volume II: Books 5-6",W. G. Spencer,Harvard University Press,Loeb Classical Library,30,L304
+1938,Celsus,"On Medicine Volume III: Books 7-8",W. G. Spencer,Harvard University Press,Loeb Classical Library,30,L336
+1913,Cicero,On Duties,Walter Miller,Harvard University Press,Loeb Classical Library,-44,L030
+1914,Cicero,On Ends,H. Rackham,Harvard University Press,Loeb Classical Library,-45,L040
+1927,Cicero,Tusculan Disputations,J. E. King,Harvard University Press,Loeb Classical Library,-45,L141
+1923,Cicero,"On Old Age. On Friendship. On Divination",William Armistead Falconer,Harvard University Press,Loeb Classical Library,-44,L154
+1933,Cicero,"On the Nature of the Gods. Academica",H. Rackham,Harvard University Press,Loeb Classical Library,-45,L268
+1928,Cicero,"The Republic. The Laws",Clinton W. Keyes,Harvard University Press,Loeb Classical Library,-51,L213
+1942,Cicero,"On the Orator Books 1-2",E. W. Sutton; H. Rackham,Harvard University Press,Loeb Classical Library,-55,L348
+1942,Cicero,"On the Orator Book 3. On Fate. Stoic Paradoxes. Divisions of Oratory",H. Rackham,Harvard University Press,Loeb Classical Library,-55,L349
+1939,Cicero,"Brutus. Orator",G. L. Hendrickson; H. M. Hubbell,Harvard University Press,Loeb Classical Library,-46,L342
+1954,Cicero,Rhetorica ad Herennium,Harry Caplan,Harvard University Press,Loeb Classical Library,-85,L403
+1949,Cicero,"On Invention. Best Kind of Orator. Topics",H. M. Hubbell,Harvard University Press,Loeb Classical Library,-85,L386
+1927,Cicero,"Pro Quinctio. Pro Roscio Amerino. Pro Roscio Comoedo. On the Agrarian Law",John Henry Freese,Harvard University Press,Loeb Classical Library,-70,L240
+1928,Cicero,"Verrine Orations Volume I",L. H. G. Greenwood,Harvard University Press,Loeb Classical Library,-70,L221
+1935,Cicero,"Verrine Orations Volume II",L. H. G. Greenwood,Harvard University Press,Loeb Classical Library,-70,L293
+1927,Cicero,"Pro Lege Manilia. Pro Caecina. Pro Cluentio. Pro Rabirio",H. Grose Hodge,Harvard University Press,Loeb Classical Library,-66,L198
+1953,Cicero,"In Catilinam. Pro Murena. Pro Sulla. Pro Flacco",C. Macdonald,Harvard University Press,Loeb Classical Library,-63,L324
+1923,Cicero,"Pro Archia. Post Reditum in Senatu. Post Reditum ad Quirites. De Domo Sua. De Haruspicum Responsis. Pro Plancio",N. H. Watts,Harvard University Press,Loeb Classical Library,-57,L158
+1958,Cicero,"Pro Sestio. In Vatinium",R. Gardner,Harvard University Press,Loeb Classical Library,-56,L309
+1958,Cicero,"Pro Caelio. De Provinciis Consularibus. Pro Balbo",R. Gardner,Harvard University Press,Loeb Classical Library,-56,L447
+1953,Cicero,"Pro Milone. In Pisonem. Pro Scauro. Pro Fonteio. Pro Rabirio Postumo. Pro Marcello. Pro Ligario. Pro Rege Deiotaro",N. H. Watts,Harvard University Press,Loeb Classical Library,-52,L252
+2009,Cicero,"Philippics 1-6",D. R. Shackleton Bailey; John T. Ramsey; Gesine Manuwald,Harvard University Press,Loeb Classical Library,-43,L189
+2009,Cicero,"Philippics 7-14",D. R. Shackleton Bailey; John T. Ramsey; Gesine Manuwald,Harvard University Press,Loeb Classical Library,-43,L507
+1999,Cicero,"Letters to Atticus Volume I: Books 1-6",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,-55,L007
+1999,Cicero,"Letters to Atticus Volume II: Books 7-11",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,-50,L008
+1999,Cicero,"Letters to Atticus Volume III: Books 12-16",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,-44,L097
+1999,Cicero,"Letters to Atticus Volume IV",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,-44,L491
+2001,Cicero,"Letters to Friends Volume I: Letters 1-113",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,-50,L205
+2001,Cicero,"Letters to Friends Volume II: Letters 114-280",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,-50,L216
+2001,Cicero,"Letters to Friends Volume III: Letters 281-435",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,-50,L230
+2002,Cicero,"Letters to Quintus and Brutus. Letter Fragments. Invectives. Handbook of Electioneering",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,-50,L462
+1922,Claudian,"Volume I: Panegyric on Probinus and Olybrius. Against Rufinus. War Against Gildo. Against Eutropius. Fescennine Verses. Epithalamium. Panegyrics on the Third and Fourth Consulships of Honorius. Panegyric on the Consulship of Manlius. On Stilicho's Consulship 1",Maurice Platnauer,Harvard University Press,Loeb Classical Library,400,L135
+1922,Claudian,"Volume II: On Stilicho's Consulship 2-3. Panegyric on the Sixth Consulship of Honorius. The Gothic War. Shorter Poems. Rape of Proserpina",Maurice Platnauer,Harvard University Press,Loeb Classical Library,400,L136
+1941,Columella,"On Agriculture Volume I: Books 1-4",Harrison Boyd Ash,Harvard University Press,Loeb Classical Library,65,L361
+1954,Columella,"On Agriculture Volume II: Books 5-9",E. S. Forster; Edward H. Heffner,Harvard University Press,Loeb Classical Library,65,L407
+1955,Columella,"On Agriculture Volume III: Books 10-12. On Trees",E. S. Forster; Edward H. Heffner,Harvard University Press,Loeb Classical Library,65,L408
+1929,Cornelius Nepos,"On Great Generals. On Historians",J. C. Rolfe,Harvard University Press,Loeb Classical Library,-30,L467
+1946,Curtius,"History of Alexander Volume I: Books 1-5",J. C. Rolfe,Harvard University Press,Loeb Classical Library,50,L368
+1946,Curtius,"History of Alexander Volume II: Books 6-10",J. C. Rolfe,Harvard University Press,Loeb Classical Library,50,L369
+1929,Florus,"Epitome of Roman History. Res Gestae Divi Augusti",Edward Seymour Forster,Harvard University Press,Loeb Classical Library,140,L231
+1925,Frontinus,"Stratagems. Aqueducts of Rome",Charles E. Bennett; Mary B. McElwain,Harvard University Press,Loeb Classical Library,98,L174
+1919,Fronto,"Correspondence Volume I",C. R. Haines,Harvard University Press,Loeb Classical Library,160,L112
+1920,Fronto,"Correspondence Volume II",C. R. Haines,Harvard University Press,Loeb Classical Library,160,L113
+1927,Gellius,"Attic Nights Volume I: Books 1-5",J. C. Rolfe,Harvard University Press,Loeb Classical Library,170,L195
+1927,Gellius,"Attic Nights Volume II: Books 6-13",J. C. Rolfe,Harvard University Press,Loeb Classical Library,170,L200
+1927,Gellius,"Attic Nights Volume III: Books 14-20",J. C. Rolfe,Harvard University Press,Loeb Classical Library,170,L212
+1969,Herodian,"History of the Empire Volume I: Books 1-4",C. R. Whittaker,Harvard University Press,Loeb Classical Library,250,L454
+1970,Herodian,"History of the Empire Volume II: Books 5-8",C. R. Whittaker,Harvard University Press,Loeb Classical Library,250,L455
+1922,Historia Augusta,"Volume I",David Magie,Harvard University Press,Loeb Classical Library,400,L139
+1924,Historia Augusta,"Volume II",David Magie,Harvard University Press,Loeb Classical Library,400,L140
+1932,Historia Augusta,"Volume III",David Magie,Harvard University Press,Loeb Classical Library,400,L263
+2004,Horace,"Odes and Epodes",Niall Rudd,Harvard University Press,Loeb Classical Library,-15,L033
+1926,Horace,"Satires. Epistles. The Art of Poetry",H. Rushton Fairclough,Harvard University Press,Loeb Classical Library,-15,L194
+1933,Jerome,Select Letters,F. A. Wright,Harvard University Press,Loeb Classical Library,400,L262
+2004,Juvenal; Persius,"Juvenal and Persius",Susanna Morton Braund,Harvard University Press,Loeb Classical Library,100,L091
+1919,Livy,"History of Rome Volume I: Books 1-2",B. O. Foster,Harvard University Press,Loeb Classical Library,-20,L114
+1922,Livy,"History of Rome Volume II: Books 3-4",B. O. Foster,Harvard University Press,Loeb Classical Library,-20,L133
+1924,Livy,"History of Rome Volume III: Books 5-7",B. O. Foster,Harvard University Press,Loeb Classical Library,-20,L172
+1926,Livy,"History of Rome Volume IV: Books 8-10",B. O. Foster,Harvard University Press,Loeb Classical Library,-20,L191
+1929,Livy,"History of Rome Volume V: Books 21-22",B. O. Foster,Harvard University Press,Loeb Classical Library,-20,L233
+1940,Livy,"History of Rome Volume VI: Books 23-25",Frank Gardner Moore,Harvard University Press,Loeb Classical Library,-20,L355
+1943,Livy,"History of Rome Volume VII: Books 26-27",Frank Gardner Moore,Harvard University Press,Loeb Classical Library,-20,L367
+1949,Livy,"History of Rome Volume VIII: Books 28-30",Frank Gardner Moore,Harvard University Press,Loeb Classical Library,-20,L381
+1935,Livy,"History of Rome Volume IX: Books 31-34",Evan T. Sage,Harvard University Press,Loeb Classical Library,-20,L295
+1936,Livy,"History of Rome Volume X: Books 35-37",Evan T. Sage,Harvard University Press,Loeb Classical Library,-20,L301
+1936,Livy,"History of Rome Volume XI: Books 38-39",Evan T. Sage,Harvard University Press,Loeb Classical Library,-20,L313
+1938,Livy,"History of Rome Volume XII: Books 40-42",Evan T. Sage; Alfred C. Schlesinger,Harvard University Press,Loeb Classical Library,-20,L332
+1951,Livy,"History of Rome Volume XIII: Books 43-45",Alfred C. Schlesinger,Harvard University Press,Loeb Classical Library,-20,L396
+1959,Livy,"History of Rome Volume XIV: Summaries. Fragments. Julius Obsequens",Alfred C. Schlesinger,Harvard University Press,Loeb Classical Library,-20,L404
+1928,Lucan,"The Civil War (Pharsalia)",J. D. Duff,Harvard University Press,Loeb Classical Library,65,L220
+1924,Lucretius,On the Nature of Things,W. H. D. Rouse,Harvard University Press,Loeb Classical Library,-55,L181
+1977,Manilius,Astronomica,G. P. Goold,Harvard University Press,Loeb Classical Library,15,L469
+1993,Martial,"Epigrams Volume I: Spectacles. Books 1-5",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,90,L094
+1993,Martial,"Epigrams Volume II: Books 6-10",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,90,L095
+1993,Martial,"Epigrams Volume III: Books 11-14",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,90,L480
+1934,Minor Latin Poets,"Minor Latin Poets Volume I: Publilius Syrus. Elegies on Maecenas. Grattius. Calpurnius Siculus. Laus Pisonis. Einsiedeln Eclogues. Aetna",J. Wight Duff; Arnold M. Duff,Harvard University Press,Loeb Classical Library,-50,L284
+1934,Minor Latin Poets,"Minor Latin Poets Volume II: Florus. Hadrian. Nemesianus. Reposianus. Tiberianus. Dicta Catonis. Phoenix. Avianus. Rutilius Namatianus",J. Wight Duff; Arnold M. Duff,Harvard University Press,Loeb Classical Library,200,L434
+1914,Ovid,"Heroides. Amores",Grant Showerman,Harvard University Press,Loeb Classical Library,5,L041
+1929,Ovid,"The Art of Love. Cosmetics. Remedies for Love. Ibis. Walnut Tree. Sea Fishing. Consolation",J. H. Mozley,Harvard University Press,Loeb Classical Library,2,L232
+1916,Ovid,"Metamorphoses Volume I: Books 1-8",Frank Justus Miller,Harvard University Press,Loeb Classical Library,8,L042
+1916,Ovid,"Metamorphoses Volume II: Books 9-15",Frank Justus Miller,Harvard University Press,Loeb Classical Library,8,L043
+1931,Ovid,Fasti,James G. Frazer,Harvard University Press,Loeb Classical Library,8,L253
+1924,Ovid,"Tristia. Ex Ponto",Arthur Leslie Wheeler,Harvard University Press,Loeb Classical Library,12,L151
+1913,Petronius; Seneca,"Satyricon. Apocolocyntosis",Michael Heseltine; W. H. D. Rouse,Harvard University Press,Loeb Classical Library,60,L015
+2011,Plautus,"Volume I: Amphitryon. The Comedy of Asses. The Pot of Gold. The Two Bacchises. The Captives",Wolfgang de Melo,Harvard University Press,Loeb Classical Library,-195,L060
+2011,Plautus,"Volume II: Casina. The Casket Comedy. Curculio. Epidicus. The Two Menaechmuses",Wolfgang de Melo,Harvard University Press,Loeb Classical Library,-195,L061
+2011,Plautus,"Volume III: The Merchant. The Braggart Warrior. The Ghost. The Persian",Wolfgang de Melo,Harvard University Press,Loeb Classical Library,-195,L163
+2012,Plautus,"Volume IV: The Little Carthaginian. Pseudolus. The Rope",Wolfgang de Melo,Harvard University Press,Loeb Classical Library,-195,L260
+2013,Plautus,"Volume V: Stichus. Three-Dollar Day. Truculentus. The Tale of a Travelling Bag. Fragments",Wolfgang de Melo,Harvard University Press,Loeb Classical Library,-195,L328
+1969,Pliny the Younger,"Letters Volume I: Books 1-7",Betty Radice,Harvard University Press,Loeb Classical Library,100,L055
+1969,Pliny the Younger,"Letters Volume II: Books 8-10. Panegyricus",Betty Radice,Harvard University Press,Loeb Classical Library,100,L059
+1938,Pliny the Elder,"Natural History Volume I: Books 1-2",H. Rackham,Harvard University Press,Loeb Classical Library,77,L330
+1942,Pliny the Elder,"Natural History Volume II: Books 3-7",H. Rackham,Harvard University Press,Loeb Classical Library,77,L352
+1940,Pliny the Elder,"Natural History Volume III: Books 8-11",H. Rackham,Harvard University Press,Loeb Classical Library,77,L353
+1945,Pliny the Elder,"Natural History Volume IV: Books 12-16",H. Rackham,Harvard University Press,Loeb Classical Library,77,L370
+1950,Pliny the Elder,"Natural History Volume V: Books 17-19",H. Rackham,Harvard University Press,Loeb Classical Library,77,L371
+1951,Pliny the Elder,"Natural History Volume VI: Books 20-23",W. H. S. Jones,Harvard University Press,Loeb Classical Library,77,L392
+1956,Pliny the Elder,"Natural History Volume VII: Books 24-27",W. H. S. Jones,Harvard University Press,Loeb Classical Library,77,L393
+1963,Pliny the Elder,"Natural History Volume VIII: Books 28-32",W. H. S. Jones,Harvard University Press,Loeb Classical Library,77,L418
+1952,Pliny the Elder,"Natural History Volume IX: Books 33-35",H. Rackham,Harvard University Press,Loeb Classical Library,77,L394
+1962,Pliny the Elder,"Natural History Volume X: Books 36-37",D. E. Eichholz,Harvard University Press,Loeb Classical Library,77,L419
+1990,Propertius,Elegies,G. P. Goold,Harvard University Press,Loeb Classical Library,-20,L018
+1949,Prudentius,"Volume I: Preface. Daily Round. Divinity of Christ. Origin of Sin. Fight for Mansoul. Against Symmachus 1",H. J. Thomson,Harvard University Press,Loeb Classical Library,400,L387
+1953,Prudentius,"Volume II: Against Symmachus 2. Crowns of Martyrdom. Scenes from History. Epilogue",H. J. Thomson,Harvard University Press,Loeb Classical Library,400,L398
+2001,Quintilian,"The Orator's Education Volume I: Books 1-2",Donald A. Russell,Harvard University Press,Loeb Classical Library,95,L124
+2001,Quintilian,"The Orator's Education Volume II: Books 3-5",Donald A. Russell,Harvard University Press,Loeb Classical Library,95,L125
+2001,Quintilian,"The Orator's Education Volume III: Books 6-8",Donald A. Russell,Harvard University Press,Loeb Classical Library,95,L126
+2001,Quintilian,"The Orator's Education Volume IV: Books 9-10",Donald A. Russell,Harvard University Press,Loeb Classical Library,95,L127
+2001,Quintilian,"The Orator's Education Volume V: Books 11-12",Donald A. Russell,Harvard University Press,Loeb Classical Library,95,L494
+2006,[Quintilian],"The Lesser Declamations Volume I",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,100,L500
+2006,[Quintilian],"The Lesser Declamations Volume II",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,100,L501
+1936,Old Latin,"Remains of Old Latin Volume II: Livius Andronicus. Naevius. Pacuvius. Accius",E. H. Warmington,Harvard University Press,Loeb Classical Library,-250,L314
+1938,Old Latin,"Remains of Old Latin Volume III: Lucilius. Laws of the Twelve Tables",E. H. Warmington,Harvard University Press,Loeb Classical Library,-150,L329
+1940,Old Latin,"Remains of Old Latin Volume IV: Archaic Inscriptions",E. H. Warmington,Harvard University Press,Loeb Classical Library,-400,L359
+1921,Sallust,"War with Catiline. War with Jugurtha. Histories (Fragments). Letter to Caesar",J. C. Rolfe,Harvard University Press,Loeb Classical Library,-40,L116
+1974,Seneca the Elder,"Declamations Volume I: Controversiae Books 1-6",Michael Winterbottom,Harvard University Press,Loeb Classical Library,35,L463
+1974,Seneca the Elder,"Declamations Volume II: Controversiae Books 7-10. Suasoriae",Michael Winterbottom,Harvard University Press,Loeb Classical Library,35,L464
+1928,Seneca the Younger,"Moral Essays Volume I: De Providentia. De Constantia. De Ira. De Clementia",John W. Basore,Harvard University Press,Loeb Classical Library,55,L214
+1932,Seneca the Younger,"Moral Essays Volume II: De Consolatione ad Marciam. De Vita Beata. De Otio. De Tranquillitate Animi. De Brevitate Vitae. De Consolatione ad Polybium. De Consolatione ad Helviam",John W. Basore,Harvard University Press,Loeb Classical Library,55,L254
+1935,Seneca the Younger,"Moral Essays Volume III: De Beneficiis",John W. Basore,Harvard University Press,Loeb Classical Library,55,L310
+1917,Seneca the Younger,"Epistles Volume I: Epistles 1-65",Richard M. Gummere,Harvard University Press,Loeb Classical Library,64,L075
+1920,Seneca the Younger,"Epistles Volume II: Epistles 66-92",Richard M. Gummere,Harvard University Press,Loeb Classical Library,64,L076
+1925,Seneca the Younger,"Epistles Volume III: Epistles 93-124",Richard M. Gummere,Harvard University Press,Loeb Classical Library,64,L077
+1971,Seneca the Younger,"Natural Questions Volume I: Books 1-3",Thomas H. Corcoran,Harvard University Press,Loeb Classical Library,62,L450
+1972,Seneca the Younger,"Natural Questions Volume II: Books 4-7",Thomas H. Corcoran,Harvard University Press,Loeb Classical Library,62,L457
+2002,Seneca the Younger,"Tragedies Volume I: Hercules. Trojan Women. Phoenician Women. Medea. Phaedra",John G. Fitch,Harvard University Press,Loeb Classical Library,55,L062
+2004,Seneca the Younger,"Tragedies Volume II: Oedipus. Agamemnon. Thyestes. Hercules on Oeta. Octavia",John G. Fitch,Harvard University Press,Loeb Classical Library,55,L078
+1936,Sidonius,"Poems. Letters Books 1-2",W. B. Anderson,Harvard University Press,Loeb Classical Library,470,L296
+1965,Sidonius,"Letters Books 3-9",W. B. Anderson,Harvard University Press,Loeb Classical Library,470,L420
+1934,Silius Italicus,"Punica Volume I: Books 1-8",J. D. Duff,Harvard University Press,Loeb Classical Library,90,L277
+1934,Silius Italicus,"Punica Volume II: Books 9-17",J. D. Duff,Harvard University Press,Loeb Classical Library,90,L278
+2003,Statius,Silvae,D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,92,L206
+2004,Statius,"Thebaid Volume I: Books 1-7",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,92,L207
+2004,Statius,"Thebaid Volume II: Books 8-12. Achilleid",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,92,L498
+1914,Suetonius,"Lives of the Caesars Volume I: Julius. Augustus. Tiberius. Gaius Caligula",J. C. Rolfe,Harvard University Press,Loeb Classical Library,120,L031
+1914,Suetonius,"Lives of the Caesars Volume II: Claudius. Nero. Galba. Otho. Vitellius. Vespasian. Titus. Domitian. Lives of Illustrious Men",J. C. Rolfe,Harvard University Press,Loeb Classical Library,120,L038
+1914,Tacitus,"Agricola. Germania. Dialogue on Oratory",M. Hutton; W. Peterson; R. M. Ogilvie,Harvard University Press,Loeb Classical Library,98,L035
+1925,Tacitus,"Histories Books 1-3",Clifford H. Moore,Harvard University Press,Loeb Classical Library,110,L111
+1931,Tacitus,"Histories Books 4-5. Annals Books 1-3",Clifford H. Moore; John Jackson,Harvard University Press,Loeb Classical Library,115,L249
+1937,Tacitus,"Annals Books 4-6. 11-12",John Jackson,Harvard University Press,Loeb Classical Library,115,L312
+1937,Tacitus,"Annals Books 13-16",John Jackson,Harvard University Press,Loeb Classical Library,115,L322
+2001,Terence,"Volume I: The Woman of Andros. The Self-Tormentor. The Eunuch",John Barsby,Harvard University Press,Loeb Classical Library,-165,L022
+2001,Terence,"Volume II: Phormio. The Mother-in-Law. The Brothers",John Barsby,Harvard University Press,Loeb Classical Library,-165,L023
+1931,Tertullian; Minucius Felix,"Apology. De Spectaculis. Octavius",T. R. Glover; Gerald H. Rendall,Harvard University Press,Loeb Classical Library,200,L250
+1934,Valerius Flaccus,Argonautica,J. H. Mozley,Harvard University Press,Loeb Classical Library,90,L286
+2000,Valerius Maximus,"Memorable Doings and Sayings Volume I: Books 1-5",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,30,L492
+2000,Valerius Maximus,"Memorable Doings and Sayings Volume II: Books 6-9",D. R. Shackleton Bailey,Harvard University Press,Loeb Classical Library,30,L493
+1938,Varro,"On the Latin Language Volume I: Books 5-7",Roland G. Kent,Harvard University Press,Loeb Classical Library,-45,L333
+1938,Varro,"On the Latin Language Volume II: Books 8-10. Fragments",Roland G. Kent,Harvard University Press,Loeb Classical Library,-45,L334
+1924,Velleius Paterculus,"Compendium of Roman History. Res Gestae Divi Augusti",Frederick W. Shipley,Harvard University Press,Loeb Classical Library,30,L152
+1916,Virgil,"Eclogues. Georgics. Aeneid Books 1-6",H. Rushton Fairclough,Harvard University Press,Loeb Classical Library,-25,L063
+1918,Virgil,"Aeneid Books 7-12. Appendix Vergiliana",H. Rushton Fairclough,Harvard University Press,Loeb Classical Library,-25,L064
+1931,Vitruvius,"On Architecture Volume I: Books 1-5",Frank Granger,Harvard University Press,Loeb Classical Library,-25,L251
+1934,Vitruvius,"On Architecture Volume II: Books 6-10",Frank Granger,Harvard University Press,Loeb Classical Library,-25,L280
+2018,Ennius,"Fragmentary Republican Latin Volume I: Ennius Testimonia. Epic Fragments",Sander M. Goldberg; Gesine Manuwald,Harvard University Press,Loeb Classical Library,-175,L294
+2018,Ennius,"Fragmentary Republican Latin Volume II: Ennius Dramatic Fragments. Minor Works",Sander M. Goldberg; Gesine Manuwald,Harvard University Press,Loeb Classical Library,-175,L537

@@ -1,5 +1,16 @@
 import BlogLayout from "../BlogLayout";
 import Link from "next/link";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "The Death of Latin? What 1.6 Million Books Tell Us",
+  description: "German overtook Latin in the 1670s. We analyzed the complete USTC database to pinpoint exactly when Europe's lingua franca lost its dominance.",
+  slug: "death-of-latin",
+  date: "2025-12-06",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function DeathOfLatin() {
   return (
@@ -8,6 +19,8 @@ export default function DeathOfLatin() {
       tag="Data"
       slug="death-of-latin"
       prevPost={{ href: "/blog/mapping-translations", title: "Mapping Translations" }}
+      nextPost={{ href: "/blog/printing-revolution", title: "The Printing Revolution" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

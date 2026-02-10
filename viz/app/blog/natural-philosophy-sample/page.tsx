@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "Natural Philosophy Sample: Renaissance Science Texts",
+  description: "A curated sample of Renaissance natural philosophy texts—astronomy, physics, medicine, and natural magic—showing what remains untranslated.",
+  slug: "natural-philosophy-sample",
+  date: "2025-11-01",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function NaturalPhilosophySample() {
   return (
@@ -8,6 +19,7 @@ export default function NaturalPhilosophySample() {
       slug="natural-philosophy-sample"
       prevPost={{ href: "/blog/methodology", title: "Methodology" }}
       nextPost={{ href: "/blog/roadmap", title: "Translation Roadmap" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

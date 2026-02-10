@@ -1,4 +1,14 @@
 import Link from "next/link";
+import { generateBlogMetadata } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "The Digitization Gap: What's Online and What's Not",
+  description: "Only 18% of Latin works are digitized, 8% have searchable OCR, and less than 3% are translated. The accessibility crisis in Renaissance scholarship.",
+  slug: "digitization-gap",
+  date: "2025-11-01",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
 
 export default function DigitizationGap() {
   return (

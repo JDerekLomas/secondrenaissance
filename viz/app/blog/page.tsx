@@ -1,4 +1,19 @@
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Research Essays",
+  description: "Data-driven research into Renaissance Latin publishing, translation gaps, and the 500,000 works from 1450-1700 that remain untranslated. Explore the hidden libraries of the Renaissance.",
+  alternates: {
+    canonical: '/blog',
+  },
+  openGraph: {
+    title: "Research Essays | Second Renaissance Research",
+    description: "Data-driven research into Renaissance Latin publishing, translation gaps, and the hidden libraries of the Renaissance.",
+    url: "https://secondrenaissance.ai/blog",
+    type: "website",
+  },
+};
 
 // Pinned posts - featured at the top
 const pinnedPosts = [
@@ -34,6 +49,14 @@ const pinnedPosts = [
 
 // All posts in reverse chronological order (newest first)
 const posts = [
+  {
+    slug: "vibecoding-renaissance",
+    title: "Vibecoding and the Renaissance: When \"Anyone, Even If Entirely Unskilled\" Could Create",
+    date: "Feb 8, 2026",
+    excerpt: "Renaissance thinkers dreamed of combinatorial arts that would let the unskilled compose music, command spirits, and generate knowledge. Five centuries later, we call it vibecoding.",
+    tag: "Research",
+    category: "Ideas",
+  },
   {
     slug: "spread-of-printing",
     title: "How the Printing Press Spread Across Europe: An Interactive Map (1450-1500)",

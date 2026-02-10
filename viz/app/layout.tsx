@@ -17,12 +17,19 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Second Renaissance Research",
+  metadataBase: new URL('https://www.secondrenaissance.ai'),
+  title: {
+    default: "Second Renaissance Research",
+    template: "%s | Second Renaissance Research",
+  },
   description: "500,000 Latin works from 1450-1700. Less than 2% translated. The first Renaissance was sparked by rediscovering ancient texts—we're working to unlock the half million that came next.",
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: "Second Renaissance Research",
     description: "500,000 Latin works from 1450-1700. Less than 2% translated. Unlocking the lost knowledge of the Renaissance.",
-    url: "https://secondrenaissance.vercel.app",
+    url: "https://www.secondrenaissance.ai",
     siteName: "Second Renaissance Research",
     images: [
       {

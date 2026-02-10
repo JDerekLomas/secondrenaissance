@@ -138,7 +138,7 @@ export default function BlogLayout({ children, title, tag, slug, date = "Decembe
           </p>
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             <a
-              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(`https://www.secondrenaissance.ai/blog/${slug}`)}`}
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(`https://secondrenaissance.ai/blog/${slug}`)}`}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -159,7 +159,7 @@ export default function BlogLayout({ children, title, tag, slug, date = "Decembe
               Share on X
             </a>
             <a
-              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://www.secondrenaissance.ai/blog/${slug}`)}`}
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://secondrenaissance.ai/blog/${slug}`)}`}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -180,7 +180,7 @@ export default function BlogLayout({ children, title, tag, slug, date = "Decembe
               LinkedIn
             </a>
             <a
-              href={`mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(`Check out this article: https://www.secondrenaissance.ai/blog/${slug}`)}`}
+              href={`mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(`Check out this article: https://secondrenaissance.ai/blog/${slug}`)}`}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',

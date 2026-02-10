@@ -1,6 +1,14 @@
-"use client";
-
 import Link from "next/link";
+import { generateBlogMetadata } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "Translation Roadmap: Renaissance Latin Works",
+  description: "A prioritized list of untranslated Renaissance Latin texts - from Ficino's commentaries to alchemical emblems. What should we translate first?",
+  slug: "roadmap",
+  date: "2025-12-20",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
 
 interface Work {
   author: string;

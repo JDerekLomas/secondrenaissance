@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "Even Ficino Isn't Fully Translated",
+  description: "You'd think the famous Renaissance humanists would be fully available. They're not. Ficino, Pico, Valla—vast bodies of work remain untranslated.",
+  slug: "famous-humanists",
+  date: "2025-11-28",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function FamousHumanists() {
   return (
@@ -7,6 +18,7 @@ export default function FamousHumanists() {
       tag="Research"
       slug="famous-humanists"
       prevPost={{ href: "/blog/translation-gap", title: "The Translation Gap" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

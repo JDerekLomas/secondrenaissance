@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "Gaps of the Greats: Major Works by Famous Figures That Remain Untranslated",
+  description: "Even Ficino, Pico, Bruno, Agrippa, and Fludd have major works locked in Latin. We catalog what's translated and what's not.",
+  slug: "gaps-of-the-greats",
+  date: "2025-12-06",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function GapsOfTheGreats() {
   return (
@@ -8,6 +19,7 @@ export default function GapsOfTheGreats() {
       slug="gaps-of-the-greats"
       prevPost={{ href: "/blog/lost-books", title: "Lost Books" }}
       nextPost={{ href: "/blog/methodology", title: "Methodology" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

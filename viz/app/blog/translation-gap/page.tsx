@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "The Translation Gap: 95% of Latin Literature is Locked Away",
+  description: "Only 416 Latin works from 1450-1700 ever appeared in Latin-English bilingual editions. Out of 533,000. The numbers reveal a staggering accessibility crisis.",
+  slug: "translation-gap",
+  date: "2025-11-24",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function TranslationGap() {
   return (
@@ -7,6 +18,7 @@ export default function TranslationGap() {
       tag="Data"
       slug="translation-gap"
       prevPost={{ href: "/blog/renaissance-bestsellers", title: "Renaissance Bestsellers" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

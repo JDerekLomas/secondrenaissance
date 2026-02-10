@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "30 Million Manuscripts: India's NAMAMI Database and the Future of Sanskrit",
+  description: "Sanskrit manuscripts outnumber Greek and Latin combined by 100 to 1. Here's how to access India's National Mission for Manuscripts database.",
+  slug: "sanskrit-manuscripts",
+  date: "2025-12-18",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function SanskritManuscripts() {
   return (
@@ -8,6 +19,7 @@ export default function SanskritManuscripts() {
       slug="sanskrit-manuscripts"
       prevPost={{ href: "/blog/roadmap", title: "Translation Roadmap" }}
       nextPost={{ href: "/blog/pythagoras-sankhya", title: "Pythagoras & Sāṃkhya" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

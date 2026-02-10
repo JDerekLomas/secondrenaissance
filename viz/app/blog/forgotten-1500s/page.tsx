@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "The Forgotten Cinquecento: Thinkers of the 1500s You Can't Read",
+  description: "Zabarella, Cardano, della Porta, Telesio. The century of the Scientific Revolution—and the Latin authors who shaped it but remain inaccessible.",
+  slug: "forgotten-1500s",
+  date: "2025-12-02",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function Forgotten1500s() {
   return (
@@ -8,6 +19,7 @@ export default function Forgotten1500s() {
       slug="forgotten-1500s"
       prevPost={{ href: "/blog/forgotten-1400s", title: "Forgotten Authors of the 1400s" }}
       nextPost={{ href: "/blog/forgotten-1600s", title: "Forgotten Authors of the 1600s" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

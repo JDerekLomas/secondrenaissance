@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "Renaissance Bestsellers Nobody Reads",
+  description: "Some Latin books went through 100+ editions. They shaped European thought for centuries. Today, they're completely inaccessible.",
+  slug: "renaissance-bestsellers",
+  date: "2025-11-26",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function RenaissanceBestsellers() {
   return (
@@ -8,6 +19,7 @@ export default function RenaissanceBestsellers() {
       slug="renaissance-bestsellers"
       prevPost={{ href: "/blog/forgotten-authors", title: "Forgotten Authors" }}
       nextPost={{ href: "/blog/translation-gap", title: "The Translation Gap" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

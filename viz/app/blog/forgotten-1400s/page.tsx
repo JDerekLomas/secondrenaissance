@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "The Forgotten Quattrocento: Thinkers of the 1400s You Can't Read",
+  description: "Giorgio Valla, Giovanni Pontano, Paul of Venice. The 15th century gave us the Renaissance—and hundreds of Latin thinkers whose works remain untranslated.",
+  slug: "forgotten-1400s",
+  date: "2025-12-01",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function Forgotten1400s() {
   return (
@@ -8,6 +19,7 @@ export default function Forgotten1400s() {
       slug="forgotten-1400s"
       prevPost={{ href: "/blog/forgotten-authors", title: "The Forgotten Giants" }}
       nextPost={{ href: "/blog/forgotten-1500s", title: "Forgotten Authors of the 1500s" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

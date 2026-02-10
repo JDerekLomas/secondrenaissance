@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "The Forgotten Giants: Prolific Authors You've Never Heard Of",
+  description: "Jakob Martini wrote 836 works. Johann Gerhard wrote 697. You've never read a word they wrote—because almost none of it has been translated.",
+  slug: "forgotten-authors",
+  date: "2025-11-30",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function ForgottenAuthors() {
   return (
@@ -8,6 +19,7 @@ export default function ForgottenAuthors() {
       slug="forgotten-authors"
       prevPost={{ href: "/blog/why-latin-matters", title: "Why Latin Matters" }}
       nextPost={{ href: "/blog/forgotten-1400s", title: "Forgotten Authors of the 1400s" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

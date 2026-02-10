@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "Hunting for Translations: A Day Mapping the Latin-English Landscape",
+  description: "How many Latin works have been translated into English? I catalogued 3,232 translation volumes across 45+ sources to find out.",
+  slug: "hunting-for-translations",
+  date: "2025-11-22",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function HuntingForTranslations() {
   return (
@@ -7,6 +18,7 @@ export default function HuntingForTranslations() {
       tag="Research Report"
       slug="hunting-for-translations"
       prevPost={{ href: "/blog/esoteric-timeline", title: "Esoteric Timeline" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

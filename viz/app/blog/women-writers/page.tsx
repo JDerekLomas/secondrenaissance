@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "The Rediscovery of Medieval Women Writers",
+  description: "Marguerite Porete: 950x growth. Christine de Pizan: 280x. Google Ngram data reveals how feminist scholarship recovered an entire literary tradition.",
+  slug: "women-writers",
+  date: "2025-12-23",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function WomenWriters() {
   return (
@@ -8,6 +19,7 @@ export default function WomenWriters() {
       slug="women-writers"
       prevPost={{ href: "/blog/forgotten-authors", title: "The Forgotten Giants" }}
       nextPost={{ href: "/blog/methodology", title: "Methodology" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

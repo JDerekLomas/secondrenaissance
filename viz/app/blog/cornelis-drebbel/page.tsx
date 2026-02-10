@@ -1,4 +1,17 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "Cornelis Drebbel: The Dutch Alchemist Who Invented the Future",
+  description: "He built the first cybernetic system, the first submarine, the first air conditioning—and inspired Shakespeare's Prospero and Francis Bacon's Salomon's House. No one knows about him.",
+  slug: "cornelis-drebbel",
+  date: "2025-12-21",
+  image: "/gallery/full/drebbel-portrait.jpg",
+  imageAlt: "Portrait of Cornelis Drebbel, Dutch inventor and alchemist",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function CornelisDrebbel() {
   return (
@@ -8,6 +21,7 @@ export default function CornelisDrebbel() {
       slug="cornelis-drebbel"
       date="December 2025"
       prevPost={{ href: "/blog/roadmap", title: "Translation Roadmap" }}
+      jsonLd={jsonLd}
     >
       {/* Hero Image
           Source: Wikimedia Commons - https://commons.wikimedia.org/wiki/File:Cornelius_Drebbel_portrait_painted_1620s.jpg

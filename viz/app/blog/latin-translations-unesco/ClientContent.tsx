@@ -1,7 +1,14 @@
 "use client";
 
+import { useState, useCallback } from "react";
 import BlogLayout from "../BlogLayout";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, Cell, PieChart, Pie } from "recharts";
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient(
+  "https://ykhxaecbbxaaqlujuzde.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlraHhhZWNiYnhhYXFsdWp1emRlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUwNjExMDEsImV4cCI6MjA4MDYzNzEwMX0.O2chfnHGQWLOaVSFQ-F6UJMlya9EzPbsUh848SEOPj4"
+);
 
 const centuryData = [
   { century: "5c BCE", count: 4 },
@@ -66,6 +73,32 @@ const pubYearData = [
   { year: "2019", count: 36, source: "scraped" }, { year: "2020", count: 31, source: "scraped" }, { year: "2021", count: 18, source: "scraped" },
   { year: "2022", count: 24, source: "scraped" }, { year: "2023", count: 20, source: "scraped" }, { year: "2024", count: 27, source: "scraped" },
   { year: "2025", count: 19, source: "scraped" },
+];
+
+const decadeData = [
+  { decade: "1800s", count: 74, source: "historical" },
+  { decade: "1810s", count: 48, source: "historical" },
+  { decade: "1820s", count: 57, source: "historical" },
+  { decade: "1830s", count: 50, source: "historical" },
+  { decade: "1840s", count: 70, source: "historical" },
+  { decade: "1850s", count: 95, source: "historical" },
+  { decade: "1860s", count: 91, source: "historical" },
+  { decade: "1870s", count: 117, source: "historical" },
+  { decade: "1880s", count: 183, source: "historical" },
+  { decade: "1890s", count: 196, source: "historical" },
+  { decade: "1900s", count: 220, source: "historical" },
+  { decade: "1910s", count: 238, source: "historical" },
+  { decade: "1920s", count: 251, source: "historical" },
+  { decade: "1930s", count: 246, source: "historical" },
+  { decade: "1940s", count: 156, source: "historical" },
+  { decade: "1950s", count: 289, source: "historical" },
+  { decade: "1960s", count: 454, source: "historical" },
+  { decade: "1970s", count: 479, source: "unesco" },
+  { decade: "1980s", count: 797, source: "unesco" },
+  { decade: "1990s", count: 1277, source: "unesco" },
+  { decade: "2000s", count: 1345, source: "unesco" },
+  { decade: "2010s", count: 400, source: "scraped" },
+  { decade: "2020s", count: 157, source: "scraped" },
 ];
 
 const post2009ByPublisher = [
@@ -218,12 +251,209 @@ function HorizontalBar({ items, maxVal, labelWidth = 200 }: {
   );
 }
 
+type TranslationRow = {
+  id: number;
+  author: string | null;
+  english_title: string | null;
+  translator: string | null;
+  pub_year: string | null;
+  publisher: string | null;
+  era: string | null;
+  original_year: string | null;
+  canonical_author: string | null;
+  canonical_work: string | null;
+  source: string | null;
+  series: string | null;
+};
+
+const ERA_OPTIONS = ['all', 'classical', 'medieval', 'renaissance', 'early_modern', 'modern'] as const;
+const ERA_LABELS: Record<string, string> = {
+  all: 'All Eras', classical: 'Classical', medieval: 'Medieval',
+  renaissance: 'Renaissance', early_modern: 'Early Modern', modern: 'Modern',
+};
+
+function SearchBox() {
+  const [query, setQuery] = useState('');
+  const [era, setEra] = useState<string>('all');
+  const [results, setResults] = useState<TranslationRow[]>([]);
+  const [total, setTotal] = useState<number | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [searched, setSearched] = useState(false);
+  const [page, setPage] = useState(0);
+  const PAGE_SIZE = 25;
+
+  const doSearch = useCallback(async (pageNum: number) => {
+    setLoading(true);
+    setSearched(true);
+    setPage(pageNum);
+
+    let q = supabase
+      .from('latin_translations')
+      .select('id,author,english_title,translator,pub_year,publisher,era,original_year,canonical_author,canonical_work,source,series', { count: 'exact' });
+
+    if (query.trim()) {
+      const term = `%${query.trim()}%`;
+      q = q.or(`author.ilike.${term},english_title.ilike.${term},translator.ilike.${term},canonical_author.ilike.${term},canonical_work.ilike.${term},publisher.ilike.${term}`);
+    }
+    if (era !== 'all') {
+      q = q.eq('era', era);
+    }
+
+    q = q.order('pub_year', { ascending: false })
+      .range(pageNum * PAGE_SIZE, (pageNum + 1) * PAGE_SIZE - 1);
+
+    const { data, count, error } = await q;
+    if (error) {
+      console.error('Search error:', error);
+      setResults([]);
+      setTotal(0);
+    } else {
+      setResults(data || []);
+      setTotal(count);
+    }
+    setLoading(false);
+  }, [query, era]);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    doSearch(0);
+  };
+
+  const totalPages = total ? Math.ceil(total / PAGE_SIZE) : 0;
+
+  return (
+    <div style={{ margin: '32px 0' }}>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
+        <input
+          type="text"
+          value={query}
+          onChange={e => setQuery(e.target.value)}
+          placeholder="Search by author, title, translator, publisher..."
+          style={{
+            flex: 1, minWidth: '200px', padding: '10px 14px',
+            border: '1px solid #d4cfc4', borderRadius: '6px',
+            fontFamily: 'Inter, sans-serif', fontSize: '14px',
+            background: '#faf9f6', color: '#1a1612',
+            outline: 'none',
+          }}
+        />
+        <select
+          value={era}
+          onChange={e => { setEra(e.target.value); }}
+          style={{
+            padding: '10px 14px', border: '1px solid #d4cfc4', borderRadius: '6px',
+            fontFamily: 'Inter, sans-serif', fontSize: '14px',
+            background: '#faf9f6', color: '#1a1612', cursor: 'pointer',
+          }}
+        >
+          {ERA_OPTIONS.map(e => (
+            <option key={e} value={e}>{ERA_LABELS[e]}</option>
+          ))}
+        </select>
+        <button
+          type="submit"
+          style={{
+            padding: '10px 20px', background: '#9e4a3a', color: '#fff',
+            border: 'none', borderRadius: '6px', cursor: 'pointer',
+            fontFamily: 'Inter, sans-serif', fontSize: '14px', fontWeight: 600,
+          }}
+        >
+          {loading ? 'Searching...' : 'Search'}
+        </button>
+      </form>
+
+      {searched && (
+        <div>
+          <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#888', marginBottom: '12px' }}>
+            {total !== null ? `${total.toLocaleString()} result${total !== 1 ? 's' : ''}` : ''}
+            {total !== null && total > PAGE_SIZE ? ` (showing ${page * PAGE_SIZE + 1}\u2013${Math.min((page + 1) * PAGE_SIZE, total)})` : ''}
+          </p>
+
+          {results.length > 0 ? (
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{
+                width: '100%', borderCollapse: 'collapse',
+                fontFamily: 'Inter, sans-serif', fontSize: '13px',
+              }}>
+                <thead>
+                  <tr style={{ borderBottom: '2px solid #d4cfc4', textAlign: 'left' }}>
+                    <th style={{ padding: '8px 6px', color: '#888', fontWeight: 600, fontSize: '11px', letterSpacing: '0.05em' }}>YEAR</th>
+                    <th style={{ padding: '8px 6px', color: '#888', fontWeight: 600, fontSize: '11px', letterSpacing: '0.05em' }}>AUTHOR</th>
+                    <th style={{ padding: '8px 6px', color: '#888', fontWeight: 600, fontSize: '11px', letterSpacing: '0.05em' }}>TITLE</th>
+                    <th style={{ padding: '8px 6px', color: '#888', fontWeight: 600, fontSize: '11px', letterSpacing: '0.05em' }}>TRANSLATOR</th>
+                    <th style={{ padding: '8px 6px', color: '#888', fontWeight: 600, fontSize: '11px', letterSpacing: '0.05em' }}>PUBLISHER</th>
+                    <th style={{ padding: '8px 6px', color: '#888', fontWeight: 600, fontSize: '11px', letterSpacing: '0.05em' }}>ERA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {results.map(r => (
+                    <tr key={r.id} style={{ borderBottom: '1px solid #ece8e0' }}>
+                      <td style={{ padding: '8px 6px', whiteSpace: 'nowrap' }}>{r.pub_year || '\u2014'}</td>
+                      <td style={{ padding: '8px 6px' }}>{r.canonical_author || r.author || '\u2014'}</td>
+                      <td style={{ padding: '8px 6px', fontStyle: 'italic', maxWidth: '300px' }}>{r.english_title || '\u2014'}</td>
+                      <td style={{ padding: '8px 6px' }}>{r.translator || '\u2014'}</td>
+                      <td style={{ padding: '8px 6px', fontSize: '12px', color: '#666' }}>{r.publisher || '\u2014'}</td>
+                      <td style={{ padding: '8px 6px' }}>
+                        {r.era && (
+                          <span style={{
+                            display: 'inline-block', padding: '2px 8px', borderRadius: '10px',
+                            fontSize: '10px', fontWeight: 600, letterSpacing: '0.03em',
+                            background: ERA_COLORS[r.era] || '#d4cfc4', color: '#fff',
+                          }}>
+                            {ERA_LABELS[r.era] || r.era}
+                          </span>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : (
+            !loading && <p style={{ color: '#888', fontStyle: 'italic' }}>No results found.</p>
+          )}
+
+          {totalPages > 1 && (
+            <div style={{ display: 'flex', gap: '8px', justifyContent: 'center', marginTop: '16px', alignItems: 'center' }}>
+              <button
+                onClick={() => doSearch(page - 1)}
+                disabled={page === 0}
+                style={{
+                  padding: '6px 14px', border: '1px solid #d4cfc4', borderRadius: '4px',
+                  background: page === 0 ? '#f5f3ef' : '#fff', cursor: page === 0 ? 'default' : 'pointer',
+                  fontFamily: 'Inter, sans-serif', fontSize: '12px', color: page === 0 ? '#ccc' : '#1a1612',
+                }}
+              >
+                Previous
+              </button>
+              <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '12px', color: '#888' }}>
+                Page {page + 1} of {totalPages}
+              </span>
+              <button
+                onClick={() => doSearch(page + 1)}
+                disabled={page >= totalPages - 1}
+                style={{
+                  padding: '6px 14px', border: '1px solid #d4cfc4', borderRadius: '4px',
+                  background: page >= totalPages - 1 ? '#f5f3ef' : '#fff', cursor: page >= totalPages - 1 ? 'default' : 'pointer',
+                  fontFamily: 'Inter, sans-serif', fontSize: '12px', color: page >= totalPages - 1 ? '#ccc' : '#1a1612',
+                }}
+              >
+                Next
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 interface ClientContentProps { jsonLd: string; }
 
 export default function ClientContent({ jsonLd }: ClientContentProps) {
   return (
     <BlogLayout
-      title="What Latin Gets Translated? 4,457 Translations from UNESCO and Beyond"
+      title="What Latin Gets Translated? 9,016 Translations from 1800 to 2025"
       tag="Data"
       slug="latin-translations-unesco"
       prevPost={{ href: "/blog/theology-problem", title: "The Theology Problem" }}
@@ -232,9 +462,10 @@ export default function ClientContent({ jsonLd }: ClientContentProps) {
       <p style={{ fontFamily: 'Newsreader, Georgia, serif', fontSize: '22px', lineHeight: 1.6, color: '#444', marginBottom: '32px' }}>
         UNESCO&apos;s <a href="https://www.unesco.org/xtrans/bsform.aspx" style={{ color: '#9e4a3a', textDecoration: 'none' }}>Index Translationum</a> tracked
         every book translation published worldwide from 1979 to 2009&mdash;roughly 2 million records across 800 languages.
-        We scraped all <strong>3,191 Latin-to-English translations</strong> from UNESCO, then extended the dataset to 2025
-        by scraping catalogs from 30+ publishers and series&mdash;Harvard (I Tatti, DOML, Loeb), Cambridge, Routledge, Brill,
-        CUA Press, Paulist Press, Hackett, Penguin, OUP, De Gruyter, Liverpool TTH, Cistercian Publications, PIMS, New City Press, and specialist presses for astrology, alchemy, and grimoire literature&mdash;reaching <strong>4,457 total records</strong>.
+        We scraped all <strong>3,191 Latin-to-English translations</strong> from UNESCO, extended the dataset to 2025
+        by scraping catalogs from 30+ publishers and series, then reached back to 1800
+        using the Open Library and Internet Archive APIs and the full Loeb Classical Library catalog&mdash;reaching <strong>7,542 total records</strong> spanning
+        two centuries of Latin translation.
       </p>
 
       <h2>When Were These Works Originally Written?</h2>
@@ -336,10 +567,54 @@ export default function ClientContent({ jsonLd }: ClientContentProps) {
         <EraLegend />
       </figure>
 
-      <h2>Translation Rate Over Time</h2>
-      <p>Latin translation is not dying&mdash;it accelerated from ~70/year in 1978 to a peak of 172 in 2006.
-        After UNESCO stopped tracking in 2009, we extended coverage by scraping 50+ publisher catalogs and specialist presses.
-        The post-2009 bars (lighter) are still an undercount&mdash;they capture academic series and specialist translators but not
+      <h2>Two Centuries of Latin Translation</h2>
+      <p>By extending the dataset back to 1800 using Open Library and Internet Archive records, we can see the
+        long arc of Latin translation into English. Translation accelerated throughout the 19th century, dipped
+        during both World Wars, then surged in the postwar university expansion of the 1950s&ndash;60s. The UNESCO
+        decades (1970s&ndash;2000s) show the highest recorded rates, peaking at over 1,300 translations in the 2000s.
+        The 2010s and 2020s bars are undercounts from publisher catalogs only.</p>
+
+      <figure style={FIGURE_STYLE}>
+        <figcaption style={CAPTION_STYLE}>LATIN-TO-ENGLISH TRANSLATIONS BY DECADE, 1800&ndash;2025</figcaption>
+        <div style={{ width: '100%', height: 300 }}>
+          <ResponsiveContainer>
+            <BarChart data={decadeData} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#e8e4dc" vertical={false} />
+              <XAxis dataKey="decade" tick={TICK_STYLE} interval={1} angle={-45} textAnchor="end" height={50} />
+              <YAxis tick={TICK_STYLE} />
+              <Tooltip contentStyle={TOOLTIP_STYLE} />
+              <Bar dataKey="count" radius={[2, 2, 0, 0]}>
+                {decadeData.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={entry.source === 'historical' ? '#8b9a7d' : entry.source === 'unesco' ? '#9e4a3a' : '#c9a86c'} />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+        <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', marginTop: '8px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <div style={{ width: 12, height: 12, borderRadius: 2, background: '#8b9a7d' }} />
+            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '11px', color: '#888' }}>Open Library / Internet Archive / Loeb</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <div style={{ width: 12, height: 12, borderRadius: 2, background: '#9e4a3a' }} />
+            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '11px', color: '#888' }}>UNESCO (comprehensive)</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <div style={{ width: 12, height: 12, borderRadius: 2, background: '#c9a86c' }} />
+            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '11px', color: '#888' }}>Publisher catalogs (partial)</span>
+          </div>
+        </div>
+      </figure>
+
+      <p><strong>Note on historical data:</strong> The pre-1979 records come from library catalog APIs (Open Library, Internet Archive)
+        rather than comprehensive surveys like UNESCO. They capture books that were cataloged and digitized, which skews toward
+        major publishers and frequently-held works. The true number of Latin-to-English translations published in any given
+        decade before 1979 was likely higher than shown.</p>
+
+      <h2>UNESCO Years: Annual Detail (1978&ndash;2025)</h2>
+      <p>Zooming into the UNESCO period and beyond, Latin translation accelerated from ~70/year in 1978 to a peak of 172 in 2006.
+        The post-2009 bars (lighter) capture academic series and specialist translators but not
         the full publishing landscape that UNESCO tracked.</p>
 
       <figure style={FIGURE_STYLE}>
@@ -438,9 +713,15 @@ export default function ClientContent({ jsonLd }: ClientContentProps) {
       <p><strong>2. Translation is accelerating.</strong> The rate roughly doubled from 1978 to 2006. Academic series like I Tatti Renaissance Library and Dumbarton Oaks Medieval Library are systematically working through previously untranslated texts.</p>
       <p><strong>3. The canon is narrow.</strong> Of 2,037 unique works, the top 15 most-retranslated account for a disproportionate share of activity. The long tail of one-time translations is where real discovery happens.</p>
 
+      <h2>Search the Dataset</h2>
+      <p>
+        Search all 7,542 translations by author, title, translator, or publisher. Filter by era to explore what&apos;s been translated from each period.
+      </p>
+      <SearchBox />
+
       <h2>Download the Data</h2>
       <p>
-        The full dataset is available as a CSV with 4,457 records including source, series, author, title, translator,
+        The full dataset is available as a CSV with 7,542 records including source, series, author, title, translator,
         publication year, publisher, country, estimated original composition date, era, and canonical work identifiers.
       </p>
       <p style={{ margin: '24px 0' }}>
@@ -459,17 +740,21 @@ export default function ClientContent({ jsonLd }: ClientContentProps) {
             fontWeight: 600,
           }}
         >
-          Download CSV (4,457 records)
+          Download CSV (7,542 records)
         </a>
       </p>
       <p style={{ fontSize: '14px', color: '#888' }}>
-        <strong>Sources:</strong> <a href="https://www.unesco.org/xtrans/bsform.aspx" style={{ color: '#9e4a3a', textDecoration: 'none' }}>UNESCO Index Translationum</a> (1979&ndash;2009),
-        Harvard University Press (Loeb, I Tatti, DOML), Cambridge UP, Routledge, Brill, CUA Press, Paulist Press,
+        <strong>Sources:</strong> <a href="https://www.unesco.org/xtrans/bsform.aspx" style={{ color: '#9e4a3a', textDecoration: 'none' }}>UNESCO Index Translationum</a> (1979&ndash;2009, 3,191 records),
+        Open Library API (1800&ndash;1978, 2,524 records),
+        Internet Archive API (1800&ndash;1978, 472 records),
+        Loeb Classical Library full catalog (89 records),
+        Harvard University Press (I Tatti, DOML), Cambridge UP, Routledge, Brill, CUA Press, Paulist Press,
         De Gruyter/Toronto UP, Hackett, Penguin, OUP, Liverpool UP (Translated Texts for Historians),
         Cistercian Publications/Liturgical Press, PIMS (Toronto), Chicago UP, Columbia UP, JHU Press,
         Bolchazy-Carducci, Dover, Notre Dame UP, New City Press (Works of Saint Augustine),
         Cazimi Press, Golden Hoard Press, Ibis Press/Weiser, Magnum Opus Hermetic Sourceworks,
         Renaissance Astrology Press, AFA, Project Hindsight/ARHAT, Shepheard-Walwyn, and other specialist publishers.
+        Pre-1979 records sourced from library catalog APIs (not LLM-generated); some noise may remain.
         Original composition dates and canonical work identifiers estimated via LLM classification.
       </p>
     </BlogLayout>

@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "The Golden Verses of Pythagoras: A 19th-Century Manuscript Mystery",
+  description: "A palm-leaf manuscript labeled 'golden verses of Pythagoras' reveals how British scholars tried to connect Indian philosophy with Greek antiquity.",
+  slug: "pythagoras-sankhya",
+  date: "2025-12-18",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function PythagorasSankhya() {
   return (
@@ -8,6 +19,7 @@ export default function PythagorasSankhya() {
       slug="pythagoras-sankhya"
       prevPost={{ href: "/blog/sanskrit-manuscripts", title: "Sanskrit Manuscripts" }}
       nextPost={{ href: "/blog/methodology", title: "Methodology" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

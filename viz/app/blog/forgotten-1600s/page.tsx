@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "The Forgotten Seicento: Thinkers of the 1600s You Can't Read",
+  description: "Kircher, Sennert, Weyer, Liceti. 324,690 Latin works from the Scientific Revolution—and the scholars behind them who remain untranslated.",
+  slug: "forgotten-1600s",
+  date: "2025-12-03",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function Forgotten1600s() {
   return (
@@ -8,6 +19,7 @@ export default function Forgotten1600s() {
       slug="forgotten-1600s"
       prevPost={{ href: "/blog/forgotten-1500s", title: "Forgotten Authors of the 1500s" }}
       nextPost={{ href: "/blog/renaissance-bestsellers", title: "Renaissance Bestsellers" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

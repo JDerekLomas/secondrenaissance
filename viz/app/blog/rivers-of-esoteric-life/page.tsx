@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "Rivers of Esoteric Life: Mapping the Hermetic Tradition",
+  description: "Applying Forlong's 'Rivers of Life' methodology to trace how Hermetica, alchemy, Kabbalah, and Rosicrucianism flowed through Renaissance publishing.",
+  slug: "rivers-of-esoteric-life",
+  date: "2025-11-15",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function RiversOfEsotericLife() {
   return (
@@ -7,6 +18,7 @@ export default function RiversOfEsotericLife() {
       tag="Draft"
       slug="rivers-of-esoteric-life"
       prevPost={{ href: "/blog/famous-humanists", title: "Even Ficino Isn't Fully Translated" }}
+      jsonLd={jsonLd}
     >
       <div style={{
         background: '#f5f0e8',

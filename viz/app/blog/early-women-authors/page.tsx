@@ -1,6 +1,14 @@
-"use client";
-
 import Link from "next/link";
+import { generateBlogMetadata } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "A Timeline of Early Women Authors",
+  description: "From Themistoclea (550 BCE) to Mary Astell (1700): 2,200 years of women's writing. The Pythagoreans, the German mystics, the Italian humanists—now recovered from Victorian erasure.",
+  slug: "early-women-authors",
+  date: "2025-12-25",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
 
 export default function EarlyWomenAuthors() {
   return (

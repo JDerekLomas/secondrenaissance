@@ -1,4 +1,14 @@
 import Link from "next/link";
+import { generateBlogMetadata } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "The Hidden Hermetic Library: What the Embassy of the Free Mind Reveals About Cataloging Gaps",
+  description: "We cross-referenced Amsterdam's esoteric collection with standard bibliographies. 35% of their 15th-century holdings don't appear in ISTC or USTC.",
+  slug: "hidden-hermetic-library",
+  date: "2025-12-07",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
 
 export default function HiddenHermeticLibrary() {
   // Works not in ISTC or USTC with no digital coverage

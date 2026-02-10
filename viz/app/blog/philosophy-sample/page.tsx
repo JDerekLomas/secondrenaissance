@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "Philosophy Sample: Renaissance Philosophical Texts",
+  description: "A curated sample of Renaissance philosophical texts—logic, ethics, metaphysics—showing the translation gap in early modern philosophy.",
+  slug: "philosophy-sample",
+  date: "2025-11-01",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function PhilosophySample() {
   return (
@@ -8,6 +19,7 @@ export default function PhilosophySample() {
       slug="philosophy-sample"
       prevPost={{ href: "/blog/natural-philosophy-sample", title: "Natural Philosophy Sample" }}
       nextPost={{ href: "/blog/roadmap", title: "Translation Roadmap" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

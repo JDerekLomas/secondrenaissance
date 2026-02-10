@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "The Dark Matter of Book History: How Many Latin Works Are Lost Forever?",
+  description: "We count 500,000 surviving Latin works. But estimates suggest 25-80% of editions were lost entirely. What does this mean for our understanding?",
+  slug: "lost-books",
+  date: "2025-12-05",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function LostBooks() {
   return (
@@ -8,6 +19,7 @@ export default function LostBooks() {
       slug="lost-books"
       prevPost={{ href: "/blog/theology-problem", title: "The Theology Problem" }}
       nextPost={{ href: "/blog/gaps-of-the-greats", title: "Gaps of the Greats" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

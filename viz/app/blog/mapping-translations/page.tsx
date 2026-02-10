@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "Mapping the Translation Landscape: A Research Diary",
+  description: "How do you count something that's never been counted? Building a comprehensive database of Latin-to-English translations.",
+  slug: "mapping-translations",
+  date: "2025-11-20",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function MappingTranslations() {
   return (
@@ -6,6 +17,7 @@ export default function MappingTranslations() {
       title="Mapping the Translation Landscape: A Research Diary"
       tag="Methods"
       slug="mapping-translations"
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',

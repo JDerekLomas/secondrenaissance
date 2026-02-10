@@ -1,4 +1,15 @@
 import BlogLayout from "../BlogLayout";
+import { generateBlogMetadata, generateArticleJsonLd } from "@/lib/blogMetadata";
+
+const postMeta = {
+  title: "SourceLibrary: A Vision for AI-Assisted Translation",
+  description: "Half a million Renaissance Latin texts await translation. We're building tools to make that possible—empowering scholars with AI-assisted workflows.",
+  slug: "sourcelibrary-vision",
+  date: "2025-12-12",
+};
+
+export const metadata = generateBlogMetadata(postMeta);
+const jsonLd = generateArticleJsonLd(postMeta);
 
 export default function SourceLibraryVision() {
   return (
@@ -7,6 +18,7 @@ export default function SourceLibraryVision() {
       tag="Vision"
       slug="sourcelibrary-vision"
       prevPost={{ href: "/blog/why-latin-matters", title: "Why Latin Matters" }}
+      jsonLd={jsonLd}
     >
       <p style={{
         fontFamily: 'Newsreader, Georgia, serif',
