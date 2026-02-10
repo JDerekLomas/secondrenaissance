@@ -1,0 +1,13 @@
+# Robots.txt for Second Renaissance Research
+# https://www.secondrenaissance.ai
+
+User-agent: *
+Allow: /
+
+# Disallow API and auth routes
+Disallow: /api/
+Disallow: /login
+Disallow: /translate/
+
+# Sitemap
+Sitemap: https://www.secondrenaissance.ai/sitemap.xml

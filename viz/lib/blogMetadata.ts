@@ -10,7 +10,7 @@ export interface BlogPostMeta {
 }
 
 export function generateBlogMetadata(post: BlogPostMeta): Metadata {
-  const url = `https://secondrenaissance.ai/blog/${post.slug}`;
+  const url = `https://www.secondrenaissance.ai/blog/${post.slug}`;
   const image = post.image || 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Vitruvian_macrocosm.jpg/800px-Vitruvian_macrocosm.jpg';
 
   return {
@@ -55,16 +55,16 @@ export function generateArticleJsonLd(post: BlogPostMeta): string {
     author: {
       '@type': 'Organization',
       name: 'Second Renaissance Research',
-      url: 'https://secondrenaissance.ai',
+      url: 'https://www.secondrenaissance.ai',
     },
     publisher: {
       '@type': 'Organization',
       name: 'Second Renaissance Research',
-      url: 'https://secondrenaissance.ai',
+      url: 'https://www.secondrenaissance.ai',
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://secondrenaissance.ai/blog/${post.slug}`,
+      '@id': `https://www.secondrenaissance.ai/blog/${post.slug}`,
     },
     image: post.image || 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Vitruvian_macrocosm.jpg/800px-Vitruvian_macrocosm.jpg',
   };

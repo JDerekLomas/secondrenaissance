@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Research Essays | Second Renaissance Research",
     description: "Data-driven research into Renaissance Latin publishing, translation gaps, and the hidden libraries of the Renaissance.",
-    url: "https://secondrenaissance.ai/blog",
+    url: "https://www.secondrenaissance.ai/blog",
     type: "website",
   },
 };
