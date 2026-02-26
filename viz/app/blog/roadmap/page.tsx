@@ -1,4 +1,4 @@
-import Link from "next/link";
+import BlogLayout from "../BlogLayout";
 import { generateBlogMetadata } from "@/lib/blogMetadata";
 
 const postMeta = {
@@ -432,40 +432,16 @@ const lists: Record<string, ListSection> = {
 
 export default function RoadmapPage() {
   return (
-    <div style={{ minHeight: '100vh', background: '#fdfcf9', color: '#1a1612' }}>
-      <header style={{ borderBottom: '1px solid #e8e4dc' }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '24px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Link href="/blog" style={{ color: '#9e4a3a', textDecoration: 'none', fontSize: '12px', letterSpacing: '0.05em', fontFamily: 'Inter, sans-serif', fontWeight: 500 }}>
-            &larr; RESEARCH ESSAYS
-          </Link>
-          <a
-            href="https://www.ancientwisdomtrust.org/become-a-patron"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              padding: '8px 16px',
-              background: '#9e4a3a',
-              color: '#fff',
-              borderRadius: '4px',
-              textDecoration: 'none',
-              fontSize: '13px',
-              fontFamily: 'Inter, sans-serif',
-              fontWeight: 500
-            }}
-          >
-            Support This Work
-          </a>
-        </div>
-      </header>
-
-      <main style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 32px' }}>
-        <h1 style={{ fontSize: '42px', fontFamily: 'Cormorant Garamond, serif', fontWeight: 600, marginBottom: '16px' }}>
-          Translation Roadmap
-        </h1>
-        <p style={{ fontSize: '20px', fontFamily: 'Newsreader, serif', color: '#444', marginBottom: '48px', lineHeight: 1.6 }}>
-          Prioritized Latin works for translation. Less than 3% of Renaissance Latin literature
-          has ever been translated into English. These are the gaps that matter most.
-        </p>
+    <BlogLayout
+      title="Translation Roadmap: Renaissance Latin Works"
+      tag="Research"
+      slug="roadmap"
+      date="December 2025"
+    >
+      <p style={{ fontSize: '20px', fontFamily: 'Newsreader, serif', color: '#444', marginBottom: '48px', lineHeight: 1.6 }}>
+        Prioritized Latin works for translation. Less than 3% of Renaissance Latin literature
+        has ever been translated into English. These are the gaps that matter most.
+      </p>
 
         {Object.entries(lists).map(([key, section]) => (
           <section key={key} style={{ marginBottom: '56px' }}>
@@ -577,25 +553,6 @@ export default function RoadmapPage() {
           </div>
         </section>
 
-        <div style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid #e8e4dc' }}>
-          <Link href="/blog/methodology" style={{ color: '#9e4a3a', textDecoration: 'none', fontFamily: 'Inter, sans-serif', fontSize: '14px' }}>
-            &larr; View full methodology
-          </Link>
-        </div>
-      </main>
-
-      <footer style={{ borderTop: '1px solid #e8e4dc', padding: '32px 0', textAlign: 'center', color: '#888', fontSize: '14px', fontFamily: 'Inter, sans-serif' }}>
-        <p>
-          Data from{" "}
-          <a href="https://www.ustc.ac.uk/" style={{ color: '#9e4a3a', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">
-            USTC
-          </a>
-          {" "}| For{" "}
-          <a href="https://sourcelibrary.org" style={{ color: '#9e4a3a', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">
-            SourceLibrary.org
-          </a>
-        </p>
-      </footer>
-    </div>
+    </BlogLayout>
   );
 }

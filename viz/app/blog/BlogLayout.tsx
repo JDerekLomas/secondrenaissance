@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Comments from "@/components/Comments";
+import { getPostNav, getRelatedPosts } from "./postsData";
 
 interface BlogLayoutProps {
   children: React.ReactNode;
@@ -23,8 +24,16 @@ const tagColors: Record<string, { bg: string; text: string }> = {
   Draft: { bg: '#f5f5f5', text: '#888' },
 };
 
-export default function BlogLayout({ children, title, tag, slug, date = "December 2025", nextPost, prevPost, jsonLd }: BlogLayoutProps) {
+export default function BlogLayout({ children, title, tag, slug, date = "December 2025", nextPost: nextPostProp, prevPost: prevPostProp, jsonLd }: BlogLayoutProps) {
   const colors = tagColors[tag] || tagColors.Research;
+
+  // Auto-compute navigation from postsData, with explicit props as override
+  const autoNav = getPostNav(slug);
+  const prevPost = prevPostProp || autoNav.prevPost;
+  const nextPost = nextPostProp || autoNav.nextPost;
+
+  // Auto-compute related posts
+  const relatedPosts = getRelatedPosts(slug, 3);
 
   return (
     <main style={{ background: '#fdfcf9', minHeight: '100vh' }}>
@@ -138,7 +147,7 @@ export default function BlogLayout({ children, title, tag, slug, date = "Decembe
           </p>
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             <a
-              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(`https://secondrenaissance.ai/blog/${slug}`)}`}
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(`https://www.secondrenaissance.ai/blog/${slug}`)}`}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -159,7 +168,7 @@ export default function BlogLayout({ children, title, tag, slug, date = "Decembe
               Share on X
             </a>
             <a
-              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://secondrenaissance.ai/blog/${slug}`)}`}
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://www.secondrenaissance.ai/blog/${slug}`)}`}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -180,7 +189,7 @@ export default function BlogLayout({ children, title, tag, slug, date = "Decembe
               LinkedIn
             </a>
             <a
-              href={`mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(`Check out this article: https://secondrenaissance.ai/blog/${slug}`)}`}
+              href={`mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(`Check out this article: https://www.secondrenaissance.ai/blog/${slug}`)}`}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -205,10 +214,53 @@ export default function BlogLayout({ children, title, tag, slug, date = "Decembe
         {/* Comments */}
         <Comments postSlug={slug} />
 
-        {/* Navigation */}
+        {/* Related Posts */}
+        {relatedPosts.length > 0 && (
+          <div style={{
+            marginTop: '48px',
+            paddingTop: '32px',
+            borderTop: '1px solid #e8e4dc',
+          }}>
+            <p style={{
+              fontFamily: 'Inter, sans-serif',
+              fontSize: '12px',
+              fontWeight: 500,
+              letterSpacing: '0.05em',
+              color: '#888',
+              marginBottom: '16px',
+            }}>
+              YOU MIGHT ALSO LIKE
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {relatedPosts.map(post => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  style={{
+                    display: 'block',
+                    padding: '16px 20px',
+                    background: '#fff',
+                    border: '1px solid #e8e4dc',
+                    borderRadius: '8px',
+                    textDecoration: 'none',
+                    fontFamily: 'Cormorant Garamond, Georgia, serif',
+                    fontSize: '18px',
+                    fontWeight: 500,
+                    color: '#1a1612',
+                    lineHeight: 1.3,
+                  }}
+                >
+                  {post.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Prev/Next Navigation */}
         {(prevPost || nextPost) && (
           <div style={{
-            marginTop: '64px',
+            marginTop: '32px',
             paddingTop: '32px',
             borderTop: '1px solid #e8e4dc',
             display: 'flex',

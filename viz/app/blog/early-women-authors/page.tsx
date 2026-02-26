@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BlogLayout from "../BlogLayout";
 import { generateBlogMetadata } from "@/lib/blogMetadata";
 
 const postMeta = {
@@ -12,41 +13,17 @@ export const metadata = generateBlogMetadata(postMeta);
 
 export default function EarlyWomenAuthors() {
   return (
-    <div style={{ minHeight: '100vh', background: '#fdfcf9', color: '#1a1612' }}>
-      <header style={{ borderBottom: '1px solid #e8e4dc' }}>
-        <div style={{ maxWidth: '768px', margin: '0 auto', padding: '24px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Link href="/" style={{ color: '#9e4a3a', textDecoration: 'none', fontSize: '12px', letterSpacing: '0.05em', fontFamily: 'Inter, sans-serif', fontWeight: 500 }}>
-            &larr; ANCIENT WISDOM RESEARCH
-          </Link>
-          <a
-            href="https://www.ancientwisdomtrust.org/become-a-patron"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              padding: '8px 16px',
-              background: '#9e4a3a',
-              color: '#fff',
-              borderRadius: '4px',
-              textDecoration: 'none',
-              fontSize: '13px',
-              fontFamily: 'Inter, sans-serif',
-              fontWeight: 500
-            }}
-          >
-            Support This Work
-          </a>
-        </div>
-      </header>
+    <BlogLayout
+      title="A Timeline of Early Women Authors"
+      tag="Research"
+      slug="early-women-authors"
+      date="December 2025"
+    >
+      <p style={{ color: '#888', fontFamily: 'Inter, sans-serif', fontSize: '14px', marginBottom: '48px' }}>
+        From Themistoclea to Mary Astell: 2,200 years of women&apos;s writing
+      </p>
 
-      <article style={{ maxWidth: '768px', margin: '0 auto', padding: '48px 32px 96px' }}>
-        <h1 style={{ fontSize: '48px', fontFamily: 'Cormorant Garamond, serif', fontWeight: 600, lineHeight: 1.1, marginBottom: '16px' }}>
-          A Timeline of Early Women Authors
-        </h1>
-        <p style={{ color: '#888', fontFamily: 'Inter, sans-serif', fontSize: '14px', marginBottom: '48px' }}>
-          From Themistoclea to Mary Astell: 2,200 years of women&apos;s writing
-        </p>
-
-        <div style={{ fontFamily: 'Newsreader, serif', fontSize: '18px', lineHeight: 1.8, color: '#333' }}>
+      <div style={{ fontFamily: 'Newsreader, serif', fontSize: '18px', lineHeight: 1.8, color: '#333' }}>
           <p>
             When we think of the &ldquo;great books&rdquo; of the Western tradition, we typically imagine a parade of male authors:
             Homer, Plato, Aristotle, Cicero, Augustine, Aquinas, Dante, Shakespeare, Milton. But this is a distorted picture,
@@ -328,16 +305,6 @@ export default function EarlyWomenAuthors() {
             <Link href="/sparklines" style={{ color: '#9e4a3a' }}>cultural attention tracker</Link>.
           </p>
         </div>
-      </article>
-
-      <footer style={{ borderTop: '1px solid #e8e4dc', padding: '32px', textAlign: 'center', color: '#888', fontSize: '14px', fontFamily: 'Inter, sans-serif' }}>
-        <p style={{ marginBottom: '8px' }}>
-          <Link href="/blog" style={{ color: '#9e4a3a', textDecoration: 'none' }}>
-            &larr; Back to Blog
-          </Link>
-        </p>
-        <p>Data from Google Books Ngram Viewer</p>
-      </footer>
-    </div>
+    </BlogLayout>
   );
 }

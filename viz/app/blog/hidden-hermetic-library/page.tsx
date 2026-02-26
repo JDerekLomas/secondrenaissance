@@ -1,4 +1,4 @@
-import Link from "next/link";
+import BlogLayout from "../BlogLayout";
 import { generateBlogMetadata } from "@/lib/blogMetadata";
 
 const postMeta = {
@@ -32,91 +32,23 @@ export default function HiddenHermeticLibrary() {
   ];
 
   return (
-    <main className="min-h-screen" style={{ background: '#fdfcf9' }}>
-      {/* Navigation */}
-      <nav style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        background: 'rgba(253, 252, 249, 0.95)',
-        backdropFilter: 'blur(8px)',
-        borderBottom: '1px solid #e8e4dc',
-        zIndex: 100,
-        padding: '16px 24px',
+    <BlogLayout
+      title="The Hidden Hermetic Library: What the Embassy of the Free Mind Reveals About Cataloging Gaps"
+      tag="Research"
+      slug="hidden-hermetic-library"
+      date="December 2025"
+    >
+      <p style={{
+        fontFamily: 'Newsreader, Georgia, serif',
+        fontSize: '20px',
+        color: '#666',
+        lineHeight: 1.6,
+        marginBottom: '24px',
       }}>
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}>
-          <Link href="/" style={{
-            fontFamily: 'Inter, sans-serif',
-            fontSize: '12px',
-            fontWeight: 500,
-            letterSpacing: '0.1em',
-            color: '#666',
-            textDecoration: 'none',
-          }}>
-            SECOND RENAISSANCE RESEARCH
-          </Link>
-          <div style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
-            <Link href="/data" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>Data</Link>
-            <Link href="/blog" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>Essays</Link>
-            <Link href="/about" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: '#555', textDecoration: 'none' }}>About</Link>
-          </div>
-        </div>
-      </nav>
+        We cross-referenced Amsterdam&apos;s esoteric book collection with standard Renaissance bibliographies. 35% of their 15th-century holdings don&apos;t appear in either ISTC or USTC. These aren&apos;t marginal texts.
+      </p>
 
-      {/* Article */}
-      <article style={{
-        maxWidth: '720px',
-        margin: '0 auto',
-        padding: '140px 24px 100px',
-      }}>
-        {/* Header */}
-        <header style={{ marginBottom: '48px' }}>
-          <p style={{
-            fontFamily: 'Inter, sans-serif',
-            fontSize: '12px',
-            letterSpacing: '0.1em',
-            color: '#9e4a3a',
-            marginBottom: '16px',
-          }}>
-            RESEARCH NOTE
-          </p>
-          <h1 style={{
-            fontFamily: 'Cormorant Garamond, Georgia, serif',
-            fontSize: 'clamp(32px, 5vw, 48px)',
-            fontWeight: 400,
-            color: '#1a1612',
-            lineHeight: 1.2,
-            marginBottom: '24px',
-          }}>
-            The Hidden Hermetic Library: What the Embassy of the Free Mind Reveals About Cataloging Gaps
-          </h1>
-          <p style={{
-            fontFamily: 'Newsreader, Georgia, serif',
-            fontSize: '20px',
-            color: '#666',
-            lineHeight: 1.6,
-            marginBottom: '24px',
-          }}>
-            We cross-referenced Amsterdam&apos;s esoteric book collection with standard Renaissance bibliographies. 35% of their 15th-century holdings don&apos;t appear in either ISTC or USTC. These aren&apos;t marginal texts.
-          </p>
-          <p style={{
-            fontFamily: 'Inter, sans-serif',
-            fontSize: '13px',
-            color: '#888',
-          }}>
-            December 2025
-          </p>
-        </header>
-
-        {/* Content */}
-        <div style={{
+      <div style={{
           fontFamily: 'Newsreader, Georgia, serif',
           fontSize: '18px',
           lineHeight: 1.8,
@@ -538,32 +470,6 @@ export default function HiddenHermeticLibrary() {
           </div>
         </div>
 
-        {/* Footer nav */}
-        <div style={{
-          marginTop: '64px',
-          paddingTop: '32px',
-          borderTop: '1px solid #e8e4dc',
-          display: 'flex',
-          justifyContent: 'space-between',
-        }}>
-          <Link href="/blog" style={{
-            fontFamily: 'Inter, sans-serif',
-            fontSize: '14px',
-            color: '#9e4a3a',
-            textDecoration: 'none',
-          }}>
-            ← All Essays
-          </Link>
-          <Link href="/" style={{
-            fontFamily: 'Inter, sans-serif',
-            fontSize: '14px',
-            color: '#666',
-            textDecoration: 'none',
-          }}>
-            Home
-          </Link>
-        </div>
-      </article>
-    </main>
+    </BlogLayout>
   );
 }
