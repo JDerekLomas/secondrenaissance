@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Embassy of the Free Mind — Hermetic Library Catalog',
     description: 'Browse 28,000 works on esotericism, hermetica, alchemy, and mysticism. Find digitized versions on Internet Archive.',
-    url: 'https://secondrenaissance.vercel.app/bph',
+    url: 'https://www.secondrenaissance.ai/bph',
     siteName: 'Second Renaissance Research',
     images: [
       {

@@ -264,7 +264,7 @@ export default function AboutPage() {
               Tiered recommendations based on historical impact, translation gap, feasibility,
               and audience reach.
             </p>
-            <Link href="/roadmap" style={{
+            <Link href="/blog/roadmap" style={{
               fontFamily: 'Inter, sans-serif',
               fontSize: '13px',
               color: '#9e4a3a',

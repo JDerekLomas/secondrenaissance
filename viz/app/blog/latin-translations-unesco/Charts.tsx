@@ -115,7 +115,7 @@ export function CountryChart({ data }: { data: { country: string; count: number 
           <Pie
             data={data} dataKey="count" nameKey="country"
             cx="50%" cy="50%" outerRadius={110}
-            label={({ country, count }) => `${country} (${count})`}
+            label={({ country, count }: any) => `${country} (${count})`}
             labelLine={true}
             style={{ fontFamily: 'Inter, sans-serif', fontSize: '11px' }}
           >

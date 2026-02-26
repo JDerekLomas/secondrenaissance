@@ -96,7 +96,7 @@ export default function Home() {
           <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
             <a href="/map" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Map</a>
             <a href="/timelines" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Timelines</a>
-            <a href="/roadmap" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Roadmap</a>
+            <a href="/blog/roadmap" style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Roadmap</a>
             <a
               href="https://www.ancientwisdomtrust.org/become-a-patron"
               target="_blank"
@@ -503,7 +503,7 @@ export default function Home() {
                 Explore the Map
               </a>
               <a
-                href="/roadmap"
+                href="/blog/roadmap"
                 style={{
                   fontFamily: 'Inter, sans-serif',
                   fontSize: '14px',

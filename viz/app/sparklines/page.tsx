@@ -1240,8 +1240,8 @@ export default function SparklinePage() {
   const [filterPattern, setFilterPattern] = useState<string>('all');
   const [selectedWorks, setSelectedWorks] = useState<Set<string>>(new Set());
 
-  const categories = useMemo(() => [...new Set(WORKS.map(w => w.category))].sort(), []);
-  const patterns = useMemo(() => [...new Set(WORKS.map(w => w.pattern))].sort(), []);
+  const categories = useMemo(() => Array.from(new Set(WORKS.map(w => w.category))).sort(), []);
+  const patterns = useMemo(() => Array.from(new Set(WORKS.map(w => w.pattern))).sort(), []);
 
   const sortedWorks = useMemo(() => {
     let filtered = WORKS;
