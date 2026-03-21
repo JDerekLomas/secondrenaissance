@@ -291,6 +291,14 @@ export default function BPHCatalog() {
                       >
                         Search EFM Catalog ↗
                       </a>
+                      <a
+                        href={`https://sourcelibrary.org/search?q=${encodeURIComponent(item.title || '')}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#9e4a3a] hover:underline"
+                      >
+                        Source Library ↗
+                      </a>
                     </div>
                   </div>
 
