@@ -23,7 +23,7 @@ const visualizations: Viz[] = [
   {
     slug: 'image-deep-zoom',
     title: 'Image Deep Zoom',
-    description: '39,783 illustrations from pre-modern texts, clustered by visual similarity. Tile-based renderer with quadtree spatial indexing — zoom from 40K dots down to individual thumbnails.',
+    description: '35,532 illustrations from pre-modern texts, clustered into 50 groups by visual similarity. Tile-based renderer with quadtree spatial indexing — zoom from 35K dots down to individual thumbnails.',
     date: '2026-03-27',
     url: 'https://sourcelibrary.org/research/image-atlas',
     screenshot: '/lab-screenshots/image-atlas.jpg',
