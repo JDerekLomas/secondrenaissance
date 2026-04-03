@@ -21,6 +21,17 @@ interface Viz {
 
 const visualizations: Viz[] = [
   {
+    slug: 'translation-pipeline',
+    title: 'Translation Pipeline',
+    description: 'Stop-motion visualization of the real AI translation pipeline processing a 15th-century Ficino manuscript. Real IIIF page images from Biblioteca Medicea Laurenziana, actual Gemini OCR output with XML tags, and live translation — the whole system made visible.',
+    date: '2026-04-03',
+    url: 'https://sourcelibrary.org/translation-viz.html',
+    screenshot: '/lab-screenshots/translation-pipeline.jpg',
+    site: 'Source Library',
+    tech: 'Canvas, IIIF, Gemini',
+    status: 'beta',
+  },
+  {
     slug: 'image-deep-zoom',
     title: 'Image Deep Zoom',
     description: '35,532 illustrations from pre-modern texts, clustered into 50 groups by visual similarity. Tile-based renderer with quadtree spatial indexing — zoom from 35K dots down to individual thumbnails.',
