@@ -9,8 +9,7 @@ BASE = '/Users/dereklomas/secondrenaissance/scripts'
 MASTER = f'{BASE}/latin_translations_master.csv'
 
 SUPABASE_URL = "https://ykhxaecbbxaaqlujuzde.supabase.co"
-SUPABASE_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlraHhhZWNiYnhhYXFsdWp1emRlIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NTA2MTEwMSwiZXhwIjoyMDgwNjM3MTAxfQ.QY6DJeScr7bWYy_xOOn5JPl6jd4196aJbTP2-1eg2fQ")
+SUPABASE_KEY = os.environ["SUPABASE_SERVICE_ROLE_KEY"]
 
 # Direct Postgres connection for DDL
 DB_HOST = "db.ykhxaecbbxaaqlujuzde.supabase.co"
